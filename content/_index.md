@@ -1,11 +1,11 @@
 ---
 weight: 10
 bookCollapseSection: true
-title: Bienvenido a GlmbXecurity
+title: GlmbXecurity Hacking & Ciberseguridad
 ---
-Bienvenido a mi sitio web, aquí encontrarás apuntes de ciberseguridad que iré subiendo a lo largo de mi aprendizaje en este campo de la informática.  
 
 ![imagen](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/logo.png)
+
 ### About me
 #### 💼 Sysadmin y security area in Ejército de Tierra.
 #### 📚 ASIR y SMR | Active Directory, VmWare | eJPTv2 (en curso)
