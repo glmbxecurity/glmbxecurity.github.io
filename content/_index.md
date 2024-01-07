@@ -5,9 +5,7 @@ title: Bienvenido a GlmbXecurity
 ---
 Bienvenido a mi sitio web, aquí encontrarás apuntes de ciberseguridad que iré subiendo a lo largo de mi aprendizaje en este campo de la informática.  
 
-<img src="https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/logo.png" height="300" width="300">
-
-
+![imagen](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/logo.png)
 ### About me
 #### 💼 Sysadmin y security area in Ejército de Tierra.
 #### 📚 ASIR y SMR | Active Directory, VmWare | eJPTv2 (en curso)
