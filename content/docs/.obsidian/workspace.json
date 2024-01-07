@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "e1cde686d89c415d",
+    "id": "5affb6660bf7434a",
     "type": "split",
     "children": [
       {
-        "id": "26ac5823508fa622",
+        "id": "fbdf79a35cb0652e",
         "type": "tabs",
         "children": [
           {
-            "id": "967990cd43ceb0a5",
+            "id": "66705e072f977452",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Reconocimiento/Version de servicio y S.O.md",
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "08de62bdea5871a3",
+    "id": "08363c0c75198e1f",
     "type": "split",
     "children": [
       {
-        "id": "f806589236af751c",
+        "id": "aa6cab8cf79332c2",
         "type": "tabs",
         "children": [
           {
-            "id": "12af4969ac64d8dc",
+            "id": "b6bc0be7d2acbf11",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "4d60024cf34bbb63",
+            "id": "f17834b9a619d559",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "870f188ac685173c",
+            "id": "901f804e11b30d9e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "09be9cfa4cc57f6e",
+    "id": "604c8775570f59c8",
     "type": "split",
     "children": [
       {
-        "id": "fc3baab1b7acef8d",
+        "id": "887a38e4fff6ad05",
         "type": "tabs",
         "children": [
           {
-            "id": "1cc833bcbf12a657",
+            "id": "a724c9b7b64f4d12",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Reconocimiento/Version de servicio y S.O.md",
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +97,19 @@
             }
           },
           {
-            "id": "124dead3184c03fe",
+            "id": "62d13574f788b673",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Reconocimiento/Version de servicio y S.O.md",
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "2566bcd810feed2d",
+            "id": "86f30d6eae710c89",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "5153b7c68538583d",
+            "id": "34deadb2c7557fa9",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Reconocimiento/Version de servicio y S.O.md"
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md"
               }
             }
           }
@@ -146,53 +146,9 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "967990cd43ceb0a5",
+  "active": "66705e072f977452",
   "lastOpenFiles": [
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "5 - Hacking Linux/Comandos básicos.md",
-    "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "1 - Reconocimiento/Version de servicio y S.O.md",
     "1 - Reconocimiento/CMS.md",
-    "1 - Reconocimiento/Subdominios y emails.md",
-    "1 - Reconocimiento/Fuzzing Web.md",
-    "1 - Reconocimiento/Busqueda de exploits.md",
-    "1 - Reconocimiento/Nmap.md",
-    "1 - Reconocimiento/6- Descubrimiento emails en una empresa.md",
-    "2 - Hacking genérico/Uso de Metasploit.md",
-    "6 - Hacking Windows/Active Directory.md",
-    "6 - Hacking Windows/_index.md",
-    "5 - Hacking Linux/_index.md",
-    "4 - Hacking Servicios/_index.md",
-    "3 - Hacking Web/_index.md",
-    "2 - Hacking genérico/_index.md",
-    "1 - Reconocimiento/_index.md",
-    "_index.md",
-    "5 - Hacking Linux/Tratamiento de la TTY.md",
-    "5 - Hacking Linux",
-    "4 - Hacking Servicios/8080 Apache Tomcat.md",
-    "4 - Hacking Servicios/22 SSH.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
-    "4 - Hacking Servicios",
-    "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/Wordpress.md",
-    "3 - Hacking Web/LFI.md",
-    "3 - Hacking Web",
-    "2 - Hacking genérico",
-    "1 - Reconocimiento",
-    "6 - Hacking Windows",
-    "10 - Active directory",
-    "imagenes/CTF_napping/Pasted image 20231230003512.png",
-    "imagenes/CTF_napping/Pasted image 20231230013717.png",
-    "imagenes/Pasted image 20240102215922.png",
-    "imagenes/privesc/setuidpython.png",
-    "10 - CTF's",
-    "9 - Varios linux",
-    "imagenes/privesc",
-    "imagenes/CTF_napping/Pasted image 20231230013542.png",
-    "imagenes/CTF_napping/Pasted image 20231230013352.png",
-    "imagenes/CTF_napping/Pasted image 20231230010352.png",
-    "imagenes/CTF_napping/Pasted image 20231230010316.png",
-    "imagenes/CTF_napping/Pasted image 20231230005943.png",
-    "imagenes/CTF_napping/Pasted image 20231230005855.png"
+    "1 - Reconocimiento/Busqueda de exploits.md"
   ]
 }
