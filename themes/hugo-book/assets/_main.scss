@@ -7,7 +7,7 @@ html {
 body {
   min-width: $body-min-width;
   color: var(--body-font-color);
-  background: var(--body-background);
+  background: #141021;
 
   letter-spacing: 0.33px;
   font-weight: $body-font-weight;
@@ -103,7 +103,7 @@ ul.pagination {
   .book-menu-content {
     width: $menu-width;
     padding: $padding-16;
-    background: var(--body-background);
+    background: #c1121f;
 
     @include fixed;
   }
