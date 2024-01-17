@@ -23,3 +23,9 @@ Con el hash.txt obtenido:
 ```
 john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
+
+### Fuerza bruta SSH
+Si la "l" o "p" son minúsculas, le estamos indicando que utilice literalmente dicho usuario o contraseña. Si es mayúscula, lo utilizaremos para tirar de un diccionario.
+```bash
+hydra 127.0.0.1 ssh -s 22 -l root -P pass.txt -f -vV 
+```

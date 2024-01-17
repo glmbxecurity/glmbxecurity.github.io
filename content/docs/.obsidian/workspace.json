@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
+                "file": "5 - Hacking Linux/Escalada Privilegios.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
+                "file": "5 - Hacking Linux/Escalada Privilegios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
+                "file": "5 - Hacking Linux/Escalada Privilegios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Reconocimiento/Descubrir equipos en la red.md"
+                "file": "5 - Hacking Linux/Escalada Privilegios.md"
               }
             }
           }
@@ -148,7 +148,18 @@
   },
   "active": "66705e072f977452",
   "lastOpenFiles": [
-    "1 - Reconocimiento/CMS.md",
+    "4 - Hacking Servicios/22 SSH.md",
+    "3 - Hacking Web/3. Enumeración web avanzada.md",
+    "3 - Hacking Web/1. Fuzzing Web.md",
+    "3 - Hacking Web/2. Descubrimiento CMS.md",
+    "1 - Reconocimiento/Descubrir equipos en la red.md",
+    "3 - Hacking Web/Anotaciones varias.md",
+    "1 - Reconocimiento/Subdominios y emails.md",
+    "2 - Hacking genérico/Codificación.md",
+    "3 - Hacking Web/LFI.md",
+    "2 - Hacking genérico/Crack ZIP bruteforce.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "4 - Hacking Servicios/8080 Apache Tomcat.md",
     "1 - Reconocimiento/Busqueda de exploits.md"
   ]
 }

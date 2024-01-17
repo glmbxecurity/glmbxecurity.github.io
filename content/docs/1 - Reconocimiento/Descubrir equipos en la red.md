@@ -1,11 +1,12 @@
  ```bash
  arp-scan -I <interfaz> --localnet --ignoredups
- ```
-```bash
+
 nmap -sn <dir_red/mask>
-```
- ```bash
+
+ 
 masscan -p80,8000-8100 10.0.0.0/8 --rate=10000
+
+netdiscover -P -i eth0
  ```
 
 Tener en cuenta que **puede haber subnetting**, y esto no impide encontrar equipos en distintas redes.

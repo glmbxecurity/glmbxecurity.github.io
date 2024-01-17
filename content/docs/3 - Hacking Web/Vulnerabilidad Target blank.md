@@ -13,7 +13,7 @@ Luego, por ejemplo, la página web falsa les pedirá que accedan de nuevo a su c
 ### Ejemplo de uso
 [Maquina Napping VulnHub (Mirar minuto 10)](https://www.youtube.com/watch?v=jVdfRTeOhnM)
 
-Esta vulnerabilidad suele ocurrir [[1- Anotaciones varias#Cuando en una web hay un admin que revisa links, mensajes, etc]]
+Esta vulnerabilidad suele ocurrir [[Anotaciones varias#Cuando en una web hay un admin que revisa links, mensajes, etc]]
 
 ### Explotar vulnerabilidad
 
