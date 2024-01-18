@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Hacking genérico/Reverse Shells.md",
+                "file": "5 - Hacking Linux/Comandos básicos.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Hacking genérico/Reverse Shells.md",
+                "file": "5 - Hacking Linux/Comandos básicos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Hacking genérico/Reverse Shells.md",
+                "file": "5 - Hacking Linux/Comandos básicos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Hacking genérico/Reverse Shells.md"
+                "file": "5 - Hacking Linux/Comandos básicos.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "66705e072f977452",
   "lastOpenFiles": [
-    "3 - Hacking Web/1. Fuzzing Web.md",
     "2 - Hacking genérico/Reverse Shells.md",
+    "3 - Hacking Web/1. Fuzzing Web.md",
     "3 - Hacking Web/LFI.md",
     "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/22 SSH.md",
