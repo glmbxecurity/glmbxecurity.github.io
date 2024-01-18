@@ -11,6 +11,7 @@
 - [Networking](#net)
 - [Compartir ficheros entre maquinas](#comp)
 - [Comandos FTP](#ftp)
+- [Compresion/descompresion de ficheros](#tar)
 
 
 
@@ -183,4 +184,21 @@ get <fichero>
 mget *
 put <fichero>
 
+```
+
+### Compresion/Descompresion de ficheros
+<a name="tar"></a>
+##### TAR
+```bash
+tar -xf fichero.tar "DESCOMPRIMIR"
+tar -xzf archivo.tar.gz "DESCOMPRIMIR tar.gz"
+tar -cf fichero.tar fichero_a_comprimir.txt "COMPRIMIR"
+tar -cf fichero.tar fichero_a_comprimir1.txt fichero_a_comprimir2.txt "COMPRIMIR VARIOS"
+```
+
+##### GZIP
+```bash
+gzip -c documento.txt > comprimido.gz "COMPRIMIR"
+gzip -d documento.gz "DESCOMPRIMIR"
+gunzip documento.gz "DESCOMPRIMIR"
 ```
