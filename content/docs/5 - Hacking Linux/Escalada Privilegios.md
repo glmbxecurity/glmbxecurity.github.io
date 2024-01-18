@@ -74,7 +74,10 @@ Cuando detectamos algun binario con nombre similar a **polkit** , se puede explo
 
 https://github.com/Almorabea/Polkit-exploit
 
-
+##### Permiso de SUID env
+```bash
+/usr/bin/env /bin/sh -p
+```
 ### SUDO -L
 Si encontramos un binario que con ==sudo -l== vemos que podemos ejecutarlo como si fueramos el administrador, podemos buscar en **GTFOBins**
 
