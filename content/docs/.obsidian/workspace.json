@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "2 - Hacking genérico/Escribir en terminal de una víctima.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "2 - Hacking genérico/Escribir en terminal de una víctima.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "2 - Hacking genérico/Escribir en terminal de una víctima.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md"
+                "file": "2 - Hacking genérico/Escribir en terminal de una víctima.md"
               }
             }
           }
@@ -148,11 +148,12 @@
   },
   "active": "66705e072f977452",
   "lastOpenFiles": [
+    "5 - Hacking Linux/Escalada Privilegios.md",
+    "2 - Hacking genérico/Escribir en terminal de una víctima.md",
     "5 - Hacking Linux/Comandos básicos.md",
     "2 - Hacking genérico/Reverse Shells.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
     "3 - Hacking Web/LFI.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/22 SSH.md",
     "3 - Hacking Web/3. Enumeración web avanzada.md",
     "3 - Hacking Web/2. Descubrimiento CMS.md",
