@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "2 - Hacking genérico/Codificación.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "2 - Hacking genérico/Codificación.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "2 - Hacking genérico/Codificación.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md"
+                "file": "2 - Hacking genérico/Codificación.md"
               }
             }
           }
@@ -148,9 +148,13 @@
   },
   "active": "66705e072f977452",
   "lastOpenFiles": [
+    "5 - Hacking Linux/Crack etc shadow.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
+    "2 - Hacking genérico/Codificación.md",
+    "4 - Hacking Servicios/21 FTP.md",
+    "2 - Hacking genérico/Esteganografía.md",
     "4 - Hacking Servicios/111 RCPBIND (NFS).md",
     "2 - Hacking genérico/Escribir en terminal de una víctima.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
     "5 - Hacking Linux/Comandos básicos.md",
     "2 - Hacking genérico/Reverse Shells.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
@@ -161,7 +165,6 @@
     "1 - Reconocimiento/Descubrir equipos en la red.md",
     "3 - Hacking Web/Anotaciones varias.md",
     "1 - Reconocimiento/Subdominios y emails.md",
-    "2 - Hacking genérico/Codificación.md",
     "2 - Hacking genérico/Crack ZIP bruteforce.md",
     "4 - Hacking Servicios/139, 445 SMB.md",
     "4 - Hacking Servicios/8080 Apache Tomcat.md",

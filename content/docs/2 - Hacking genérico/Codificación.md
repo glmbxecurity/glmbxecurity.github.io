@@ -13,3 +13,11 @@ Hay un lenguaje con este aspecto: "Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. "
 
 Se puede decodificar aquí: 
 https://www.dcode.fr/ook-language
+
+
+## Brainfuck
+
+Teniendo un código de este tipo: ++++++++++**[**>+++++++>++++++++++>+++>+<<<<-**]**>++**.**>+**.**+++++++**..**+++**.**>++**.**<<+++++++++++++++**.**>**.**+++**.**------**.**--------**.**>+**.**>**.**
+
+se puede decodificar aquí:
+https://www.dcode.fr/brainfuck-language

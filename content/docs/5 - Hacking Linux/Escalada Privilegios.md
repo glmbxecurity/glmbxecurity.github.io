@@ -78,6 +78,19 @@ https://github.com/Almorabea/Polkit-exploit
 ```bash
 /usr/bin/env /bin/sh -p
 ```
+
+##### Permiso SUID Less
+Leemos un fichero:
+```bash
+sudo /bin/less fichero.txt
+
+Luego nos aparece resaltado el (END)
+ahí escribimos una exclamación !
+y podemos ejecutar comandos del sistema desde less, pero como tenemos permiso SUID podemos ejecutar:
+/bin/bash
+
+y ya somos root
+```
 ### SUDO -L
 Si encontramos un binario que con ==sudo -l== vemos que podemos ejecutarlo como si fueramos el administrador, podemos buscar en **GTFOBins**
 
