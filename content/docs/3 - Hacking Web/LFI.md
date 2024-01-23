@@ -1,3 +1,4 @@
+### Local File Inclusion
 #### Ficheros interesantes en LFI
 * /etc/passwd
 * /etc/shadow
