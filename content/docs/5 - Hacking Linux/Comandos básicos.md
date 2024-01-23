@@ -1,4 +1,4 @@
-## Indice
+### Indice
 - [Recolectar informacion](#recolectar)
 - [Usuarios y grupos](#usuarios_grupos)
 - [Operaciones con ficheros](#ficheros)
@@ -16,7 +16,7 @@
 
 
 <a name="recolectar"></a>
-## Recolectar información
+### Recolectar información
 ```bash
 * uname -r -a (system y kernel)
 * hostname
@@ -35,7 +35,7 @@
 
 
 <a name="usuarios_grupos"></a>
-## usuarios y grupos
+### usuarios y grupos
 ```bash
 * groupadd [grupo]
 * adduser [usuario]
@@ -48,7 +48,7 @@
 ```
 
 <a name="ficheros"></a>
-## Ficheros
+### Ficheros
 ```bash
 * cd [directorio] (cambiar directorio)
 * ls [directorio] (listar directorio)
@@ -67,7 +67,7 @@
 
 
 <a name="ficheross"></a>
-## Permisos en ficheros
+### Permisos en ficheros
 ```bash
 * chmod 755 [fichero] (todos al propietario, leer al resto)
 * chown [usuario] [fichero] (cambiar propietario)
@@ -76,7 +76,7 @@
 ```
 
 <a name="stdin"></a>
-## Stdin | Stdout | Stdr
+### Stdin | Stdout | Stdr
 
 0, hace referencia a la entrada (teclado)
 1, hace referencia a la salida (pantalla)
@@ -92,14 +92,14 @@
 
 
 <a name="var"></a>
-## Variables Bash y alias
+### Variables Bash y alias
 * $HOME
 * $BASH
 * $SHELL
 * export $NAME=value (establece la variable de entorno al valor indicado)
 * alias [alias]=[comando] (establecer un alias al comando)
 <a name="concat"></a>
-## Concatenacion
+### Concatenacion
 ```bash
 * comando1 ; comando2 (ejecuta el primer comando, luego el segundo)
 * comando1 && comando2 (ejecuta el segundo, solo si el primero es exitoso)
@@ -109,7 +109,7 @@
 ```
 
 <a name="bus"></a>
-## Búsqueda
+### Búsqueda
 ```bash
 * grep [palabra](buscar lineas en fichero)
 * find (buscar ficheros)
@@ -123,14 +123,14 @@
 ```
 
   * EJEMPLO mas útil: ps | awk -F ":" '{print $2}' (muestra la segunda columna del resultado del comando `ps` cuyo delimitador sea ':')
-## Compresion ficheros
+### Compresion ficheros
 ```bash
 * tar -cf [file.tar] [file](comprimir)
 * tar -xf [file.tar ](descomprimir)
 
 ```
 <a name="ssh"></a>
-## conexion SSH
+### conexion SSH
 ```bash
 * ssh user@host
 * ssh -p user@host (indicar puerto)
@@ -143,13 +143,13 @@ Teniendo el fichero id_rsa del usuario podemos realizar una conexión. En ocasio
 ssh <usuario>@<ip> -i id_rsa
 ```
 <a name="net"></a>
-##### Copiar ficheros con SSH por SCP
+#### Copiar ficheros con SSH por SCP
 ```bash
 scp <origen> <destino>
 "SUBIR FICHEROS" scp /home/kali/file.txt usuario@servidor:/ruta
 "DESCARGAR FICHEROS" scp usuario@servidor:/file.txt /home/kali.file.txt
 ```
-## Networking
+### Networking
 ```bash
 * ip addr show (ver ip)
 * ifconfig (ver todas las interfaces)
@@ -159,7 +159,7 @@ scp <origen> <destino>
 ```
 
 <a name="comp"></a>
-## Compartir ficheros entre maquinas
+### Compartir ficheros entre maquinas
 Podemos compartir ficheros con la máquina víctima montando un servidor http en python. Para ello nos posicionamos en la ruta donde tengamos el fichero y ejecutamos
 ```bash
 python3 -m http.server 80
@@ -188,7 +188,7 @@ put <fichero>
 
 ### Compresion/Descompresion de ficheros
 <a name="tar"></a>
-##### TAR
+#### TAR
 ```bash
 tar -xf fichero.tar "DESCOMPRIMIR"
 tar -xzf archivo.tar.gz "DESCOMPRIMIR tar.gz"
@@ -196,7 +196,7 @@ tar -cf fichero.tar fichero_a_comprimir.txt "COMPRIMIR"
 tar -cf fichero.tar fichero_a_comprimir1.txt fichero_a_comprimir2.txt "COMPRIMIR VARIOS"
 ```
 
-##### GZIP
+#### GZIP
 ```bash
 gzip -c documento.txt > comprimido.gz "COMPRIMIR"
 gzip -d documento.gz "DESCOMPRIMIR"

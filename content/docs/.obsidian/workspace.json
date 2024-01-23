@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "6 - Hacking Windows/Active Directory.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "6 - Hacking Windows/Active Directory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md",
+                "file": "6 - Hacking Windows/Active Directory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/Escalada Privilegios.md"
+                "file": "6 - Hacking Windows/Active Directory.md"
               }
             }
           }
@@ -149,33 +149,33 @@
   "active": "66705e072f977452",
   "lastOpenFiles": [
     "Ruta/Del/Archivo.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "Ruta/Del",
-    "Ruta",
-    "5 - Hacking Linux/Path Hijacking.md",
-    "3 - Hacking Web/LFI.md",
-    "2 - Hacking genérico/Wireshark.md",
-    "2 - Hacking genérico/Reverse Shells.md",
-    "2 - Hacking genérico/Esteganografía.md",
-    "2 - Hacking genérico/Codificación.md",
-    "3 - Hacking Web/Wordpress.md",
-    "3 - Hacking Web/1. Fuzzing Web.md",
+    "6 - Hacking Windows/Active Directory.md",
+    "5 - Hacking Linux/Tratamiento de la TTY.md",
     "5 - Hacking Linux/Pivoting de usuarios.md",
-    "Pasted image 20240121181825.png",
+    "5 - Hacking Linux/Path Hijacking.md",
     "5 - Hacking Linux/Escribir en terminal de una víctima.md",
-    "2 - Hacking genérico/Crack ZIP bruteforce.md",
-    "1 - Reconocimiento/Version de servicio y S.O.md",
-    "1 - Reconocimiento/Subdominios y emails.md",
-    "1 - Reconocimiento/Nmap.md",
-    "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "1 - Reconocimiento/Busqueda de exploits.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
     "5 - Hacking Linux/Crack etc shadow.md",
-    "4 - Hacking Servicios/21 FTP.md",
-    "4 - Hacking Servicios/111 RCPBIND (NFS).md",
     "5 - Hacking Linux/Comandos básicos.md",
+    "5 - Hacking Linux/_index.md",
+    "4 - Hacking Servicios/8080 Apache Tomcat.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "4 - Hacking Servicios/111 RCPBIND (NFS).md",
     "4 - Hacking Servicios/22 SSH.md",
+    "4 - Hacking Servicios/21 FTP.md",
+    "4 - Hacking Servicios/_index.md",
+    "3 - Hacking Web/Wordpress.md",
+    "3 - Hacking Web/Vulnerabilidad Target blank.md",
+    "3 - Hacking Web/LFI.md",
+    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
+    "3 - Hacking Web/Anotaciones varias.md",
     "3 - Hacking Web/3. Enumeración web avanzada.md",
     "3 - Hacking Web/2. Descubrimiento CMS.md",
-    "3 - Hacking Web/Anotaciones varias.md"
+    "3 - Hacking Web/1. Fuzzing Web.md",
+    "3 - Hacking Web/_index.md",
+    "2 - Hacking genérico/Wireshark.md",
+    "Ruta/Del",
+    "Ruta",
+    "Pasted image 20240121181825.png"
   ]
 }

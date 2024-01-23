@@ -12,7 +12,7 @@ nmap -p- --open -sS -sCV -T5 -v -n -Pn 10.10.10.4 -oG fichero.txt --top-ports 10
 ``` 
 
 
-## Evasion de Firewall con Nmap
+### Evasion de Firewall con Nmap
 Se puede intentar evitar el bloqueo por parte del firewall al intento de escaneo de puertos. para ello algo muy común es el hecho de fragmentar los paquetes, o indicar el tamaño maáximo de MTU (tamaño máximo de transimision de unidad), o falsear ciertos datos.  
 
 * -f (fragmentar paquetes)
@@ -31,7 +31,7 @@ Se puede intentar evitar el bloqueo por parte del firewall al intento de escaneo
 >Al realizar un escaneo, el atacante envía un SYN, recibe un SYN/ACK, y vuelve a responder con un ACK. Aquí terminaría la conexión. En caso de estar el puerto cerrado o la conexion ser rechazada, recibiriamos un RST en lugar del SYN/ACK.  
 Pues bien, con "-sS", lo que hacemos es después de recibir el SYN/ACK, enviamos un RST. Ya que algunos Firewall, solo registran conexiones completas, y al no enviar el ACK, no lo registran en sus logs.
 
-## Parámetros mas frecuentes de nmap
+### Parámetros mas frecuentes de nmap
 Los parámetros mas útiles son los siguientes:  
 * -p1-100 (puertos del 1 al 100)
 * -p- (todos los puertos)

