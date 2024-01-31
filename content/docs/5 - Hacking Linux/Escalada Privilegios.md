@@ -45,6 +45,12 @@ find / -group "grupo" 2>/dev/null
 ```bash
 find / -name *.pcap* 2>/dev/null
 ```
+
+#### Mirar las variables de entorno
+En ocasiones podemos encontrar credenciales, o aprovechar para ver si hay algo raro en el path
+```bash
+env
+```
 ### Capabilities
 ```bash
 getcap -r / 2>/dev/null
