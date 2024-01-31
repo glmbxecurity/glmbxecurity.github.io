@@ -12,6 +12,7 @@
 - [Compartir ficheros entre maquinas](#comp)
 - [Comandos FTP](#ftp)
 - [Compresion/descompresion de ficheros](#tar)
+- [Regex](#regex)
 
 
 
@@ -162,7 +163,9 @@ scp <origen> <destino>
 ### Compartir ficheros entre maquinas
 Podemos compartir ficheros con la máquina víctima montando un servidor http en python. Para ello nos posicionamos en la ruta donde tengamos el fichero y ejecutamos
 ```bash
-python3 -m http.server 80
+python3 -m http.server 5000
+
+El puerto 80 en ocasiones requiere permisos de root
 ```
 
 desde la máquina víctima hacemos:
@@ -201,4 +204,23 @@ tar -cf fichero.tar fichero_a_comprimir1.txt fichero_a_comprimir2.txt "COMPRIMIR
 gzip -c documento.txt > comprimido.gz "COMPRIMIR"
 gzip -d documento.gz "DESCOMPRIMIR"
 gunzip documento.gz "DESCOMPRIMIR"
+```
+
+### Regex (Expresiones regulares)
+```python
+#Sustitución de caracteres
+tr '\' ' '
+
+#Seleccion de culumnas
+EJ: imprimir columna 2
+awk '{print $2}'
+
+#Mostrar lineas distintas de
+grep -v <palabra>
+
+#No distinguir mayusculas de minusculas
+grep -i
+
+#Encontrar palabra en conjunto de archivos
+grep -l <palabra> ./*
 ```

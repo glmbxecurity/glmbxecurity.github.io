@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
+                "file": "4 - Hacking Servicios/3306 SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
+                "file": "4 - Hacking Servicios/3306 SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
+                "file": "4 - Hacking Servicios/3306 SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md"
+                "file": "4 - Hacking Servicios/3306 SQL.md"
               }
             }
           }
@@ -147,34 +146,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f17834b9a619d559",
+  "active": "66705e072f977452",
   "lastOpenFiles": [
-    "2 - Hacking genérico/Reverse Shells.md",
+    "6 - Hacking Windows/Active Directory.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "5 - Hacking Linux/Comandos básicos.md",
+    "3 - Hacking Web/Wordpress.md",
+    "3 - Hacking Web/LFI.md",
     "5 - Hacking Linux/Pivoting de usuarios.md",
     "5 - Hacking Linux/Escalada Privilegios.md",
+    "3 - Hacking Web/1. Fuzzing Web.md",
+    "3 - Hacking Web/2. Descubrimiento CMS.md",
+    "3 - Hacking Web/3. Enumeración web avanzada.md",
+    "2 - Hacking genérico/Codificación.md",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "2 - Hacking genérico/Reverse Shells.md",
     "3 - Hacking Web/Log poisoning.md",
-    "3 - Hacking Web/LFI.md",
-    "6 - Hacking Windows/Active Directory.md",
     "Ruta/Del/Archivo.md",
     "5 - Hacking Linux/Tratamiento de la TTY.md",
     "5 - Hacking Linux/Path Hijacking.md",
     "5 - Hacking Linux/Escribir en terminal de una víctima.md",
     "5 - Hacking Linux/Crack etc shadow.md",
-    "5 - Hacking Linux/Comandos básicos.md",
     "5 - Hacking Linux/_index.md",
     "4 - Hacking Servicios/8080 Apache Tomcat.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
     "4 - Hacking Servicios/111 RCPBIND (NFS).md",
     "4 - Hacking Servicios/22 SSH.md",
     "4 - Hacking Servicios/21 FTP.md",
     "4 - Hacking Servicios/_index.md",
-    "3 - Hacking Web/Wordpress.md",
     "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
-    "3 - Hacking Web/Anotaciones varias.md",
-    "3 - Hacking Web/3. Enumeración web avanzada.md",
-    "3 - Hacking Web/2. Descubrimiento CMS.md",
-    "3 - Hacking Web/1. Fuzzing Web.md",
     "Ruta/Del",
     "Ruta",
     "Pasted image 20240121181825.png"
