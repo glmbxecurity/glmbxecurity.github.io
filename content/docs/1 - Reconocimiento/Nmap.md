@@ -3,12 +3,28 @@
 nmap <ip> <parametros>
 ``` 
 
-### Escaneo típico Nmap
+### Escaneo básico Nmap 
 
-```bash 
-nmap -p- --open -sS -sCV -T5 -v -n -Pn 10.10.10.4 -oG fichero.txt
+```bash
+# Primer escaneo simple para conocer puertos abiertos
+nmap 10.10.10.4 -p- --open -n -Pn --min-rate 2000 -oG fichero.txt
+nmap 10.10.10.4 --top-ports 10000 --open -n -Pn --min-rate 2000 -oG fichero.txt
 
-nmap -p- --open -sS -sCV -T5 -v -n -Pn 10.10.10.4 -oG fichero.txt --top-ports 10000
+# Escaneo a puertos UDP (en ocasiones hay servicios corriendo en un puerto UDP)
+nmap 10.10.10.4 -sU --top-ports 200 --min-rate 2000 -Pn -oG fichero.txt
+
+# Escaneo conociendo los puertos abiertos
+nmap 10.10.10.4 -p 22,80,445 -n -Pn --min-rate 2000 -sS -sCV -oG fichero.txt
+```
+
+### Scripts Nmap
+```bash
+# Con la opción -sC utiliza el script por defecto para encontrar vulnerabilidades, si queremos utilizar un script específico, podemos consultar el listado de scripts
+
+ls /usr/share/nmap/scripts
+
+# Elegir el script deseado y realizar el escaneo de la siguiente manera
+nmap 10.10.10.4 --script "vuln" -p 445
 ``` 
 
 
