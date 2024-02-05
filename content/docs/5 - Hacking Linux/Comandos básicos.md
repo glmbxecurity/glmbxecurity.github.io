@@ -211,6 +211,9 @@ gunzip documento.gz "DESCOMPRIMIR"
 #Sustitución de caracteres
 tr '\' ' '
 
+#Eliminacion caracteres
+tr -d ' ' 
+
 #Seleccion de culumnas
 EJ: imprimir columna 2
 awk '{print $2}'
@@ -223,4 +226,29 @@ grep -i
 
 #Encontrar palabra en conjunto de archivos
 grep -l <palabra> ./*
+
+#Invertir lineas en un fichero
+tac <fichero_original> >> <fichero_destino>
+```
+
+### SQL
+```bash
+# Conexion a base de datos MYSQL, ojo a como está la contraseña, no es un error. la clave va pegada al -p.
+
+mysql -h <ip> -u <usuario> -p<contraseña>
+
+# Ver bases de datos
+show databases;
+
+# utilizar una base de datos
+use <bbdd>;
+
+# Ver tablas de una base de datos
+show tables;
+
+# Sentencias SQL básicas
+SELECT <columna/s> FROM <tabla>;
+SELECT <columna/s> FROM <tabla> WHERE id=1;
+
+
 ```

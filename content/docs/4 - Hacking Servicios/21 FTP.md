@@ -1,4 +1,4 @@
-### Ataque fuerza bruta contraseñas FTP con Hydra
+###  Fuerza bruta FTP con Hydra
 
 ```bash
 # Cuando tengo el usuario y quiero sacar la contraseña
@@ -12,6 +12,15 @@ hydra -L /usr/share/wordlists/metasploit/unix_users.txt <usuario> -p password123
 * -L mayúscila especifica un diccionario de usuarios
 * -p minúscula (mismo para contraseñas)
 * -P mayúscula (mismo para  contraseñas)
+
+### Fuerza bruta FTP con Metasploit
+```bash
+# search ftp_login, seleccionamos auxiliary/scanner/ftp/ftp_login
+	Completamos los datos necesarios y "run"
+```
+
+
+
 
 
 
