@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fbdf79a35cb0652e",
+        "id": "9069c804292eec8c",
         "type": "tabs",
         "children": [
           {
-            "id": "66705e072f977452",
+            "id": "2054ddb6a7acf245",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Hacking genérico/Crack ZIP fuerza bruta.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9ddd9e262466ca3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Hacking genérico/Crack keepass fuerza bruta.md",
+                "file": "Links de interés.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Hacking genérico/Crack keepass fuerza bruta.md",
+                "file": "Links de interés.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Hacking genérico/Crack keepass fuerza bruta.md",
+                "file": "Links de interés.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Hacking genérico/Crack keepass fuerza bruta.md"
+                "file": "Links de interés.md"
               }
             }
           }
@@ -158,34 +145,34 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9ddd9e262466ca3b",
+  "active": "2054ddb6a7acf245",
   "lastOpenFiles": [
-    "2 - Hacking genérico/Crack ZIP fuerza bruta.md",
-    "2 - Hacking genérico/Crack keepass fuerza bruta.md",
+    "Metodología.md",
+    "5 - Hacking Linux/Tratamiento de la TTY.md",
+    "5 - Hacking Linux/Pivoting de usuarios.md",
+    "5 - Hacking Linux/Path Hijacking.md",
+    "5 - Hacking Linux/Escribir en terminal de una víctima.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
+    "5 - Hacking Linux/Crack etc shadow.md",
+    "5 - Hacking Linux/Comandos básicos.md",
+    "4 - Hacking Servicios/8080 Apache Tomcat.md",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "4 - Hacking Servicios/111 RCPBIND (NFS).md",
     "4 - Hacking Servicios/22 SSH.md",
     "4 - Hacking Servicios/21 FTP.md",
     "4 - Hacking Servicios/_index.md",
-    "5 - Hacking Linux/Crack etc shadow.md",
-    "5 - Hacking Linux/Comandos básicos.md",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
-    "3 - Hacking Web/Fuerza bruta login web.md",
     "3 - Hacking Web/Wordpress.md",
-    "2 - Hacking genérico/Reverse Shells.md",
-    "6 - Hacking Windows/Eternalblue.md",
-    "1 - Reconocimiento/Nmap.md",
-    "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "5 - Hacking Linux/Path Hijacking.md",
-    "3 - Hacking Web/Anotaciones varias.md",
-    "6 - Hacking Windows/Active Directory.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
+    "3 - Hacking Web/Vulnerabilidad Target blank.md",
+    "3 - Hacking Web/Log poisoning.md",
     "3 - Hacking Web/LFI.md",
-    "5 - Hacking Linux/Pivoting de usuarios.md",
-    "3 - Hacking Web/1. Fuzzing Web.md",
-    "3 - Hacking Web/2. Descubrimiento CMS.md",
+    "3 - Hacking Web/Fuerza bruta login web.md",
+    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
+    "3 - Hacking Web/Anotaciones varias.md",
     "3 - Hacking Web/3. Enumeración web avanzada.md",
-    "2 - Hacking genérico/Codificación.md",
+    "3 - Hacking Web/2. Descubrimiento CMS.md",
+    "3 - Hacking Web/1. Fuzzing Web.md",
+    "Links de interés.md",
     "Ruta/Del",
     "Ruta",
     "Pasted image 20240121181825.png"

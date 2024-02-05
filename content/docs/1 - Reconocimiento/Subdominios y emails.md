@@ -20,7 +20,7 @@ Con phonebook.cz se pueden reconocer subdominios de empresas expuestas, pero tam
  
  Con la palabra interna reservada ** FUZZ ** la colocamos en la parte que queramos fuzzear, en este caso la que va delante del dominio principal. ahí será donde se prueben los dominios. con "--hc" hide code, excluiriamos el codigo de estado que no nos interese, en este caso el 403
  ```bash
- wfuzz -c -t 20 --hc=403 -w <diccionario> -H "Host: FUZZ.google.com" http://google.com
+ wfuzz -c -t 20 --hc=404 -w <diccionario> -H "Host: FUZZ.google.com" http://google.com
  ```
 
 #### DNSrecon
