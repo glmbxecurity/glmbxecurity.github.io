@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Metodología pentesting.md",
+                "file": "6 - Hacking Windows/_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Metodología pentesting.md",
+                "file": "6 - Hacking Windows/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Metodología pentesting.md",
+                "file": "6 - Hacking Windows/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Metodología pentesting.md"
+                "file": "6 - Hacking Windows/_index.md"
               }
             }
           }
@@ -160,9 +160,15 @@
   },
   "active": "ba8bafb1138cf5e1",
   "lastOpenFiles": [
+    "5 - Hacking Linux/_index.md",
+    "4 - Hacking Servicios/_index.md",
+    "3 - Hacking Web/_index.md",
+    "2 - Hacking genérico/_index.md",
+    "2 - Hacking genérico/Codificación.md",
+    "1 - Reconocimiento/_index.md",
+    "Metodología pentesting.md",
     "3 - Hacking Web/Wordpress.md",
     "3 - Hacking Web/Fuerza bruta login web.md",
-    "Metodología pentesting.md",
     "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
     "3 - Hacking Web/Anotaciones varias.md",
     "3 - Hacking Web/3. Enumeración web avanzada.md",
@@ -180,12 +186,6 @@
     "5 - Hacking Linux/Escalada Privilegios.md",
     "5 - Hacking Linux/Crack etc shadow.md",
     "5 - Hacking Linux/Comandos básicos.md",
-    "4 - Hacking Servicios/8080 Apache Tomcat.md",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
-    "4 - Hacking Servicios/111 RCPBIND (NFS).md",
-    "4 - Hacking Servicios/22 SSH.md",
-    "4 - Hacking Servicios/21 FTP.md",
     "Ruta/Del",
     "Ruta",
     "Pasted image 20240121181825.png"
