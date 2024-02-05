@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Hacking Windows/_index.md",
+                "file": "3 - Hacking Web/_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6 - Hacking Windows/_index.md",
+                "file": "3 - Hacking Web/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Hacking Windows/_index.md",
+                "file": "3 - Hacking Web/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Hacking Windows/_index.md"
+                "file": "3 - Hacking Web/_index.md"
               }
             }
           }
@@ -160,6 +160,7 @@
   },
   "active": "ba8bafb1138cf5e1",
   "lastOpenFiles": [
+    "6 - Hacking Windows/_index.md",
     "5 - Hacking Linux/_index.md",
     "4 - Hacking Servicios/_index.md",
     "3 - Hacking Web/_index.md",
@@ -185,7 +186,6 @@
     "5 - Hacking Linux/Escribir en terminal de una víctima.md",
     "5 - Hacking Linux/Escalada Privilegios.md",
     "5 - Hacking Linux/Crack etc shadow.md",
-    "5 - Hacking Linux/Comandos básicos.md",
     "Ruta/Del",
     "Ruta",
     "Pasted image 20240121181825.png"
