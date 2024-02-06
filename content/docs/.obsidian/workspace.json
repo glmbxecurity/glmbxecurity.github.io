@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "5affb6660bf7434a",
+    "id": "8377c99899988ea5",
     "type": "split",
     "children": [
       {
-        "id": "9069c804292eec8c",
+        "id": "417a42075fad117c",
         "type": "tabs",
         "children": [
           {
-            "id": "2054ddb6a7acf245",
+            "id": "7e57ac5b2880c753",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/Fuerza bruta login web.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba8bafb1138cf5e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 - Hacking Web/_index.md",
+                "file": "4 - Hacking Servicios/21 FTP.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "08363c0c75198e1f",
+    "id": "74e302cbf1f25869",
     "type": "split",
     "children": [
       {
-        "id": "aa6cab8cf79332c2",
+        "id": "898fe273724f0df3",
         "type": "tabs",
         "children": [
           {
-            "id": "b6bc0be7d2acbf11",
+            "id": "dbdd49f90623da7c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +43,7 @@
             }
           },
           {
-            "id": "f17834b9a619d559",
+            "id": "a31ebd6fa94dd032",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,7 +58,7 @@
             }
           },
           {
-            "id": "901f804e11b30d9e",
+            "id": "ee67f0a638c282aa",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -85,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "604c8775570f59c8",
+    "id": "28a7728eccd9e073",
     "type": "split",
     "children": [
       {
-        "id": "887a38e4fff6ad05",
+        "id": "b97d4c1e45fbe1d9",
         "type": "tabs",
         "children": [
           {
-            "id": "a724c9b7b64f4d12",
+            "id": "269054220b1c8f39",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/_index.md",
+                "file": "4 - Hacking Servicios/21 FTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,19 +97,19 @@
             }
           },
           {
-            "id": "62d13574f788b673",
+            "id": "ba2e54a5804721b1",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/_index.md",
+                "file": "4 - Hacking Servicios/21 FTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "86f30d6eae710c89",
+            "id": "996b1b8c6d531c74",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,12 +120,12 @@
             }
           },
           {
-            "id": "34deadb2c7557fa9",
+            "id": "f74be0546e151e2a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/_index.md"
+                "file": "4 - Hacking Servicios/21 FTP.md"
               }
             }
           }
@@ -146,7 +133,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,36 +146,33 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "ba8bafb1138cf5e1",
+  "active": "7e57ac5b2880c753",
   "lastOpenFiles": [
-    "Metodología pentesting.md",
-    "Links de interés.md",
-    "6 - Hacking Windows/_index.md",
-    "5 - Hacking Linux/_index.md",
-    "4 - Hacking Servicios/_index.md",
-    "3 - Hacking Web/_index.md",
-    "2 - Hacking genérico/_index.md",
-    "2 - Hacking genérico/Codificación.md",
-    "1 - Reconocimiento/_index.md",
-    "3 - Hacking Web/Wordpress.md",
-    "3 - Hacking Web/Fuerza bruta login web.md",
-    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
-    "3 - Hacking Web/Anotaciones varias.md",
-    "3 - Hacking Web/3. Enumeración web avanzada.md",
+    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
+    "2 - Hacking genérico/Reverse Shells.md",
+    "2 - Hacking genérico/Esteganografía.md",
+    "2 - Hacking genérico/Crack ZIP fuerza bruta.md",
     "3 - Hacking Web/2. Descubrimiento CMS.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
-    "1 - Reconocimiento/Subdominios y emails.md",
+    "3 - Hacking Web/Log poisoning.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
+    "5 - Hacking Linux/Escribir en terminal de una víctima.md",
+    "5 - Hacking Linux/Path Hijacking.md",
+    "5 - Hacking Linux/Crack etc shadow.md",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "5 - Hacking Linux/Pivoting de usuarios.md",
+    "5 - Hacking Linux/Comandos básicos.md",
+    "5 - Hacking Linux/_index.md",
+    "4 - Hacking Servicios/8080 Apache Tomcat.md",
+    "2 - Hacking genérico/Wireshark.md",
+    "2 - Hacking genérico/Crack keepass fuerza bruta.md",
+    "2 - Hacking genérico/Codificación.md",
+    "2 - Hacking genérico/_index.md",
     "1 - Reconocimiento/Version de servicio y S.O.md",
+    "1 - Reconocimiento/Subdominios y emails.md",
     "1 - Reconocimiento/Nmap.md",
     "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "5 - Hacking Linux/Tratamiento de la TTY.md",
-    "5 - Hacking Linux/Pivoting de usuarios.md",
-    "5 - Hacking Linux/Path Hijacking.md",
-    "5 - Hacking Linux/Escribir en terminal de una víctima.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "5 - Hacking Linux/Crack etc shadow.md",
-    "Ruta/Del",
-    "Ruta",
-    "Pasted image 20240121181825.png"
+    "1 - Reconocimiento/Busqueda de exploits.md",
+    "1 - Reconocimiento/_index.md"
   ]
 }
