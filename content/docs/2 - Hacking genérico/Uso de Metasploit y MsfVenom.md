@@ -8,6 +8,7 @@
 * show options (para ver lo que podemos aplicar en un exploit)
 * set (establecer un parámetro)
 * run (lanzar un exploit)
+* shell (obtener una shell cuando ya hemos establecido una sesión de meterpreter)
 ```
 
 ### Payloads con MsfVenom
