@@ -8,18 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7e57ac5b2880c753",
+            "id": "272f3d58d2446c2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Hacking Windows/Active Directory.md",
+                "file": "Preparación eJPTv2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "74c3e31cc657039f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Personalizar Kali con BSPWM (FACIL).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "33d7002a3afb968b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6 - Hacking Windows/Active Directory.md",
+                "file": "Personalizar Kali con BSPWM (FACIL).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Hacking Windows/Active Directory.md",
+                "file": "Personalizar Kali con BSPWM (FACIL).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Hacking Windows/Active Directory.md"
+                "file": "Personalizar Kali con BSPWM (FACIL).md"
               }
             }
           }
@@ -146,34 +171,35 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "7e57ac5b2880c753",
+  "active": "74c3e31cc657039f",
   "lastOpenFiles": [
-    "6 - Hacking Windows/Escalada Privilegios.md",
+    "Preparación eJPTv2.md",
+    "Personalizar Kali con BSPWM (FACIL).md",
+    "Metodología pentesting.md",
+    "5 - Hacking Linux/Pivoting de usuarios.md",
     "5 - Hacking Linux/Escalada Privilegios.md",
+    "4 - Hacking Servicios/161 SNMP.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "1 - Reconocimiento/Nmap.md",
+    "2 - Hacking genérico/Codificación.md",
+    "1 - Reconocimiento/Descubrir equipos en la red.md",
+    "Links de interés.md",
+    "1 - Reconocimiento/_index.md",
+    "Sin título",
+    "4 - Hacking Servicios/21 FTP.md",
+    "3 - Hacking Web/3. Enumeración web avanzada.md",
+    "3 - Hacking Web/XSS.md",
+    "6 - Hacking Windows/Active Directory.md",
+    "6 - Hacking Windows/Escalada Privilegios.md",
     "3 - Hacking Web/Drupal.md",
     "7 - Pivoting",
     "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
     "3 - Hacking Web/Wordpress.md",
-    "4 - Hacking Servicios/161 SNMP.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
-    "4 - Hacking Servicios/21 FTP.md",
     "2 - Hacking genérico/Reverse Shells.md",
     "2 - Hacking genérico/Esteganografía.md",
     "2 - Hacking genérico/Crack ZIP fuerza bruta.md",
     "3 - Hacking Web/2. Descubrimiento CMS.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
-    "3 - Hacking Web/Log poisoning.md",
-    "5 - Hacking Linux/Escribir en terminal de una víctima.md",
-    "5 - Hacking Linux/Path Hijacking.md",
-    "5 - Hacking Linux/Crack etc shadow.md",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "5 - Hacking Linux/Pivoting de usuarios.md",
-    "5 - Hacking Linux/Comandos básicos.md",
-    "5 - Hacking Linux/_index.md",
-    "4 - Hacking Servicios/8080 Apache Tomcat.md",
-    "2 - Hacking genérico/Wireshark.md",
-    "2 - Hacking genérico/Crack keepass fuerza bruta.md",
-    "2 - Hacking genérico/Codificación.md",
-    "2 - Hacking genérico/_index.md"
+    "3 - Hacking Web/Log poisoning.md"
   ]
 }

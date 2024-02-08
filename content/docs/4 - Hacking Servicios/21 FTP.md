@@ -1,3 +1,7 @@
+### Escaneo vulnerabilidades FTP
+```bash
+nmap <ip> -p <puerto> -n -Pn --script=ftp-anon
+```
 ###  Fuerza bruta FTP con Hydra
 
 ```bash

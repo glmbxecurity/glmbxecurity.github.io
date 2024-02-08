@@ -51,6 +51,13 @@ En ocasiones podemos encontrar credenciales, o aprovechar para ver si hay algo r
 ```bash
 env
 ```
+
+#### Comprobar el historial
+```bash
+history
+
+cat $HOME/.bash_history
+```
 ### Capabilities
 ```bash
 getcap -r / 2>/dev/null
