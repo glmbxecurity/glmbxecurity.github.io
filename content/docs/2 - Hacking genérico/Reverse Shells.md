@@ -6,7 +6,7 @@
 * **Si metemos la reverse shell en la URL, mejor URLencodear el comando**.
 * **Si metemos la reverse shell a través de un comando con un exploit en el terminal,  poner el comando entre comillas**
 
-#### RCE en la URL con BASH
+#### Reverse shell en la URL con BASH
 Si tenemos ejecución remota de comandos a través de una URL, podemos establecer una reverse shell con bash.  Nos ponemos a la escucha y ejecutamos el comando en la URL.
 
 ```bash

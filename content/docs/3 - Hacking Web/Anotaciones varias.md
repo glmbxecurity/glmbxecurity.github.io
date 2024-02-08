@@ -6,3 +6,7 @@ Cuando en una web, vemos algún mensaje o texto que nos indique o nos insinúe q
 
 Cuando encontramos el fichero info.php (fichero de configuración de php), en ocasiones podemos enumerar algún usuario que esté incluído en el fichero. en **Configuration > Apache2handler > User/Group** 
 
+### Id=1
+Cuando tenemos una url en la que se dirige a un perfil, un producto, etc, de la siguiente manera: ```http://ip/product=2```, o ```http://ip/pofile.php&id=1```
+
+
