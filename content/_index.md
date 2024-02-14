@@ -20,12 +20,15 @@ este sitio para compartir contigo mis conocimientos en ciberseguridad y document
  ## Skills
  
  {{< hint warning >}}
- ### CCNA 1 & 2 v7
+ #### WEB Pentesting
+ ##### Linux & Windows Pentesting
+ #### Services Pentesting
+ ##### CCNA 1 & 2 v7
  #### Linux & Bash 
  ##### HTML & CSS 
- ##### Hardware
- #### Active directory 
+ #### Hardware
+ ##### Active directory 
  #### Vmware ESXi & Vcenter 
- #### Trellix ePO Endpoint
+ ##### Trellix ePO Endpoint
 
 {{< /hint >}}
