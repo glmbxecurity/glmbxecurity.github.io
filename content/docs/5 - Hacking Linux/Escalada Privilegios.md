@@ -9,10 +9,11 @@ id
 ```bash
 sudo -l
 ```
-#### Permisos SUID y GUID
+#### Permisos SUID, GUID y Binarios SH
 ```bash
 find / -perm -4000 2>/dev/null
 find / -perm -2000 2>/dev/null
+find / -name *.sh
 ```
 #### Versión de sudo
 con este comando podremos ver la versión de sudo, y se puede buscar alguna vulnerabilidad afectada a la versión.
@@ -138,6 +139,13 @@ Luego ejecutamos una bash y seremos root.
 ```bash
 bash -p
 ```
+
+#### Permiso SUID en /opt
+En este directorio se suelen almacenar scripts y programas que no pertenecen al sistema. Cuando encontramos un binario SUID, o con sudo -L dentro de este directorio hay que investigarlo bien. Para el ejemplo, en la máquina **symfonos 1** , se encontró **/opt/statuscheck**, pertenecía a root, y tenía SUID, esto quiere decir que podíamos ejecutarlo y además como root. 
+
+al hacer un **strings** se vió que contenía el comado **curl** y estaba incluido con ruta relativa y no absoluta, lo que ayudó a acontecer un [Path Hijacking](https://glmbxecurity.github.io/docs/5-hacking-linux/path-hijacking/)
+
+
 ### SUDO -L
 Si encontramos un binario que con ==sudo -l== vemos que podemos ejecutarlo como si fueramos el administrador, podemos buscar en **GTFOBins**
 

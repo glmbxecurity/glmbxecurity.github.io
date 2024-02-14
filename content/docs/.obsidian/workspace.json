@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Preparación eJPTv2.md",
+                "file": "5 - Hacking Linux/Escalada Privilegios.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Preparación eJPTv2.md",
+                "file": "5 - Hacking Linux/Escalada Privilegios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Preparación eJPTv2.md",
+                "file": "5 - Hacking Linux/Escalada Privilegios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Preparación eJPTv2.md"
+                "file": "5 - Hacking Linux/Escalada Privilegios.md"
               }
             }
           }
@@ -148,32 +148,32 @@
   },
   "active": "a23e57df096c810d",
   "lastOpenFiles": [
-    "5 - Hacking Linux/Path Hijacking.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "5 - Hacking Linux/Tratamiento de la TTY.md",
-    "2 - Hacking genérico/Reverse Shells.md",
+    "4 - Hacking Servicios/25 SMTP.md",
     "3 - Hacking Web/Log poisoning.md",
+    "4 - Hacking Servicios/21 FTP.md",
+    "5 - Hacking Linux/Comandos básicos.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "2 - Hacking genérico/Reverse Shells.md",
+    "3 - Hacking Web/LFI.md",
+    "1 - Reconocimiento/Busqueda de exploits.md",
+    "3 - Hacking Web/Wordpress.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "Preparación eJPTv2.md",
+    "5 - Hacking Linux/Path Hijacking.md",
+    "5 - Hacking Linux/Tratamiento de la TTY.md",
     "2 - Hacking genérico/Codificación.md",
     "3 - Hacking Web/Anotaciones varias.md",
     "2 - Hacking genérico/Crack keepass fuerza bruta.md",
     "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
     "3 - Hacking Web/XSS.md",
-    "3 - Hacking Web/Wordpress.md",
     "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/LFI.md",
     "3 - Hacking Web/3. Enumeración web avanzada.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
     "3 - Hacking Web/Fuerza bruta login web.md",
     "1 - Reconocimiento/Nmap.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
     "4 - Hacking Servicios/161 SNMP.md",
-    "Preparación eJPTv2.md",
     "Personalizar Kali con BSPWM (FACIL).md",
-    "5 - Hacking Linux/Pivoting de usuarios.md",
-    "Metodología pentesting.md",
-    "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "Links de interés.md",
-    "1 - Reconocimiento/_index.md",
     "Sin título",
     "7 - Pivoting"
   ]

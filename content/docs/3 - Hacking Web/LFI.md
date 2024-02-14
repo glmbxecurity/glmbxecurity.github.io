@@ -5,6 +5,10 @@
 * /var/log/apache2/access.log
 * /var/log/httpd/access.log
 * /home/$USER/.ssh/id_rsa
+* /var/log/mail.log
+* var/log/maillog
+* /var/mail/helios
+* 
 
 #### Path traversal basics
 ```bash

@@ -23,6 +23,13 @@ hydra -L /usr/share/wordlists/metasploit/unix_users.txt <usuario> -p password123
 	Completamos los datos necesarios y "run"
 ```
 
+### Descargar de forma recursiva todo de un FTP
+```bash
+wget -r ftp://"<user>":"<pass>"@ip
+```
+
+
+
 
 
 

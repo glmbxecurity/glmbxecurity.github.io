@@ -25,7 +25,7 @@
 * arp -a (tabla arp)
 * whoami (usuario actual)
 * id (grupo al que pertenece usuario actual)
-* ps (procesos)
+* ps -aux (procesos)
 * top (procesos en tiempo real)
 * bg (ver procesos en 2º plano)
 * pwd (ver directorio en el que estamos situados)
