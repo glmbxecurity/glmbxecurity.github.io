@@ -4,7 +4,7 @@ bookCollapseSection: true
 title: GlmbXecurity Hacking & Ciberseguridad
 ---
 
-![imagen](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/Banner_V2.jpg)
+![imagen](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/Banner.jpg)
 
 ### About me
 #### 💼 Sysadmin y security area in Ejército de Tierra.
