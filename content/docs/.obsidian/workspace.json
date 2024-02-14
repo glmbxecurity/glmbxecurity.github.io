@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Preparación eJPTv2.md",
+                "file": "Preparación EJPTv2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Preparación eJPTv2.md",
+                "file": "Preparación EJPTv2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Preparación eJPTv2.md",
+                "file": "Preparación EJPTv2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Preparación eJPTv2.md"
+                "file": "Preparación EJPTv2.md"
               }
             }
           }
@@ -163,7 +163,7 @@
     "1 - Reconocimiento/Busqueda de exploits.md",
     "3 - Hacking Web/Wordpress.md",
     "4 - Hacking Servicios/139, 445 SMB.md",
-    "Preparación eJPTv2.md",
+    "Preparación EJPTv2.md",
     "5 - Hacking Linux/Path Hijacking.md",
     "5 - Hacking Linux/Tratamiento de la TTY.md",
     "2 - Hacking genérico/Codificación.md",
