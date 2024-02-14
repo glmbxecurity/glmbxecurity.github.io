@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Reconocimiento/Nmap.md",
+                "file": "Preparación eJPTv2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Reconocimiento/Nmap.md",
+                "file": "Preparación eJPTv2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Reconocimiento/Nmap.md",
+                "file": "Preparación eJPTv2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Reconocimiento/Nmap.md"
+                "file": "Preparación eJPTv2.md"
               }
             }
           }
@@ -148,6 +148,10 @@
   },
   "active": "a23e57df096c810d",
   "lastOpenFiles": [
+    "1 - Reconocimiento/_index.md",
+    "Sin título",
+    "1 - Reconocimiento/Nmap.md",
+    "1 - Reconocimiento/Sin título",
     "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/25 SMTP.md",
     "3 - Hacking Web/Log poisoning.md",
@@ -171,10 +175,7 @@
     "3 - Hacking Web/3. Enumeración web avanzada.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
     "3 - Hacking Web/Fuerza bruta login web.md",
-    "1 - Reconocimiento/Nmap.md",
     "4 - Hacking Servicios/161 SNMP.md",
-    "Personalizar Kali con BSPWM (FACIL).md",
-    "Sin título",
     "7 - Pivoting"
   ]
 }
