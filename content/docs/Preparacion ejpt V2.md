@@ -1,6 +1,6 @@
 ### Introducción
-En este post se detallará todo lo necesario para afrontar esta certificación con éxito, tanto las técnicas necesarias, máquinas para practiar, metodología de examen, contenidos, etc.
-prueba
+En este post se detallará todo lo necesario para afrontar esta certificación con éxito, tanto las técnicas necesarias, máquinas para practiar, metodología de examen, contenidos, etc.  
+
 ### Indice
 [Que es eJPTv2]()
 [El examen]()
