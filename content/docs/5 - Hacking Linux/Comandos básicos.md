@@ -139,8 +139,10 @@
 
 #### Conexion SSH con id_rsa
 
-Teniendo el fichero id_rsa del usuario podemos realizar una conexión. En ocasiones no necesitamos contraseña. En caso de que sí, se puede intentar crackear con [Ataques fuerza bruta](4%20-%20Hacking%20genérico/Ataques%20fuerza%20bruta.md)
+Teniendo el fichero id_rsa del usuario podemos realizar una conexión. En ocasiones no necesitamos contraseña. En caso de que sí, se puede intentar crackear con [Ataques fuerza bruta](4%20-%20Hacking%20genérico/Ataques%20fuerza%20bruta.md)  
+Importante CAMBIAR LOS PEEMISOS A 600  
 ```bash
+chmod 600 id_rsa
 ssh <usuario>@<ip> -i id_rsa
 ```
 <a name="net"></a>

