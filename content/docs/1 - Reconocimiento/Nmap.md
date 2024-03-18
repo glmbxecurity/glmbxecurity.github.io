@@ -17,6 +17,21 @@ nmap 10.10.10.4 -sU --top-ports 200 --min-rate 2000 -Pn -oG fichero.txt
 nmap 10.10.10.4 -p 22,80,445 -n -Pn --min-rate 2000 -sS -sCV -oG fichero.txt
 ```
 
+### Escaneo Nmap como un PRO
+
+Primero realizamos un escaneo básico y extraemos todos los puertos:
+```bash
+nmap -p- <IP> >nmap.txt
+
+cat nmap.txt | tr '/' ' ' | grep "^[0-9]" | awk '{print $1}' | tr '\n' ',' | sed 's/,$/\n/' > nmap
+```
+
+Ahora con todos los puertos obtenidos y separados por comas, podemos copiar ese texto y realizar un escaneo potente:
+
+```bash
+nmap 10.10.10.4 -p 22,80,445 -n -Pn --min-rate 2000 -sS -sCV -oG fichero.txt
+```
+
 ### Scripts Nmap
 ```bash
 # Con la opción -sC utiliza el script por defecto para encontrar vulnerabilidades, si queremos utilizar un script específico, podemos consultar el listado de scripts
