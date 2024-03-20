@@ -64,5 +64,56 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 
 #### Vulnhub
 
-* Dark Hole: 1 - [Writeup](https://www.linkedin.com/posts/edward-herrera-galamba-77a92513b_writeup-ctf-darkhole-vulnhub-activity-7162120686814150656-6t9a?utm_source=share&utm_medium=member_desktop)
-* Symfonos 1 - [Writeup](https://www.linkedin.com/posts/edward-herrera-galamba-77a92513b_symfonos-1-vulnhub-activity-7163626204149886976-P2AI?utm_source=share&utm_medium=member_desktop)
+* Dark Hole 1✔️- [Writeup](https://www.linkedin.com/posts/edward-herrera-galamba-77a92513b_writeup-ctf-darkhole-vulnhub-activity-7162120686814150656-6t9a?utm_source=share&utm_medium=member_desktop)
+* Symfonos 1 ✔️- [Writeup](https://www.linkedin.com/posts/edward-herrera-galamba-77a92513b_symfonos-1-vulnhub-activity-7163626204149886976-P2AI?utm_source=share&utm_medium=member_desktop)
+* Dark Hole 2 ✔️
+* Symfonos 2
+* Symfonos 3
+* Symfonos 5
+* Election
+* Hack me please 1
+* Insanity
+* ICA 1
+* Corrosion 2
+* Venom 1
+* Durian 1
+
+#### HackTheBox
+* Union
+* Validation
+* Return
+* GoodGames
+
+#### Tryhackme
+* Blue✔️
+* Ice
+* Blaster
+* Pentesting Fundamentals
+* Ignite
+* Blog
+* Startup
+* Chill Hack
+* Bolt
+* VulnHet: Internal
+* ColdBox: Easy
+* Basic pentesting
+* Vulnversity ✔️
+* takeover
+* Rootme✔️
+* Pickle rick✔️
+* SkyNet
+* Chocolate factory
+* Easy peasy
+* Corridor
+* Steel Mountain
+* Game Zone
+
+#### PG play
+* Dawn
+* InfosecPrep
+* Seppuku
+* FunBoxEasy
+
+#### HackMyVM
+* Friendly
+* Art
