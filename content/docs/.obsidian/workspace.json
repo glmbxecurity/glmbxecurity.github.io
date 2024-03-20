@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/3. Enumeración web avanzada.md",
+                "file": "2 - Hacking genérico/Reverse Shells.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "curl",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/3. Enumeración web avanzada.md",
+                "file": "2 - Hacking genérico/Reverse Shells.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/3. Enumeración web avanzada.md",
+                "file": "2 - Hacking genérico/Reverse Shells.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/3. Enumeración web avanzada.md"
+                "file": "2 - Hacking genérico/Reverse Shells.md"
               }
             }
           }
@@ -149,6 +148,10 @@
   },
   "active": "a23e57df096c810d",
   "lastOpenFiles": [
+    "2 - Hacking genérico/Local port forwarding.md",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "2 - Hacking genérico/Repositorio git.md",
+    "3 - Hacking Web/3. Enumeración web avanzada.md",
     "3 - Hacking Web/Log poisoning.md",
     "5 - Hacking Linux/Comandos básicos.md",
     "1 - Reconocimiento/Nmap.md",
@@ -158,7 +161,6 @@
     "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/25 SMTP.md",
     "4 - Hacking Servicios/21 FTP.md",
-    "4 - Hacking Servicios/3306 SQL.md",
     "2 - Hacking genérico/Reverse Shells.md",
     "3 - Hacking Web/LFI.md",
     "1 - Reconocimiento/Busqueda de exploits.md",
@@ -173,10 +175,7 @@
     "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
     "3 - Hacking Web/XSS.md",
     "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/3. Enumeración web avanzada.md",
     "3 - Hacking Web/1. Fuzzing Web.md",
-    "3 - Hacking Web/Fuerza bruta login web.md",
-    "4 - Hacking Servicios/161 SNMP.md",
     "7 - Pivoting"
   ]
 }
