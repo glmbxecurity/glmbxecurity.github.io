@@ -2,12 +2,12 @@
 En este post se detallará todo lo necesario para afrontar esta certificación con éxito, tanto las técnicas necesarias, máquinas para practiar, metodología de examen, contenidos, etc.  
 
 ### Indice
-[Que es eJPTv2]()
-[El examen]()
-[Conocimientos necesarios]()
-[Metodología]()
-[Donde prepararse]()
-[Máquinas CTF]()
+* [Que es eJPTv2]()  
+* [El examen]()  
+* [Conocimientos necesarios]()  
+* [Metodología]()  
+* [Donde prepararse]()  
+* [Máquinas CTF]()  
 
 ### Que es eJPTv2
 eLearning Junior Penetration Tester, es una certificación en ciberseguridad 100% práctica ideal para aquellos que se quieran iniciar en la ciberseguridad. Es de las mas asequibles en este campo, pero no por ello es trivial, requiere de esfuerzo, dedicación y mucha práctica.
