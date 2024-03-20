@@ -231,6 +231,14 @@ grep -l <palabra> ./*
 
 #Invertir lineas en un fichero
 tac <fichero_original> >> <fichero_destino>
+
+# Tratamiento con sed (p.e eliminar la ultima coma de una linea)
+	#EXPLICACION: "s" es pra sustitución
+	# ,$ hace referencia a la ultima coma
+	# \n hace referencia a un salto de linea
+	# hay que separar los argumentos con una "/" SIEMPRE
+sed 's/,$/\n/'
+
 ```
 
 ### SQL
