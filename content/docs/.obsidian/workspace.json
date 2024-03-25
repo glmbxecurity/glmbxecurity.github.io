@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a23e57df096c810d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2 - Hacking genérico/Reverse Shells.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f1b7609a5cf3f3ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Preparacion ejpt V2.md"
+                "file": "7 - Proyectos/Certification Authority + ACME.md"
               }
             }
           }
@@ -161,6 +148,9 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "Preparacion ejpt V2.md",
+    "7 - Proyectos/Certification Authority + ACME.md",
+    "7 - Proyectos",
     "2 - Hacking genérico/Local port forwarding.md",
     "4 - Hacking Servicios/3306 SQL.md",
     "2 - Hacking genérico/Repositorio git.md",
@@ -187,8 +177,6 @@
     "2 - Hacking genérico/Crack keepass fuerza bruta.md",
     "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
     "3 - Hacking Web/XSS.md",
-    "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/1. Fuzzing Web.md",
     "7 - Pivoting"
   ]
 }
