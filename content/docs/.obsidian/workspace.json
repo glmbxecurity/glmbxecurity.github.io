@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md"
+                "file": "7 - Proyectos/_index.md"
               }
             }
           }
@@ -148,9 +148,9 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "7 - Proyectos/Certification Authority + ACME.md",
     "7 - Proyectos/_index.md",
     "6 - Hacking Windows/_index.md",
-    "7 - Proyectos/Certification Authority + ACME.md",
     "Preparacion ejpt V2.md",
     "7 - Proyectos",
     "2 - Hacking genérico/Local port forwarding.md",
