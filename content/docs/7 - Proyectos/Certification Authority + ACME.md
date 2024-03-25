@@ -92,13 +92,13 @@ Para que un cliente o servidor pueda confiar en los certificados emitidos por la
 #### Generar certificados auto-renovables
 Ya con todo configurado, nos dirigimos al servidor que queremos certificar y descargamos **win-acme**. Al descomprimir editamos las **URL** para que quede de la siguiente manera:
 ```bash
-    "DefaultBaseUri": "https://caroot.et.ms.esp/acme/acme/directory",
-    "DefaultBaseUriTest": "https://caroot.et.ms.esp/acme/acme/directory",
-    "DefaultBaseUriImport": "https://caroot.et.ms.esp/acme/acme/directory",
+    "DefaultBaseUri": "https://caroot.midominio/acme/acme/directory",
+    "DefaultBaseUriTest": "https://caroot.midominio/acme/acme/directory",
+    "DefaultBaseUriImport": "https://caroot.midominio/acme/acme/directory",
 ```
 
-* Teniendo en cuenta lo configurado en el ca.json. Tanto el ca.json como el DNS deben hacer referencia al mismo nombre: **caroot.et.ms.esp**. 
+* Teniendo en cuenta lo configurado en el ca.json. Tanto el ca.json como el DNS deben hacer referencia al mismo nombre: **caroot.midominio**. 
 
 * Abrir el puerto 80 en el firewall del servidor que queremos certificar y lanzar **wacs.exe** como administrador.
 
-* Elegimos la opción de IIS y seguimos los pasos. En caso de querer crear un certificado manual, por ejemplo para el **cliente1.et.ms.esp**, cuando nos pregunte el nombre, tenemos que darle justo **cliente1.et.ms.esp** ya que hace una validación, y no podemos generar algo que no corresponde a nuestra máquina.
+* Elegimos la opción de IIS y seguimos los pasos. En caso de querer crear un certificado manual, por ejemplo para el **cliente1.midominio**, cuando nos pregunte el nombre, tenemos que darle justo **cliente1.midominio** ya que hace una validación, y no podemos generar algo que no corresponde a nuestra máquina.
