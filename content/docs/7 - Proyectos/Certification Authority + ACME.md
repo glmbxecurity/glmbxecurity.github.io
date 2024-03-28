@@ -128,7 +128,7 @@ Ya con todo configurado, nos dirigimos al servidor que queremos certificar y des
 13. Si queremos crear un nuevo binding para otro sitio, es el momento, sino, por defecto es que no.
 ```
 
-### Generar certificado RSA con validación DNS (No auto-renovable)
+### Generar certificado web RSA con validación DNS (No auto-renovable)
 
 * Primero debemos abrir **Win-acme** desde el terminal. Para evitar problemas, mejor abrir sin caché:
 ```bash
@@ -160,5 +160,23 @@ Esta entrada es temporal y le meteremos como valor el challenge que nos dará wi
 
 Terminará creando el certificado y poniéndolo donde le hayamos dicho en pasos anteriores (sea en una ruta, o en el almacén de certificados).
 
+### Generar certificado a partir de un CSR
 
+#### Con step ca (desde la CA)
+```
+step ca sign request.csr certificado.crt
+
+# Donde request.csr es el CSR generado por el servidor que se quiere certificar, y certificado.crt es el certificado que vamos a generar.
+```
+### Generar certificado de equipo
+Necesitamos un csr generado desde el equipo que se quiere certificar con openssl
+```bash
+openssl req -new -keyout computer.key -out computer.csr -subj "/CN=nombre_del_equipo"
+
+```
+
+luego enviamos este CSR a la CA, y firmamos con
+```bash
+step ca sign request.csr certificado.crt
+```
 
