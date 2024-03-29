@@ -13,7 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
+=======
+                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +89,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< Updated upstream
                 "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
+=======
+                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
+>>>>>>> Stashed changes
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< Updated upstream
                 "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
+=======
+                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
+>>>>>>> Stashed changes
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< Updated upstream
                 "file": "7 - Proyectos/Personalizar Kali con BSPWM.md"
+=======
+                "file": "5 - Hacking Linux/Pivoting de usuarios.md"
+>>>>>>> Stashed changes
               }
             }
           }
@@ -148,9 +164,13 @@
   },
   "active": "dbdd49f90623da7c",
   "lastOpenFiles": [
-    "7 - Proyectos/Certification Authority + ACME.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
     "7 - Proyectos/_index.md",
+<<<<<<< Updated upstream
     "3 - Hacking Web/Log poisoning.md",
+=======
+    "7 - Proyectos/Certification Authority + ACME.md",
+>>>>>>> Stashed changes
     "6 - Hacking Windows/_index.md",
     "Preparacion ejpt V2.md",
     "7 - Proyectos",
@@ -163,7 +183,6 @@
     "1 - Reconocimiento/_index.md",
     "Sin título",
     "1 - Reconocimiento/Sin título",
-    "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/25 SMTP.md",
     "4 - Hacking Servicios/21 FTP.md",
     "2 - Hacking genérico/Reverse Shells.md",
