@@ -13,11 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< Updated upstream
-                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
-=======
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
->>>>>>> Stashed changes
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,11 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< Updated upstream
-                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
-=======
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
->>>>>>> Stashed changes
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,11 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< Updated upstream
-                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
-=======
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md",
->>>>>>> Stashed changes
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,11 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< Updated upstream
-                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md"
-=======
-                "file": "5 - Hacking Linux/Pivoting de usuarios.md"
->>>>>>> Stashed changes
+                "file": "7 - Proyectos/Certification Authority + ACME.md"
               }
             }
           }
@@ -162,15 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dbdd49f90623da7c",
+  "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "7 - Proyectos/_index.md",
-<<<<<<< Updated upstream
-    "3 - Hacking Web/Log poisoning.md",
-=======
+    "7 - Proyectos/Personalizar Kali con BSPWM.md",
     "7 - Proyectos/Certification Authority + ACME.md",
->>>>>>> Stashed changes
+    "7 - Proyectos/_index.md",
+    "3 - Hacking Web/Log poisoning.md",
     "6 - Hacking Windows/_index.md",
     "Preparacion ejpt V2.md",
     "7 - Proyectos",
@@ -183,6 +164,7 @@
     "1 - Reconocimiento/_index.md",
     "Sin título",
     "1 - Reconocimiento/Sin título",
+    "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/25 SMTP.md",
     "4 - Hacking Servicios/21 FTP.md",
     "2 - Hacking genérico/Reverse Shells.md",
@@ -195,7 +177,6 @@
     "5 - Hacking Linux/Tratamiento de la TTY.md",
     "2 - Hacking genérico/Codificación.md",
     "3 - Hacking Web/Anotaciones varias.md",
-    "2 - Hacking genérico/Crack keepass fuerza bruta.md",
     "7 - Pivoting"
   ]
 }
