@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md"
+                "file": "7 - Proyectos/Personalizar Kali con BSPWM.md"
               }
             }
           }
@@ -138,19 +138,19 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "f1b7609a5cf3f3ce",
+  "active": "dbdd49f90623da7c",
   "lastOpenFiles": [
+    "7 - Proyectos/Certification Authority + ACME.md",
     "7 - Proyectos/_index.md",
     "3 - Hacking Web/Log poisoning.md",
-    "7 - Proyectos/Certification Authority + ACME.md",
     "6 - Hacking Windows/_index.md",
     "Preparacion ejpt V2.md",
     "7 - Proyectos",
