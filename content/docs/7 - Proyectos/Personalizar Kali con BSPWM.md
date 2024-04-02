@@ -16,14 +16,16 @@ Script automatizado para tu entorno de hacking. La mayor parte del proyecto se r
 * Instala un wallpaper personalizado
 
 ## Preview del mod
-![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/274f031e-62b5-4e12-a70b-8b66d05e12bc)
-![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/8ef532e7-f5c2-440f-b97e-f431a0543834)
-![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/9299dfce-4309-4eca-8a48-89836110dd72)
-![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/1b0642e8-245a-42af-b08c-80afe67dad07)
+![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/3d7feb37-fd6a-400f-8a9a-2097515f8da0)
+![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/fce236f1-1d92-45ba-b850-76289b354504)
+![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/e76ab0e7-cdb2-45b4-85ed-4e17940b1574)
+![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/58555e54-5980-49bd-be74-0843cd374d7e)
+
 
 
 ## Instalacion
-Introducimos el siguiente comando (NO INTRODUCIRLO COMO ROOT, sino dará PROBLEMAS)
+Introducimos el siguiente comando (NO INTRODUCIRLO COMO ROOT, sino dará PROBLEMAS)  
+IMPOSTANTE: en algun momento nos pedirá reiniciar algun servicio, le decimos que no. Sino nunca se instalará bien  
 ```bash
 sudo apt update && git clone https://github.com/glmbxecurity/Autobspwm && cd Autobspwm && chmod +x install.sh && ./install.sh
 ```  
@@ -44,7 +46,8 @@ El script está preparado para cambiar el layout del teclado al Español de Espa
   
 ## Set target para hacking
 Para establecer un target cuando estamos con un CTF, introducimos el siguiente comando:  
-![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/2c552ea5-d78e-4d5f-87b3-9dae20ec67c0)
+![image](https://github.com/glmbxecurity/Customkali2.0_AutoBSPWM/assets/137443771/b6712c12-0d95-4311-8f7f-240a01e0e9e3)
+
 
 ```bash
 settarget <ip maquina>
@@ -69,7 +72,36 @@ windows + "1,2,3,4,5,6,7,8,9,0" cambiar de escritorio
 windows + shift + "1,2,3,4,5,6,7,8,9,0" cambiar de escritorio la ventana actual al escritorio seleccionado
 ============================================================================================================
 ```
-## Cambiar wallpaper + Wallpapers adicionales
-Si prefieres otro wallpaper, se edita el fichero: ~/.config/bspwm/bspwmrc
-En el repositorio hay un par de wallpapers para descargar y configurar como el que se ve a continuacion
-![wall_adicional2](https://raw.githubusercontent.com/glmbxecurity/Customkali2.0_AutoBSPWM/main/wallpapers_adicionales/wallpaper3.png)
+## Cambiar wallpaper + Wallpapers adicionales  
+Al clonar el repositorio, se descargan wallpapers adicionales.
+Para cambiarlo, se edita el fichero: ~/.config/bspwm/bspwmrc
+![Alt text](https://raw.githubusercontent.com/glmbxecurity/Customkali2.0_AutoBSPWM/main/wallpapers_adicionales/wallpaper1.jpg)
+
+## Extra  
+Si quieres cambiar alguna configuración:  
+* Para personalizar los colores de la terminal, se pueden editar los ficheros /home/kali/.config/kitty/kitty.conf  
+* Para personalizar los colores del prompt, se puede editar el fichero /home/kali/.p10k.zsh
+```bash
+En p10k.zsh los parametros son los siguientes:
+
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232 (Linea 187 del fichero)
+  typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=148 (Linea 188 del fichero)
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐' (linea 190 del fichero)
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=4 (Linea 217 del fichero)
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=254 (Linea 219 del fichero)
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=196 (color path prompt)
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=196 (color primer elemento path prompt)
+  
+
+```
+## Syntax Highhlighting edit
+Si quieres editar el syntax highlighting basta con añadir los parámetros que podemos consultar en el [manual](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md). al final del fichero .zshrc. Un ejemplo:  
+```bash
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue
+```
+
+#### Recursos
+* [Descargar iconos aquí](https://www.nerdfonts.com/cheat-sheet)  
+* **Sacar paleta de colores de powerlevel10k** ``` for i in {0..255}; do print -Pn “%K{$i} %k%F{$i}${(l:3::0:)i}%f “ ${${(M)$((i%6)):#3}:+$’\n’}; done ```

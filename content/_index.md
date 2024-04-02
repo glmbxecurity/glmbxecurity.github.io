@@ -9,7 +9,8 @@ title: GlmbXecurity Hacking & Ciberseguridad
 ### About me
 #### 💼 Sysadmin y security area in Ejército de Tierra.
 #### 📚 ASIR y SMR | Active Directory, VmWare | eJPTv2 (en curso)
-#### 📃 Mi rincón en Github: <a href="https://github.com/glmbxecurity"> GlmbXecurity </a>
+#### 📃 Mi rincón en Github: [GlmbXecurity](https://github.com/glmbxecurity)
+#### 📽️ Youtube: [GlmbXecurity](https://www.youtube.com/channel/UC-74_gwWd1Nt-pOjLc86GPQ)
 
  ### Un poco sobre mí ❤️
  {{< hint warning >}}

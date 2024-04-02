@@ -95,6 +95,7 @@ step ca certificate web1.et.ms.esp certificado.crt clave.key
 #### Importar certificado de CA Root en clientes
 Para que un cliente o servidor pueda confiar en los certificados emitidos por la CA, es IMPRESCINDIBLE que, ya bien de forma automática a través de GPO, o manual instalando el certificado, se instale el certificado de la CA ROOT.
 
+### Solicitar certificados con Win-Acme
 #### Configurar win-acme
 Ya con todo configurado, nos dirigimos al servidor que queremos certificar y descargamos **win-acme**. Al descomprimir editamos las **URL** para que quede de la siguiente manera:
 ```bash
@@ -110,7 +111,7 @@ Ya con todo configurado, nos dirigimos al servidor que queremos certificar y des
 * Configurar el settings para la "autorenovacion", lo ideal es que sea cada 24h, y en el ca.json se tenga que caduquen los certificados cada 48h. (asi tenemos 24h de margen entre la caducidad y la renovación).
 
 
-### Generar certificado autorenovable IIS
+#### Generar certificado autorenovable IIS
 * Abrir **win-acme** como administrador, y veremos un menú que iremos contestando preguntas:
 ```bash
 1. Create certificate (full options)
@@ -128,7 +129,7 @@ Ya con todo configurado, nos dirigimos al servidor que queremos certificar y des
 13. Si queremos crear un nuevo binding para otro sitio, es el momento, sino, por defecto es que no.
 ```
 
-### Generar certificado web RSA con validación DNS (No auto-renovable)
+#### Generar certificado web RSA con validación DNS (No auto-renovable)
 
 * Primero debemos abrir **Win-acme** desde el terminal. Para evitar problemas, mejor abrir sin caché:
 ```bash
@@ -169,12 +170,15 @@ step ca sign request.csr certificado.crt
 # Donde request.csr es el CSR generado por el servidor que se quiere certificar, y certificado.crt es el certificado que vamos a generar.
 ```
 ### Generar certificado de equipo
+
+#### Generar request con OpenSSL
 Necesitamos un csr generado desde el equipo que se quiere certificar con openssl
 ```bash
 openssl req -new -keyout computer.key -out computer.csr -subj "/CN=nombre_del_equipo"
 
 ```
 
+#### Firma del request con step ca
 luego enviamos este CSR a la CA, y firmamos con
 ```bash
 step ca sign request.csr certificado.crt
