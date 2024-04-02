@@ -180,3 +180,7 @@ luego enviamos este CSR a la CA, y firmamos con
 step ca sign request.csr certificado.crt
 ```
 
+### Tipo de certificado (segun servidor)
+	* JCHAT: WEB tipo PEM
+	* EPO: WEB tipo PEM
+	* IIS: autorenovable IIS
