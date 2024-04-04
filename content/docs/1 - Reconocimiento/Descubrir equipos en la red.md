@@ -19,3 +19,10 @@ en caso de haber un equipo, ej: 10.10.54.25/16, y estuviera activo, lo veríamos
 
 **Las maquinas virtuales comienzan con la mac 08:00:... y tener un branding de PCS Systemtechnik**
 
+### MAC's típicas de Máquina Virtual
+* 08:00:XX:XX:XX:XX
+* 00:0c:29:XX:XX:XX
+#### Brandings de MV
+* PCS Systemtechnik
+* Vmware
+
