@@ -12,14 +12,14 @@ cd
 mkdir .ssh && chmod 700 .ssh
 touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
 apt install git
-mkdir <nombre_repositorio>
+mkdir <nombre_repositorio.git>
 cd !$
 git init --bare
 git config --global user.mail "tu_email"
 git config --global user.name "Nombre.apellidos"
 ```
 
-Si queremos usar mi plantilla, clonamos mi repositorio, se elimina el contenido del directorio content, y se edita la plantilla para personalizarla. (en content es donde irán los post.). sino, puedes buscar una plantilla por internet que te guste.
+Si queremos usar mi plantilla, clonamos mi repositorio, se elimina el contenido del directorio content y todo lo relacionado con git, y se edita la plantilla para personalizarla. (en content es donde irán los post.). sino, puedes buscar una plantilla por internet que te guste.
 ```bash
 git clone 'https://github.com/glmbxecurity/glmbxecurity.github.io'
 cd glmbxecurity.github.io
@@ -36,6 +36,16 @@ En el servidor git, metemos la clave publica del usuario/editor en authorized ke
 cat /id_rsa.pub >> /home/git/.ssh/authorized_keys
 ```
 
+### Primera inicializacion
+El directorio creado en el servidor donde se inicializó, no es el directorio de trabajo donde estará el contenido, sino es un directorio sobre el que trabaja el servidor para controlar los cambios. Como queremos montar un servidor web, debemos de clonar el repositorio a un directorio diferente (que este sí contendrá los ficheros de la web).
+
+```bash
+mkdir documentacion_server
+git clone git@ip:/ruta_al_repositorio.git>
+git add *
+git commit -m "primera inicializacion"
+git push origin master
+```
 ### Montar y editar la web
 Instalamos pre-requisitos
 ```bash
@@ -67,7 +77,7 @@ themes/hugo-book/assets/_custom.scss
 
 Para lanzar la web, nos posicionamos en el directorio del repositorio y ejecutamos:
 ```bash
-hugo server --bind <ip_del_servidor> -p 80
+hugo server --bind <ip_del_servidor>
 ```
 
 ### Editar la web (Colaboradores)
@@ -83,7 +93,7 @@ git config --global user.name "Nombre.apellidos"
 git clone https://ruta_al_repo.git
 
 # Si es alojado en una organizacion
-git clone usuario@ip:/ruta_al_repo/
+git clone git@ip:/ruta_al_repo.git/
 ```
 
 Abrimos obsidian y editamos la web. Si es la primera vez:
@@ -159,4 +169,12 @@ systemctl stop nginx
 
 #### IMPORTANTE
 Cada vez que se realicen modificaciones/cambios en la web, para que se vea reflejado en nginx, hay lanzar el comando **hugo** en la raíz del repositorio.
+
+Cuando se crean ficheros desde el colaborador, cambia el propietario, hay que cambiar el propietario para poder lanzar **hugo**.
+```bash
+chown -R git:git *
+hugo
+```
+
+
 
