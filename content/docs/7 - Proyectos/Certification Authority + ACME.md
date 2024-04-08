@@ -13,10 +13,9 @@ En este laboratorio instalaremos una CA standalone, en un dominio ficticio de em
 
 * Máquina Wserver 2019 controlador de dominio + DNS + IIS
 * Máquina Ubuntu 22.04 CA Root
-* Máquina Ubuntu 22.04 CA Subordinada
 * Máquina Windows 10 Cliente para hacer pruebas
 
-Partiremos de que tenemos un DC instalado y configurado, con direccionamiento estático, y el rol de IIS activado. El cliente windows 10 unido al dominio, y las máquinas ubuntu actualizadas. Al menos las máquinas ubuntu requieren de acceso a internet para descargar el software de CA (Step-CA).
+Partiremos de que tenemos un DC instalado y configurado, con direccionamiento estático, y el rol de IIS activado. El cliente windows 10 unido al dominio, y la máquina ubuntu actualizadas Al menos la máquina ubuntu requiere de acceso a internet para descargar el software de CA (Step-CA).
 
 #### Instalación Step-CA
 
@@ -184,7 +183,15 @@ luego enviamos este CSR a la CA, y firmamos con
 step ca sign request.csr certificado.crt
 ```
 
+## Crear CASUB en Linux (Pdte probar)
+Partiendo que ya tenemos una CA ROOT, nos creamos una maquina llamada CA SUB, y descargamos el software de CA, configuramos direccionamiento y hostname. Posteriormente, teniendo el certificado y la key de la ROOT:
+```bash
+step ca init --root=[ROOT_CERT_FILE] --key=[ROOT_PRIVATE_KEY_FILE]
+```
+
+
 ### Tipo de certificado (segun servidor)
 	* JCHAT: WEB tipo PEM
 	* EPO: WEB tipo PEM
 	* IIS: autorenovable IIS
+	* Vcenter: tipo CASUB

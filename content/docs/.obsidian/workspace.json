@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
+                "file": "7 - Proyectos/Certification Authority + ACME.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md"
+                "file": "7 - Proyectos/Certification Authority + ACME.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
     "7 - Proyectos/_index.md",
     "7 - Proyectos/Certification Authority + ACME.md",
     "7 - Proyectos/Personalizar Kali con BSPWM.md",
-    "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
     "7 - Proyectos/Servidor VPN privado + PiHole.md",
     "1 - Reconocimiento/Descubrir equipos en la red.md",
     "1 - Reconocimiento/Subdominios y emails.md",
