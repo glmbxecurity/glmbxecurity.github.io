@@ -176,5 +176,7 @@ chown -R git:git *
 hugo
 ```
 
+### Hosteo en Github Pages (Pdte desarrollo)
+
 
 
