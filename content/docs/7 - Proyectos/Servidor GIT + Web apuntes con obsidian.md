@@ -120,11 +120,9 @@ git push origin master
 
 ### Hosteo web con NGINX
 
-{{ < hint warning >}}
-
+#### Importante tener en cuenta
 Al lanzar el comando **hugo** en la raíz del repositorio, se construye la web e el directorio **public**. Esto es importante saberlo, ya que si realizamos cambios y no tenemos hugo corriendo, habrá que lanzarlo para que se actualize el directorio public con los nuevos cambios. De lo contrario nunca veremos nuestra web actualizada.
 
-{{< /hint >}}
 
 Instalar servicio, y crear un fichero de configuracion del sitio, partiendo del default.
 ```bash
