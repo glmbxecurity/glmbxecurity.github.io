@@ -58,7 +58,10 @@ _index.md
 static/favicon
 
 # CSS
-themes/hugo-book/assets
+themes/hugo-book/assets/_main.scss
+
+# Color de titulos
+themes/hugo-book/assets/_custom.scss
 
 ```
 
@@ -105,4 +108,55 @@ git push origin master
 * git push origin master
 ```
 
+### Hosteo web con NGINX
+
+{{ < hint warning >}}
+
+Al lanzar el comando **hugo** en la raíz del repositorio, se construye la web e el directorio **public**. Esto es importante saberlo, ya que si realizamos cambios y no tenemos hugo corriendo, habrá que lanzarlo para que se actualize el directorio public con los nuevos cambios. De lo contrario nunca veremos nuestra web actualizada.
+
+{{< /hint >}}
+
+Instalar servicio, y crear un fichero de configuracion del sitio, partiendo del default.
+```bash
+apt install nginx
+cd /etc/nginx/sites-available
+cp default documentacion_server
+ln -s /etc/nginx/sites-available/documentacion_server /etc/nginx/sites-enabled/documentacion_server
+vim mysite
+```
+
+La configuración tendrá la siguiente pinta:
+```bash
+server { 
+	listen 80; 
+	listen [::]:80; 
+	
+	server_name mysite.com www.mysite.com; 
+	root /var/www/documentacion_server/public; 
+	index index.html; 
+	
+	location / { 
+		try_files $uri $uri/ =404; 
+	} 
+}
+```
+
+Ya que tenemos la "web" en un repositorio en algun lugar del servior, deberemos enlazar este repositorio con el lugar donde dijimos a nginx que debía leer los ficheros web.
+```bash
+ln -s /documentacion_server /var/www/documentacion_server
+```
+
+Para comprobar la configuracion
+```bash
+service nginx configtest
+```
+
+Lanzar y parar el servicio
+```bash
+systemctl start nginx
+systemctl stop nginx
+```
+
+#### IMPORTANTE
+Cada vez que se realicen modificaciones/cambios en la web, para que se vea reflejado en nginx, hay lanzar el comando **hugo** en la raíz del repositorio.
 

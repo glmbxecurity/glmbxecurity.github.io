@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "28a7728eccd9e073",
@@ -147,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dbdd49f90623da7c",
+  "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
     "7 - Proyectos/Servidor VPN privado + PiHole.md",
     "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
