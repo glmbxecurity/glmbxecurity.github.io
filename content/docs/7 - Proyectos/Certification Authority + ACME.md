@@ -183,6 +183,7 @@ luego enviamos este CSR a la CA, y firmamos con
 step ca sign request.csr certificado.crt
 ```
 
+<<<<<<< Updated upstream
 ### Certificar Exchange (Autorenovable)
 En el DNS deben estar creadas las entradas:
 + mail
@@ -196,6 +197,45 @@ wacs.exe --source manual --host mail.example.com,webmail.example.com,autodiscove
 Partiendo que ya tenemos una CA ROOT, nos creamos una maquina llamada CA SUB, y descargamos el software de CA, configuramos direccionamiento y hostname. Posteriormente, teniendo el certificado y la key de la ROOT:
 ```bash
 step ca init --root=[ROOT_CERT_FILE] --key=[ROOT_PRIVATE_KEY_FILE]
+=======
+### Certificar Vcenter con step ca
+
+Se abre una consola de shell en vcenter:
+
+#### Generar y exportar CSR y PrivateKey
+```bash
+#Entramos en una shell con el comando "shell"
+
+#Si la shell está deshabilitada:
+shell.set --enabled true
+
+# Crear un directorio y entrar en el
+mkdir CA && cd ca
+
+# Lanzar manager de certificados
+/usr/lib/vmware-vmca/bin/certificate-manager
+
+# Opcion 1 (replace machine ssl certificate with custom certificate)
+
+# Pedirá credenciales con permisos
+
+# Opcion 1 (generate CSR)
+# Path: ./
+# En las preguntas, todo por defecto si se quiere, hata el punto que pide el "hostname". se introduce el FQDN. En el proximo paso igual
+
+# Ahora genera el 'CSR' y la 'Privatekey'.
+Los debemos extraer con un cliente SFTP (Bitvise, FIlezilla, etc). Desde la CAsub o el propio vcenter ejecutamos:
+
+sftp usuario@ip
+
+put vmca_issued_csr,csr
+put vmca_issued_key.key
+
+o
+get vmca_issued_csr,csr
+get vmca_issued_key.key
+
+>>>>>>> Stashed changes
 ```
 
 
@@ -203,5 +243,10 @@ step ca init --root=[ROOT_CERT_FILE] --key=[ROOT_PRIVATE_KEY_FILE]
 	* JCHAT: WEB tipo PEM
 	* EPO: WEB tipo PEM
 	* IIS: autorenovable IIS
+<<<<<<< Updated upstream
 	* Vcenter: tipo CASUB
 	* Exchange: WEB tipo CER
+=======
+	* Vcenter: WEB con CSR
+
+>>>>>>> Stashed changes
