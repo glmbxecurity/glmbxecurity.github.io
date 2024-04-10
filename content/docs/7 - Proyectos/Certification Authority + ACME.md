@@ -94,6 +94,12 @@ step ca certificate web1.et.ms.esp certificado.crt clave.key
 #### Importar certificado de CA Root en clientes
 Para que un cliente o servidor pueda confiar en los certificados emitidos por la CA, es IMPRESCINDIBLE que, ya bien de forma automática a través de GPO, o manual instalando el certificado, se instale el certificado de la CA ROOT.
 
+## Crear CASUB en Linux (Pdte probar)
+Partiendo que ya tenemos una CA ROOT, nos creamos una maquina llamada CA SUB, y descargamos el software de CA, configuramos direccionamiento y hostname. Posteriormente, teniendo el certificado y la key de la ROOT:
+```bash
+step ca init --root=[ROOT_CERT_FILE] --key=[ROOT_PRIVATE_KEY_FILE]
+```
+
 ### Solicitar certificados con Win-Acme
 #### Configurar win-acme
 Ya con todo configurado, nos dirigimos al servidor que queremos certificar y descargamos **win-acme**. Al descomprimir editamos las **URL** para que quede de la siguiente manera:
@@ -128,7 +134,7 @@ Ya con todo configurado, nos dirigimos al servidor que queremos certificar y des
 13. Si queremos crear un nuevo binding para otro sitio, es el momento, sino, por defecto es que no.
 ```
 
-#### Generar certificado web RSA con validación DNS (No auto-renovable)
+#### Generar certificado web con validación DNS (No auto-renovable)
 
 * Primero debemos abrir **Win-acme** desde el terminal. Para evitar problemas, mejor abrir sin caché:
 ```bash
@@ -168,37 +174,22 @@ step ca sign request.csr certificado.crt
 
 # Donde request.csr es el CSR generado por el servidor que se quiere certificar, y certificado.crt es el certificado que vamos a generar.
 ```
-### Generar certificado de equipo
 
-#### Generar request con OpenSSL
-Necesitamos un csr generado desde el equipo que se quiere certificar con openssl
-```bash
-openssl req -new -keyout computer.key -out computer.csr -subj "/CN=nombre_del_equipo"
 
-```
+#### Certificar Exchange (Autorenovable)
 
-#### Firma del request con step ca
-luego enviamos este CSR a la CA, y firmamos con
-```bash
-step ca sign request.csr certificado.crt
-```
-
-<<<<<<< Updated upstream
-### Certificar Exchange (Autorenovable)
 En el DNS deben estar creadas las entradas:
 + mail
 + webmail
 + autodiscover
 + (el nombre de la maquina/host)
+
+Luego con win-acme:
 ```bash
 wacs.exe --source manual --host mail.example.com,webmail.example.com,autodiscover.example.com,host.et.ms.esp --certificatestore My --acl-fullcontrol "network service,administrators" --installation iis,script --installationsiteid 1 --script "./Scripts/ImportExchange.v2.ps1" --scriptparameters "'{CertThumbprint}' 'IIS,SMTP,IMAP' 1 '{CacheFile}' '{CachePassword}' '{CertFriendlyName}'"
 ```
-## Crear CASUB en Linux (Pdte probar)
-Partiendo que ya tenemos una CA ROOT, nos creamos una maquina llamada CA SUB, y descargamos el software de CA, configuramos direccionamiento y hostname. Posteriormente, teniendo el certificado y la key de la ROOT:
-```bash
-step ca init --root=[ROOT_CERT_FILE] --key=[ROOT_PRIVATE_KEY_FILE]
-=======
-### Certificar Vcenter con step ca
+
+### Certificar Vcenter y ESXi con step ca
 
 Se abre una consola de shell en vcenter:
 
@@ -235,18 +226,15 @@ o
 get vmca_issued_csr,csr
 get vmca_issued_key.key
 
->>>>>>> Stashed changes
 ```
+
+
 
 
 ### Tipo de certificado (segun servidor)
 	* JCHAT: WEB tipo PEM
 	* EPO: WEB tipo PEM
 	* IIS: autorenovable IIS
-<<<<<<< Updated upstream
 	* Vcenter: tipo CASUB
 	* Exchange: WEB tipo CER
-=======
 	* Vcenter: WEB con CSR
-
->>>>>>> Stashed changes
