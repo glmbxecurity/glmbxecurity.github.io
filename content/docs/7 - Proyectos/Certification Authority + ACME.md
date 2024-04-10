@@ -183,6 +183,15 @@ luego enviamos este CSR a la CA, y firmamos con
 step ca sign request.csr certificado.crt
 ```
 
+### Certificar Exchange (Autorenovable)
+En el DNS deben estar creadas las entradas:
++ mail
++ webmail
++ autodiscover
++ (el nombre de la maquina/host)
+```bash
+wacs.exe --source manual --host mail.example.com,webmail.example.com,autodiscover.example.com,host.et.ms.esp --certificatestore My --acl-fullcontrol "network service,administrators" --installation iis,script --installationsiteid 1 --script "./Scripts/ImportExchange.v2.ps1" --scriptparameters "'{CertThumbprint}' 'IIS,SMTP,IMAP' 1 '{CacheFile}' '{CachePassword}' '{CertFriendlyName}'"
+```
 ## Crear CASUB en Linux (Pdte probar)
 Partiendo que ya tenemos una CA ROOT, nos creamos una maquina llamada CA SUB, y descargamos el software de CA, configuramos direccionamiento y hostname. Posteriormente, teniendo el certificado y la key de la ROOT:
 ```bash
@@ -195,3 +204,4 @@ step ca init --root=[ROOT_CERT_FILE] --key=[ROOT_PRIVATE_KEY_FILE]
 	* EPO: WEB tipo PEM
 	* IIS: autorenovable IIS
 	* Vcenter: tipo CASUB
+	* Exchange: WEB tipo CER
