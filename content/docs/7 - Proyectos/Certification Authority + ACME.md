@@ -91,6 +91,11 @@ Desde la propia CA, donde primero le pasamos el nombre, luego el certificado a e
 step ca certificate web1.et.ms.esp certificado.crt clave.key
 ```
 
+#### Certificado con tiempo de expiración personalizado
+```bash
+step ca certificate --not-after="2025-04-11T00:00:00Z" dominio.local certificado.crt clave.key
+```
+
 #### Importar certificado de CA Root en clientes
 Para que un cliente o servidor pueda confiar en los certificados emitidos por la CA, es IMPRESCINDIBLE que, ya bien de forma automática a través de GPO, o manual instalando el certificado, se instale el certificado de la CA ROOT.
 
@@ -236,5 +241,9 @@ get vmca_issued_key.key
 	* EPO: WEB tipo PEM
 	* IIS: autorenovable IIS
 	* Vcenter: tipo CASUB
+<<<<<<< Updated upstream
 	* Exchange: WEB tipo CER
+=======
+	* Exchange: autorenovable con comando "específico"
+>>>>>>> Stashed changes
 	* Vcenter: WEB con CSR
