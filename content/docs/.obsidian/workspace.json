@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/Vaultwarden Password Manager.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/Vaultwarden Password Manager.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md",
+                "file": "7 - Proyectos/Vaultwarden Password Manager.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 - Proyectos/Certification Authority + ACME.md"
+                "file": "7 - Proyectos/Vaultwarden Password Manager.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "7 - Proyectos/Vaultwarden Password Manager.md",
     "7 - Proyectos/Certification Authority + ACME.md",
+    "7 - Proyectos/Vaultwarden Password Manager.md",
     "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
     "7 - Proyectos/_index.md",
     "7 - Proyectos/Personalizar Kali con BSPWM.md",

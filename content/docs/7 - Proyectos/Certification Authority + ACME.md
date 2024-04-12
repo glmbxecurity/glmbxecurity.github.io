@@ -194,56 +194,10 @@ Luego con win-acme:
 wacs.exe --source manual --host mail.example.com,webmail.example.com,autodiscover.example.com,host.et.ms.esp --certificatestore My --acl-fullcontrol "network service,administrators" --installation iis,script --installationsiteid 1 --script "./Scripts/ImportExchange.v2.ps1" --scriptparameters "'{CertThumbprint}' 'IIS,SMTP,IMAP' 1 '{CacheFile}' '{CachePassword}' '{CertFriendlyName}'"
 ```
 
-### Certificar Vcenter y ESXi con step ca
-
-Se abre una consola de shell en vcenter:
-
-#### Generar y exportar CSR y PrivateKey
-```bash
-#Entramos en una shell con el comando "shell"
-
-#Si la shell está deshabilitada:
-shell.set --enabled true
-
-# Crear un directorio y entrar en el
-mkdir CA && cd ca
-
-# Lanzar manager de certificados
-/usr/lib/vmware-vmca/bin/certificate-manager
-
-# Opcion 1 (replace machine ssl certificate with custom certificate)
-
-# Pedirá credenciales con permisos
-
-# Opcion 1 (generate CSR)
-# Path: ./
-# En las preguntas, todo por defecto si se quiere, hata el punto que pide el "hostname". se introduce el FQDN. En el proximo paso igual
-
-# Ahora genera el 'CSR' y la 'Privatekey'.
-Los debemos extraer con un cliente SFTP (Bitvise, FIlezilla, etc). Desde la CAsub o el propio vcenter ejecutamos:
-
-sftp usuario@ip
-
-put vmca_issued_csr,csr
-put vmca_issued_key.key
-
-o
-get vmca_issued_csr,csr
-get vmca_issued_key.key
-
-```
-
-
-
-
 ### Tipo de certificado (segun servidor)
 	* JCHAT: WEB tipo PEM
 	* EPO: WEB tipo PEM
 	* IIS: autorenovable IIS
 	* Vcenter: tipo CASUB
-<<<<<<< Updated upstream
-	* Exchange: WEB tipo CER
-=======
 	* Exchange: autorenovable con comando "específico"
->>>>>>> Stashed changes
 	* Vcenter: WEB con CSR
