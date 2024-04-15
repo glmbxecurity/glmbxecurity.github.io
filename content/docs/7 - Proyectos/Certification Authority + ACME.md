@@ -201,3 +201,4 @@ wacs.exe --source manual --host mail.example.com,webmail.example.com,autodiscove
 	* Vcenter: tipo CASUB
 	* Exchange: autorenovable con comando "específico"
 	* Vcenter: WEB con CSR
+	* ESXi: Automatico con Vcenter
