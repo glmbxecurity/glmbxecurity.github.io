@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7 - Proyectos/Vaultwarden Password Manager.md",
+                "file": "4 - Hacking Servicios/22 SSH.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7 - Proyectos/Vaultwarden Password Manager.md",
+                "file": "4 - Hacking Servicios/22 SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7 - Proyectos/Vaultwarden Password Manager.md",
+                "file": "4 - Hacking Servicios/22 SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7 - Proyectos/Vaultwarden Password Manager.md"
+                "file": "4 - Hacking Servicios/22 SSH.md"
               }
             }
           }
@@ -138,16 +138,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "2 - Hacking genérico/Local port forwarding.md",
+    "4 - Hacking Servicios/22 SSH.md",
+    "5 - Hacking Linux/_index.md",
+    "5 - Hacking Linux/Comandos básicos.md",
+    "5 - Hacking Linux/Crack etc shadow.md",
+    "5 - Hacking Linux/Escalada Privilegios.md",
+    "5 - Hacking Linux/Escribir en terminal de una víctima.md",
+    "5 - Hacking Linux/Path Hijacking.md",
+    "5 - Hacking Linux/Pivoting de usuarios.md",
+    "5 - Hacking Linux/Tratamiento de la TTY.md",
+    "4 - Hacking Servicios/21 FTP.md",
+    "2 - Hacking genérico/Cracking fuerza bruta.md",
+    "2 - Hacking genérico/Crack keepass fuerza bruta.md",
+    "2 - Hacking genérico/Crack ZIP fuerza bruta.md",
     "7 - Proyectos/Certification Authority + ACME.md",
     "7 - Proyectos/Vaultwarden Password Manager.md",
     "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
@@ -161,22 +175,8 @@
     "6 - Hacking Windows/_index.md",
     "Preparacion ejpt V2.md",
     "7 - Proyectos",
-    "2 - Hacking genérico/Local port forwarding.md",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "2 - Hacking genérico/Repositorio git.md",
-    "3 - Hacking Web/3. Enumeración web avanzada.md",
-    "5 - Hacking Linux/Comandos básicos.md",
-    "1 - Reconocimiento/Nmap.md",
-    "1 - Reconocimiento/_index.md",
     "Sin título",
     "1 - Reconocimiento/Sin título",
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "4 - Hacking Servicios/25 SMTP.md",
-    "4 - Hacking Servicios/21 FTP.md",
-    "2 - Hacking genérico/Reverse Shells.md",
-    "3 - Hacking Web/LFI.md",
-    "1 - Reconocimiento/Busqueda de exploits.md",
-    "3 - Hacking Web/Wordpress.md",
     "7 - Pivoting"
   ]
 }

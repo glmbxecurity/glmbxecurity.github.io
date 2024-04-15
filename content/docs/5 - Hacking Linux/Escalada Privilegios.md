@@ -59,6 +59,13 @@ history
 
 cat $HOME/.bash_history
 ```
+
+#### Comprobar servicios locales
+En ocasiones tenemos servicios como Mysql o algun panel de admin que solo funciona desde la máquina local, hay 2 maneras:
+```bash
+netstat -tuln
+ss -tuln
+```
 ### Capabilities
 ```bash
 getcap -r / 2>/dev/null

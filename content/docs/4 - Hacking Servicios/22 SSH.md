@@ -41,3 +41,7 @@ Completamos los datos y "run"
 # METASPLOIT es un poco mas lento que hydra.
 ```
 
+### Reenvio de puertos ssh
+También llamado local port forwarding ![[Local port forwarding]]
+
+

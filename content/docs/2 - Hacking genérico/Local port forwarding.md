@@ -1,3 +1,4 @@
+### How to
 Cuando tenemos acceso a una máquina, hay servicios que por algun motivo solo están corriendo para el "localhost". A veces nos interesa acceder a ese servicio ya que puede ser un panel web de administración, por ejemplo.
 
 Supongamos una máquina que corre un servicio web en el puerto 9999 y lo queremos ver desde nuestro equipo en el puerto 8080.
