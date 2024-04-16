@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Hacking Servicios/22 SSH.md",
+                "file": "Preparacion ejpt V2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Hacking Servicios/22 SSH.md",
+                "file": "Preparacion ejpt V2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 - Hacking Servicios/22 SSH.md",
+                "file": "Preparacion ejpt V2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Hacking Servicios/22 SSH.md"
+                "file": "Preparacion ejpt V2.md"
               }
             }
           }
@@ -148,8 +148,24 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "2 - Hacking genérico/Local port forwarding.md",
+    "8 - Writeups/_index.md",
+    "8 - Writeups/Vulnhub - Darkhole2.md",
+    "Pasted image 20240416161224.png",
+    "Pasted image 20240416172336.png",
+    "Pasted image 20240416172125.png",
+    "Pasted image 20240416171942.png",
+    "Pasted image 20240416171026.png",
+    "Pasted image 20240416171009.png",
+    "Pasted image 20240416170915.png",
+    "Pasted image 20240416165342.png",
+    "Pasted image 20240416165325.png",
+    "Pasted image 20240416164902.png",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "Preparacion ejpt V2.md",
+    "7 - Proyectos/_index.md",
+    "8 - Writeups",
     "4 - Hacking Servicios/22 SSH.md",
+    "2 - Hacking genérico/Local port forwarding.md",
     "5 - Hacking Linux/_index.md",
     "5 - Hacking Linux/Comandos básicos.md",
     "5 - Hacking Linux/Crack etc shadow.md",
@@ -165,15 +181,9 @@
     "7 - Proyectos/Certification Authority + ACME.md",
     "7 - Proyectos/Vaultwarden Password Manager.md",
     "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
-    "7 - Proyectos/_index.md",
     "7 - Proyectos/Personalizar Kali con BSPWM.md",
     "7 - Proyectos/Servidor VPN privado + PiHole.md",
     "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "1 - Reconocimiento/Subdominios y emails.md",
-    "1 - Reconocimiento/Version de servicio y S.O.md",
-    "3 - Hacking Web/Log poisoning.md",
-    "6 - Hacking Windows/_index.md",
-    "Preparacion ejpt V2.md",
     "7 - Proyectos",
     "Sin título",
     "1 - Reconocimiento/Sin título",
