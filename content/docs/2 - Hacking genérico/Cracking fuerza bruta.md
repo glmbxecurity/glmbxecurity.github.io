@@ -1,3 +1,11 @@
+#### IMPORTANTE AL USAR JOHN
+Al crackear hashes a veces no nos muestra en la salida del programa la clave, para verla basta con ejecutar:
+```bash
+john --show <nombre_del_fichero_crackeado>
+
+#EJEMPLO
+john --show hash
+```
 ### Cracking ZIP
 #### Con FcrackZIP
 
@@ -47,3 +55,29 @@ SEGUNDO
 ```bash
 john --wordlist="diccionario" unshadowed.txt
 ```
+
+### Cracking ficheros GPG cifrados
+Teniendo un fichero **.pgp** y su clave **.asc** se puede descifrar el fichero, pero el proceso suele requerir de la "clave/passphrase" para el .asc. Para ello se puede crackear con john the ripper y luego descifrar el fichero.
+
+1º convertir la clave.asc en un fichero hash entendible para john
+```bash
+gpg2john clave.asc hash
+```
+
+2º crackear el hash
+```bash
+john hash --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
+3º importar la clave
+```bash
+gpg --import clave.asc
+```
+
+4º desencriptar el fichero gpg con la clave.asc y el "pasphrase" obtenido anteriormente con john
+```bash
+gpg --decrypt fichero.gpg clave.asc
+```
+
+
+
