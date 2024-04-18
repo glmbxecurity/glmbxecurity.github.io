@@ -227,6 +227,17 @@ Este script, establece al usuario root, la **contraseña: "toor"**
 #!/bin/bash  
 echo -e "toor\ntoor" | passwd root
 ```
+
+### Escalada privilegios con man
+Tanto escalada como pivoting, si podemos ejecutar un binario como otro usuario (Sudo -L), y este binario tiene un manual, este se nos abre con vim. Lo que ocurre es que vim tiene un modo de comandos, en el que facilmente podemos hacer un:
+```bash
+!/bin/bash
+```
+
+y nos lanzamos una bash como ese usuario con el que ejecutamos el binario.
+```bash
+sudo -u usuario /bin/binario
+```
 ### Herramientas automatizadas escalada privilegios
 
 #### LES (Linux exploit suggester)
