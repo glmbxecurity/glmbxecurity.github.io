@@ -36,7 +36,7 @@ uname -r
 ```
 
 #### Comprobar grupos
-A veces nuestro usuario no tiene privilegios, pero si el grupo al que pertenece
+A veces nuestro usuario no tiene privilegios, pero si el grupo al que pertenece.
 ```bash
 id
 find / -group "grupo" 2>/dev/null
@@ -238,6 +238,11 @@ y nos lanzamos una bash como ese usuario con el que ejecutamos el binario.
 ```bash
 sudo -u usuario /bin/binario
 ```
+
+### Vulnerabilidad lxd
+si el usuario pertenede al grupo lxd, (comprobar con comando id), existe un exploit para escalar privilegios a root.
+https://github.com/initstring/lxd_root
+
 ### Herramientas automatizadas escalada privilegios
 
 #### LES (Linux exploit suggester)
