@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/LFI.md",
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/LFI.md",
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/LFI.md",
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/LFI.md"
+                "file": "1 - Reconocimiento/Descubrir equipos en la red.md"
               }
             }
           }
@@ -148,6 +148,17 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "1 - Reconocimiento/Nmap.md",
+    "1 - Reconocimiento/Descubrir equipos en la red.md",
+    "1 - Reconocimiento/Busqueda de exploits.md",
+    "1 - Reconocimiento/Dominios y emails.md",
+    "1 - Reconocimiento/Leaked Password Databases.md",
+    "1 - Reconocimiento/Google Dorks Cheatsheet.md",
+    "1 - Reconocimiento/Reconocimiento web.md",
+    "1 - Reconocimiento/WAF.md",
+    "3 - Hacking Web/3. Enumeración web avanzada.md",
+    "3 - Hacking Web/1. Fuzzing Web.md",
+    "3 - Hacking Web/LFI.md",
     "5 - Hacking Linux/Path Hijacking.md",
     "5 - Hacking Linux/Escalada Privilegios.md",
     "4 - Hacking Servicios/22 SSH.md",
@@ -174,17 +185,6 @@
     "5 - Hacking Linux/Comandos básicos.md",
     "5 - Hacking Linux/Crack etc shadow.md",
     "5 - Hacking Linux/Escribir en terminal de una víctima.md",
-    "5 - Hacking Linux/Pivoting de usuarios.md",
-    "5 - Hacking Linux/Tratamiento de la TTY.md",
-    "4 - Hacking Servicios/21 FTP.md",
-    "2 - Hacking genérico/Crack keepass fuerza bruta.md",
-    "2 - Hacking genérico/Crack ZIP fuerza bruta.md",
-    "7 - Proyectos/Certification Authority + ACME.md",
-    "7 - Proyectos/Vaultwarden Password Manager.md",
-    "7 - Proyectos/Servidor GIT + Web apuntes con obsidian.md",
-    "7 - Proyectos/Personalizar Kali con BSPWM.md",
-    "7 - Proyectos/Servidor VPN privado + PiHole.md",
-    "1 - Reconocimiento/Descubrir equipos en la red.md",
     "7 - Proyectos",
     "Sin título",
     "1 - Reconocimiento/Sin título",

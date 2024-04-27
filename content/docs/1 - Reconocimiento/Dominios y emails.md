@@ -3,13 +3,45 @@ Con phonebook.cz se pueden reconocer subdominios de empresas expuestas, pero tam
   
 * [CRT.SH](https://crt.sh/)
 * [Phonebook.cz](https://phonebook.cz)
+* [Dnsdumpster](https://dnsdumpster.com) (muy buena para reconocimiento de un dominio)
 
 #### Sublist3r
 ```bash
 ./sublist3r.py -d acmeitsupport.thm
 ```
- 
+#### DNSrecon
+```bash
+dnsrecon -t brt -d acmeitsupport.thm
+```
+
+#### Claves filtradas
+Si encontramos un email de una organización, podemos ir a haveibeenpwned.com para ver si ese email tiene claves filtradas.
+
+#### theHarvester
+Herrramienta para descubrir emails, nombres, subdominios, urls... Con la opcion -b le decimos que motores de búsqueda utiliza, para ver una lista completa ir a su [Repositorio de github](https://github.com/laramies/theHarvester)
+```bash
+theHarvester -d miweb.com -b google,linkedin,yahoo,dnsdumpster,duckduckgo,crtsh
+```
 ### Reconocimientos activos
+
+#### Dnsenum
+```bash
+dnsenum midominio.com
+```
+
+#### Dig
+```bash
+dig axfr @servidorDNS dominio.local
+```
+
+#### Fierce
+```bash
+fierce -dns dominio.com 
+
+# Especificando un diccionario
+fierce -dns dominio.com -wordlist <diccionario para fuzzing dns>
+```
+
 #### GObuster
  Con esta herramienta se pueden realizar varios tipos de fuzzing, entre ellos el de subdominios. se podría filtrar los errores que no queremos que aparezcan con un grep -v (para excluir lineas)
  ```bash
@@ -23,7 +55,3 @@ Con phonebook.cz se pueden reconocer subdominios de empresas expuestas, pero tam
  wfuzz -c -t 20 --hc=404 -w <diccionario> -H "Host: FUZZ.google.com" http://google.com
  ```
 
-#### DNSrecon
-```bash
-dnsrecon -t brt -d acmeitsupport.thm
-```
