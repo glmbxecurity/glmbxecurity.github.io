@@ -13,7 +13,7 @@ Cuando tratamos de máquinas a partir de Windows 10, este es el emjor método ya
 
 nmap -sn <dir_red/mask>
 
-nmap -Pn 10.10.0.5 (cuado no responde al ping)
+nmap -Pn 10.10.0.5 (cuado no responde al ping)(Útil para escanear windows)
 
 netdiscover -P -i eth0 -r 192.168.1.0/24 (debemos poner la dirección de red de la interfaz que queremos escanear)
 
@@ -32,6 +32,12 @@ en caso de haber un equipo, ej: 10.10.54.25/16, y estuviera activo, lo veríamos
 Se envían paquetes a un puerto específico (comunmente el 80), para detectar si el equipo está en línea. (no necesariamente el puerto debe estar abierto para que esto funcione). Este escaneo es más seguro que el Ping ScaN.
 ```bash
 masscan -p80,8000-8100 10.0.0.0/8 --rate=10000
+nmap -sn -PS 10.10.0.0/16 (se puede a una IP o a toda la red)
+```
+
+### TCP ACK Ping
+```bash
+nmap -sn -PA 10.10.0.0/16 (se puede a una IP o a toda la red)
 ```
 ### MAC's típicas de Máquina Virtual
 * 08:00:XX:XX:XX:XX

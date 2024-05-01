@@ -4,11 +4,9 @@ En algunas webs, nos podemos encontrar al realizar el reconocimiento, que nmap n
 ### Dumpear repositorio git
 En este momento, podemos dumpear el repositorio a nuestra máquina con herramientas como **git-dumptool**. Hay muchas de este tipo.
 
-### Ver logs repositorio git
-Estando en la raíz del repositorio:
-```bash
-git log
-```
+### Analizar la información
+* con ```git log```, podemos ver los comits.
+* con ```git show```, seguido de los primeros digitos del commit, podemos ver los cambios en el código.
 
 Podriamos ver información interesante como crecenciales o similares, o comentarios que nos pueden animar a ver un diff.
 

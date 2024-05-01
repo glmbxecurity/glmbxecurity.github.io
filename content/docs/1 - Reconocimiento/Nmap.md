@@ -42,38 +42,31 @@ ls /usr/share/nmap/scripts
 nmap 10.10.10.4 --script "vuln" -p 445
 ``` 
 
+### Detección Firewall
+Con el parámetro -sA podremos tratar de detectar si hay algun firewall. Si en el escaneo aparece **unfiltered** es que no hay firewall, por el contrario si aparece **filtered** podemos asegurar que hay algun tipo de cortafuegos.
+```bash
+nmap -Pn -sA 10.10.10.1
+```
+### Evasion de Firewall / IDS con Nmap
+Se puede intentar evitar el bloqueo por parte del firewall al intento de escaneo de puertos. para ello algo muy común es el hecho de fragmentar los paquetes, o indicar el tamaño maáximo de MTU (tamaño mínimo de transimision de unidad), o falsear ciertos datos.  
 
-### Evasion de Firewall con Nmap
-Se puede intentar evitar el bloqueo por parte del firewall al intento de escaneo de puertos. para ello algo muy común es el hecho de fragmentar los paquetes, o indicar el tamaño maáximo de MTU (tamaño máximo de transimision de unidad), o falsear ciertos datos.  
+#### Fragmentando paquetes
+```bash
+nmap -Pn -sS -f 10.10.10.10
+```
 
-* -f (fragmentar paquetes)
-* --mtu <numero multiplo de 8>
-* -D <ip> (falsificar ip de origen)
-* --source port <puerto> (falsificar puerto de origen)
-* --data-length <numero> (modificar tamaño de paquete, sumando ese numero al tamaño original del paquete)
-* --spoof-mac <mac> (falsear la mac)  
+#### Estableciendo MTU personalizada
+```bash
+nmap -Pn -sS --mtu 8 10.10.10.10
+```
+
+#### Spoofing 
+```bash
+nmap -Pn -sS 10.10.10.10 -D 192.168.1.1 -g 443 --spoof-mac AA:BB:CC:DD:EE:FF
+```
+
+#### Cambiando TTL y data-length
+```bash
+nmap -Pn -sS -f 10.10.10.10 --data-length 200 --ttl 127
+```
    
- El falseo de IP y MAC, puede ser útil si se combina con el siguiente comando, que nos enumera los dispositivos con su IP y MAC que están conectados y activos en la red:  
- 
- arp-scan -I <interfaz> --localnet
- 
-   
- * -sS (tratar de no dejar evidencias en Firewall/IDS), explicación:  
->Al realizar un escaneo, el atacante envía un SYN, recibe un SYN/ACK, y vuelve a responder con un ACK. Aquí terminaría la conexión. En caso de estar el puerto cerrado o la conexion ser rechazada, recibiriamos un RST en lugar del SYN/ACK.  
-Pues bien, con "-sS", lo que hacemos es después de recibir el SYN/ACK, enviamos un RST. Ya que algunos Firewall, solo registran conexiones completas, y al no enviar el ACK, no lo registran en sus logs.
-
-### Parámetros mas frecuentes de nmap
-Los parámetros mas útiles son los siguientes:  
-* -p1-100 (puertos del 1 al 100)
-* -p- (todos los puertos)
-* --top-ports 100 (Los 100 puertos mas comunes [en este ejemplo])
-* -n (para evitar resolucion DNS)
-* -T (del 0 al 5. Indica la velocidad, y por consiguiente la agresividad del escaneo)(un numero mayor puede ser detectado por firewalls)
-* -sU (puertos UDP)
-* -sV (version del servicio)
-* -sn (detectar equipos en la red, mac, y marca)  
-* --min-rate 5000 (agiliza bastante el escaneo, no se recomienda añadir mas de 5000)
-*  --open (evita puertos filtered)
-* -sC (conjunto de scripts de nmap para detectar vulnerabilidades)
-*  -Pn (Evitar ping y tratar equipo como activo y alcanzable en la red)
-*  -oN (exportar escaneo en formato nmap a un fichero)
