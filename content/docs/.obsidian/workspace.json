@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Hacking Servicios/3306 SQL.md",
+                "file": "3 - Hacking Web/WebDAV.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Hacking Servicios/3306 SQL.md",
+                "file": "3 - Hacking Web/WebDAV.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 - Hacking Servicios/3306 SQL.md",
+                "file": "3 - Hacking Web/WebDAV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Hacking Servicios/3306 SQL.md"
+                "file": "3 - Hacking Web/WebDAV.md"
               }
             }
           }
@@ -148,10 +148,18 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "3 - Hacking Web/1. Fuzzing Web.md",
-    "3 - Hacking Web/3. Enumeración web avanzada.md",
+    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
+    "3 - Hacking Web/WebDAV.md",
+    "3 - Hacking Web/Enumeración web avanzada.md",
+    "3 - Hacking Web/Fuzzing Web.md",
+    "3 - Hacking Web/Fuerza bruta login web.md",
     "3 - Hacking Web/LFI.md",
-    "3 - Hacking Web/2. Descubrimiento CMS.md",
+    "3 - Hacking Web/Vulnerabilidad Target blank.md",
+    "3 - Hacking Web/Wordpress.md",
+    "3 - Hacking Web/XSS.md",
+    "3 - Hacking Web/Anotaciones varias.md",
+    "3 - Hacking Web/Descubrimiento CMS.md",
+    "4 - Hacking Servicios/3306 SQL.md",
     "4 - Hacking Servicios/22 SSH.md",
     "4 - Hacking Servicios/21 FTP.md",
     "4 - Hacking Servicios/139, 445 SMB.md",
@@ -166,12 +174,6 @@
     "1 - Reconocimiento/WAF.md",
     "1 - Reconocimiento/Nmap.md",
     "1 - Reconocimiento/Busqueda de exploits.md",
-    "1 - Reconocimiento/Leaked Password Databases.md",
-    "5 - Hacking Linux/Path Hijacking.md",
-    "5 - Hacking Linux/Escalada Privilegios.md",
-    "Preparacion ejpt V2.md",
-    "8 - Writeups/_index.md",
-    "8 - Writeups/Vulnhub - Darkhole2.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",
@@ -182,8 +184,6 @@
     "Pasted image 20240416165342.png",
     "Pasted image 20240416165325.png",
     "Pasted image 20240416164902.png",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "7 - Proyectos/_index.md",
     "8 - Writeups",
     "7 - Proyectos",
     "Sin título",
