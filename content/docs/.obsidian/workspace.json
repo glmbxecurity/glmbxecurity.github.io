@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/WebDAV.md",
+                "file": "6 - Hacking Windows/BlueKeep.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/WebDAV.md",
+                "file": "6 - Hacking Windows/BlueKeep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/WebDAV.md",
+                "file": "6 - Hacking Windows/BlueKeep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/WebDAV.md"
+                "file": "6 - Hacking Windows/BlueKeep.md"
               }
             }
           }
@@ -148,8 +148,12 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
+    "6 - Hacking Windows/Eternalblue.md",
+    "6 - Hacking Windows/BlueKeep.md",
+    "4 - Hacking Servicios/3389 RDP.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
     "3 - Hacking Web/WebDAV.md",
+    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
     "3 - Hacking Web/Enumeración web avanzada.md",
     "3 - Hacking Web/Fuzzing Web.md",
     "3 - Hacking Web/Fuerza bruta login web.md",
@@ -162,7 +166,6 @@
     "4 - Hacking Servicios/3306 SQL.md",
     "4 - Hacking Servicios/22 SSH.md",
     "4 - Hacking Servicios/21 FTP.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
     "2 - Hacking genérico/Cracking fuerza bruta.md",
     "4 - Hacking Servicios/161 SNMP.md",
     "1 - Reconocimiento/Reconocimiento web.md",
@@ -171,9 +174,6 @@
     "1 - Reconocimiento/Descubrir equipos en la red.md",
     "1 - Reconocimiento/Dominios y emails.md",
     "1 - Reconocimiento/Google Dorks Cheatsheet.md",
-    "1 - Reconocimiento/WAF.md",
-    "1 - Reconocimiento/Nmap.md",
-    "1 - Reconocimiento/Busqueda de exploits.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",
