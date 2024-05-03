@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Hacking Windows/BlueKeep.md",
+                "file": "4 - Hacking Servicios/5985 WinRM.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6 - Hacking Windows/BlueKeep.md",
+                "file": "4 - Hacking Servicios/5985 WinRM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Hacking Windows/BlueKeep.md",
+                "file": "4 - Hacking Servicios/5985 WinRM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Hacking Windows/BlueKeep.md"
+                "file": "4 - Hacking Servicios/5985 WinRM.md"
               }
             }
           }
@@ -148,8 +148,10 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "6 - Hacking Windows/Eternalblue.md",
+    "6 - Hacking Windows/Active Directory.md",
+    "4 - Hacking Servicios/5985 WinRM.md",
     "6 - Hacking Windows/BlueKeep.md",
+    "6 - Hacking Windows/Eternalblue.md",
     "4 - Hacking Servicios/3389 RDP.md",
     "4 - Hacking Servicios/139, 445 SMB.md",
     "3 - Hacking Web/WebDAV.md",
@@ -172,8 +174,6 @@
     "2 - Hacking genérico/Repositorio git.md",
     "1 - Reconocimiento/Repositorio git web.md",
     "1 - Reconocimiento/Descubrir equipos en la red.md",
-    "1 - Reconocimiento/Dominios y emails.md",
-    "1 - Reconocimiento/Google Dorks Cheatsheet.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",
