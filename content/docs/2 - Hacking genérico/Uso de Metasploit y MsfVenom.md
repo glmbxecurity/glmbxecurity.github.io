@@ -9,6 +9,18 @@
 * set (establecer un parámetro)
 * run (lanzar un exploit)
 * shell (obtener una shell cuando ya hemos establecido una sesión de meterpreter)
+* sessions -l (listar sesiones)
+* sessions <numero> entrar en una sesión
+
+#METERPRETER migrar sesion de meterpreter x86 a x64
+pgrep explorer (esto nos dará el PID del proceso explorer)
+migrate <numero> (el numero del proceso obtenido)
+
+#METERPRETER BASICS
+* sysinfo
+* getprivs
+*  getuid
+* 
 ```
 
 ### Payloads con MsfVenom
