@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
+                "file": "6 - Hacking Windows/Credential dumping.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
+                "file": "6 - Hacking Windows/Credential dumping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
+                "file": "6 - Hacking Windows/Credential dumping.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md"
+                "file": "6 - Hacking Windows/Credential dumping.md"
               }
             }
           }
@@ -148,18 +148,20 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
+    "6 - Hacking Windows/Credential dumping.md",
+    "6 - Hacking Windows/Eternalblue.md",
+    "6 - Hacking Windows/BlueKeep.md",
     "2 - Hacking genérico/Obfuscation - AV Evasion.md",
+    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
     "2 - Hacking genérico/Codificación.md",
     "2 - Hacking genérico/Cracking fuerza bruta.md",
     "2 - Hacking genérico/Esteganografía.md",
-    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
     "6 - Hacking Windows/Escalada Privilegios.md",
     "6 - Hacking Windows/Active Directory.md",
-    "6 - Hacking Windows/BlueKeep.md",
     "6 - Hacking Windows/Comandos básicos.md",
     "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
     "4 - Hacking Servicios/5985 WinRM.md",
-    "6 - Hacking Windows/Eternalblue.md",
     "4 - Hacking Servicios/3389 RDP.md",
     "4 - Hacking Servicios/139, 445 SMB.md",
     "3 - Hacking Web/WebDAV.md",
@@ -172,8 +174,6 @@
     "3 - Hacking Web/XSS.md",
     "3 - Hacking Web/Anotaciones varias.md",
     "3 - Hacking Web/Descubrimiento CMS.md",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "4 - Hacking Servicios/22 SSH.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",
