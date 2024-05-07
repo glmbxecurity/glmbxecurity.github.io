@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Hacking Windows/Credential dumping.md",
+                "file": "6 - Hacking Windows/Explotacion.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6 - Hacking Windows/Credential dumping.md",
+                "file": "6 - Hacking Windows/Explotacion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Hacking Windows/Credential dumping.md",
+                "file": "6 - Hacking Windows/Explotacion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Hacking Windows/Credential dumping.md"
+                "file": "6 - Hacking Windows/Explotacion.md"
               }
             }
           }
@@ -148,8 +148,13 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "2 - Hacking genérico/Metasploit y MsfVenom.md",
+    "6 - Hacking Windows/Explotacion.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "6 - Hacking Windows/Escalada Privilegios.md",
+    "6 - Hacking Windows/Enumeracion.md",
+    "6 - Hacking Windows/Comandos básicos.md",
     "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
-    "6 - Hacking Windows/Credential dumping.md",
     "6 - Hacking Windows/Eternalblue.md",
     "6 - Hacking Windows/BlueKeep.md",
     "2 - Hacking genérico/Obfuscation - AV Evasion.md",
@@ -157,13 +162,8 @@
     "2 - Hacking genérico/Codificación.md",
     "2 - Hacking genérico/Cracking fuerza bruta.md",
     "2 - Hacking genérico/Esteganografía.md",
-    "6 - Hacking Windows/Escalada Privilegios.md",
-    "6 - Hacking Windows/Active Directory.md",
-    "6 - Hacking Windows/Comandos básicos.md",
-    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
     "4 - Hacking Servicios/5985 WinRM.md",
     "4 - Hacking Servicios/3389 RDP.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
     "3 - Hacking Web/WebDAV.md",
     "3 - Hacking Web/Enumeración web avanzada.md",
     "3 - Hacking Web/Fuzzing Web.md",

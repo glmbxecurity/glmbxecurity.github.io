@@ -1,7 +1,7 @@
 ### Enumeracion
 Si ya tenemos algun usuario mucho mejor, sino podemos tratar de realizar un ataque de fuerza bruta.
 
-![[Active Directory#Enumerar usuarios Active Directory]]
+![[Enumeracion#Enumerar usuarios Active Directory]]
 
 ### Ejecución de comandos
 #### WinRM RCE crackmapexec
