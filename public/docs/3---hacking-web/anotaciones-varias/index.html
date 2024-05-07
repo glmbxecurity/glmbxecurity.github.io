@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cuando en una web hay un admin que revisa links, mensajes, etc#Cuando en una web, vemos algún mensaje o texto que nos indique o nos insinúe que alguien comprobará nuestro link o un mensaje (por ejemplo si hay un chat), esto se puede prestar para un CSRF, un XSS para obtener cookies de sesión o para montar un Phishing con la vulnerabilidad de [[Vulnerabilidad Target blank]], por ejemplo.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/3---hacking-web/anotaciones-varias/">
+  <meta property="og:site_name" content="GlmbXecurity">
+  <meta property="og:title" content="GlmbXecurity">
+  <meta property="og:description" content="Cuando en una web hay un admin que revisa links, mensajes, etc#Cuando en una web, vemos algún mensaje o texto que nos indique o nos insinúe que alguien comprobará nuestro link o un mensaje (por ejemplo si hay un chat), esto se puede prestar para un CSRF, un XSS para obtener cookies de sesión o para montar un Phishing con la vulnerabilidad de [[Vulnerabilidad Target blank]], por ejemplo.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Anotaciones Varias | GlmbXecurity</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.07ff6561dbc56dcb1af545f6f320c8e3ed095a95012a7fd6d3fec7f21f5133bc.css" integrity="sha256-B/9lYdvFbcsa9UX28yDI4&#43;0JWpUBKn/W0/7H8h9RM7w=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.053c47a53420d4d8f91a0d7ff16baf41deb7e3c08baea451fd3e10effc18b34b.js" integrity="sha256-BTxHpTQg1Nj5Gg1/8WuvQd6348CLrqRR/T4Q7/wYs0s=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GlmbXecurity</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4725ecd4288801edac599d317b7f3fbd" class="toggle"  />
+    <label for="section-4725ecd4288801edac599d317b7f3fbd" class="flex justify-between">
+      <a href="/docs/1---reconocimiento/" class="">Reconocimiento</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/busqueda-de-exploits/" class="">Busqueda De Exploits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/descubrir-equipos-en-la-red/" class="">Descubrir Equipos en La Red</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/dominios-y-emails/" class="">Dominios Y Emails</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/google-dorks-cheatsheet/" class="">Google Dorks Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/nmap/" class="">Nmap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/reconocimiento-web/" class="">Reconocimiento Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/version-de-servicio-y-s.o/" class="">Version De Servicio Y S. O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/waf/" class="">Waf</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-113277fae8d94cf467d477245d42c6e9" class="toggle" checked />
+    <label for="section-113277fae8d94cf467d477245d42c6e9" class="flex justify-between">
+      <a href="/docs/3---hacking-web/" class="">Hacking web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/anotaciones-varias/" class="active">Anotaciones Varias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/" class="">Bypass Subir Ficheros Con Extensiones No Permitidas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/descubrimiento-cms/" class="">Descubrimiento Cms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/drupal/" class="">Drupal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/" class="">Enumeración Web Avanzada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuerza-bruta-login-web/" class="">Fuerza Bruta Login Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuzzing-web/" class="">Fuzzing Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/lfi/" class="">Lfi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/vulnerabilidad-target-blank/" class="">Vulnerabilidad Target Blank</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/webdav/" class="">Web Dav</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/wordpress/" class="">Wordpress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/xss/" class="">Xss</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d708dbd650445c961ea376c6ec392a3" class="toggle"  />
+    <label for="section-6d708dbd650445c961ea376c6ec392a3" class="flex justify-between">
+      <a href="/docs/2---hacking-gen%C3%A9rico/" class="">Hacking Genérico</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/" class="">Codificación</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/" class="">Cracking Fuerza Bruta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/" class="">Esteganografía</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/" class="">Local Port Forwarding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/" class="">Metasploit Y Msf Venom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/" class="">Obfuscation Av Evasion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/repositorio-git/" class="">Repositorio Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/reverse-shells/" class="">Reverse Shells</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/wireshark/" class="">Wireshark</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-653fb6148147fb5a54d5ae8f6cdc32db" class="toggle"  />
+    <label for="section-653fb6148147fb5a54d5ae8f6cdc32db" class="flex justify-between">
+      <a href="/docs/4---hacking-servicios/" class="">Hacking Servicios</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/111-rcpbind-nfs/" class="">111 RCP Bind ( Nfs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/139-445-smb/" class="">139, 445 Smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/161-snmp/" class="">161 SNMP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/21-ftp/" class="">21 FTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/22-ssh/" class="">22 SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/25-smtp/" class="">25 SMTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3306-sql/" class="">3306 SQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3389-rdp/" class="">3389 Rdp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/5985-winrm/" class="">5985 Win Rm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/8080-apache-tomcat/" class="">8080 Apache Tomcat</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4702fb46d9830af28f7b5deb2ce3e3da" class="toggle"  />
+    <label for="section-4702fb46d9830af28f7b5deb2ce3e3da" class="flex justify-between">
+      <a href="/docs/5---hacking-linux/" class="">Hacking Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/crack-etc-shadow/" class="">Crack Etc Shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/" class="">Escribir en Terminal De Una Víctima</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/path-hijacking/" class="">Path Hijacking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/pivoting-de-usuarios/" class="">Pivoting De Usuarios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/tratamiento-de-la-tty/" class="">Tratamiento De La Tty</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bad90e32cc0f7a46aaa4431b64839fc0" class="toggle"  />
+    <label for="section-bad90e32cc0f7a46aaa4431b64839fc0" class="flex justify-between">
+      <a href="/docs/6---hacking-windows/" class="">Hacking Windows</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/enumeracion/" class="">Enumeracion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/explotacion/" class="">Explotacion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/" class="">Vulnerabilidades Mas Conocidas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0791bead2c829c6f4d4cc85517e0210" class="toggle"  />
+    <label for="section-c0791bead2c829c6f4d4cc85517e0210" class="flex justify-between">
+      <a href="/docs/7---proyectos/" class="">Proyectos</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/certification-authority-&#43;-acme/" class="">Certification Authority Acme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/personalizar-kali-con-bspwm/" class="">Personalizar Kali Con Bspwm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/" class="">Servidor Git Web Apuntes Con Obsidian</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/" class="">Servidor VPN Privado Pi Hole</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/vaultwarden-password-manager/" class="">Vaultwarden Password Manager</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/links-de-inter%C3%A9s/" class="">Links De Interés</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/preparacion-ejpt-v2/" class="">Preparacion Ejpt V2</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Anotaciones Varias</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cuando-en-una-web-hay-un-admin-que-revisa-links-mensajes-etc">Cuando en una web hay un admin que revisa links, mensajes, etc</a></li>
+        <li><a href="#fichero-infophp">Fichero info.php</a></li>
+        <li><a href="#id1">Id=1</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h3 id="cuando-en-una-web-hay-un-admin-que-revisa-links-mensajes-etc">
+  Cuando en una web hay un admin que revisa links, mensajes, etc
+  <a class="anchor" href="#cuando-en-una-web-hay-un-admin-que-revisa-links-mensajes-etc">#</a>
+</h3>
+<p>Cuando en una web, vemos algún mensaje o texto que nos indique o nos insinúe que alguien comprobará nuestro link o un mensaje (por ejemplo si hay un chat), esto se puede prestar para un <strong>CSRF</strong>, un <strong>XSS</strong> para obtener cookies de sesión o para montar un <strong>Phishing</strong> con la vulnerabilidad de [[Vulnerabilidad Target blank]], por ejemplo.</p>
+<h3 id="fichero-infophp">
+  Fichero info.php
+  <a class="anchor" href="#fichero-infophp">#</a>
+</h3>
+<p>Cuando encontramos el fichero info.php (fichero de configuración de php), en ocasiones podemos enumerar algún usuario que esté incluído en el fichero. en <strong>Configuration &gt; Apache2handler &gt; User/Group</strong></p>
+<h3 id="id1">
+  Id=1
+  <a class="anchor" href="#id1">#</a>
+</h3>
+<p>Cuando tenemos una url en la que se dirige a un perfil, un producto, etc, de la siguiente manera: <code>http://ip/product=2</code>, o <code>http://ip/pofile.php&amp;id=1</code></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cuando-en-una-web-hay-un-admin-que-revisa-links-mensajes-etc">Cuando en una web hay un admin que revisa links, mensajes, etc</a></li>
+        <li><a href="#fichero-infophp">Fichero info.php</a></li>
+        <li><a href="#id1">Id=1</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proyectos on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/7---proyectos/</link>
+    <description>Recent content in Proyectos on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/7---proyectos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/7---proyectos/certification-authority-&#43;-acme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/7---proyectos/certification-authority-&#43;-acme/</guid>
+      <description>Entidad Certificadora con Auto-enrollment&#xD;#&#xD;Que es una CA?&#xD;#&#xD;Una autoridad confiable responsable de emitir certificados digitales. Estos certificados son utilizados para autenticar la identidad de entidades en línea, como sitios web, aplicaciones o usuarios. La función principal de una CA es garantizar la integridad y autenticidad de la información intercambiada a través de Internet mediante el uso de criptografía de clave pública.&#xA;Como funciona?&#xD;#&#xD;La CA emite un certificado para un servicio, los clientes tienen importado el certificado de la CA Raíz (ya sea de forma manual o por políticas de dominio).</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/7---proyectos/personalizar-kali-con-bspwm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/7---proyectos/personalizar-kali-con-bspwm/</guid>
+      <description>Customkali2.0_AutoBSPWM&#xD;#&#xD;Script automatizado para tu entorno de hacking. La mayor parte del proyecto se recoge del repositorio kalilifa, este mod realiza los siguientes cambios:&#xA;Instala bspwm instala polybar Instala kitty Cambia a zsh Instala Oh-My-Zsh + Powerlevel10K Instala rofi (lanzador de aplicaciones) Instala feh (visor de imagenes) Instala colorls (Comando ls con colores bien identificativos) Instala batcat (Cat con añadidos, como restaltar el código en distintos lenguajes de programación) Instala fuente &amp;ldquo;Hack Nerd Font&amp;rdquo; Modifica colores de terminal kitty Modifica el prompt de powerlevek10K Instala un wallpaper personalizado Preview del mod&#xD;#&#xD;Instalacion&#xD;#&#xD;Introducimos el siguiente comando (NO INTRODUCIRLO COMO ROOT, sino dará PROBLEMAS)</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/</guid>
+      <description>Servidor GIT + Web apuntes con obsidian&#xD;#&#xD;En este proyecto se montará un servidor de git y un portal web con nginx, el contenido de la documentación se editará mediante obsidian. Además se explicará como subirlo a github y tener tu propia github page.&#xA;Servidor git&#xD;#&#xD;Instalacion y creacion repositorio. Crearemos el usuario git, y meteremos las authorized heys de los colaboradores del servidor.&#xA;apt update apt install tmux (si no lo tienes, es recomendable) sudo adduser git su git cd mkdir .</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/</guid>
+      <description>Servidor VPN privado + PiHole&#xD;#&#xD;Introducción&#xD;#&#xD;Este proyecto trata de montar tu propio servidor de VPN, válido tanto para montar en casa con un viejo equipo, raspberry o dispositivo similar, como para montar en un VPS (Que es mi caso, y es la mejor opción).&#xA;Apertura de puertos&#xD;#&#xD;Tanto si se trata de un VPS como si se monta en casa, habrá que abrir el puerto en el router / firewall para la comunicación con el servicio de VPN en este caso wireguard, cuyo puerto por defecto es el 51820.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/7---proyectos/vaultwarden-password-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/7---proyectos/vaultwarden-password-manager/</guid>
+      <description>Instalacion gestor de contraseñas Vaultwarden&#xD;#&#xD;Pre-requisitos&#xD;#&#xD;apt update apt install docker.io apt install docker-compose Vaultwarden&#xD;#&#xD;Creamos un directorio para los contenedores, uno para vaultwarden y otro para nginx-proxy-manager&#xA;git clone https://github.com/jmlcas/vaultwarden cd vaultwarden dockerp-compuse up -d Datos por defecto en la instalacion:&#xA;localhost:8200 Nginx-Proxy-Manager&#xD;#&#xD;git clone https://github.com7jmlcas/nginx-proxy-manager cd nginx-proxy-manager docker-compose up -d Datos por defecto en la instalacion:&#xA;localhost:81 admin@example.com:changeme Configuracion Nginx Proxy&#xD;#&#xD;Primeramente cambiamos el email y pass por defecto.</description>
+    </item>
+  </channel>
+</rss>

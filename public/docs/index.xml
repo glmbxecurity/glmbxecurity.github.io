@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/</link>
+    <description>Recent content in Docs on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/links-de-inter%C3%A9s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/links-de-inter%C3%A9s/</guid>
+      <description>&#xD;Herramientas&#xD;#&#xD;Phonebook.cz Crackstation Dcode.ft Revshells PentestMonkey GTFOBins Plataformas practicar hacking&#xD;#&#xD;Tryhackme Hackthebox Vulnyx Vulnhub Hackmyvm </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/preparacion-ejpt-v2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/preparacion-ejpt-v2/</guid>
+      <description>Introducción&#xD;#&#xD;En este post se detallará todo lo necesario para afrontar esta certificación con éxito, tanto las técnicas necesarias, máquinas para practiar, metodología de examen, contenidos, etc.&#xA;Indice&#xD;#&#xD;Que es eJPTv2 El examen Conocimientos necesarios Metodología Donde prepararse Máquinas CTF Que es eJPTv2&#xD;#&#xD;eLearning Junior Penetration Tester, es una certificación en ciberseguridad 100% práctica ideal para aquellos que se quieran iniciar en la ciberseguridad. Es de las mas asequibles en este campo, pero no por ello es trivial, requiere de esfuerzo, dedicación y mucha práctica.</description>
+    </item>
+  </channel>
+</rss>

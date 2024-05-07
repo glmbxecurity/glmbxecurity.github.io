@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Entidad Certificadora con Auto-enrollment#Que es una CA?#Una autoridad confiable responsable de emitir certificados digitales. Estos certificados son utilizados para autenticar la identidad de entidades en línea, como sitios web, aplicaciones o usuarios. La función principal de una CA es garantizar la integridad y autenticidad de la información intercambiada a través de Internet mediante el uso de criptografía de clave pública.
+Como funciona?#La CA emite un certificado para un servicio, los clientes tienen importado el certificado de la CA Raíz (ya sea de forma manual o por políticas de dominio).">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/7---proyectos/certification-authority-&#43;-acme/">
+  <meta property="og:site_name" content="GlmbXecurity">
+  <meta property="og:title" content="GlmbXecurity">
+  <meta property="og:description" content="Entidad Certificadora con Auto-enrollment#Que es una CA?#Una autoridad confiable responsable de emitir certificados digitales. Estos certificados son utilizados para autenticar la identidad de entidades en línea, como sitios web, aplicaciones o usuarios. La función principal de una CA es garantizar la integridad y autenticidad de la información intercambiada a través de Internet mediante el uso de criptografía de clave pública.
+Como funciona?#La CA emite un certificado para un servicio, los clientes tienen importado el certificado de la CA Raíz (ya sea de forma manual o por políticas de dominio).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Certification Authority Acme | GlmbXecurity</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.822ea23655b0ba1b461943a35514ae2c30663029973dea97b76d84fa6d10f821.css" integrity="sha256-gi6iNlWwuhtGGUOjVRSuLDBmMCmXPeqXt22E&#43;m0Q&#43;CE=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.053c47a53420d4d8f91a0d7ff16baf41deb7e3c08baea451fd3e10effc18b34b.js" integrity="sha256-BTxHpTQg1Nj5Gg1/8WuvQd6348CLrqRR/T4Q7/wYs0s=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GlmbXecurity</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4725ecd4288801edac599d317b7f3fbd" class="toggle"  />
+    <label for="section-4725ecd4288801edac599d317b7f3fbd" class="flex justify-between">
+      <a href="/docs/1---reconocimiento/" class="">Reconocimiento</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/busqueda-de-exploits/" class="">Busqueda De Exploits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/descubrir-equipos-en-la-red/" class="">Descubrir Equipos en La Red</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/dominios-y-emails/" class="">Dominios Y Emails</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/google-dorks-cheatsheet/" class="">Google Dorks Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/nmap/" class="">Nmap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/reconocimiento-web/" class="">Reconocimiento Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/version-de-servicio-y-s.o/" class="">Version De Servicio Y S. O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/waf/" class="">Waf</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-113277fae8d94cf467d477245d42c6e9" class="toggle"  />
+    <label for="section-113277fae8d94cf467d477245d42c6e9" class="flex justify-between">
+      <a href="/docs/3---hacking-web/" class="">Hacking web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/anotaciones-varias/" class="">Anotaciones Varias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/" class="">Bypass Subir Ficheros Con Extensiones No Permitidas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/descubrimiento-cms/" class="">Descubrimiento Cms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/drupal/" class="">Drupal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/" class="">Enumeración Web Avanzada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuerza-bruta-login-web/" class="">Fuerza Bruta Login Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuzzing-web/" class="">Fuzzing Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/lfi/" class="">Lfi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/vulnerabilidad-target-blank/" class="">Vulnerabilidad Target Blank</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/webdav/" class="">Web Dav</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/wordpress/" class="">Wordpress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/xss/" class="">Xss</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d708dbd650445c961ea376c6ec392a3" class="toggle"  />
+    <label for="section-6d708dbd650445c961ea376c6ec392a3" class="flex justify-between">
+      <a href="/docs/2---hacking-gen%C3%A9rico/" class="">Hacking Genérico</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/" class="">Codificación</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/" class="">Cracking Fuerza Bruta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/" class="">Esteganografía</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/" class="">Local Port Forwarding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/" class="">Metasploit Y Msf Venom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/" class="">Obfuscation Av Evasion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/repositorio-git/" class="">Repositorio Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/reverse-shells/" class="">Reverse Shells</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/wireshark/" class="">Wireshark</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-653fb6148147fb5a54d5ae8f6cdc32db" class="toggle"  />
+    <label for="section-653fb6148147fb5a54d5ae8f6cdc32db" class="flex justify-between">
+      <a href="/docs/4---hacking-servicios/" class="">Hacking Servicios</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/111-rcpbind-nfs/" class="">111 RCP Bind ( Nfs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/139-445-smb/" class="">139, 445 Smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/161-snmp/" class="">161 SNMP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/21-ftp/" class="">21 FTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/22-ssh/" class="">22 SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/25-smtp/" class="">25 SMTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3306-sql/" class="">3306 SQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3389-rdp/" class="">3389 Rdp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/5985-winrm/" class="">5985 Win Rm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/8080-apache-tomcat/" class="">8080 Apache Tomcat</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4702fb46d9830af28f7b5deb2ce3e3da" class="toggle"  />
+    <label for="section-4702fb46d9830af28f7b5deb2ce3e3da" class="flex justify-between">
+      <a href="/docs/5---hacking-linux/" class="">Hacking Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/crack-etc-shadow/" class="">Crack Etc Shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/" class="">Escribir en Terminal De Una Víctima</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/path-hijacking/" class="">Path Hijacking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/pivoting-de-usuarios/" class="">Pivoting De Usuarios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/tratamiento-de-la-tty/" class="">Tratamiento De La Tty</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bad90e32cc0f7a46aaa4431b64839fc0" class="toggle"  />
+    <label for="section-bad90e32cc0f7a46aaa4431b64839fc0" class="flex justify-between">
+      <a href="/docs/6---hacking-windows/" class="">Hacking Windows</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/enumeracion/" class="">Enumeracion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/explotacion/" class="">Explotacion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/" class="">Vulnerabilidades Mas Conocidas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0791bead2c829c6f4d4cc85517e0210" class="toggle" checked />
+    <label for="section-c0791bead2c829c6f4d4cc85517e0210" class="flex justify-between">
+      <a href="/docs/7---proyectos/" class="">Proyectos</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/certification-authority-&#43;-acme/" class="active">Certification Authority Acme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/personalizar-kali-con-bspwm/" class="">Personalizar Kali Con Bspwm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/" class="">Servidor Git Web Apuntes Con Obsidian</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/" class="">Servidor VPN Privado Pi Hole</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/vaultwarden-password-manager/" class="">Vaultwarden Password Manager</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/links-de-inter%C3%A9s/" class="">Links De Interés</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/preparacion-ejpt-v2/" class="">Preparacion Ejpt V2</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Certification Authority Acme</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#que-es-una-ca">Que es una CA?</a></li>
+        <li><a href="#como-funciona">Como funciona?</a></li>
+        <li><a href="#laboratorio-ca--acme">Laboratorio CA + ACME</a></li>
+        <li><a href="#crear-certificado-de-manera-manual">Crear certificado de manera manual</a></li>
+      </ul>
+    </li>
+    <li><a href="#crear-casub-en-linux-pdte-probar">Crear CASUB en Linux (Pdte probar)</a>
+      <ul>
+        <li><a href="#solicitar-certificados-con-win-acme">Solicitar certificados con Win-Acme</a></li>
+        <li><a href="#generar-certificado-a-partir-de-un-csr">Generar certificado a partir de un CSR</a></li>
+        <li><a href="#tipo-de-certificado-segun-servidor">Tipo de certificado (segun servidor)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="entidad-certificadora-con-auto-enrollment">
+  Entidad Certificadora con Auto-enrollment
+  <a class="anchor" href="#entidad-certificadora-con-auto-enrollment">#</a>
+</h1>
+<h3 id="que-es-una-ca">
+  Que es una CA?
+  <a class="anchor" href="#que-es-una-ca">#</a>
+</h3>
+<p>Una autoridad confiable responsable de emitir certificados digitales. Estos certificados son utilizados para autenticar la identidad de entidades en línea, como sitios web, aplicaciones o usuarios. La función principal de una CA es garantizar la integridad y autenticidad de la información intercambiada a través de Internet mediante el uso de criptografía de clave pública.</p>
+<h3 id="como-funciona">
+  Como funciona?
+  <a class="anchor" href="#como-funciona">#</a>
+</h3>
+<p>La CA emite un certificado para un servicio, los clientes tienen importado el certificado de la CA Raíz (ya sea de forma manual o por políticas de dominio). Estos clientes al visitar, por ejemplo un sitio web certificado por la CA, confían en este certificado ya que ha sido emitido por una CA confiable.</p>
+<p>El Auto-enrollment, sirve para renovar este certificado cada cierto tiempo de manera automática, por ejemplo 24h, de manera que si ha sido vulnerado de alguna forma el certificado, este no sería válido pasadas las 24h de su emisión, y el servicio solicitaría un nuevo certificado confiable.</p>
+<h3 id="laboratorio-ca--acme">
+  Laboratorio CA + ACME
+  <a class="anchor" href="#laboratorio-ca--acme">#</a>
+</h3>
+<p>En este laboratorio instalaremos una CA standalone, en un dominio ficticio de empresa privada y certificaremos de manera automática un servidor web IIS,  con renovación automática del certificado cada 24h. Los requisitos para este laboratorio son:</p>
+<ul>
+<li>Máquina Wserver 2019 controlador de dominio + DNS + IIS</li>
+<li>Máquina Ubuntu 22.04 CA Root</li>
+<li>Máquina Windows 10 Cliente para hacer pruebas</li>
+</ul>
+<p>Partiremos de que tenemos un DC instalado y configurado, con direccionamiento estático, y el rol de IIS activado. El cliente windows 10 unido al dominio, y la máquina ubuntu actualizadas Al menos la máquina ubuntu requiere de acceso a internet para descargar el software de CA (Step-CA).</p>
+<h4 id="instalación-step-ca">
+  Instalación Step-CA
+  <a class="anchor" href="#instalaci%c3%b3n-step-ca">#</a>
+</h4>
+<p>Previamente la CA debe tener nombre de equipo establecido una IP estática.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Actualizar repositorios</span>
+</span></span><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Instalar curl y wget(si no se tiene)</span>
+</span></span><span style="display:flex;"><span>apt install curl wget -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Instalar ultima version Step-CA</span>
+</span></span><span style="display:flex;"><span>wget https://dl.smallstep.com/certificates/docs-ca-install/latest/step-ca_amd64.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i step-ca_amd64.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Buscar ultima version Step-Cli</span>
+</span></span><span style="display:flex;"><span>wget https://dl.smallstep.com/cli/docs-ca-install/latest/step-cli_amd64.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i step-cli_amd64.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crear directorio step-ca y añadir al PATH</span>
+</span></span><span style="display:flex;"><span>sudo mkdir /etc/step-ca
+</span></span><span style="display:flex;"><span>sudo su
+</span></span><span style="display:flex;"><span>export STEPPATH<span style="color:#f92672">=</span>/etc/step-ca 
+</span></span></code></pre></div><h4 id="inicializar-ca">
+  Inicializar CA
+  <a class="anchor" href="#inicializar-ca">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>step ca init
+</span></span></code></pre></div><ul>
+<li>Seleccionar <strong>standalone</strong></li>
+<li>Introducir <strong>nombre</strong> para la <strong>CA</strong></li>
+<li>Introducir <strong>nombre DNS o ip</strong> de la CA</li>
+<li>Introducir <strong>puerto de escucha de la CA</strong>, ej 443</li>
+<li>Introducir un <strong>mail</strong> para el primier <strong>provisioner</strong></li>
+<li>Introducir contraseña para la <strong>CA</strong></li>
+</ul>
+<h4 id="añadir-acme-provisioner">
+  Añadir ACME provisioner
+  <a class="anchor" href="#a%c3%b1adir-acme-provisioner">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Añadir acme provisioner</span>
+</span></span><span style="display:flex;"><span>step ca provisioner add acme --type ACME
+</span></span></code></pre></div><h4 id="cambiar-duración-certificados">
+  Cambiar duración certificados
+  <a class="anchor" href="#cambiar-duraci%c3%b3n-certificados">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Editar la configuracion de la CA con el siguiente contenido, meteiendolo dentro de cada provisionar, si se quiere cambiar la duración de los certificados, por defecto 24h(OPCIONAL).</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo nano /etc/step-ca/config/ca.json
+</span></span></code></pre></div><pre tabindex="0"><code>&#34;claims&#34;: {  
+&#34;maxTLSCertDuration&#34;:&#34;26280h&#34;,  
+&#34;defaultTLSCertDuration&#34;:&#34;8760h&#34;  
+},
+</code></pre><h4 id="lanzar-el-servicio">
+  Lanzar el servicio
+  <a class="anchor" href="#lanzar-el-servicio">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>step-ca &lt;fichero_configuracion&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ejemplo</span>
+</span></span><span style="display:flex;"><span>step-ca /etc/step-ca/config/ca.json
+</span></span></code></pre></div><h3 id="crear-certificado-de-manera-manual">
+  Crear certificado de manera manual
+  <a class="anchor" href="#crear-certificado-de-manera-manual">#</a>
+</h3>
+<p>Desde la propia CA, donde primero le pasamos el nombre, luego el certificado a exportar y por ultimo la clave que queremos generar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>step ca certificate web1.et.ms.esp certificado.crt clave.key
+</span></span></code></pre></div><h4 id="certificado-con-tiempo-de-expiración-personalizado">
+  Certificado con tiempo de expiración personalizado
+  <a class="anchor" href="#certificado-con-tiempo-de-expiraci%c3%b3n-personalizado">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>step ca certificate --not-after<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2025-04-11T00:00:00Z&#34;</span> dominio.local certificado.crt clave.key
+</span></span></code></pre></div><h4 id="importar-certificado-de-ca-root-en-clientes">
+  Importar certificado de CA Root en clientes
+  <a class="anchor" href="#importar-certificado-de-ca-root-en-clientes">#</a>
+</h4>
+<p>Para que un cliente o servidor pueda confiar en los certificados emitidos por la CA, es IMPRESCINDIBLE que, ya bien de forma automática a través de GPO, o manual instalando el certificado, se instale el certificado de la CA ROOT.</p>
+<h2 id="crear-casub-en-linux-pdte-probar">
+  Crear CASUB en Linux (Pdte probar)
+  <a class="anchor" href="#crear-casub-en-linux-pdte-probar">#</a>
+</h2>
+<p>Partiendo que ya tenemos una CA ROOT, nos creamos una maquina llamada CA SUB, y descargamos el software de CA, configuramos direccionamiento y hostname. Posteriormente, teniendo el certificado y la key de la ROOT:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>step ca init --root<span style="color:#f92672">=[</span>ROOT_CERT_FILE<span style="color:#f92672">]</span> --key<span style="color:#f92672">=[</span>ROOT_PRIVATE_KEY_FILE<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="solicitar-certificados-con-win-acme">
+  Solicitar certificados con Win-Acme
+  <a class="anchor" href="#solicitar-certificados-con-win-acme">#</a>
+</h3>
+<h4 id="configurar-win-acme">
+  Configurar win-acme
+  <a class="anchor" href="#configurar-win-acme">#</a>
+</h4>
+<p>Ya con todo configurado, nos dirigimos al servidor que queremos certificar y descargamos <strong>win-acme</strong>. Al descomprimir editamos las <strong>URL</strong> para que quede de la siguiente manera:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;DefaultBaseUri&#34;</span>: <span style="color:#e6db74">&#34;https://caroot.midominio/acme/acme/directory&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;DefaultBaseUriTest&#34;</span>: <span style="color:#e6db74">&#34;https://caroot.midominio/acme/acme/directory&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;DefaultBaseUriImport&#34;</span>: <span style="color:#e6db74">&#34;https://caroot.midominio/acme/acme/directory&#34;</span>,
+</span></span></code></pre></div><ul>
+<li>
+<p>Teniendo en cuenta lo configurado en el ca.json. Tanto el ca.json como el DNS deben hacer referencia al mismo nombre: <strong>caroot.midominio</strong>.</p>
+</li>
+<li>
+<p>Abrir el puerto 80 en el firewall del servidor que queremos certificar y lanzar <strong>wacs.exe</strong> como administrador.</p>
+</li>
+<li>
+<p>Configurar el settings para la &ldquo;autorenovacion&rdquo;, lo ideal es que sea cada 24h, y en el ca.json se tenga que caduquen los certificados cada 48h. (asi tenemos 24h de margen entre la caducidad y la renovación).</p>
+</li>
+</ul>
+<h4 id="generar-certificado-autorenovable-iis">
+  Generar certificado autorenovable IIS
+  <a class="anchor" href="#generar-certificado-autorenovable-iis">#</a>
+</h4>
+<ul>
+<li>Abrir <strong>win-acme</strong> como administrador, y veremos un menú que iremos contestando preguntas:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>1. Create certificate <span style="color:#f92672">(</span>full options<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>2. Read bindings from IIS
+</span></span><span style="display:flex;"><span>3. Nos pedirá que identificador de sitio elegir, si solo tenemos uno, pulsamos enter.
+</span></span><span style="display:flex;"><span>4. Nos preguntará los bindigs, elegimos <span style="color:#e6db74">&#34;All&#34;</span>, luego pulsamos <span style="color:#e6db74">&#34;enter, o &#39;y&#39; para continuar&#34;</span>
+</span></span><span style="display:flex;"><span>5. Nos pode el <span style="color:#e6db74">&#34;Friendly name&#34;</span>, escribimos en nombre, ej: <span style="color:#e6db74">&#34;web1.midominio.com&#34;</span>
+</span></span><span style="display:flex;"><span>6. Nos pregunta si queremos generar certificados por cada dominio, host, etc. Marcamos <span style="color:#e6db74">&#34;Single certificate&#34;</span>.
+</span></span><span style="display:flex;"><span>7. En el tipo de verificación se puede dejar la que viene por defecto.
+</span></span><span style="display:flex;"><span>8. Tipo de clave privada <span style="color:#e6db74">&#34;RSA&#34;</span>
+</span></span><span style="display:flex;"><span>9. En lugar de almacenamiento dejamos el por defecto <span style="color:#e6db74">&#34;Windows Certificate Store&#34;</span>
+</span></span><span style="display:flex;"><span>10. En <span style="color:#e6db74">&#34;store to use&#34;</span>, dejamos el <span style="color:#e6db74">&#34;default&#34;</span>
+</span></span><span style="display:flex;"><span>11. Por último nos pregunta si queremos sacar una copia del certificado. Aquí marcar lo que interese.
+</span></span><span style="display:flex;"><span>12. Marcamos para crear o actualizar los bindings en IIS
+</span></span><span style="display:flex;"><span>13. Si queremos crear un nuevo binding para otro sitio, es el momento, sino, por defecto es que no.
+</span></span></code></pre></div><h4 id="generar-certificado-web-con-validación-dns-no-auto-renovable">
+  Generar certificado web con validación DNS (No auto-renovable)
+  <a class="anchor" href="#generar-certificado-web-con-validaci%c3%b3n-dns-no-auto-renovable">#</a>
+</h4>
+<ul>
+<li>Primero debemos abrir <strong>Win-acme</strong> desde el terminal. Para evitar problemas, mejor abrir sin caché:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd C:<span style="color:#ae81ff">\W</span>in-acme<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>wacs.exe --nocache
+</span></span></code></pre></div><ul>
+<li>Segundo, seguimos el wizzard para generar el certificado:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* M: Create certificate <span style="color:#f92672">(</span>full options<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* 2: Manual input
+</span></span><span style="display:flex;"><span>* Aquí metemos el FQDN de la máquina, ej: n111epo1.midominio.local
+</span></span><span style="display:flex;"><span>* Friendly name: podemos dejar por defecto
+</span></span><span style="display:flex;"><span>* Split this source into multiple certificates: por defecto
+</span></span><span style="display:flex;"><span>* Validation: <span style="color:#f92672">[</span>dbs<span style="color:#f92672">]</span> Create verification records manually
+</span></span><span style="display:flex;"><span>* Tipo de clave privada: por defecto
+</span></span><span style="display:flex;"><span>* Almacenar el certificado: Va por la necesidad del servicio, elegir lo que corresponda.
+</span></span></code></pre></div><ul>
+<li>Tercero. Al finalizar todo llegaremos a un apartado donde nos pedirá crear una entrada TXT en el DNS. nos vamos al DNS del PDC y creamos una entrada de tipo TXT llamada:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_acme-challenge.servidor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ejemplo: _acme-challenge.portalweb
+</span></span></code></pre></div><p>En su valor, meteremos el que nos pida <strong>win-acme</strong> en el apartado &ldquo;Content:&rdquo;</p>
+<p>Esta entrada es temporal y le meteremos como valor el challenge que nos dará win-acme más adelante. (Posteriormente win-acme nos pedirá eliminar la entrada).</p>
+<p>Terminará creando el certificado y poniéndolo donde le hayamos dicho en pasos anteriores (sea en una ruta, o en el almacén de certificados).</p>
+<h3 id="generar-certificado-a-partir-de-un-csr">
+  Generar certificado a partir de un CSR
+  <a class="anchor" href="#generar-certificado-a-partir-de-un-csr">#</a>
+</h3>
+<h4 id="con-step-ca-desde-la-ca">
+  Con step ca (desde la CA)
+  <a class="anchor" href="#con-step-ca-desde-la-ca">#</a>
+</h4>
+<pre tabindex="0"><code>step ca sign request.csr certificado.crt
+
+# Donde request.csr es el CSR generado por el servidor que se quiere certificar, y certificado.crt es el certificado que vamos a generar.
+</code></pre><h4 id="certificar-exchange-autorenovable">
+  Certificar Exchange (Autorenovable)
+  <a class="anchor" href="#certificar-exchange-autorenovable">#</a>
+</h4>
+<p>En el DNS deben estar creadas las entradas:</p>
+<ul>
+<li>mail</li>
+<li>webmail</li>
+<li>autodiscover</li>
+<li>(el nombre de la maquina/host)</li>
+</ul>
+<p>Luego con win-acme:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wacs.exe --source manual --host mail.example.com,webmail.example.com,autodiscover.example.com,host.et.ms.esp --certificatestore My --acl-fullcontrol <span style="color:#e6db74">&#34;network service,administrators&#34;</span> --installation iis,script --installationsiteid <span style="color:#ae81ff">1</span> --script <span style="color:#e6db74">&#34;./Scripts/ImportExchange.v2.ps1&#34;</span> --scriptparameters <span style="color:#e6db74">&#34;&#39;{CertThumbprint}&#39; &#39;IIS,SMTP,IMAP&#39; 1 &#39;{CacheFile}&#39; &#39;{CachePassword}&#39; &#39;{CertFriendlyName}&#39;&#34;</span>
+</span></span></code></pre></div><h3 id="tipo-de-certificado-segun-servidor">
+  Tipo de certificado (segun servidor)
+  <a class="anchor" href="#tipo-de-certificado-segun-servidor">#</a>
+</h3>
+<pre><code>* JCHAT: WEB tipo PEM
+* EPO: WEB tipo PEM
+* IIS: autorenovable IIS
+* Vcenter: tipo CASUB
+* Exchange: autorenovable con comando &quot;específico&quot;
+* Vcenter: WEB con CSR
+* ESXi: Automatico con Vcenter
+</code></pre>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#que-es-una-ca">Que es una CA?</a></li>
+        <li><a href="#como-funciona">Como funciona?</a></li>
+        <li><a href="#laboratorio-ca--acme">Laboratorio CA + ACME</a></li>
+        <li><a href="#crear-certificado-de-manera-manual">Crear certificado de manera manual</a></li>
+      </ul>
+    </li>
+    <li><a href="#crear-casub-en-linux-pdte-probar">Crear CASUB en Linux (Pdte probar)</a>
+      <ul>
+        <li><a href="#solicitar-certificados-con-win-acme">Solicitar certificados con Win-Acme</a></li>
+        <li><a href="#generar-certificado-a-partir-de-un-csr">Generar certificado a partir de un CSR</a></li>
+        <li><a href="#tipo-de-certificado-segun-servidor">Tipo de certificado (segun servidor)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

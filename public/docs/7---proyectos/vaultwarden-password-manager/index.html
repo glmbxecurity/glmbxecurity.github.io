@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Instalacion gestor de contraseñas Vaultwarden#Pre-requisitos#apt update apt install docker.io apt install docker-compose Vaultwarden#Creamos un directorio para los contenedores, uno para vaultwarden y otro para nginx-proxy-manager
+git clone https://github.com/jmlcas/vaultwarden cd vaultwarden dockerp-compuse up -d Datos por defecto en la instalacion:
+localhost:8200 Nginx-Proxy-Manager#git clone https://github.com7jmlcas/nginx-proxy-manager cd nginx-proxy-manager docker-compose up -d Datos por defecto en la instalacion:
+localhost:81 admin@example.com:changeme Configuracion Nginx Proxy#Primeramente cambiamos el email y pass por defecto.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/7---proyectos/vaultwarden-password-manager/">
+  <meta property="og:site_name" content="GlmbXecurity">
+  <meta property="og:title" content="GlmbXecurity">
+  <meta property="og:description" content="Instalacion gestor de contraseñas Vaultwarden#Pre-requisitos#apt update apt install docker.io apt install docker-compose Vaultwarden#Creamos un directorio para los contenedores, uno para vaultwarden y otro para nginx-proxy-manager
+git clone https://github.com/jmlcas/vaultwarden cd vaultwarden dockerp-compuse up -d Datos por defecto en la instalacion:
+localhost:8200 Nginx-Proxy-Manager#git clone https://github.com7jmlcas/nginx-proxy-manager cd nginx-proxy-manager docker-compose up -d Datos por defecto en la instalacion:
+localhost:81 admin@example.com:changeme Configuracion Nginx Proxy#Primeramente cambiamos el email y pass por defecto.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Vaultwarden Password Manager | GlmbXecurity</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.822ea23655b0ba1b461943a35514ae2c30663029973dea97b76d84fa6d10f821.css" integrity="sha256-gi6iNlWwuhtGGUOjVRSuLDBmMCmXPeqXt22E&#43;m0Q&#43;CE=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.053c47a53420d4d8f91a0d7ff16baf41deb7e3c08baea451fd3e10effc18b34b.js" integrity="sha256-BTxHpTQg1Nj5Gg1/8WuvQd6348CLrqRR/T4Q7/wYs0s=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GlmbXecurity</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4725ecd4288801edac599d317b7f3fbd" class="toggle"  />
+    <label for="section-4725ecd4288801edac599d317b7f3fbd" class="flex justify-between">
+      <a href="/docs/1---reconocimiento/" class="">Reconocimiento</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/busqueda-de-exploits/" class="">Busqueda De Exploits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/descubrir-equipos-en-la-red/" class="">Descubrir Equipos en La Red</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/dominios-y-emails/" class="">Dominios Y Emails</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/google-dorks-cheatsheet/" class="">Google Dorks Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/nmap/" class="">Nmap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/reconocimiento-web/" class="">Reconocimiento Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/version-de-servicio-y-s.o/" class="">Version De Servicio Y S. O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/waf/" class="">Waf</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-113277fae8d94cf467d477245d42c6e9" class="toggle"  />
+    <label for="section-113277fae8d94cf467d477245d42c6e9" class="flex justify-between">
+      <a href="/docs/3---hacking-web/" class="">Hacking web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/anotaciones-varias/" class="">Anotaciones Varias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/" class="">Bypass Subir Ficheros Con Extensiones No Permitidas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/descubrimiento-cms/" class="">Descubrimiento Cms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/drupal/" class="">Drupal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/" class="">Enumeración Web Avanzada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuerza-bruta-login-web/" class="">Fuerza Bruta Login Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuzzing-web/" class="">Fuzzing Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/lfi/" class="">Lfi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/vulnerabilidad-target-blank/" class="">Vulnerabilidad Target Blank</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/webdav/" class="">Web Dav</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/wordpress/" class="">Wordpress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/xss/" class="">Xss</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d708dbd650445c961ea376c6ec392a3" class="toggle"  />
+    <label for="section-6d708dbd650445c961ea376c6ec392a3" class="flex justify-between">
+      <a href="/docs/2---hacking-gen%C3%A9rico/" class="">Hacking Genérico</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/" class="">Codificación</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/" class="">Cracking Fuerza Bruta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/" class="">Esteganografía</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/" class="">Local Port Forwarding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/" class="">Metasploit Y Msf Venom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/" class="">Obfuscation Av Evasion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/repositorio-git/" class="">Repositorio Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/reverse-shells/" class="">Reverse Shells</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/wireshark/" class="">Wireshark</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-653fb6148147fb5a54d5ae8f6cdc32db" class="toggle"  />
+    <label for="section-653fb6148147fb5a54d5ae8f6cdc32db" class="flex justify-between">
+      <a href="/docs/4---hacking-servicios/" class="">Hacking Servicios</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/111-rcpbind-nfs/" class="">111 RCP Bind ( Nfs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/139-445-smb/" class="">139, 445 Smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/161-snmp/" class="">161 SNMP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/21-ftp/" class="">21 FTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/22-ssh/" class="">22 SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/25-smtp/" class="">25 SMTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3306-sql/" class="">3306 SQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3389-rdp/" class="">3389 Rdp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/5985-winrm/" class="">5985 Win Rm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/8080-apache-tomcat/" class="">8080 Apache Tomcat</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4702fb46d9830af28f7b5deb2ce3e3da" class="toggle"  />
+    <label for="section-4702fb46d9830af28f7b5deb2ce3e3da" class="flex justify-between">
+      <a href="/docs/5---hacking-linux/" class="">Hacking Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/crack-etc-shadow/" class="">Crack Etc Shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/" class="">Escribir en Terminal De Una Víctima</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/path-hijacking/" class="">Path Hijacking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/pivoting-de-usuarios/" class="">Pivoting De Usuarios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/tratamiento-de-la-tty/" class="">Tratamiento De La Tty</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bad90e32cc0f7a46aaa4431b64839fc0" class="toggle"  />
+    <label for="section-bad90e32cc0f7a46aaa4431b64839fc0" class="flex justify-between">
+      <a href="/docs/6---hacking-windows/" class="">Hacking Windows</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/enumeracion/" class="">Enumeracion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/explotacion/" class="">Explotacion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/" class="">Vulnerabilidades Mas Conocidas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0791bead2c829c6f4d4cc85517e0210" class="toggle" checked />
+    <label for="section-c0791bead2c829c6f4d4cc85517e0210" class="flex justify-between">
+      <a href="/docs/7---proyectos/" class="">Proyectos</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/certification-authority-&#43;-acme/" class="">Certification Authority Acme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/personalizar-kali-con-bspwm/" class="">Personalizar Kali Con Bspwm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/" class="">Servidor Git Web Apuntes Con Obsidian</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/" class="">Servidor VPN Privado Pi Hole</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/vaultwarden-password-manager/" class="active">Vaultwarden Password Manager</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/links-de-inter%C3%A9s/" class="">Links De Interés</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/preparacion-ejpt-v2/" class="">Preparacion Ejpt V2</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Vaultwarden Password Manager</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pre-requisitos">Pre-requisitos</a>
+      <ul>
+        <li><a href="#vaultwarden">Vaultwarden</a></li>
+        <li><a href="#nginx-proxy-manager">Nginx-Proxy-Manager</a></li>
+      </ul>
+    </li>
+    <li><a href="#configuracion-nginx-proxy">Configuracion Nginx Proxy</a></li>
+    <li><a href="#certificar-servidor">Certificar servidor</a></li>
+    <li><a href="#configuraciones-extra">Configuraciones EXTRA</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="instalacion-gestor-de-contraseñas-vaultwarden">
+  Instalacion gestor de contraseñas Vaultwarden
+  <a class="anchor" href="#instalacion-gestor-de-contrase%c3%b1as-vaultwarden">#</a>
+</h1>
+<h2 id="pre-requisitos">
+  Pre-requisitos
+  <a class="anchor" href="#pre-requisitos">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update
+</span></span><span style="display:flex;"><span>apt install docker.io
+</span></span><span style="display:flex;"><span>apt install docker-compose
+</span></span></code></pre></div><h3 id="vaultwarden">
+  Vaultwarden
+  <a class="anchor" href="#vaultwarden">#</a>
+</h3>
+<p>Creamos un directorio para los contenedores, uno para vaultwarden y otro para nginx-proxy-manager</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/jmlcas/vaultwarden
+</span></span><span style="display:flex;"><span>cd vaultwarden
+</span></span><span style="display:flex;"><span>dockerp-compuse up -d
+</span></span></code></pre></div><p>Datos por defecto en la instalacion:</p>
+<ul>
+<li>localhost:8200</li>
+</ul>
+<h3 id="nginx-proxy-manager">
+  Nginx-Proxy-Manager
+  <a class="anchor" href="#nginx-proxy-manager">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com7jmlcas/nginx-proxy-manager
+</span></span><span style="display:flex;"><span>cd nginx-proxy-manager
+</span></span><span style="display:flex;"><span>docker-compose up -d
+</span></span></code></pre></div><p>Datos por defecto en la instalacion:</p>
+<ul>
+<li>localhost:81</li>
+<li><a href="mailto:admin@example.com">admin@example.com</a>:changeme</li>
+</ul>
+<h2 id="configuracion-nginx-proxy">
+  Configuracion Nginx Proxy
+  <a class="anchor" href="#configuracion-nginx-proxy">#</a>
+</h2>
+<p>Primeramente cambiamos el email y pass por defecto.
+Luego en hosts-&gt;New proxy host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Forward hostname/IP: la ip de la maquina
+</span></span><span style="display:flex;"><span>Forward port: <span style="color:#ae81ff">8200</span>
+</span></span><span style="display:flex;"><span>Domain names: el nombre que le daremos al DNS y que hará el forward, ej: vaultwarden.et.ms.esp
+</span></span></code></pre></div><h2 id="certificar-servidor">
+  Certificar servidor
+  <a class="anchor" href="#certificar-servidor">#</a>
+</h2>
+<p>Generar un certificado tipo web:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>step ca certificate vaultwarden.et.ms.esp vaultwarden.crt vaultwarden.key
+</span></span></code></pre></div><p>Para importar, en nginxproxymanager, nos vamos a SSL Certificates &ndash;&gt; Add SSL Certificate &ndash;&gt; Custom
+Una vez importado en Hosts &ndash;&gt; Editamos y en la pestaña SSL elegimos el certificado generado anteriormente.</p>
+<h2 id="configuraciones-extra">
+  Configuraciones EXTRA
+  <a class="anchor" href="#configuraciones-extra">#</a>
+</h2>
+<p>Vaultwarden tiene 2 maneras de configurarse: Mediante las variables de entorno o mediante el fichero config.json. Es recomendable no mezclar ambas opciones, ya que la segunda sobreescribirá a la primera. Dicho fichero de configuración se genera la primera vez que arrancamos el contenedor a partir de la configuración de las variables de entorno, por lo que recomiendo definirla ahí y, una vez arrancado, eliminar del docker-compose.yml aquella configuración que no necesitemos ya o que sea más sensible (como los token). Para una configuración básica pero completa, he utilizado la siguiente (puedes consultar todas las posibles configuraciones en la wiki del proyecto).</p>
+<p>Las variables de entorno se editan en el docker-compose file, y debe tener una pinta algo así:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>version: <span style="color:#e6db74">&#34;3.3&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  vaultwarden:
+</span></span><span style="display:flex;"><span>    image: vaultwarden/server:latest
+</span></span><span style="display:flex;"><span>    container_name: vaultwarden
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./vaultwarden:/data/
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - 8200:80
+</span></span><span style="display:flex;"><span>    restart: unless-stopped
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>    - ADMIN_TOKEN<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;el token de admin&#39;</span>
+</span></span></code></pre></div><pre tabindex="0"><code>* LOG_FILE: Define el nombre del fichero de log que usará el servicio. La ruta hace referencia dentro del contenedor.
+* LOG_LEVEL: Definimos el nivel de log, desde trace a error, pudiendo deshabilitar el log poniendo el nivel a off.
+* EXTENDED_LOGGING: Combinado con el anterior, nos permite definir el nivel de log.
+* DOMAIN: Lo usaremos para poner el dominio de nuestro servicio, y será necesario tanto para el envío de correos como para el acceso web. En el ejemplo, exponemos el servicio en https://bitwarden.midomin.io
+* SIGNUPS_ALLOWED: Con esta variable, permitimos o denegamos que cualquiera se pueda dar de alta en nuestro servicio. Deberá estar a true la primera vez, para que, por lo menos, podamos crear nuestra cuenta, y después lo cambiaremos a false ¡o cualquiera podría registrarse en nuestro servicio y utilizarlo!
+* INVITATIONS_ALLOWED: Si esta variable está a true, permitiremos que, aquellas cuentas que hayan recibido un enlace de invitación de nuestro servicio, se puedan registrar aunque tengamos prohibido el registro con la variable SIGNUPS_ALLOWED=false.
+* ADMIN_TOKEN: Si esta variable está definida, se nos habilitará el endpoint /admin, el cual nos permitirá gestionar nuestro servicio, usuarios, organizaciones, etc. El valor que pongamos será el que nos pedirá para acceder a dicha administración, por lo que, si deseamos tener habilitado el acceso, recomiendo poner un valor generado complicado de conocer, haciendo uso, por ejemplo, del comando openssl rand -base64 48 en cualquier terminal.
+* PRECAUCIÓN: Mantén el token especificado en ADMIN_TOKEN a salvo y a buen recaudo, es ni más ni menos que la contraseña de acceso a la zona de administración de tu servidor de contraseñas.
+</code></pre><h1 id="habilitar-panel-de-admin">
+  Habilitar panel de admin
+  <a class="anchor" href="#habilitar-panel-de-admin">#</a>
+</h1>
+<p>El panel de administración se encuentra deshabilitado por defecto, pero se puede habilitar añadiendo la variable <strong>ADMIN_TOKEN</strong> al docker compose file. Primero se debe generar con el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl rand -base64 <span style="color:#ae81ff">48</span>
+</span></span></code></pre></div><p>Luego añadimos el token al fichero de docker compose y debemos duplicar cada &ldquo;$&rdquo; que nos encontremos, para evitar la interpolación de variables.
+finalmente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Tiramos</span>
+</span></span><span style="display:flex;"><span>sudo docker compose -f /home/administrator/vaultwarden/docker-compose.yaml down vaultwarden
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Levantamos</span>
+</span></span><span style="display:flex;"><span>sudo docker-compose -f /home/administrator/vaultwarden/docker-compose.yaml up vaultwarden
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ojo con la ruta del fichero</span>
+</span></span></code></pre></div><p>Ahora ya accedemos al portal admin <a href="http://vaultwarden.et.ms.esp/admin">http://vaultwarden.et.ms.esp/admin</a>
+IMPORTANTE: para loguear hay que meter el token con las comillas, sino no entrará jamás.</p>
+<h4 id="extra">
+  EXTRA
+  <a class="anchor" href="#extra">#</a>
+</h4>
+<p>Para facilitar el habilitado / deshabilitado del panel, se hace una copia del docker-compose con el admin habilitado, y se utiliza cuando se quiera habilitar.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pre-requisitos">Pre-requisitos</a>
+      <ul>
+        <li><a href="#vaultwarden">Vaultwarden</a></li>
+        <li><a href="#nginx-proxy-manager">Nginx-Proxy-Manager</a></li>
+      </ul>
+    </li>
+    <li><a href="#configuracion-nginx-proxy">Configuracion Nginx Proxy</a></li>
+    <li><a href="#certificar-servidor">Certificar servidor</a></li>
+    <li><a href="#configuraciones-extra">Configuraciones EXTRA</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

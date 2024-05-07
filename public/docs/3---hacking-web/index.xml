@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking web on GlmbXecurity</title>
+    <link>http://localhost:1313/docs/3---hacking-web/</link>
+    <description>Recent content in Hacking web on GlmbXecurity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/3---hacking-web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/anotaciones-varias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/anotaciones-varias/</guid>
+      <description>Cuando en una web hay un admin que revisa links, mensajes, etc&#xD;#&#xD;Cuando en una web, vemos algún mensaje o texto que nos indique o nos insinúe que alguien comprobará nuestro link o un mensaje (por ejemplo si hay un chat), esto se puede prestar para un CSRF, un XSS para obtener cookies de sesión o para montar un Phishing con la vulnerabilidad de [[Vulnerabilidad Target blank]], por ejemplo.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/bypass-subir-ficheros-con-extensiones-no-permitidas/</guid>
+      <description>Al intentar subir un fichero a una web, es posible que no permita ciertas extensiones que pueden resultar maliciosa, como php.&#xA;Extensiones similares&#xD;#&#xD;PHP: php php2 php3 php4 php5 php6 php7 phps phps pht phtm phtml pgif shtml htaccess phar inc hphp ctp module PHPv8 php php4 php5 phtml module inc hphp ctp Probando mayusculas&#xD;#&#xD;En ocasiones se podría utilizar las extensiones anteriores de la siguiente manera: pHp, pHP5&amp;hellip;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/descubrimiento-cms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/descubrimiento-cms/</guid>
+      <description>Reconocimiento Wordpress&#xD;#&#xD;Rutas importantes:&#xA;*wp-admin *wp-login *wp-content/plugins *xmlrpc.php&#xA;Si en la página encontramos algún post, suele venir con el nombre del usuario que lo creó. ahí ya hay una pista&#xA;Con wpscan, enumeramos version, plugins, etc&#xA;wpscan --url 10.10.5.3 (scan basico) wpscan --url 10.10.5.3 -e vp,u (enumera plugins vulnerables y usuarios) wpscan -hh (ver todas las opciones) Con Wpscan API token se busca activamente en la web de WPScan.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/drupal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/drupal/</guid>
+      <description>&#xD;Version drupal&#xD;#&#xD;En ocasiones en el panel de login, podemos ver la version de drupal en el código fuente. A veces tenemos el robots.txt (nmap a veces lo encuentra), y nos dice la url escondida que hace referencia a la versión, por ej: /drupal-75-7 Vulnerabilidad Drupalgeddon&#xD;#&#xD;Es una vulnerabilidad que nos permite obtener una sesión de meterpreter que luego se puede convertir en una shell.&#xA;msfconsole search drupal 7 use exploit/unix/webapp/drupal_drupalgeddon2 # completamos los campos y &amp;#34;run&amp;#34; </description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/enumeraci%C3%B3n-web-avanzada/</guid>
+      <description>Escaneo vulnerabilidades HTTP&#xD;#&#xD;nmap &amp;lt;ip&amp;gt; -p &amp;lt;puerto&amp;gt; -n -Pn --script=http-enum Escaneo vulnerabilidades con Nikto&#xD;#&#xD;nikto -url &amp;lt;url&amp;gt; Buscar comentarios&#xD;#&#xD;curl http://172.16.226.6/ | grep &amp;#34;!&amp;#34; Ver codigo fuente con CURL&#xD;#&#xD;En ocasiones encontramos codigo php que no podemos ver, pero si se interpreta por el servidor. Si queremos conocer su código:&#xA;curl -s &amp;#34;http://ip/fichero.php&amp;#34; Enumeración cabeceras&#xD;#&#xD;Introduciendo cabeceras válidas e inválidas veremos diferentes respuestas. Podemos enumerar si tiene virtual hosting y ver cual es el dominio</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/fuerza-bruta-login-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/fuerza-bruta-login-web/</guid>
+      <description>Cuando detectamos un panel de login, se pueden realizar varias cosas, probar inyecciones SQL, realizar fuerza bruta con wpscan (si se trata de un wordpress), tratar de enumerar usuarios con burpsuite, etc. En este caso vamos a tratar de hacer fuerza bruta al panel de login con Burpsuite e Hydra .&#xA;Interceptar petición&#xD;#&#xD;Realizamos un intento de login para interceptar la petición, nos interesan los campos POST o GET junto con la URL a la que se realizará el ataque.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/fuzzing-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/fuzzing-web/</guid>
+      <description>Whatweb&#xD;#&#xD;whatweb xiaomi.com Gobuster&#xD;#&#xD;Con gobuster tenemos la opción para especificar que estamos ante virtual hosting, y extensiones de archivos.&#xA;gobuster dir -u http://xiaomi.com/ -t 50 -w &amp;lt;dicionario&amp;gt; gobuster dir -u http://xiaomi.com/ -t 50 -w &amp;lt;dicionario&amp;gt; -x php,html,txt,py,sh,js gobuster vhost -u driftingblues.box -w /usr/share/wordlists/dirb/common.txt Dirb&#xD;#&#xD;Dirb hace automáticamente fuzzing sobre los directorios encontrados para localizar subdirectorios.&#xA;dirb &amp;lt;http://ip&amp;gt; Fuzzing web HTTPS&#xD;#&#xD;Nos saldrá un error al usar SSL, y nos dirá los codigos que debemos omitir para no tener errores, como ejemplo se puso el codigo de estado 200</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/lfi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/lfi/</guid>
+      <description>Local File Inclusion&#xD;#&#xD;Ficheros interesantes en LFI&#xD;#&#xD;/etc/passwd /etc/shadow /var/log/apache2/access.log /var/log/httpd/access.log /home/$USER/.ssh/id_rsa /var/log/mail.log var/log/maillog /var/mail/helios Path traversal basics&#xD;#&#xD;#basico ../../etc/passwd #cuando se omite el &amp;#34;../&amp;#34; en el código ....//....//etc/passwd # cuando prohibe el &amp;#34;../&amp;#34; ..////..////..../////etc/passwd # cuando prohibe un fichero concreto ../etc///////passwd ../etc/host?s ../etc/passwd/. # cuando se concatena una extension .php al final por defecto, hacemos uso de null bytes (versiones antiguas de php por debajo de la 5.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/vulnerabilidad-target-blank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/vulnerabilidad-target-blank/</guid>
+      <description>Explicación vulnerabilidad target blank&#xD;#&#xD;Esta vulnerabilidad, también conocida como reverse tabnabbing, un tipo de ataque de phishing en el que el atacante reemplaza la pestaña legítima, y fiable, por un documento malicioso usando el selector window.opener.location.assign() cuando se accede mediante un enlace de apertura en nueva ventana/pestaña, o sea del tipo _target=»blank».&#xA;Lo que hace el atacante es, usando el selector window.opener.location, llevar al usuario a alguna página falsa, que simula ser la original, o ejecuta algún JavaScript en la página de apertura en la que confía el usuario.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/webdav/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/webdav/</guid>
+      <description>WebDAV (Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP (Hypertext Transfer Protocol) que permite a los usuarios gestionar y editar archivos almacenados en servidores remotos. WebDAV fue diseñado para facilitar la colaboración entre usuarios en la creación y edición de contenidos en la web, permitiendo operaciones como la carga y descarga de archivos, la gestión de directorios, y la edición directa de archivos en un servidor.&#xA;Enumeracion webDAV&#xD;#&#xD;# Si se necesita proveer contraseña se mete el argumento -auth davtest -url &amp;lt;URL/webdav&amp;gt; -auth user:pass Fuerza bruta contra webdav login panel&#xD;#&#xD;hydra -L usuarios.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/wordpress/</guid>
+      <description>Ficheros y lugares interesantes&#xD;#&#xD;*xlmrpc.php *license.txt *licencia.txt *wp-config.php *.htaccess *wp-admin *wp-login *wp-content/plugins *xmlrpc.php&#xA;Cuando una web no se muestra bien&#xD;#&#xD;A veces cuando tenemos un wordpress, la pagina no se muestra correctamente (fondo blanco, todo descuadrado, sin formato, mal). Lo único que hay que hacer es comprobar que lo mas seguro es que haya virtual hosting, y se deba incluir la dirección IP en /etc/hosts&#xA;Contraseñas por fuerza bruta en wordpress&#xD;#&#xD;Teniendo un usuario válido, se puede realizar lo siguiente</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/docs/3---hacking-web/xss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/3---hacking-web/xss/</guid>
+      <description>en desarrollo</description>
+    </item>
+  </channel>
+</rss>
