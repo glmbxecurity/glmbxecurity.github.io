@@ -4,32 +4,37 @@ bookCollapseSection: true
 title: GlmbXecurity Hacking & Ciberseguridad
 ---
 
-![imagen](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/Banner.jpg)
+![imagen](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/Banner_WEB.jpg)
 
 ### About me
-#### 💼 Sysadmin y security area in Ejército de Tierra.
-#### 📚 ASIR y SMR | Active Directory, VmWare | eJPTv2 (en curso)
-#### 📃 Mi rincón en Github: [GlmbXecurity](https://github.com/glmbxecurity)
+#### 💼 Pentester y Analísta de ciberseguridad en Ejército de Tierra 🇪🇸
+#### 📚 FP Grado medio SMR | FP Grado superior ASIR | eJPTv2 | CCNA 1 y 2 (v7)
+#### 📃 Github: [GlmbXecurity](https://github.com/glmbxecurity)
 #### 📽️ Youtube: [GlmbXecurity](https://www.youtube.com/channel/UC-74_gwWd1Nt-pOjLc86GPQ)
+#### 📃 Linkedin: [Edward Herrera Galamba](https://www.linkedin.com/in/edward-herrera-galamba-77a92513b/)
+
 
  ### Un poco sobre mí ❤️
  {{< hint warning >}}
-soy un gran aficionado de la ciberseguridad en todos sus ámbitos. Aunque actualmente trabajo como Sysadmin, a lo largo de mi carrera
-he curioseado con casi todos los campos que puede abarcar la informática. Actualmente me estoy preparando para el OSCP y he creado 
-este sitio para compartir contigo mis conocimientos en ciberseguridad y documentar las MV’s que voy realizando en forma de “Write Up’s”.
+Apasionado de la ciberseguridad en todos sus ámbitos, aunque me decanto por el pentesting, por mi trabajo también desempeño funciones blue 
+team. Actualmente me dedico al área de ciberseguridad en las Fuerzas Armadas Españolas, aunque en mi tiempo libre también desarrollo algún
+proyecto de sistemas, o de cualquier otro tipo.  
+
+Este sitio ha sido creado para compartir mis conocimientos en hacking ético, writeup's CTF y proyectos interesantes relacionados con el tema.
 {{< /hint >}}
  ## Skills
  
  {{< hint warning >}}
- #### WEB Pentesting
- ##### Linux & Windows Pentesting
- #### Services Pentesting
- ##### CCNA 1 & 2 v7
- #### Linux & Bash 
- ##### HTML & CSS 
- #### Hardware
- ##### Active directory 
- #### Vmware ESXi & Vcenter 
- ##### Trellix ePO Endpoint
 
+### Linux & Windows pentesting
+### Pentesting web
+### Common services & vulnerabilities pentesting
+#### Trellix ePolicy Orchestrator
+#### Nessus
+#### SIEM Analyst
+#### Linux & Bash 
+#### Active directory 
+#### Vmware ESXi & Vcenter 
+#### HTML & CSS 
+#### Hardware
 {{< /hint >}}
