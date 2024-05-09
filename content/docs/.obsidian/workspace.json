@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md",
+                "file": "5 - Hacking Linux/5 - Cronjobs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md",
+                "file": "5 - Hacking Linux/5 - Cronjobs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md",
+                "file": "5 - Hacking Linux/5 - Cronjobs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md"
+                "file": "5 - Hacking Linux/5 - Cronjobs.md"
               }
             }
           }
@@ -148,10 +148,14 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "5 - Hacking Linux/3 - Escalada Privilegios.md",
+    "5 - Hacking Linux/5 - Cronjobs.md",
+    "5 - Hacking Linux/2 - Explotación.md",
+    "5 - Hacking Linux/1 - Comandos básicos.md",
+    "5 - Hacking Linux/9 - Pivoting de usuarios.md",
     "5 - Hacking Linux/8 - Path Hijacking.md",
     "5 - Hacking Linux/7 - Sudo -L.md",
     "5 - Hacking Linux/6 - Permisos SUID - GUID.md",
-    "5 - Hacking Linux/5 - Cronjobs.md",
     "5 - Hacking Linux/4 - Capabilities.md",
     "6 - Hacking Windows/4 - Escalada Privilegios.md",
     "6 - Hacking Windows/3 - Explotacion.md",
@@ -170,10 +174,6 @@
     "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
     "3 - Hacking Web/4 - Fuerza bruta panel login.md",
     "3 - Hacking Web/3 - Wordpress.md",
-    "3 - Hacking Web/2 - Fuzzing Web.md",
-    "5 - Hacking Linux/2 - Explotación.md",
-    "5 - Hacking Linux/Vulnerabilidades mas conocidas.md",
-    "5 - Hacking Linux/3 - Escalada Privilegios.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",

@@ -22,3 +22,6 @@ unshadow passwd shadow > unshadowed.txt
 
 john --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt
 ```
+
+
+

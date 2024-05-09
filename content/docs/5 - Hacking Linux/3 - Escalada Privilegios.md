@@ -25,6 +25,7 @@ uname -r
 #### Listar tareas cron
 cat /etc/crontab
 cat /etc/cron.d
+crontab -l
 
 #### Comprobar grupos
 ### A veces nuestro usuario no tiene privilegios, pero si el grupo al que pertenece.
@@ -65,7 +66,7 @@ docker run -v /:/mnt --rm -it alpine chroot /mnt sh
 
 ### Binario con permisos de edición y ejecución
 
-Con sudo -l vemos que se puede ejecutar como root, sus permisos nos deja editar el fichero, algo así ==rwxrwxrwx==. editamos dicho binario y le metemos el comando ==su -==.
+Con sudo -l vemos que se puede ejecutar como root, sus permisos nos deja editar el fichero, algo así ==rwxrwxrwx==. editamos dicho binario y le metemos el comando==su -==.
 
 
 ### Pivoting / escalada privilegios con man
@@ -98,7 +99,12 @@ Herramienta que busca posibles malas configuraciones en la maquina para intentar
 Herramienta para monitorizar tareas cron
 
 ### Escalada privilegios con path hijacking
-<a href="https://glmbxecurity.github.io/docs/5-hacking-linux/path-hijacking/">
+<a href="https://glmbxecurity.github.io/docs/5-hacking-linux/path-hijacking/"></a>
+
+### Linux exploit suggester (Kernel exploits)
+Automatizacion para tratar de buscar vulnerabilidades a nivel de kernel y más,
+[Linux exploit suggester V1](https://github.com/The-Z-Labs/linux-exploit-suggester)
+[Linux exploit suggester V2](https://github.com/jondonas/linux-exploit-suggester-2)
 
 
 
