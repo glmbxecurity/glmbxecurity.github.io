@@ -8,6 +8,7 @@ En este post se detallará todo lo necesario para afrontar esta certificación c
 * [Metodología]()  
 * [Donde prepararse]()  
 * [Máquinas CTF]()  
+* [Diccionarios utilizados]()
 
 ### Que es eJPTv2
 eLearning Junior Penetration Tester, es una certificación en ciberseguridad 100% práctica ideal para aquellos que se quieran iniciar en la ciberseguridad. Es de las mas asequibles en este campo, pero no por ello es trivial, requiere de esfuerzo, dedicación y mucha práctica.
@@ -117,3 +118,11 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 #### HackMyVM
 * Friendly
 * Art
+
+### Diccionarios utilizados eJPTv2
+##### Fuerza bruta login FTP y SSH
+* __/usr/share/metasploit-framework/data/wordlists/common_users.txt__
+* __/usr/share/metasploit-framework/data/wordlists/common_passwords.txt__
+
+##### Fuerza bruta SAMBA passwords
+* __/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt__

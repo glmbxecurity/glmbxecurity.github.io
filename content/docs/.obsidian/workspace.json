@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6 - Hacking Windows/Explotacion.md",
+                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "6 - Hacking Windows/Explotacion.md",
+                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "6 - Hacking Windows/Explotacion.md",
+                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "6 - Hacking Windows/Explotacion.md"
+                "file": "5 - Hacking Linux/9 - Pivoting de usuarios.md"
               }
             }
           }
@@ -148,32 +148,32 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "5 - Hacking Linux/8 - Path Hijacking.md",
+    "5 - Hacking Linux/7 - Sudo -L.md",
+    "5 - Hacking Linux/6 - Permisos SUID - GUID.md",
+    "5 - Hacking Linux/5 - Cronjobs.md",
+    "5 - Hacking Linux/4 - Capabilities.md",
+    "6 - Hacking Windows/4 - Escalada Privilegios.md",
+    "6 - Hacking Windows/3 - Explotacion.md",
+    "6 - Hacking Windows/2 - Enumeracion.md",
+    "6 - Hacking Windows/1 - Comandos básicos.md",
+    "1 - Reconocimiento/5 - Busqueda de exploits.md",
+    "1 - Reconocimiento/Google Dorks Cheatsheet.md",
+    "1 - Reconocimiento/Version de servicio y S.O.md",
+    "1 - Reconocimiento/4 - Dominios y emails.md",
+    "3 - Hacking Web/1 - Enumeración web avanzada.md",
+    "1 - Reconocimiento/3 - Reconocimiento web.md",
+    "1 - Reconocimiento/2 - Nmap.md",
+    "1 - Reconocimiento/1 - Descubrir equipos en la red.md",
     "2 - Hacking genérico/Metasploit y MsfVenom.md",
-    "6 - Hacking Windows/Explotacion.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
-    "6 - Hacking Windows/Escalada Privilegios.md",
-    "6 - Hacking Windows/Enumeracion.md",
-    "6 - Hacking Windows/Comandos básicos.md",
-    "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
-    "6 - Hacking Windows/Eternalblue.md",
-    "6 - Hacking Windows/BlueKeep.md",
-    "2 - Hacking genérico/Obfuscation - AV Evasion.md",
-    "3 - Hacking Web/Bypass subir ficheros con extensiones no permitidas.md",
-    "2 - Hacking genérico/Codificación.md",
-    "2 - Hacking genérico/Cracking fuerza bruta.md",
-    "2 - Hacking genérico/Esteganografía.md",
-    "4 - Hacking Servicios/5985 WinRM.md",
-    "4 - Hacking Servicios/3389 RDP.md",
-    "3 - Hacking Web/WebDAV.md",
-    "3 - Hacking Web/Enumeración web avanzada.md",
-    "3 - Hacking Web/Fuzzing Web.md",
-    "3 - Hacking Web/Fuerza bruta login web.md",
-    "3 - Hacking Web/LFI.md",
-    "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/Wordpress.md",
-    "3 - Hacking Web/XSS.md",
-    "3 - Hacking Web/Anotaciones varias.md",
     "3 - Hacking Web/Descubrimiento CMS.md",
+    "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
+    "3 - Hacking Web/4 - Fuerza bruta panel login.md",
+    "3 - Hacking Web/3 - Wordpress.md",
+    "3 - Hacking Web/2 - Fuzzing Web.md",
+    "5 - Hacking Linux/2 - Explotación.md",
+    "5 - Hacking Linux/Vulnerabilidades mas conocidas.md",
+    "5 - Hacking Linux/3 - Escalada Privilegios.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",

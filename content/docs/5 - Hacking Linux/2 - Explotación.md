@@ -1,6 +1,6 @@
-Al encontrar forma de leer ficheros que pertenecen a **root**, por ejemplo con permiso SUID a ___cat, less, vim___ , podemos intentar leer el fichero **/etc/shadow** y crackearlo.
 
 ### Crack /etc/shadow
+Al encontrar forma de leer ficheros que pertenecen a **root**, por ejemplo con permiso SUID a ___cat, less, vim___ , podemos intentar leer el fichero **/etc/shadow** y crackearlo.
 
 neceistamos:
 * /etc/passwd (con la linea donde aparece root)
