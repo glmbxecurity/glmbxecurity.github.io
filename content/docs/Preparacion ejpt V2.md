@@ -125,4 +125,18 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 * __/usr/share/metasploit-framework/data/wordlists/common_passwords.txt__
 
 ##### Fuerza bruta SAMBA passwords
+* __/usr/share/metasploit-framework/data/wordlists/unix_users.txt__
 * __/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt__
+
+#### Fuzzing web
+* __/usr/share/metasploit-framework/data/wmap/wmap_dirs.txt_
+
+#### HTTP Login
+Passwords
+* __/usr/share/metasploit-framework/data/wordlists/http_default_pass.txt_ 
+* Users
+* __/usr/share/metasploit-framework/data/wordlists/http_default_users.txt_
+* * __/usr/share/metasploit-framework/data/wordlists/namelisttxt_
+
+Users:Passwords (usuario y contraseña separado por ":")
+* __/usr/share/metasploit-framework/data/wordlists/http_default_userpass.txt__

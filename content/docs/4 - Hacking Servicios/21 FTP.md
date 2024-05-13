@@ -1,3 +1,7 @@
+### Enumeracion con metasploit
+```bash
+search type:auxiliary name:ftp
+```
 ### Escaneo vulnerabilidades FTP
 ```bash
 nmap <ip> -p <puerto> -n -Pn --script=ftp-anon

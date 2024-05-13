@@ -1,3 +1,28 @@
+### Enumeración con metasploit
+Buscar módulos para enumeración http
+```bash
+search tpye: auxiliary name:http
+```
+
+### Enumeracion con WMAP (Metasploit)
+```bash
+### Cargar modulo wmap
+load wmap
+
+### Ver las opciones que tiene
+wmap_ (y tabulamos)
+
+### Agregar un sitio
+wmap_sites -a <IP>
+wmap_sites -l # Listar los sites
+
+### especificar un target
+wmap_targets -t <URL>
+wmap_targets -l #Listar targets
+
+### Lanzar escaneo por defecto con los modulos habilitados
+wmap_run -e
+```
 ### Escaneo vulnerabilidades HTTP
 ```bash
 nmap <ip> -p <puerto> -n -Pn --script=http-enum

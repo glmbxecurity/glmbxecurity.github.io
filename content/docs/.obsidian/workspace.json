@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5 - Hacking Linux/5 - Cronjobs.md",
+                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/5 - Cronjobs.md",
+                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/5 - Cronjobs.md",
+                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/5 - Cronjobs.md"
+                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md"
               }
             }
           }
@@ -148,8 +148,20 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "5 - Hacking Linux/3 - Escalada Privilegios.md",
+    "4 - Hacking Servicios/25 SMTP.md",
+    "Log poisoning.md",
+    "4 - Hacking Servicios/22 SSH.md",
+    "4 - Hacking Servicios/21 FTP.md",
+    "4 - Hacking Servicios/3306 SQL.md",
+    "3 - Hacking Web/1 - Enumeración web avanzada.md",
+    "Preparacion ejpt V2.md",
+    "3 - Hacking Web/1 - Enumeración web con metasploit.md",
+    "8 - Pivoting/Pivoting basics.md",
+    "8 - Pivoting/_index.md",
+    "6 - Hacking Windows/_index.md",
     "5 - Hacking Linux/5 - Cronjobs.md",
+    "8 - Pivoting",
+    "5 - Hacking Linux/3 - Escalada Privilegios.md",
     "5 - Hacking Linux/2 - Explotación.md",
     "5 - Hacking Linux/1 - Comandos básicos.md",
     "5 - Hacking Linux/9 - Pivoting de usuarios.md",
@@ -163,17 +175,6 @@
     "6 - Hacking Windows/1 - Comandos básicos.md",
     "1 - Reconocimiento/5 - Busqueda de exploits.md",
     "1 - Reconocimiento/Google Dorks Cheatsheet.md",
-    "1 - Reconocimiento/Version de servicio y S.O.md",
-    "1 - Reconocimiento/4 - Dominios y emails.md",
-    "3 - Hacking Web/1 - Enumeración web avanzada.md",
-    "1 - Reconocimiento/3 - Reconocimiento web.md",
-    "1 - Reconocimiento/2 - Nmap.md",
-    "1 - Reconocimiento/1 - Descubrir equipos en la red.md",
-    "2 - Hacking genérico/Metasploit y MsfVenom.md",
-    "3 - Hacking Web/Descubrimiento CMS.md",
-    "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
-    "3 - Hacking Web/4 - Fuerza bruta panel login.md",
-    "3 - Hacking Web/3 - Wordpress.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",
