@@ -57,4 +57,8 @@ En ocasiones se podría utilizar las extensiones anteriores de la siguiente mane
 > - _file.php%0d%0a.png_
 > - _file.phpJunk123png_
 
+
+#### Manipulacion content-type
+Al interceptar una petición de file upload con burpsuite, en ocasiones la validación se hace en base al content-type que se puede modificar en la petición.
+
 ![[Obfuscation - AV Evasion#Exiftool]]

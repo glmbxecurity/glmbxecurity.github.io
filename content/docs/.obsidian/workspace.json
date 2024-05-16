@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md",
+                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md",
+                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md",
+                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/1 - Enumeración web avanzada.md"
+                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md"
               }
             }
           }
@@ -148,12 +148,12 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "3 - Hacking Web/1 - Enumeración web avanzada.md",
     "4 - Hacking Servicios/25 SMTP.md",
     "Log poisoning.md",
     "4 - Hacking Servicios/22 SSH.md",
     "4 - Hacking Servicios/21 FTP.md",
     "4 - Hacking Servicios/3306 SQL.md",
-    "3 - Hacking Web/1 - Enumeración web avanzada.md",
     "Preparacion ejpt V2.md",
     "3 - Hacking Web/1 - Enumeración web con metasploit.md",
     "8 - Pivoting/Pivoting basics.md",
