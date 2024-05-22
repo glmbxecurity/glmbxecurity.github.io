@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
+                "file": "3 - Hacking Web/LFI.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
+                "file": "3 - Hacking Web/LFI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
+                "file": "3 - Hacking Web/LFI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md"
+                "file": "3 - Hacking Web/LFI.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "3 - Hacking Web/4 - Fuerza bruta login.md",
+    "3 - Hacking Web/5 - Bypass subir ficheros con extensiones no permitidas.md",
     "3 - Hacking Web/1 - Enumeración web avanzada.md",
     "4 - Hacking Servicios/25 SMTP.md",
     "Log poisoning.md",
@@ -173,8 +175,6 @@
     "6 - Hacking Windows/3 - Explotacion.md",
     "6 - Hacking Windows/2 - Enumeracion.md",
     "6 - Hacking Windows/1 - Comandos básicos.md",
-    "1 - Reconocimiento/5 - Busqueda de exploits.md",
-    "1 - Reconocimiento/Google Dorks Cheatsheet.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",

@@ -1,4 +1,7 @@
 ### Local File Inclusion
+
+__La primera premisa si estamos tratando de explotar un LFI y no funciona por "POST", es cambiar a "GET" y viceversa__
+
 #### Ficheros interesantes en LFI
 * /etc/passwd
 * /etc/shadow
