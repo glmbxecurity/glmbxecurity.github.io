@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Hacking genérico/Crear diccionarios.md",
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Hacking genérico/Crear diccionarios.md",
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Hacking genérico/Crear diccionarios.md",
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Hacking genérico/Crear diccionarios.md"
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "2 - Hacking genérico/Cracking fuerza bruta.md",
     "2 - Hacking genérico/Crear diccionarios.md",
+    "2 - Hacking genérico/Cracking fuerza bruta.md",
     "2 - Hacking genérico/Local port forwarding.md",
     "3 - Hacking Web/LFI.md",
     "3 - Hacking Web/4 - Fuerza bruta login.md",
