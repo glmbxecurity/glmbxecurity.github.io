@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 - Pivoting/_index.md",
+                "file": "3 - Hacking Web/HTTP FileServer.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "active direc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "8 - Pivoting/_index.md",
+                "file": "3 - Hacking Web/HTTP FileServer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8 - Pivoting/_index.md",
+                "file": "3 - Hacking Web/HTTP FileServer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 - Pivoting/_index.md"
+                "file": "3 - Hacking Web/HTTP FileServer.md"
               }
             }
           }
@@ -148,33 +148,33 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
+    "6 - Hacking Windows/2 - Enumeracion.md",
+    "6 - Hacking Windows/3 - Explotacion.md",
+    "4 - Hacking Servicios/5985 WinRM.md",
+    "6 - Hacking Windows/4 - Escalada Privilegios.md",
+    "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
+    "4 - Hacking Servicios/139, 445 SMB.md",
+    "4 - Hacking Servicios/161 SNMP.md",
+    "2 - Enumeracion.md",
+    "3 - Hacking Web/HTTP FileServer.md",
+    "2 - Hacking genérico/Metasploit y MsfVenom.md",
+    "2 - Hacking genérico/Obfuscation - AV Evasion.md",
+    "8 - Pivoting/_index.md",
+    "7 - Proyectos/_index.md",
+    "6 - Hacking Windows/_index.md",
     "4 - Hacking Servicios/_index.md",
     "5 - Hacking Linux/_index.md",
-    "6 - Hacking Windows/_index.md",
-    "7 - Proyectos/_index.md",
     "7 - Proyectos/Certification Authority + ACME.md",
     "6 - Hacking Windows/Active Directory.md",
-    "8 - Pivoting/_index.md",
     "8 - Pivoting/Pivoting basics.md",
     "8 - Pivoting",
-    "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
-    "6 - Hacking Windows/4 - Escalada Privilegios.md",
     "3 - Hacking Web/4 - Fuerza bruta login.md",
     "3 - Hacking Web/3 - Wordpress.md",
     "3 - Hacking Web/2 - Fuzzing Web.md",
     "3 - Hacking Web/1 - Enumeración web avanzada.md",
-    "2 - Hacking genérico/Obfuscation - AV Evasion.md",
-    "2 - Hacking genérico/Metasploit y MsfVenom.md",
     "2 - Hacking genérico/Crear diccionarios.md",
     "1 - Reconocimiento/5 - Busqueda de exploits.md",
     "1 - Reconocimiento/4 - Dominios y emails.md",
-    "1 - Reconocimiento/3 - Reconocimiento web.md",
-    "1 - Reconocimiento/2 - Nmap.md",
-    "1 - Reconocimiento/1 - Descubrir equipos en la red.md",
-    "3 - Hacking Web/LFI.md",
-    "6 - Hacking Windows/BlueKeep.md",
-    "6 - Hacking Windows/Comandos básicos.md",
-    "6 - Hacking Windows/Escalada Privilegios.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",

