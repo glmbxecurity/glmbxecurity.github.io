@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 - Hacking Servicios/_index.md",
+                "file": "8 - Pivoting/_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 - Hacking Servicios/_index.md",
+                "file": "8 - Pivoting/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 - Hacking Servicios/_index.md",
+                "file": "8 - Pivoting/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 - Hacking Servicios/_index.md"
+                "file": "8 - Pivoting/_index.md"
               }
             }
           }
@@ -148,11 +148,10 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-<<<<<<< Updated upstream
+    "4 - Hacking Servicios/_index.md",
     "5 - Hacking Linux/_index.md",
     "6 - Hacking Windows/_index.md",
     "7 - Proyectos/_index.md",
-    "4 - Hacking Servicios/_index.md",
     "7 - Proyectos/Certification Authority + ACME.md",
     "6 - Hacking Windows/Active Directory.md",
     "8 - Pivoting/_index.md",
@@ -172,37 +171,10 @@
     "1 - Reconocimiento/3 - Reconocimiento web.md",
     "1 - Reconocimiento/2 - Nmap.md",
     "1 - Reconocimiento/1 - Descubrir equipos en la red.md",
-=======
->>>>>>> Stashed changes
     "3 - Hacking Web/LFI.md",
     "6 - Hacking Windows/BlueKeep.md",
     "6 - Hacking Windows/Comandos básicos.md",
     "6 - Hacking Windows/Escalada Privilegios.md",
-<<<<<<< Updated upstream
-=======
-    "6 - Hacking Windows/Active Directory.md",
-    "2 - Hacking genérico/Uso de Metasploit y MsfVenom.md",
-    "4 - Hacking Servicios/5985 WinRM.md",
-    "6 - Hacking Windows/Eternalblue.md",
-    "4 - Hacking Servicios/3389 RDP.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
-    "3 - Hacking Web/WebDAV.md",
-    "3 - Hacking Web/Enumeración web avanzada.md",
-    "3 - Hacking Web/Fuzzing Web.md",
-    "3 - Hacking Web/Fuerza bruta login web.md",
-    "3 - Hacking Web/Vulnerabilidad Target blank.md",
-    "3 - Hacking Web/Wordpress.md",
-    "3 - Hacking Web/XSS.md",
-    "3 - Hacking Web/Anotaciones varias.md",
-    "3 - Hacking Web/Descubrimiento CMS.md",
-    "4 - Hacking Servicios/3306 SQL.md",
-    "4 - Hacking Servicios/22 SSH.md",
-    "4 - Hacking Servicios/21 FTP.md",
-    "2 - Hacking genérico/Cracking fuerza bruta.md",
-    "4 - Hacking Servicios/161 SNMP.md",
-    "1 - Reconocimiento/Reconocimiento web.md",
-    "2 - Hacking genérico/Repositorio git.md",
->>>>>>> Stashed changes
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",
