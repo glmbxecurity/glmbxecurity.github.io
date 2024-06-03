@@ -6,12 +6,14 @@
 * search <windows | nombre de la vuln ..>
 * use <modulo> (utilizar un exploit)
 * show options (para ver lo que podemos aplicar en un exploit)
+* info (ver los targets disponibles, opciones, etc)
 * set (establecer un parámetro)
 * run (lanzar un exploit)
 * shell (obtener una shell cuando ya hemos establecido una sesión de meterpreter)
 * sessions -l (listar sesiones)
 * sessions -K (kill sessions)
 * sessions <numero> entrar en una sesión
+
 
 #METERPRETER migrar sesion de meterpreter x86 a x64
 pgrep explorer (esto nos dará el PID del proceso explorer)
