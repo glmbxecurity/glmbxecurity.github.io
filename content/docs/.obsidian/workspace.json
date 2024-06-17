@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8 - Pivoting/Pivoting entornos Windows.md",
+                "file": "8 - Pivoting/Pivoting entornos Linux.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "8 - Pivoting/Pivoting entornos Windows.md",
+                "file": "8 - Pivoting/Pivoting entornos Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "8 - Pivoting/Pivoting entornos Windows.md",
+                "file": "8 - Pivoting/Pivoting entornos Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8 - Pivoting/Pivoting entornos Windows.md"
+                "file": "8 - Pivoting/Pivoting entornos Linux.md"
               }
             }
           }
@@ -138,18 +138,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
     "8 - Pivoting/Pivoting basics.md",
+    "8 - Pivoting/Pivoting entornos Linux.md",
     "8 - Pivoting/Pivoting entornos Windows.md",
+    "2 - Hacking genérico/Metasploit y MsfVenom.md",
+    "2 - Hacking genérico/Local port forwarding.md",
+    "4 - Hacking Servicios/8080 Apache Tomcat.md",
     "8 - Pivoting/_index.md",
     "6 - Hacking Windows/4 - Post explotación.md",
     "6 - Hacking Windows/3 - Explotacion.md",
@@ -159,8 +163,6 @@
     "4 - Hacking Servicios/139, 445 SMB.md",
     "3 - Hacking Web/2 - Fuzzing Web.md",
     "3 - Hacking Web/4 - Fuerza bruta login.md",
-    "4 - Hacking Servicios/8080 Apache Tomcat.md",
-    "2 - Hacking genérico/Metasploit y MsfVenom.md",
     "4 - Hacking Servicios/5985 WinRM.md",
     "6 - Hacking Windows/_index.md",
     "5 - Hacking Linux/_index.md",
@@ -172,9 +174,7 @@
     "2 - Hacking genérico/Obfuscation - AV Evasion.md",
     "4 - Hacking Servicios/_index.md",
     "7 - Proyectos/Certification Authority + ACME.md",
-    "6 - Hacking Windows/Active Directory.md",
     "8 - Pivoting",
-    "3 - Hacking Web/3 - Wordpress.md",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
     "Pasted image 20240416172125.png",

