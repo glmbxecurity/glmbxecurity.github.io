@@ -56,6 +56,9 @@ ss -tuln
 ### Capabilities
 getcap -r / 2>/dev/null
 
+### Mirar directorio opt
+ls -la /opt
+
  SI NADA DE LO DE ARRIBA FUNCIONA, MIRAR RESTO DE SECCIONES DE HACKING LINUX
 ```
 

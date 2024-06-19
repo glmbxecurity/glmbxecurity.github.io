@@ -1,6 +1,6 @@
-## Con tarea cron de algun tipo 
+## Con tarea cron 
 
-Si nos encontramos un binario de python, que se ejecuta a cada rato y que tenemos permisos para ejecutarlo pero no para editarlo, no está todo perdido. En ocasiones, algun usuario puede pertenecer a algún grupo que tenga permisos de edición sobre las librerías de python o sobre el directorio en que se encuentra dicho binario.py.
+Si nos encontramos un binario de python, que se ejecuta a cada rato o sospechamos que lo hace (YA QUE SI NO LO EJECUTA NUESTRO USUARIO NO LO VEREMOS EN EL CRONTAB) y que tenemos permisos para ejecutarlo pero no para editarlo, no está todo perdido. En ocasiones, algun usuario puede pertenecer a algún grupo que tenga permisos de edición sobre las librerías de python o sobre el directorio en que se encuentra dicho binario.py.
 
 Ejemplo de librería: **/usr/lib/python2.7/ftplib.py**
 ```bash
