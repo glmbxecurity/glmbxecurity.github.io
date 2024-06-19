@@ -15,3 +15,17 @@ Si se ha establecido una terminal remota, (por ejemplo telnet o netcat), la info
 ```bash
 strings captura.pcap
 ```
+
+### Analizar trafico 
+Si vemos que ejecutando el comando "id", pertenecemos al grupo pcap, estamos de suerte porque podriamos tratar de analizar el tráfico con wireshark o tcpdump.
+
+```bash
+### Analizar en tiempo real
+tcpdump -i lo -v
+
+### CAPTURA DE PAQUETES
+tcpdump -i lo -w file.pcap
+
+### POSTERIORMENTE LEEMOS EL FICHERO file.pcap en busca de información interesante, como intentos de login.
+tcpdump -r file.pcap
+```

@@ -11,7 +11,7 @@ sudo -l
 find / -perm -4000 2>/dev/null
 find / -perm -2000 2>/dev/null
 find / -name *.sh
-
+find / -name *.py
 #### Versión de sudo
 ### teniendo la version de sudo se puede buscar alguna vulnerabilidad
 sudo -V
@@ -30,7 +30,11 @@ crontab -l
 #### Comprobar grupos
 ### A veces nuestro usuario no tiene privilegios, pero si el grupo al que pertenece.
 id
-find / -group "grupo" 2>/dev/null
+find / -group "grupo"  -ls 2>/dev/null
+
+###
+Si pertenecemos al grupo pcap, mirar el apartado de "Wireshark" en la web
+Si pertenecemos a un grupo que pueda ejecutar python, y encontramos un .py editable, podemos escalar facilmente.
 
 #### Buscar capturas de wireshark
 find / -name *.pcap* 2>/dev/null

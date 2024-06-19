@@ -32,6 +32,7 @@
 * last (ultimos logins)
 * df -h (ver espacio libre en el sistema)
 * fdisk -l (ver particiones y tipos)
+* watch ls -la /bin/bash (ver si un binario cambia sus permisos cuando hay una tarea cron para ello)
 ```
 
 

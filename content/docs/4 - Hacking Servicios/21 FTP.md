@@ -54,6 +54,13 @@ wget -r ftp://"<user>":"<pass>"@ip
 
 ```
 
+### Sniff FTP
+FTP por defecto no cifra el tráfico, si tenemos la casualidad que podemos esnifar tráfico, *pertenecemos al grupo pcap*, o tenemos algun privilegio. Podríamos escuchar peticiones al puerto 21 y tratar de obtener contraseñas de acceso en claro.
+
+```bash
+tcpdump -i lo -v
+```
+
 
 
 
