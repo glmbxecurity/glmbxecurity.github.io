@@ -56,6 +56,7 @@ ss -tuln
 ### Capabilities
 getcap -r / 2>/dev/null
 
+ SI NADA DE LO DE ARRIBA FUNCIONA, MIRAR RESTO DE SECCIONES DE HACKING LINUX
 ```
 
 ### Docker
@@ -106,10 +107,7 @@ Herramienta que busca posibles malas configuraciones en la maquina para intentar
 ### Pspy
 [Pspy](https://github.com/DominicBreuker/pspy)
 Herramienta para monitorizar tareas cron
-
-### Escalada privilegios con path hijacking
 <a href="https://glmbxecurity.github.io/docs/5-hacking-linux/path-hijacking/"></a>
-
 ### Linux exploit suggester (Kernel exploits)
 Automatizacion para tratar de buscar vulnerabilidades a nivel de kernel y más,
 [Linux exploit suggester V1](https://github.com/The-Z-Labs/linux-exploit-suggester)

