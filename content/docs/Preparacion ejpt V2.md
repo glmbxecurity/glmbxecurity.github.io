@@ -70,7 +70,7 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 * Dark Hole 2 ✔️ - [Writeup](https://www.linkedin.com/posts/edward-herrera-galamba-77a92513b_darkhole-lab-activity-7186023841960189952-aE-X?utm_source=share&utm_medium=member_desktop)
 * Symfonos 2 ✔️
 * Symfonos 3 ✔️
-* Symfonos 5 ✔️ 
+* Symfonos 5 ✔️ - [Writeup](https://glmbxecurity.github.io/docs/10-writeups/symfonos-5/)
 * Election
 * Hack me please 1
 * Insanity
