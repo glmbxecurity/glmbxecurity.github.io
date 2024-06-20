@@ -12,6 +12,12 @@ __La primera premisa si estamos tratando de explotar un LFI y no funciona por "P
 * var/log/maillog
 * /var/mail/helios
 * 
+#### Indicios que pueda acontecer un LFI
+* Cuando al analizar la petición, vemos que apunta a un fichero de sistema, o apunta a algo tipo: *http://127.0.0.1/categories.php*
+* Cuando tenemos una url tipo: *?file=filename.txt*
+* respuetas del servidor tipo: *Warning: include(/var/www/html/../../etc/passwd): failed to open stream*
+* Tenemos directory listing
+* Si podemos ver el codigo fuente, buscar funciones tipo: *(`include`, `require`, `file_get_contents`)*
 
 #### Path traversal basics
 ```bash

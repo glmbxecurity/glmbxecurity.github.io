@@ -13,7 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9 - Scripts/Tareas cron.md",
+                "file": "10 - Writeups/Symfonos 5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "40eb8550bf12a1d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 - Hacking Web/LFI.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cccbab266f37a362",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Hacking Servicios/389 LDAP.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "9 - Scripts/Tareas cron.md",
+                "file": "10 - Writeups/Symfonos 5.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "9 - Scripts/Tareas cron.md",
+                "file": "10 - Writeups/Symfonos 5.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9 - Scripts/Tareas cron.md"
+                "file": "10 - Writeups/Symfonos 5.md"
               }
             }
           }
@@ -148,8 +172,19 @@
   },
   "active": "f1b7609a5cf3f3ce",
   "lastOpenFiles": [
-    "9 - Scripts/_index.md",
+    "4 - Hacking Servicios/389 LDAP.md",
+    "10 - Writeups/Symfonos 5.md",
+    "3 - Hacking Web/LFI.md",
+    "6 - Hacking Windows/3 - Explotacion.md",
+    "6 - Hacking Windows/2 - Enumeracion.md",
+    "Preparacion ejpt V2.md",
+    "10 - Writeups/01 - Writeups en PDF.md",
+    "7 - Proyectos/_index.md",
+    "10 - Writeups/_index.md",
+    "10 - Writeups",
+    "4 - Hacking Servicios/3306 SQL.md",
     "9 - Scripts/Tareas cron.md",
+    "9 - Scripts/_index.md",
     "5 - Hacking Linux/5 - Cronjobs.md",
     "9 - Scripts",
     "5 - Hacking Linux/10 - Python Library Hijacking.md",
@@ -164,17 +199,7 @@
     "2 - Hacking genérico/Wireshark.md",
     "4 - Hacking Servicios/21 FTP.md",
     "5 - Hacking Linux/Vulnerabilidades mas conocidas.md",
-    "Preparacion ejpt V2.md",
     "2 - Hacking genérico/Local port forwarding.md",
-    "4 - Hacking Servicios/139, 445 SMB.md",
-    "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
-    "6 - Hacking Windows/5 - Escalada Privilegios.md",
-    "6 - Hacking Windows/4 - Post explotación.md",
-    "6 - Hacking Windows/3 - Explotacion.md",
-    "6 - Hacking Windows/2 - Enumeracion.md",
-    "6 - Hacking Windows/1 - Comandos básicos.md",
-    "8 - Pivoting/Pivoting entornos Windows.md",
-    "8 - Pivoting/Pivoting entornos Linux.md",
     "8 - Pivoting",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",
