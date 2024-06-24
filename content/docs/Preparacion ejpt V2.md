@@ -41,7 +41,7 @@ Además de esto básico, se requiere conocer las siguientes técnicas:
 * Uso de monturas
 * Enumeración y hacking SMB (SMBmap), SNMP, TOMCAT
 * SQL injection con SQLmap
-* Escalada de privilegios Linux y Windows (SUID, Sudo -L, capabilities, tareas cron...)
+* Escalada de privilegios Linux (SUID, Sudo -L, capabilities, tareas cron...)
 * PATH Hijacking
 * Pivoting de usuarios
 * Tratamiento de TTY (Linux)
@@ -87,7 +87,7 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 
 #### Tryhackme
 * Blue✔️
-* Ice
+* Ice ✔️
 * Blaster
 * Pentesting Fundamentals
 * Ignite
