@@ -1,5 +1,5 @@
 
-### Permisos SUID y GUID
+### Permisos SUID y GUID 
 #### Permiso de SUID en nmap
 basta con lanzar nmap de forma interactiva
 ```bash
@@ -61,6 +61,16 @@ WantedBy=multi-user.target' > $TF
 Luego ejecutamos una bash y seremos root.
 ```bash
 bash -p
+```
+
+#### Serv-U
+Servidor FTP con vulnerabilidad de escalada de privilegios
+link al exploit: https://www.exploit-db.com/exploits/47009
+
+Crear un fichero llamado *privesc.c* y pegar el contenido del exploit
+lanzar 
+```bash
+gcc privesc.c -o pe && ./pe
 ```
 
 #### Permiso SUID en /opt
