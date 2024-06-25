@@ -1,3 +1,7 @@
+```bash
+ps -aux | grep cron
+```
+
 Cuando se ejecutan tareas cron pero no se pueden ver en el crontab, una forma es ejecutar el comando ps, tras unos segundos volverlo a ejecutar y ver la diferencia de procesos, así identificaremos si hay una tarea cron.
 
 ```bash

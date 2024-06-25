@@ -23,6 +23,7 @@ lsb_release -a
 uname -r
 
 #### Listar tareas cron
+ps -aux | grep cron
 cat /etc/crontab
 cat /etc/cron.d
 crontab -l

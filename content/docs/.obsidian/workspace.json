@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "258c92273dbdb82c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "40eb8550bf12a1d0",
             "type": "leaf",
             "state": {
@@ -43,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -109,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Preparacion ejpt V2.md"
+                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md"
               }
             }
           }
@@ -170,10 +183,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f1b7609a5cf3f3ce",
+  "active": "258c92273dbdb82c",
   "lastOpenFiles": [
-    "5 - Hacking Linux/6 - Permisos SUID - GUID extraños.md",
+    "9 - Scripts/Tareas cron.md",
     "Preparacion ejpt V2.md",
+    "5 - Hacking Linux/6 - Permisos SUID - GUID extraños.md",
     "Pasted image 20240620190136.png",
     "10 - Writeups/Symfonos 5.md",
     "4 - Hacking Servicios/389 LDAP.md",
@@ -185,7 +199,6 @@
     "10 - Writeups/_index.md",
     "10 - Writeups",
     "4 - Hacking Servicios/3306 SQL.md",
-    "9 - Scripts/Tareas cron.md",
     "9 - Scripts/_index.md",
     "5 - Hacking Linux/5 - Cronjobs.md",
     "9 - Scripts",
