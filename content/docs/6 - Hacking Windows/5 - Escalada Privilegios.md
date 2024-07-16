@@ -140,3 +140,11 @@ Cuando se realiza una instalación masiva desatendida, las claves se suelen alma
 
 Esto puede ser interesante porque la contraseña que se suele almacenar es la del administrador, de cara a la escalada de privilegios.
 
+### CVE-2019-1388 (Privesc)
+Vulnerabilidad que afecta a ciertas versiones de windows. 
+
+Consiste en abrir un ejecutable y nos pedirá credenciales de administrador, no las meteremos, le daremos a más detalles y luego a "ver mas información acerca del certificado".
+
+Una vez en el certificado, en el apartado de "Issued By", clicamos en el "link" y se nos abrirá un navegador por detrás con permisos de Administrador. Ya podemos cerrar el certificado y salir del UAC.
+
+Una vez cargue, o no, da igual, la web. Tratamos de guardar la página con "File > Save As". y ahí que tegamos el explorador de windows abierto (con los mismos privilegios de administrador que el navegador), abrimos un CMD. Y ya tenemos un cmd con privilegios de administrador.

@@ -89,11 +89,11 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 #### Tryhackme
 * Blue✔️
 * Ice ✔️
-* Blaster
-* Pentesting Fundamentals
-* Ignite
-* Blog
-* Startup
+* Blaster ✔️
+* Pentesting Fundamentals ✔️
+* Ignite ✔️
+* Blog ✔️
+* Startup✔️
 * Chill Hack
 * Bolt
 * VulnHet: Internal

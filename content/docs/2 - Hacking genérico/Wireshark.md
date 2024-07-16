@@ -29,3 +29,7 @@ tcpdump -i lo -w file.pcap
 ### POSTERIORMENTE LEEMOS EL FICHERO file.pcap en busca de información interesante, como intentos de login.
 tcpdump -r file.pcap
 ```
+
+### Extensiones conocidas
+* .pcap
+* .pcapng

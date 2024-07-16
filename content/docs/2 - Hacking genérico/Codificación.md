@@ -21,3 +21,6 @@ Teniendo un código de este tipo: ++++++++++**[**>+++++++>++++++++++>+++>+<<<<-*
 
 se puede decodificar aquí:
 https://www.dcode.fr/brainfuck-language
+
+### Ghidra
+Herramienta para descompilar un binario y ver su código fuente. Útil para cuando tenemos algun binario interesante que queramos analizar, por ejemplo para escalada de privilegios.

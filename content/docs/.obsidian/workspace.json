@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f1b7609a5cf3f3ce",
+            "id": "258c92273dbdb82c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,45 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "258c92273dbdb82c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "40eb8550bf12a1d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 - Hacking Web/LFI.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cccbab266f37a362",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "4 - Hacking Servicios/389 LDAP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
+                "file": "Preparacion ejpt V2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md",
+                "file": "Preparacion ejpt V2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "5 - Hacking Linux/3 - Escalada Privilegios.md"
+                "file": "Preparacion ejpt V2.md"
               }
             }
           }
@@ -185,8 +148,15 @@
   },
   "active": "258c92273dbdb82c",
   "lastOpenFiles": [
-    "9 - Scripts/Tareas cron.md",
+    "5 - Hacking Linux/3 - Escalada Privilegios.md",
     "Preparacion ejpt V2.md",
+    "2 - Hacking genérico/Wireshark.md",
+    "9 - Scripts/Tareas cron.md",
+    "5 - Hacking Linux/4 - Capabilities.md",
+    "2 - Hacking genérico/Codificación.md",
+    "3 - Hacking Web/3 - Wordpress.md",
+    "6 - Hacking Windows/5 - Escalada Privilegios.md",
+    "6 - Hacking Windows/Vulnerabilidades mas conocidas.md",
     "5 - Hacking Linux/6 - Permisos SUID - GUID extraños.md",
     "Pasted image 20240620190136.png",
     "10 - Writeups/Symfonos 5.md",
@@ -203,16 +173,10 @@
     "5 - Hacking Linux/5 - Cronjobs.md",
     "9 - Scripts",
     "5 - Hacking Linux/10 - Python Library Hijacking.md",
-    "5 - Hacking Linux/3 - Escalada Privilegios.md",
     "5 - Hacking Linux/9 - Pivoting de usuarios.md",
     "5 - Hacking Linux/8 - Path Hijacking.md",
     "5 - Hacking Linux/7 - Sudo -L.md",
-    "5 - Hacking Linux/4 - Capabilities.md",
     "5 - Hacking Linux/2 - Explotación.md",
-    "5 - Hacking Linux/1 - Comandos básicos.md",
-    "2 - Hacking genérico/Wireshark.md",
-    "4 - Hacking Servicios/21 FTP.md",
-    "5 - Hacking Linux/Vulnerabilidades mas conocidas.md",
     "8 - Pivoting",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",

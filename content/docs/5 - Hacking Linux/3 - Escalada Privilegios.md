@@ -60,6 +60,13 @@ getcap -r / 2>/dev/null
 ### Mirar directorio opt
 ls -la /opt
 
+#TIPS
+Mirar en /opt
+Mirar si hubiera credenciales de root en ficheros de conexion a bases de datos, en caso de tener una web.
+Mirar /home de usuarios
+Mirar /etc/passwd para descubrir usuarios
+Mirar binarios interesantes y si es necesario descompilar con ghidra
+
  SI NADA DE LO DE ARRIBA FUNCIONA, MIRAR RESTO DE SECCIONES DE HACKING LINUX
 ```
 
