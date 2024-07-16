@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "2 - Hacking genérico/Cracking fuerza bruta.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "2 - Hacking genérico/Cracking fuerza bruta.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Preparacion ejpt V2.md",
+                "file": "2 - Hacking genérico/Cracking fuerza bruta.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Preparacion ejpt V2.md"
+                "file": "2 - Hacking genérico/Cracking fuerza bruta.md"
               }
             }
           }
@@ -148,7 +148,10 @@
   },
   "active": "258c92273dbdb82c",
   "lastOpenFiles": [
+    "2 - Hacking genérico/Esteganografía.md",
     "5 - Hacking Linux/3 - Escalada Privilegios.md",
+    "2 - Hacking genérico/Local port forwarding.md",
+    "2 - Hacking genérico/Reverse Shells.md",
     "Preparacion ejpt V2.md",
     "2 - Hacking genérico/Wireshark.md",
     "9 - Scripts/Tareas cron.md",
@@ -174,9 +177,6 @@
     "9 - Scripts",
     "5 - Hacking Linux/10 - Python Library Hijacking.md",
     "5 - Hacking Linux/9 - Pivoting de usuarios.md",
-    "5 - Hacking Linux/8 - Path Hijacking.md",
-    "5 - Hacking Linux/7 - Sudo -L.md",
-    "5 - Hacking Linux/2 - Explotación.md",
     "8 - Pivoting",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",

