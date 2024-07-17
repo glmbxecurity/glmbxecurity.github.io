@@ -94,9 +94,8 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 * Ignite ✔️
 * Blog ✔️
 * Startup✔️
-* Chill Hack
-* Bolt
-* VulnHet: Internal
+* Chill Hack ✔️
+* VulnNet: Internal
 * ColdBox: Easy
 * Basic pentesting
 * Vulnversity ✔️

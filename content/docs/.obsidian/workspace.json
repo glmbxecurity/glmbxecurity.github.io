@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2 - Hacking genérico/Cracking fuerza bruta.md",
+                "file": "Preparacion ejpt V2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "64e3c426e3418490",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 - Hacking Servicios/22 SSH.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 - Hacking genérico/Cracking fuerza bruta.md",
+                "file": "4 - Hacking Servicios/22 SSH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2 - Hacking genérico/Cracking fuerza bruta.md",
+                "file": "4 - Hacking Servicios/22 SSH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 - Hacking genérico/Cracking fuerza bruta.md"
+                "file": "4 - Hacking Servicios/22 SSH.md"
               }
             }
           }
@@ -146,13 +159,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "258c92273dbdb82c",
+  "active": "64e3c426e3418490",
   "lastOpenFiles": [
+    "4 - Hacking Servicios/873 Rsync.md",
+    "4 - Hacking Servicios/6379 Redis.md",
+    "4 - Hacking Servicios/111 RCPBIND (NFS).md",
+    "Preparacion ejpt V2.md",
+    "2 - Hacking genérico/Cracking fuerza bruta.md",
     "2 - Hacking genérico/Esteganografía.md",
     "5 - Hacking Linux/3 - Escalada Privilegios.md",
     "2 - Hacking genérico/Local port forwarding.md",
     "2 - Hacking genérico/Reverse Shells.md",
-    "Preparacion ejpt V2.md",
     "2 - Hacking genérico/Wireshark.md",
     "9 - Scripts/Tareas cron.md",
     "5 - Hacking Linux/4 - Capabilities.md",
@@ -172,11 +189,7 @@
     "10 - Writeups/_index.md",
     "10 - Writeups",
     "4 - Hacking Servicios/3306 SQL.md",
-    "9 - Scripts/_index.md",
-    "5 - Hacking Linux/5 - Cronjobs.md",
     "9 - Scripts",
-    "5 - Hacking Linux/10 - Python Library Hijacking.md",
-    "5 - Hacking Linux/9 - Pivoting de usuarios.md",
     "8 - Pivoting",
     "Pasted image 20240416161224.png",
     "Pasted image 20240416172336.png",

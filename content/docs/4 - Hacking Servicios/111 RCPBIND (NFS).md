@@ -2,6 +2,8 @@
 Cuando se detecta el servicio rcpbind y nfs, se puede intentar investigar si hay monturas del sistema de ficheros de la máquina disponibles con:
 ```bash
 showmount -e <ip>
+
+nmap -p- <ip> --script nfs*
 ```
 
 ### Montar NFS en nuestro equipo
