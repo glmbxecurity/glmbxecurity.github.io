@@ -20,6 +20,9 @@ dirb <http://ip>
 #### Fuzzing web HTTPS
 Nos saldrá un error al usar SSL, y nos dirá los codigos que debemos omitir para no tener errores, como ejemplo se puso el codigo de estado 200
 ```bash
+#OPCION 1
+gobuster dir -u 'https://ip' -w <diccionario> -k
+#OPCION 2
 gobuster dir -u 'https://ip' -w <diccionario> -k -l -s '200'
 ```
 ### Wfuzz

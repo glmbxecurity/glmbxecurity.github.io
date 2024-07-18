@@ -120,7 +120,7 @@ Windows
 * Startup✔️
 * Chill Hack ✔️
 * VulnNet: Internal✔️
-* ColdBox: Easy
+* ColdBox: Easy✔️
 * Basic pentesting
 * Vulnversity ✔️
 * takeover
