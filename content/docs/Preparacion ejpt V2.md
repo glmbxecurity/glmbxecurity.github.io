@@ -80,11 +80,35 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 * Durian 1
 
 #### HackTheBox
-* Union
-* Validation
-* Return
-* GoodGames
-![[Pasted image 20240620190136.png]]
+Linux
+  - Antique Linux 
+  - Armageddon 
+  - Blocky Linux
+  - Bolt Linux PassBolt
+  - GoodGames 
+  - Hawk Linux 
+  - Horizontall Linux
+  - Lame Linux Samba
+  - Nibbles Linux
+  - Oopsie Linux
+  - Shocker Linux
+  - Tabby Linux LFI
+  - Union Linux SQL
+  - Validation Linux
+Windows
+  - Archetype 
+  - Devel Windows 
+  - Driver Windows
+  - Grandpa Windows
+  - Granny Windows
+  - Jeeves Windows
+  - Jerry Windows
+  - Legacy Windows
+  - Love Windows
+  - Netmon Windows
+  - Return Windows
+
+
 
 #### Tryhackme
 * Blue✔️
@@ -95,7 +119,7 @@ Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dej
 * Blog ✔️
 * Startup✔️
 * Chill Hack ✔️
-* VulnNet: Internal
+* VulnNet: Internal✔️
 * ColdBox: Easy
 * Basic pentesting
 * Vulnversity ✔️
