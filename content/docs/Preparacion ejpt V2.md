@@ -1,5 +1,5 @@
 <img src="https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/ejptcert.jpeg" />
-[Link al certificado](https://certs.ine.com/c33d08cb-5b6a-4ce5-af2a-0e5bc5bfdba5#gs.cm2wft)
+[Link al certificado](https://certs.ine.com/c33d08cb-5b6a-4ce5-af2a-0e5bc5bfdba5#gs.cm2wft)  
 ### Introducción
 En este post se detallará todo lo necesario para afrontar esta certificación con éxito, tanto las técnicas necesarias, máquinas para practiar, metodología de examen, contenidos, etc.  
 
