@@ -21,6 +21,16 @@ proyecto de sistemas, o de cualquier otro tipo.
 Este sitio ha sido creado para compartir mis conocimientos en hacking ético, writeup's CTF y proyectos interesantes relacionados con el tema.
 {{< /hint >}}
 
+## Hoja de ruta 📚
+* eJPTv2 - eLearn Security ✔️
+* eCCPTv2 - eLearn Security
+* Red Teaming Path - Tryhackme
+* BSCP - Portswigger
+* Offensive Pentesting Path - Tryhackme
+* SOC L1 Path - Tryhackme
+* Cyber Defense Path - Tryhackme
+* SOC L2 Path - Tryhackme
+
  ## Skills
  
  {{< hint warning >}}
