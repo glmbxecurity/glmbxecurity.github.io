@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/ejptcert.jpeg" />
+[Link al certificado](https://certs.ine.com/c33d08cb-5b6a-4ce5-af2a-0e5bc5bfdba5#gs.cm2wft)
 ### Introducción
 En este post se detallará todo lo necesario para afrontar esta certificación con éxito, tanto las técnicas necesarias, máquinas para practiar, metodología de examen, contenidos, etc.  
 
@@ -33,10 +35,9 @@ Además de esto básico, se requiere conocer las siguientes técnicas:
 * Capacidad de análisis de capturas en Wireshark
 * Fuzzing Web
 * Descubrimiento y hacking CMS
-* Local file inclusion y log poisoning
+* Local file inclusion
 * File upload y bypass de extensiones
 * Fuerza bruta contra paneles de login web
-* Cross-site scripting
 * Fuerza bruta contra FTP, SSH
 * Uso de monturas
 * Enumeración y hacking SMB (SMBmap), SNMP, TOMCAT

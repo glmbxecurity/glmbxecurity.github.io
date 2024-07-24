@@ -16,6 +16,7 @@ Con gobuster tenemos la opción para especificar que estamos ante virtual hostin
 Dirb hace automáticamente fuzzing sobre los directorios encontrados para localizar subdirectorios.
 ```bash
 dirb <http://ip>
+dirb <http://ip> /ruta/diccionario/personalizado
 ```
 #### Fuzzing web HTTPS
 Nos saldrá un error al usar SSL, y nos dirá los codigos que debemos omitir para no tener errores, como ejemplo se puso el codigo de estado 200

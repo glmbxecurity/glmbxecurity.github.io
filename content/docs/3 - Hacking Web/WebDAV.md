@@ -1,4 +1,4 @@
-WebDAV (Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP (Hypertext Transfer Protocol) que permite a los usuarios gestionar y editar archivos almacenados en servidores remotos. WebDAV fue diseñado para facilitar la colaboración entre usuarios en la creación y edición de contenidos en la web, permitiendo operaciones como la carga y descarga de archivos, la gestión de directorios, y la edición directa de archivos en un servidor.
+rcWebDAV (Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP (Hypertext Transfer Protocol) que permite a los usuarios gestionar y editar archivos almacenados en servidores remotos. WebDAV fue diseñado para facilitar la colaboración entre usuarios en la creación y edición de contenidos en la web, permitiendo operaciones como la carga y descarga de archivos, la gestión de directorios, y la edición directa de archivos en un servidor.
 
 ### Enumeracion webDAV
 ```bash

