@@ -5,13 +5,13 @@ El acceso será única y exclusivamente a través de una VPN ya previamente conf
 
 ### Estructura
 Red local con:
-Ip pública asociada a dyndns: glmbxecurity.ddns.net
-Home Assistant -> 192.168.1.4 + 10.0.0.6 (wg0)
-Camara IP - > 192.168.1.5
+Ip pública asociada a dyndns:   glmbxecurity.ddns.net  
+Home Assistant -> 192.168.1.4 + 10.0.0.6 (wg0)  
+Camara IP - > 192.168.1.5  
 
 VPS con:
-Ip pública asodiada a dyndns: glmbxecurity.duckdns.org
-Wireguard server: 194.164.167.198 + 10.0.0.1 (wg0)
+Ip pública asodiada a dyndns:  glmbxecurity.duckdns.org  
+Wireguard server: 194.164.167.198 + 10.0.0.1 (wg0)  
 ![Estructura_de_red](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/Estructura_red.png)
 ### Instalación y configuración
 Partimos de la base que el servidor wireguard está configurado, y el cliente wireguard de home assistant está conectado a la VPN. Para más detalles de su configuración, mirar mi proyecto de VPN.
