@@ -197,7 +197,7 @@ while [ "$current_size" -gt "$LIMIT_MB" ]; do
 done
 ```
 
-#### 5. DashBoard Personalizado
+# DashBoard Personalizado
 
 Este apartado dependerá del gusto personal y necesidades, pero se puede crear algo así:
 ![dashboard](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/dashboard.png)
