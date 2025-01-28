@@ -12,7 +12,7 @@ Camara IP - > 192.168.1.5
 VPS con:
 Ip pública asodiada a dyndns: glmbxecurity.duckdns.org
 Wireguard server: 194.164.167.198 + 10.0.0.1 (wg0)
-![[Estructura_red.png]]
+![Estructura_de_red](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/Estructura_red.png)
 ### Instalación y configuración
 Partimos de la base que el servidor wireguard está configurado, y el cliente wireguard de home assistant está conectado a la VPN. Para más detalles de su configuración, mirar mi proyecto de VPN.
 
@@ -114,7 +114,8 @@ En automatizaciones > crear una nueva automatización > opción desde cero.
 ___Después de mucha prueba y error, he dado con la configuración perfecta para mi cámara, no debería ser diferente para la tuya, pero podría cambiar algo.___
 
 Clic en los tres puntos y editar YAML (modificar entity.id, image, action, filename según corresponda)
-![[automatizacion1.png]]
+![automatizacion1](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/automatizacion1.png)
+
 ```bash
 alias: Alerta de movimiento en cámara
 description: Notifica cuando se detecte movimiento y graba un clip de vídeo
@@ -199,7 +200,8 @@ done
 #### 5. DashBoard Personalizado
 
 Este apartado dependerá del gusto personal y necesidades, pero se puede crear algo así:
-![[dashboard.png]]
+![dashboard](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/dashboard.png)
+
 En mi caso puse una preview de la cámara, 3 botones (grabar 30s, tomar imagen y activar/desactivar la alerta+grabación creadas anteriormente).
 
 A continuación un gráfico para monitorizar el movimiento, y un seguimiento de los momentos en que el sensor detecta movimiento.
