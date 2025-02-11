@@ -56,7 +56,7 @@ set interface_net <interfaz_con_internet>
 set ssid <nombre_ap>
 ignore pydns_server
 set proxy captiveflask
-set captiveflask.redirect_to_url https://<url>
+set captiveflask.force_ssredirect_to_url https://<url>
 set captiveflask.proxy_port 443
 set captiveflask.google true
 start

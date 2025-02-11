@@ -259,3 +259,81 @@ python3 -m honeypots --setup ssh --auto
 python3 -m honeypots --setup all --auto
 ```
 
+
+### Instalación e inicio Caldera
+Caldera es un servicio para la emulación del adversario, de esta manera podremos lanzar ataques simulados a nuestro honeypot y comprobar la detección por parte de wazuh.
+
+```bash
+git clone https://github.com/mitre/caldera.git --recursive
+cd caldera
+pip3 install -r requirements.txt
+
+#### INICIAR EL SERVICIO
+python3 server.py --insecure --build
+```
+
+#### Instalación docker (alternativa)
+```bash
+# Recursively clone the Caldera repository if you have not done so
+git clone https://github.com/mitre/caldera.git --recursive
+
+# Build the docker image. Change image tagging as desired.
+# WIN_BUILD is set to true to allow Caldera installation to compile windows-based agents.
+# Alternatively, you can use the docker compose YML file via "docker-compose build"
+cd caldera
+docker build . --build-arg WIN_BUILD=true -t caldera:latest
+
+# Run the image. Change port forwarding configuration as desired.
+docker run -p 8888:8888 caldera:latest
+```
+
+Tras el despliegue, debemos desplegar un agente en el honeypot, para lanzar los ataques simulados y ver si en wazuh vemos los detalles de esos ataques. 
+
+##### ACCESO
+`https://<ip>:8888`
+
+### File Integrity Monitoring (FIM)
+Trata de monitorizar la integridad de ciertos ficheros y directorios importantes. para ello en el agente de la MV en cuestión (honeypot), debemos agregar los directorios y/o ficheros que queramos monitorizar.
+
+Dependiendo de la maquina, en un entorno real, unos directorios serán importantes y otros no. Debemos conocer nuestro servicio y la criticidad para saber determinar que es importante y que no.
+
+```bash
+## EQUIPO CLIENTE LINUX CON AGENTE WSUS
+/var/ossec/etc/ossec.conf
+
+# Apartado de File integrity monitoring
+<syscheck>
+  <disabled>no</disabled>
+  <frequency>720</frequency>
+  <scan_on_start>yes</scan_on_start>
+  <directories check_all="yes" report_changes="yes" real_time="yes">/etc,/bin,/sbin</directories>
+  <directories check_all="yes" report_changes="yes" real_time="yes">/lib,/lib64,/usr/lib,/usr/lib64</directories>
+  <directories check_all="yes" report_changes="yes" real_time="yes">/var/www,/var/log,/var/named</directories>
+  <ignore>/etc/mtab</ignore>
+  <ignore>/etc/hosts.deny</ignore>
+  <ignore>/etc/mail/statistics</ignore>
+  <ignore>/etc/random-seed</ignore>
+  <ignore>/etc/adjtime</ignore>
+  <ignore>/etc/httpd/logs</ignore>
+  <ignore>/etc/utmpx</ignore>
+  <ignore>/etc/wtmpx</ignore>
+  <ignore>/etc/cups/certs</ignore>
+  <ignore>/etc/dumpdates</ignore>
+  <ignore>/etc/svc/volatile</ignore>
+  <ignore>/sys/kernel/security</ignore>
+  <ignore>/sys/kernel/debug</ignore>
+  <ignore>/sys</ignore>
+  <ignore>/dev</ignore>
+  <ignore>/tmp</ignore>
+  <ignore>/proc</ignore>
+  <ignore>/var/run</ignore>
+  <ignore>/var/lock</ignore>
+  <ignore>/var/run/utmp</ignore>
+</syscheck>
+```
+
+
+
+
+
+
