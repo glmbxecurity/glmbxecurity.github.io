@@ -1,4 +1,5 @@
 # SOC con Wazuh como SIEM
+![Logo](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/312703959/original/4d8c36c4e1ce8111986668ca314a72c298bcee52/setup-and-configure-wazuh-siem.png)
 
 En este proyecto se tratará de montar un SOC en Vmware Workstation, pero toalmente funcional, se irá actualizando poco a poco. Los elementos principales con los que se va a contar son:
 * SIEM (Wazuh)
@@ -387,9 +388,12 @@ Dependiendo de la maquina, en un entorno real, unos directorios serán important
 </syscheck>
 ```
 
-# Custom SCA con Wazuh
+# Custom SCA con Wazuh 
+## Cumplimiento CCN-STICS 
 
-El **Security Configuration Assessment (SCA)** es una herramienta clave para evaluar el cumplimiento de estándares de seguridad como **CIS** o **NIST**, verificando configuraciones como el tiempo de desconexión tras inactividad.
+El **Security Configuration Assessment (SCA)** es una herramienta clave para evaluar el cumplimiento de estándares de seguridad como **CIS** o **NIST**, verificando configuraciones como el tiempo de desconexión tras inactividad. 
+
+En este caso se desarrolla el cumplimiento de las **CCN-STICS** para cumplir con el marco del **ENS** (Esquema nacional de seguridad Español)
 
 Debido a lo extenso que es este apartado, se ha desarrollado en otro artículo, publicado en la siguiente url: [Custom SCA con Wazuh](https://glmbxecurity.github.io/docs/7-proyectos/custom-sca-con-wazuh/)
 
