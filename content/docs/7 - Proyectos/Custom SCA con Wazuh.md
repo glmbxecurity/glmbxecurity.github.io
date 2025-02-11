@@ -1,5 +1,5 @@
 # Custom SCA con Wazuh
-
+![Logo](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/312703959/original/4d8c36c4e1ce8111986668ca314a72c298bcee52/setup-and-configure-wazuh-siem.png)
 El **Security Configuration Assessment (SCA)** es una herramienta clave para evaluar el cumplimiento de estándares de seguridad como **CIS** o **NIST**, verificando configuraciones como el tiempo de desconexión tras inactividad.
 
 En este artículo, nos enfocaremos en la creación de **SCA personalizados en Wazuh** para cumplir con las directivas de seguridad de las **CCN-STIC**, que evalúan los sistemas según el **Esquema Nacional de Seguridad en España**. Exploraremos cómo desarrollar estos SCA, destacando elementos clave para implementar un sistema de auditoría eficaz y alineado con los requisitos regulatorios, ofreciendo una capa imprescindible de seguridad proactiva para las organizaciones.
