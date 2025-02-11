@@ -1,15 +1,70 @@
-# SOC (Security Operations Center)
+# SOC con Wazuh como SIEM
 
 En este proyecto se tratará de montar un SOC en Vmware Workstation, pero toalmente funcional, se irá actualizando poco a poco. Los elementos principales con los que se va a contar son:
 * SIEM (Wazuh)
 * IDS (Suricata)
 * Adversary simulation (Caldera)
 * Honeypots
-	* Queeqbox - Honeypots
-		* Servicios
-	* Glastopf
-		* Web-Hacking Attacks
 * pFsense (Enrutar, NATear y aislar las distintas redes)
+# Índice
+
+1. [SOC con Wazuh como SIEM](#soc-con-wazuh-como-siem)
+   1.1. [Elementos principales](#elementos-principales)
+   
+2. [Planeamiento](#planeamiento)
+   2.1. [Redes y conexiones](#redes-y-conexiones)
+   2.2. [IMPORTANTE](#importante)
+
+3. [📌 Configuración de Máquinas Virtuales y Redes](#-configuración-de-máquinas-virtuales-y-redes)
+   3.1. [Tabla de configuración de redes](#tabla-de-configuración-de-redes)
+
+4. [📌 Tabla de Credenciales del Laboratorio](#-tabla-de-credenciales-del-laboratorio)
+
+5. [Esquema de red](#esquema-de-red)
+
+6. [Requisitos previos](#requisitos-previos)
+   6.1. [Configuración en Windows](#configuración-en-windows)
+   6.2. [Configuración en Linux (Debian 12)](#configuración-en-linux-debian-12)
+
+7. [Instalación y configuración pFsense](#instalación-y-configuración-pfsense)
+   7.1. [Configuración de interfaces en pFsense](#configuración-de-interfaces-en-pfsense)
+   7.2. [Reglas de firewall](#reglas-de-firewall)
+   7.3. [Configuración firewall WAN Interface](#configuración-firewall-wan-interface)
+   7.4. [Configuración firewall SOC Interface](#configuración-firewall-soc-interface)
+   7.5. [Configuración firewall HONEYPOT Interface](#configuración-firewall-honeypot-interface)
+
+8. [Instalación y configuración Wazuh](#instalación-y-configuración-wazuh)
+   8.1. [Instalación de Wazuh](#instalación-de-wazuh)
+   8.2. [Generación de ficheros de configuración e instalación](#generación-de-ficheros-de-configuración-e-instalación)
+   8.3. [Deshabilitar repositorios Wazuh](#deshabilitar-repositorios-wazuh)
+
+9. [Instalación y configuración Suricata](#instalación-y-configuración-suricata)
+   9.1. [Instalación de Suricata](#instalación-de-suricata)
+   9.2. [Configuración de Suricata](#configuración-de-suricata)
+   9.3. [Comprobación de alertas](#comprobación-de-alertas)
+   9.4. [Envío de logs de Suricata a Wazuh](#envío-de-logs-de-suricata-a-wazuh)
+
+10. [Instalación y configuración Honeypot](#instalación-y-configuración-honeypot)
+    10.1. [Instalación de Honeypot](#instalación-de-honeypot)
+    10.2. [Lanzar Honeypot](#lanzar-honeypot)
+    10.3. [Lanzar honeypots](#lanzar-honeypots)
+
+11. [Instalación e inicio Caldera](#instalación-e-inicio-caldera)
+    11.1. [Instalación de Caldera](#instalación-de-caldera)
+    11.2. [Alternativa Docker](#alternativa-docker)
+
+12. [File Integrity Monitoring (FIM)](#file-integrity-monitoring-fim)
+13. [Custom SCA con Wazuh](#custom-sca-con-wazuh)
+14. [CONTINUARÁ EL DESARROLLO CON:](#continuará-el-desarrollo-con)
+    14.1. [CDB lists](#cdb-lists)
+    14.2. [VirusTotal integration](#virustotal-integration)
+    14.3. [Windows defender logs integration](#windows-defender-logs-integration)
+    14.4. [Sysmon integration](#sysmon-integration)
+    14.5. [TheHive + Cortex](#thehive-cortex)
+    14.6. [MISP](#misp)
+    14.7. [Shuffle SOAR](#shuffle-soar)
+    14.8. [Active response scripts](#active-response-scripts)
+    14.9. [Threat Hunting](#threat-hunting)
 
 # Planeamiento
 Lo primero que se va a planear son las redes y conexiones, tendremos 3 redes:
@@ -56,7 +111,7 @@ La guía se puede seguir perfectamente, a la hora de instalar el honeypot, se av
 
 
 ### Esquema de red
-![[esquema l2_l3.png]]
+![Esquema_Red](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/esquema%20l2_l3.png)
 
 ## Requisitos previos
 Para no extender mucho esta guía, se omitirán ciertos pasos pero que son requisito previo e indispensable:
@@ -94,7 +149,7 @@ Una vez tengamos la MV instalada, le agregaremos 3 interfaces de red conectados 
 * Vmnet2 será Honeypot
 
 Se habilita el interfaz, asignamos un nombre, establecemos IP estática, cambiamos el CIDR y nos aseguramos que la interfaz de WAN, su gateway de "upstream" sea la gw de tu red local de casa.
-![[pfsense_interfaces.png]]
+![pfsense_interfaces](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/pfsense_interfaces.png)
 
 El siguiente paso es configurar las reglas de firewall, las principal intención de comunicación es:
 * Honeypot puede ser accedido dese WAN (para ser atacado)
@@ -107,16 +162,16 @@ El siguiente paso es configurar las reglas de firewall, las principal intención
 * SOC puede acceder a WAN (updates e internet)
 * SOC NO puede ser accedido desde WAN (no tiene motivos para ello)
 
-![[firewall_map.png]]
+![firewall_map](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/firewall_map.png)
 
 ### Configuración firewall WAN Interface
-![[firewall_wan.png]]
+![firewall_map](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/firewall_wan.png)
   
 ### Configuración firewall SOC Interface
-![[firewall_so.png]]
+![firewall_map](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/firewall_so.png)
   
 ### Configuración firewall HONEYPOT Interface
-![[firewall_honeypot.png]]
+![firewall_map](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/firewall_honeypot.png)
 ## Instalación y configuración Wazuh
 
 Instalamos (En mi caso Ubuntu Server 22.04), asignamos Vmnet1, establecemos direccionamiento IP (10.0.1.2/24 - Gw 10.0.1.200).
@@ -128,22 +183,22 @@ apt update && apt upgrade -y
 ___NOTA:Dependiendo de la versión de wazuh, los comandos pueden variar, lo mejor es consultar la documentación oficial___
 
 
-1. Descargar el script de instalación (la URL variará)
+15. Descargar el script de instalación (la URL variará)
 ```bash
 curl -sO https://packages.wazuh.com/4.10/wazuh-install.sh
 curl -sO https://packages.wazuh.com/4.10/config.yml
 ```
 
-2. Editar el config.yml con el hostname de la MV y la IP
-![[wazuh-indexer-install.png]]
+16. Editar el config.yml con el hostname de la MV y la IP
+![firewall_map](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/wazuh-indexer-install.png)
 
-3. Generar ficheros de configuración e instalar
+17. Generar ficheros de configuración e instalar
 ```bash
 bash wazuh-install.sh --generate-config-files
 bash wazuh-install.sh -a
 ```
 
-4. Eliminar repositorios de wazuh, para evitar un upgrade accidental que pueda estropear el servicio. (OPCIONAL)
+18. Eliminar repositorios de wazuh, para evitar un upgrade accidental que pueda estropear el servicio. (OPCIONAL)
 ```bash
 sed -i "s/^deb /#deb /" /etc/apt/sources.list.d/wazuh.list
 apt update
@@ -168,7 +223,7 @@ sudo tar -xvzf emerging.rules.tar.gz && mkdir /etc/suricata/rules && sudo mv rul
 
 ```
 
-2. Editar configuración para especificar la interfaz de red, y la HOME_NET (la red que queremos monitorear), ademas de las nuevas rules descargadas.
+19. Editar configuración para especificar la interfaz de red, y la HOME_NET (la red que queremos monitorear), ademas de las nuevas rules descargadas.
 
 ```bash
 /etc/suricata/suricata.yml
@@ -189,13 +244,13 @@ rule-files:
 - "*.rules"
 ```
 
-3. Habilitar al inicio e iniciar
+20. Habilitar al inicio e iniciar
 ```bash
 systemctl enable suricata
 systemctl start suricata
 ```
 
-4. Comprobar alertas
+21. Comprobar alertas
 ```bash
 #Ya deberiamos ver los scans de nmap, por ejemplo
 tail -f /var/log/suricata/fast.log
@@ -332,8 +387,22 @@ Dependiendo de la maquina, en un entorno real, unos directorios serán important
 </syscheck>
 ```
 
+# Custom SCA con Wazuh
 
+El **Security Configuration Assessment (SCA)** es una herramienta clave para evaluar el cumplimiento de estándares de seguridad como **CIS** o **NIST**, verificando configuraciones como el tiempo de desconexión tras inactividad.
 
+Debido a lo extenso que es este apartado, se ha desarrollado en otro artículo, publicado en la siguiente url: [Custom SCA con Wazuh](https://glmbxecurity.github.io/docs/7-proyectos/custom-sca-con-wazuh/)
+
+# CONTINUARÁ EL DESARROLLO CON:
+* CDB lists
+* VirusTotal integration
+* Windows defender logs integration
+* Sysmon integration
+* TheHive + Cortex
+* MISP
+* Shuffle SOAR
+* Active response scripts
+* Threat Hunting
 
 
 

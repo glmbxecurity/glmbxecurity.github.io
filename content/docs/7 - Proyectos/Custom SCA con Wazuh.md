@@ -4,7 +4,7 @@ El **Security Configuration Assessment (SCA)** es una herramienta clave para eva
 
 En este artículo, nos enfocaremos en la creación de **SCA personalizados en Wazuh** para cumplir con las directivas de seguridad de las **CCN-STIC**, que evalúan los sistemas según el **Esquema Nacional de Seguridad en España**. Exploraremos cómo desarrollar estos SCA, destacando elementos clave para implementar un sistema de auditoría eficaz y alineado con los requisitos regulatorios, ofreciendo una capa imprescindible de seguridad proactiva para las organizaciones.
 
-![[custom_sca_dashboard.png]]
+![Custom_SCA_Dashboard](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/custom_sca_dashboard.png)
 ### Importar las STIC
 
 El primer paso consiste en aplicar la STIC que luego deseamos **monitorear** con el SCA en Wazuh. En este caso, utilizaremos la **570A21 (incremental de dominio)**, diseñada específicamente para servidores **Windows Server 2019 en dominio**. 
@@ -168,6 +168,6 @@ Las plantillas `.yml` para verificar el cumplimiento de las CCN-STIC se han desa
 Por ejemplo, un servidor **Windows Server 2019** que actúa como controlador de dominio debería pertenecer a los grupos **Miembros de dominio**, **Servidores** y **Controlador de dominio**. Así, los archivos adecuados llegarán al directorio "shared" y solo será necesario moverlos a **rulesets/sca**, ya sea manual o automáticamente.
 
 Basándonos en esta organización, podemos aplicar las STIC correspondientes según los roles o servicios de cada equipo. En la siguiente tabla se detallan algunos ejemplos:
-![[tabla_stics.png]]
+![Tabla_Stics](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/refs/heads/main/images/proyectos/SOC/tabla_stics.png)
 
 
