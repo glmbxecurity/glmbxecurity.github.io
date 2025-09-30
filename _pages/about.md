@@ -3,6 +3,7 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I'm Edward Herrera Galamba. I studied Systems Engineering and Administration and currently work as IT Chief and Systems Manager in the Spanish Army, focusing on Cybersecurity analysis, threat mitigation, Active Directory, virtualization, and network administration.  
+  
+My military background has taught me discipline and structured problem-solving, which I apply to my work and my passion for cybersecurity. I enjoy exploring new technologies, participating in ethical hacking labs and CTF challenges, and continuously improving my skills by developing projects that solve common problems within my organization and enhance efficiency and security.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
