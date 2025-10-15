@@ -2,6 +2,19 @@ main:
   - title: "Projects"
     url: /projects/
   - title: "SEC Notes"
-    url: /secnotes/
+    url: /notas/
   - title: "About"
     url: /about/
+notas:
+  - title: "Reconocimiento"
+    url: /notas/reconocimiento/
+  - title: "Hacking Genérico"
+    url: /notas/hacking-generico/
+  - title: "Hacking Web"
+    url: /notas/hacking-web/
+  - title: "Hacking Linux"
+    url: /notas/hacking-linux/
+  - title: "Hacking Windows"
+    url: /notas/hacking-windows/
+  - title: "Proyectos"
+    url: /notas/proyectos/
