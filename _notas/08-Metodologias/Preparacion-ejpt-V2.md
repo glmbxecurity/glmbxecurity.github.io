@@ -1,9 +1,9 @@
 ---
 title: "Preparacion Ejpt V2"
-layout: single
-category: "General"
-slug: "preparacion-ejpt-v2"
-date: 2025-10-15
+layout: "single"
+category: "Metodologias"
+slug: "metodologias/preparacion-ejpt2"
+date: "2025-09-30"
 ---
 
 ![Certificado](https://raw.githubusercontent.com/glmbxecurity/glmbxecurity.github.io/main/images/ejptcert.jpeg)  
