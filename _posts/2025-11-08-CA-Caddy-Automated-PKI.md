@@ -9,6 +9,22 @@ excerpt: Smallstep CA y Caddy | Certificados automaticos con ACME
 ---
 ## Smallstep ACME server + Caddy
 
+## Introducción al lab
+Este proyecto muestra cómo montar una infraestructura de certificados automatizada usando smallstep‑ca y Caddy, con la que puedes emitir y renovar de forma segura los certificados TLS de tus servicios web. La idea es tener una Autoridad de Certificación privada, gestionada por ti, que se integra vía ACME con Caddy para que todo el proceso sea lo más transparente posible.
+
+**¿Para qué sirve?**  
+Con esta solución puedes controlar totalmente la emisión de certificados dentro de tu red o dominio, sin depender exclusivamente de servicios públicos. Esto permite reforzar la seguridad, reducir costes a largo plazo, y aplicar políticas internas sobre la validez, revocación y distribución de los certificados.
+
+**¿Qué ventajas aporta?**
+
+- Mayor control de tu infraestructura de confianza: defines quién puede emitir, cuándo expiran los certificados y cómo se revocan.
+    
+- Automatización real: al integrar smallstep con Caddy vía ACME, los certificados se renuevan sin intervención manual.
+    
+- Flexibilidad para entornos internos y públicos: tanto para servicios internos (“intranets”, APIs privadas) como para servicios accesibles desde el exterior.
+    
+- Escalabilidad: puedes extender esta base para otros usos (SSH, servicios internos, IoT) más adelante.
+
 ### Configuraciones iniciales y consideraciones
 Para poder realizar solicitudes via ACME, debemos tener un DNS funcional y con las entradas DNS antes de solicitar el certificado.  
 
