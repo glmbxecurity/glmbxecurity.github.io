@@ -1,217 +1,152 @@
 ---
 layout: single
-title: Backup Proxmox LXC and VM to Mega
+title: Proxmox to MEGA - Ultimate Backup & Restore Suite
 date: 2025-09-30
 categories:
   - projects
 author: Edward Herrera Galamba
 excerpt: Como respaldar tus MV y LXC en MEGA automáticamente
 ---
-# 💾 Backup automático de contenedores LXC en Proxmox y subida a MEGA con MegaCMD
+# 🛡️ Proxmox to MEGA - Ultimate Backup & Restore Suite
 
-## 📋 Descripción
+**Una suite completa, interactiva y automatizada para gestionar el ciclo de vida de tus backups en Proxmox VE sincronizados con la nube de MEGA.nz.**
 
-Este tutorial explica cómo **automatizar los backups de tus contenedores LXC en Proxmox** y **subirlos automáticamente a tu cuenta de MEGA** para guardarlos en la nube usando **MegaCMD**.
-
-Consta de **dos scripts**:
-
-1. `backup_all_lxc.sh` → Hace backups locales de todos los LXC en `/raid1/storage/dump`
-    
-2. `mega_backup.sh` → Sube esos backups a tu cuenta de MEGA, **sin eliminar nada en Mega** (borrado manual)
-    
+Este proyecto consta de dos potentes scripts en Bash diseñados para administradores de sistemas que buscan simplicidad y robustez. Olvídate de configuraciones complejas; utiliza menús visuales (tipo wizard) para seleccionar qué respaldar y qué restaurar, o deja que el sistema trabaje solo por las noches.
 
 ---
 
-## 🧩 Requisitos previos
+## 🚀 Características Principales
 
-### 1. Crear la carpeta donde se guardarán los backups
+### 📦 Backup All-in-One (`backup_lxc_aio.sh`)
+* **Menú asistente:**
+    * **Interactivo:** Muestra menús visuales (`whiptail`) para seleccionar contenedores específicos y decidir qué contenedores respaldar.
+    * **Automático (Cron):** Si se ejecuta programado, detecta la falta de usuario y respalda/sube **TODO** automáticamente sin intervención.
+* **Gestión de energía :** Apaga los contenedores (LXC) ordenadamente, realiza el backup y los vuelve a encender inmediatamente para minimizar el tiempo de inactividad.
+* **Detección Robusta:** Verifica que el archivo de backup se haya creado correctamente antes de intentar subirlo, buscando el archivo más reciente generado para ese ID.
+* **Rotación (Prune) Doble:**
+    * **Local:** Mantiene solo los últimos *N* backups en el disco del servidor.
+    * **Nube:** Elimina automáticamente los backups antiguos en MEGA respetando tu límite configurado.
+* **Login Persistente/Interactivo:** Si la sesión de MEGA expira, solicita credenciales al momento para continuar.
 
-```bash
-mkdir -p /raid1/storage/dump
-# Adapta la ruta a tu entorno
-```
-
----
-
-### 2. Instalar MegaCMD
-
-1. Descarga el paquete oficial para Debian/Proxmox:
-    
-
-```bash
-wget https://mega.nz/linux/MEGAsync/Debian_11.0/amd64/megacmd-xUbuntu_22.04_amd64.deb
-sudo dpkg -i megacmd-xUbuntu_22.04_amd64.deb
-sudo apt -f install -y  # Para resolver dependencias
-```
-
-2. Verifica la instalación e inicia sesión:
-    
-
-```bash
-mega-login
-```
-
-> 🔹 Nota: Este tutorial usa **MegaCMD**, no `megatools`. Con MegaCMD no hay eliminación automática de archivos antiguos.
+### 🚑 Restore Wizard (`restore_wizard.sh`)
+* **Asistente Paso a Paso:** Interfaz gráfica en terminal para guiarte en todo el proceso.
+* **Explorador de Nube:** Lista los backups disponibles en tu cuenta de MEGA y permite descargarlos selectivamente si no los tienes en local.
+* **Gestión de Conflictos:**
+    * Detecta si el ID de contenedor ya existe en tu sistema.
+    * Permite definir un **Nuevo ID** (para no sobrescribir) o mantener el original.
+    * **Seguridad:** Si decides sobrescribir, solicita confirmación explícita.
+* **Selector de Almacenamiento:** Escanea tus discos (`local-lvm`, `zfs`, `nfs`, etc.) y te permite elegir dónde restaurar el contenedor.
 
 ---
 
-### 3. Crear script de backup local de LXC
+## ⚙️ Requisitos Previos
 
-Guarda este script como `/usr/local/bin/backup_all_lxc.sh`:
-
-```bash
-#!/bin/bash
-BACKUP_DIR="/raid1/storage/dump"
-MAX_BACKUPS=1
-LXC_LIST=$(/usr/sbin/pct list | awk 'NR>1 && $1 != 100 {print $1}')
-DATE=$(date +%Y-%m-%d_%H-%M-%S)
-
-echo "=== Inicio de backups: $DATE ==="
-
-for CTID in $LXC_LIST; do
-    echo "📦 Iniciando backup para CTID $CTID..."
-
-    # Apagar contenedor
-    if ! /usr/sbin/pct shutdown $CTID --timeout 30; then
-        /usr/sbin/pct stop $CTID
-    fi
-
-    # Esperar apagado
-    TIMEOUT=10
-    WAITED=0
-    while /usr/sbin/pct status $CTID | grep -q "status: running"; do
-        [ $WAITED -ge $TIMEOUT ] && /usr/sbin/pct stop $CTID && break
-        sleep 5
-        WAITED=$((WAITED + 5))
-    done
-
-    # Backup
-    vzdump $CTID --dumpdir $BACKUP_DIR --mode stop --compress zstd
-
-    # Encender contenedor
-    /usr/sbin/pct start $CTID
-    sleep 5
-
-    # Limitar backups locales
-    ls -1t $BACKUP_DIR/vzdump-lxc-${CTID}-*.tar.zst | tail -n +$(($MAX_BACKUPS + 1)) | while read OLD_BACKUP; do
-        rm -f "$OLD_BACKUP"
-    done
-
-done
-
-echo "✅ Todos los backups completados a $(date +%H:%M:%S)"
-```
-
-Hazlo ejecutable:
-
-```bash
-chmod +x /usr/local/bin/backup_all_lxc.sh
-```
+1.  **Proxmox VE** (Compatible con versiones 7.x y 8.x).
+2.  **Paquetes necesarios:**
+    Debes tener `whiptail` instalado para los menús visuales.
+    ```bash
+    apt update && apt install whiptail -y
+    ```
+3.  **MEGAcmd (Cliente oficial):**
+    Debes tener instalado `megacmd` en tu servidor.
+    ```bash
+    # Ejemplo para Debian/Proxmox (consulta la web oficial de MEGA para tu versión exacta)
+    wget [https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megacmd-xUbuntu_22.04_amd64.deb](https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megacmd-xUbuntu_22.04_amd64.deb)
+    apt install ./megacmd-*.deb
+    ```
 
 ---
 
-### 4. Crear script de subida a MegaCMD
+## 📥 Instalación
 
-Guarda este script como `/usr/local/bin/mega_backup.sh`:
-
+1.  Clona este repositorio o descarga los scripts en tu servidor (por ejemplo, en `/root/scripts/`).
 ```bash
-#!/bin/bash
-
-LOCAL_DIR="/raid1/storage/dump"       # Cambia según tu entorno
-REMOTE_DIR="/proxmox/dump"            # Carpeta en MEGA
-LOGFILE="/var/log/mega_backup.log"
-DATE=$(date '+%Y-%m-%d %H:%M:%S')
-
-echo "[$DATE] === Iniciando subida MEGA ===" >> "$LOGFILE"
-
-# Verificar MegaCMD
-if ! command -v mega-put &>/dev/null; then
-    echo "[$DATE] ERROR: megacmd no instalado" >> "$LOGFILE"
-    exit 1
-fi
-
-[ ! -d "$LOCAL_DIR" ] && { echo "[$DATE] ERROR: No existe $LOCAL_DIR" >> "$LOGFILE"; exit 1; }
-
-# Crear carpeta remota si no existe
-mega-ls "$REMOTE_DIR" &>/dev/null || mega-mkdir -p "$REMOTE_DIR" >> "$LOGFILE" 2>&1
-
-# Extraer ID de VM/LXC
-extract_id() {
-    echo "$1" | grep -oP 'vzdump-(lxc|qemu)-\K\d+'
-}
-
-# Comparar tamaño para decidir subir
-file_needs_upload() {
-    local local_file="$1"
-    local remote_file="$2"
-    local_size=$(stat -c %s "$local_file")
-    remote_size=$(mega-ls "$REMOTE_DIR" | grep -F "$remote_file" | awk '{print $2}')
-    [ -z "$remote_size" ] && return 0
-    [ "$local_size" != "$remote_size" ] && return 0
-    return 1
-}
-
-# Archivos locales
-LOCAL_FILES=($(find "$LOCAL_DIR" -maxdepth 1 -type f \( -name "*.tar" -o -name "*.tar.zst" \) | sort))
-
-for FILE in "${LOCAL_FILES[@]}"; do
-    BASENAME=$(basename "$FILE")
-    LOCAL_ID=$(extract_id "$BASENAME")
-    [ -z "$LOCAL_ID" ] && { echo "[$DATE] ⏭️ Saltando $BASENAME" >> "$LOGFILE"; continue; }
-
-    REMOTE_MATCHES=$(mega-ls "$REMOTE_DIR" | grep -E "vzdump-(lxc|qemu)-${LOCAL_ID}-")
-    LATEST=""
-    [ -n "$REMOTE_MATCHES" ] && LATEST=$(echo "$REMOTE_MATCHES" | sort | tail -n1)
-
-    UPLOAD=false
-    if [ -z "$LATEST" ] || file_needs_upload "$FILE" "$LATEST"; then
-        UPLOAD=true
-    else
-        echo "[$DATE] ⏭️ $BASENAME sin cambios, nada que hacer" >> "$LOGFILE"
-    fi
-
-    $UPLOAD && {
-        echo "[$DATE] Subiendo $BASENAME..." >> "$LOGFILE"
-        mega-put "$FILE" "$REMOTE_DIR/" >> "$LOGFILE" 2>&1 && echo "[$DATE] ✅ Subido $BASENAME" >> "$LOGFILE"
-    }
-
-done
-
-echo "[$DATE] === Subida completa (sin eliminar backups antiguos, se hará manualmente) ===" >> "$LOGFILE"
-exit 0
+git clone https://github.com/glmbxecurity/Proxmox-backup_and_upload-mega/
 ```
-
-Hazlo ejecutable:
-
-```bash
-chmod +x /usr/local/bin/mega_backup.sh
-```
+2.  Dales permisos de ejecución:
+    ```bash
+    chmod +x proxmox_lxc_backup.sh proxmox_lxc_restore.sh
+    ```
 
 ---
 
-### 5. Pruebas manuales
+## 🔧 Configuración (Variables Editables)
 
-```bash
-/usr/local/bin/backup_all_lxc.sh
-/usr/local/bin/mega_backup.sh
-cat /var/log/mega_backup.log
-```
+Abre los scripts con `nano` o `vim` y ajusta la cabecera según tu entorno. Las variables son comunes en ambos scripts para facilitar la gestión.
 
----
-
-### 6. Automatización con cron
-
-```bash
-0 2 * * * /usr/local/bin/backup_all_lxc.sh
-0 4 * * * /usr/local/bin/mega_backup.sh
-```
+| Variable | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| `BACKUP_DIR` / `LOCAL_DIR` | Carpeta local temporal para guardar/descargar backups. | `/raid1/storage/dump` |
+| `REMOTE_DIR` | Carpeta en tu nube de MEGA. | `/proxmox/dump` |
+| `MAX_BACKUPS_LOCAL` | Cuántos backups mantener en el disco del servidor. | `1` |
+| `MAX_BACKUPS_REMOTE` | Cuántos backups mantener en la nube MEGA. | `3` |
+| `COMPRESSION` | Algoritmo de compresión de Proxmox. | `zstd` (recomendado), `gzip` |
+| `MODE` | Modo de backup (`stop` es el más seguro). | `stop`, `snapshot`, `suspend` |
+| `LOGFILE` | Ruta donde se guarda el historial de operaciones. | `/var/log/proxmox_full_backup.log` |
 
 ---
 
-### 7. Consideraciones finales
+## 🖥️ Uso: Script de Backup (`backup_lxc_aio.sh`)
 
-- El script de subida **solo sube archivos nuevos o modificados**.
-    
-- **No elimina** ningún backup en MEGA; la limpieza de versiones antiguas es manual.
-    
-- Archivos remotos que no tengan equivalente local **permanecen intactos**.
+### Modo Manual (Interactivo)
+Ejecútalo directamente en tu terminal:
+```bash
+./proxmox_lxc_backup.sh
+```
+1.  Aparecerá un menú para **seleccionar los contenedores** (Space para marcar, Enter para confirmar). Puedes marcar `ALL_IDS` para seleccionarlos todos.
+2.  El script realizará los backups locales (apagando y encendiendo cada CT).
+3.  Si se generan archivos correctamente, aparecerá un segundo menú para **seleccionar qué subir a MEGA**.
+4.  Finalmente, realizará la limpieza de versiones antiguas en la nube.
+
+### Modo Automático (Cron)
+Ideal para copias nocturnas desatendidas. Añádelo a tu crontab:
+```bash
+crontab -e
+```
+Añade la siguiente línea para ejecutarlo todos los días a las 04:00 AM:
+```bash
+0 4 * * * /ruta/a/tus/scripts/backup_lxc_aio.sh >/dev/null 2>&1
+```
+> **Nota:** En modo Cron, el script asume automáticamente la selección **ALL** (respalda todo y sube todo). Si no hay sesión de MEGA iniciada, el script fallará y registrará el error en el log, ya que no hay usuario presente para introducir la contraseña.
+
+---
+
+## 🚑 Uso: Script de Restauración (`proxmox_lxc_restore.sh`)
+
+Este script es **exclusivamente interactivo**. Úsalo cuando necesites recuperar datos ante un desastre o migración.
+
+```bash
+./proxmox_lxc_restore.sh
+```
+
+**Flujo del Asistente:**
+1.  **Login Check:** Si no estás logueado, te pedirá credenciales de MEGA en una ventana segura.
+2.  **Descarga (Opcional):** Te preguntará si quieres descargar backups desde la nube. Si dices SÍ, te mostrará una lista de archivos en MEGA para elegir.
+3.  **Selección Local:** Te mostrará todos los backups disponibles en tu carpeta local (`BACKUP_DIR`).
+4.  **Configuración de Restauración (Wizard por archivo):**
+    * Te mostrará el ID original del backup.
+    * Te permitirá definir un **Nuevo ID** (para no sobrescribir el actual) o mantener el original.
+    * **Alerta de Conflicto:** Si el ID destino ya existe en Proxmox, te avisará y pedirá confirmación explícita para sobrescribir.
+    * **Selector de Disco:** Escanea tus almacenamientos (`local`, `raid`, `zfs`, etc.) y te permite elegir dónde restaurar.
+5.  **Ejecución:** Restaurará el contenedor y te preguntará si quieres encenderlo al finalizar.
+
+---
+
+## 📝 Logs y Depuración
+
+Toda la actividad queda registrada con fecha y hora. Si algo falla, revisa el log:
+
+```bash
+tail -f /var/log/proxmox_full_backup.log
+```
+* El log incluye tiempos de ejecución, salida detallada de `vzdump`, errores de subida y confirmaciones de limpieza.
+
+---
+
+## ⚠️ Aviso
+
+El uso de estos scripts implica operaciones críticas como el apagado de servicios y la posible sobrescritura de datos (en el caso del restore).
+* **Prueba siempre la restauración** en un entorno seguro antes de confiar ciegamente en los backups.
+* Asegúrate de que tu servidor tiene espacio suficiente en disco para los backups temporales.
+
+---
