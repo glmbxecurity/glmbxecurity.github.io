@@ -1,12 +1,3 @@
----
-layout: single
-title: Ultimate SpotiBOT
-date: 2025-09-30
-categories:
-  - projects
-author: Edward Herrera Galamba
-excerpt: Tool definitiva de Spotify que une el resto de herramientas hasta la fecha en una sola
----
 # 🎧 Ultimate SpotiBOT & Spotify CLI Tools
 
 ¡Bienvenido a Ultimate SpotiBOT! Este proyecto sirve para unificar todos los proyectos anteriores relacionados con herramientas cli y bots de Spotify.  
