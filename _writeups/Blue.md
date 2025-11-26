@@ -1,7 +1,7 @@
 ---
 title: Blue [EASY]
 layout: single
-category: ejPT
+category: eJPT
 slug: eJPT/blue
 date: 2025-09-30
 ---
