@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado específicamente para preparar la certificación **OSCP** (Offensive Security Certified Professional).
 
-**Objetivo:** Completar el ciclo de 29 semanas cubriendo desde fundamentos hasta explotación avanzada y Active Directory complejo.
+**Objetivo:** Completar el ciclo de 29 semanas cubriendo desde fundamentos hasta explotación avanzada y Active Directory complejo.  
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---

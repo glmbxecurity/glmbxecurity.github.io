@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**. Aunque está etiquetado para **eWPT**, su extensión y profundidad cubren todo el espectro del pentesting web, desde vulnerabilidades básicas (OWASP Top 10) hasta técnicas avanzadas de *exploitation* web, sirviendo también para certificaciones superiores como eWPTX o CBBH.
 
-**Objetivo:** Maestría total en ataques web (SQLi, XSS, SSRF, Deserialization, JWT, HTTP Smuggling).
+**Objetivo:** Maestría total en ataques web (SQLi, XSS, SSRF, Deserialization, JWT, HTTP Smuggling).  
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---

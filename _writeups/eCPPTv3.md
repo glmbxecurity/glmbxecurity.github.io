@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado para preparar la certificación **eCPPT** (Certified Professional Penetration Tester). Esta certificación destaca por requerir movimientos laterales (Pivoting) avanzados y un reporte profesional exhaustivo.
 
-**Objetivo:** Completar las máquinas asignadas enfocándose en la post-explotación profunda y la redacción de informes.
+**Objetivo:** Completar las máquinas asignadas enfocándose en la post-explotación profunda y la redacción de informes.  
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---

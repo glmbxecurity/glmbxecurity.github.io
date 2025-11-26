@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado para preparar la certificación **OSWE** (Offensive Security Web Expert). El enfoque es puramente **Web Avanzado (White Box)**, revisión de código, deserialización insegura y bypass de filtros.
 
-**Objetivo:** Desarrollar una mentalidad de revisión de código y automatización de exploits (Python scripting).
+**Objetivo:** Desarrollar una mentalidad de revisión de código y automatización de exploits (Python scripting).  
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---

@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado para preparar la certificación **eCPTXv2** (Certified Penetration Tester eXtreme). El enfoque es **Red Teaming avanzado**, cubriendo delegaciones de Kerberos, persistencia silenciosa (DCShadow), movimientos laterales complejos y explotación de entornos híbridos (Azure AD).
 
-**Objetivo:** Dominar el Active Directory al nivel más alto y comprender vectores de ataque en la nube.
+**Objetivo:** Dominar el Active Directory al nivel más alto y comprender vectores de ataque en la nube.  
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---

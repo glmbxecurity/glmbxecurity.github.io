@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado para preparar la certificación **OSEP** (Offensive Security Exploit Developer). El enfoque principal es la evasión de defensas (AV/EDR), el desarrollo de exploits personalizados y operaciones de Red Teaming.
 
-**Objetivo:** Desarrollar capacidades de evasión y persistencia avanzada.
+**Objetivo:** Desarrollar capacidades de evasión y persistencia avanzada.  
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---

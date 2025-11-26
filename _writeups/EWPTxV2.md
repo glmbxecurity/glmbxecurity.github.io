@@ -9,7 +9,7 @@ date: 2025-09-30
 
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado para preparar la certificación **eWPTX** (Web Application Penetration Tester eXtreme). El enfoque es **Web Extreme**, cubriendo evasión de WAF, ataques a arquitecturas modernas, Prototype Pollution y deserialización avanzada.
 
-**Objetivo:** Dominar la explotación web en entornos hostiles y filtrados.  
+**Objetivo:** Dominar la explotación web en entornos hostiles y filtrados.    
 **Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---
