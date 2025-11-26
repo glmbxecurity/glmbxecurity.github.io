@@ -4,7 +4,7 @@ permalink: /writeups/
 layout: single
 ---
 
-{% assign categorias = "eJPT,eCPPT,OSCP" | split: "," %}
+{% assign categorias = "eJPT,eCPPT,OSCP,Roadmaps" | split: "," %}
 
 {% for cat in categorias %}
 **{{ cat }}**

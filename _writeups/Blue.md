@@ -1,5 +1,5 @@
 ---
-title: Blue [EASY]
+title: Blue
 layout: single
 category: eJPT
 slug: eJPT/blue
