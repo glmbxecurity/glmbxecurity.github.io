@@ -1,8 +1,8 @@
 ---
 title: Blue [EASY]
 layout: single
-category: Tryhackme
-slug: Tryhackme/blue
+category: ejPT
+slug: eJPT/blue
 date: 2025-09-30
 ---
 

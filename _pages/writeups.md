@@ -4,7 +4,7 @@ permalink: /writeups/
 layout: single
 ---
 
-{% assign categorias = "Hackthebox,Tryhackme,Vulnhub,Dockerlabs" | split: "," %}
+{% assign categorias = "eJPT,eCPPT,OSCP" | split: "," %}
 
 {% for cat in categorias %}
 **{{ cat }}**
