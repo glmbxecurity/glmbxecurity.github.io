@@ -1,5 +1,5 @@
 ---
-title: eJPT Roadmap
+title: Principiante - eJPT Roadmap
 layout: single
 category: Roadmaps
 slug: Roadmaps/ejpt
@@ -10,7 +10,7 @@ date: 2025-09-30
 Este roadmap está inspirado al 100% en el **HackingVault de s4vitar**, diseñado específicamente para preparar la certificación **eJPT** (Junior Penetration Tester).
 
 **Objetivo:** Completar 5 máquinas por semana (~12-16 horas de estudio).
-**Recurso:** Todas las resoluciones en video pertenecen al canal de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
+**Recurso:** La propiedad intelectual y todas las resoluciones en video pertenecen al canal público de [S4viSinFiltro](https://www.youtube.com/@S4viSinFiltro).
 
 ---
 
