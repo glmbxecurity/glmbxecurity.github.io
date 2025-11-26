@@ -1,8 +1,8 @@
 ---
-title: "Tareas Cron"
+title: Tareas Cron
 layout: single
-category: "Proyectos"
-slug: "proyectos/tareas-cron"
+category: Linux PrivEsc
+slug: linux-privesc/tareas-cron
 date: 2025-09-30
 ---
 
