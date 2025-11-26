@@ -1,8 +1,8 @@
 ---
-title: "Personalizar Kali Con Bspwm"
+title: Personalizar Kali Con Bspwm
 layout: single
-category: "Setup"
-slug: "setup/personalizar-kali-con-bspwm"
+category: Proyectos
+slug: proyectos/personalizar-kali-con-bspwm
 date: 2025-09-30
 ---
 

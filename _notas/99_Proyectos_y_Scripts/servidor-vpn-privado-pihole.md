@@ -1,8 +1,8 @@
 ---
-title: "Servidor Vpn Privado + Pihole"
+title: Servidor Vpn Privado + Pihole
 layout: single
-category: "Setup"
-slug: "setup/servidor-vpn-privado-pihole"
+category: Proyectos
+slug: proyectos/servidor-vpn-privado-pihole
 date: 2025-09-30
 ---
 

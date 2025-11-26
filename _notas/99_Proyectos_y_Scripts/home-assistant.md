@@ -1,8 +1,8 @@
 ---
-title: "Home Assistant"
+title: Home Assistant
 layout: single
-category: "Setup"
-slug: "setup/home-assistant"
+category: Proyectos
+slug: proyectos/home-assistant
 date: 2025-09-30
 ---
 
