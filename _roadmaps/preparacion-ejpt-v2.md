@@ -74,86 +74,75 @@ En principio con la formación que incluye el voucher es más que suficiente par
 ### Máquinas CTF para practicar
 Después de ver los cursos y aprender, toca practicar lo aprendido, aquí te dejo un listado de máquinas vulnerables para practicar el examen que te servirán de apoyo y refuerzo de lo aprendido.  
   
-*Las marcadas con un ✔️ son las que yo hice, además del path oficial de eJPT*
-#### Vulnhub
+*Las marcadas con un ✅ son las que yo hice, además del path oficial de eJPT*
 
-* Dark Hole 1✔️-
-* Symfonos 1 ✔️
-* Dark Hole 2 ✔️ 
-* Symfonos 2 ✔️
-* Symfonos 3 ✔️
-* Symfonos 5 ✔️
-* Election ✔️
-* Hack me please 1 
-* Insanity
-* ICA 1
-* Corrosion 2
-* Venom 1
-* Durian 1
-
-#### HackTheBox
-Linux
-  - Antique Linux 
-  - Armageddon 
-  - Blocky Linux
-  - Bolt Linux PassBolt
-  - GoodGames 
-  - Hawk Linux 
-  - Horizontall Linux
-  - Lame Linux Samba
-  - Nibbles Linux
-  - Oopsie Linux
-  - Shocker Linux
-  - Tabby Linux LFI
-  - Union Linux SQL
-  - Validation Linux
-Windows
-  - Archetype 
-  - Devel Windows 
-  - Driver Windows
-  - Grandpa Windows
-  - Granny Windows
-  - Jeeves Windows
-  - Jerry Windows
-  - Legacy Windows
-  - Love Windows
-  - Netmon Windows
-  - Return Windows
-
-
-
-#### Tryhackme
-* Blue✔️
-* Ice ✔️
-* Blaster ✔️
-* Pentesting Fundamentals ✔️
-* Ignite ✔️
-* Blog ✔️
-* Startup✔️
-* Chill Hack ✔️
-* VulnNet: Internal✔️
-* ColdBox: Easy✔️
-* Basic pentesting
-* Vulnversity ✔️
-* takeover
-* Rootme✔️
-* Pickle rick✔️
-* SkyNet
-* Chocolate factory
-* Easy peasy
-* Corridor
-* Steel Mountain
-* Game Zone
-
-#### PG play
-* Dawn
-* InfosecPrep
-* Seppuku
-* FunBoxEasy
-
-#### HackMyVM
-* Friendly
-* Art
+| Máquina                      | Plataforma    | Resolución | Notas (Skills)      |
+| :--------------------------- | :------------ | :--------: | :------------------ |
+| **Dark Hole 1** ✅            | VulnHub       |            | -                   |
+| **Symfonos 1 **✅             | VulnHub       |            | -                   |
+| **Dark Hole 2**✅             | VulnHub       |            | -                   |
+| **Symfonos 2**✅              | VulnHub       |            | -                   |
+| **Symfonos 3**✅              | VulnHub       |            | -                   |
+| **Symfonos 5**✅              | VulnHub       |            | -                   |
+| **Election**✅                | VulnHub       |            | -                   |
+| **Hack me please 1**         | VulnHub       |            | -                   |
+| **Insanity**                 | VulnHub       |            | -                   |
+| **ICA 1**                    | VulnHub       |            | -                   |
+| **Corrosion 2**              | VulnHub       |            | -                   |
+| **Venom 1**                  | VulnHub       |            | -                   |
+| **Durian 1**                 | VulnHub       |            | -                   |
+| **Antique**                  | HTB (Linux)   |            | -                   |
+| **Armageddon**               | HTB (Linux)   |            | -                   |
+| **Blocky**                   | HTB (Linux)   |            | -                   |
+| **Bolt**                     | HTB (Linux)   |            | PassBolt            |
+| **GoodGames**                | HTB (Linux)   |            | -                   |
+| **Hawk**                     | HTB (Linux)   |            | -                   |
+| **Horizontall**              | HTB (Linux)   |            | -                   |
+| **Lame**                     | HTB (Linux)   |            | Samba               |
+| **Nibbles**                  | HTB (Linux)   |            | -                   |
+| **Oopsie**                   | HTB (Linux)   |            | -                   |
+| **Shocker**                  | HTB (Linux)   |            | Shellshock          |
+| **Tabby**                    | HTB (Linux)   |            | LFI                 |
+| **Union**                    | HTB (Linux)   |            | SQL Injection       |
+| **Validation**               | HTB (Linux)   |            | -                   |
+| **Archetype**                | HTB (Windows) |            | MSSQL / Impacket    |
+| **Devel**                    | HTB (Windows) |            | -                   |
+| **Driver**                   | HTB (Windows) |            | -                   |
+| **Grandpa**                  | HTB (Windows) |            | -                   |
+| **Granny**                   | HTB (Windows) |            | -                   |
+| **Jeeves**                   | HTB (Windows) |            | Jenkins             |
+| **Jerry**                    | HTB (Windows) |            | Tomcat              |
+| **Legacy**                   | HTB (Windows) |            | SMB (Old)           |
+| **Love**                     | HTB (Windows) |            | -                   |
+| **Netmon**                   | HTB (Windows) |            | FTP Anon / PRTG     |
+| **Return**                   | HTB (Windows) |            | -                   |
+| **Blue**✅                    | TryHackMe     |            | EternalBlue         |
+| **Ice**✅                     | TryHackMe     |            | RDP / Icecast       |
+| **Blaster**✅                 | TryHackMe     |            | -                   |
+| **Pentesting Fundamentals**✅ | TryHackMe     |            | -                   |
+| **Ignite**✅                  | TryHackMe     |            | CMS Fuel            |
+| **Blog**✅                    | TryHackMe     |            | Wordpress           |
+| **Startup**✅                 | TryHackMe     |            | -                   |
+| **Chill Hack**✅              | TryHackMe     |            | -                   |
+| **VulnNet: Internal**✅       | TryHackMe     |            | -                   |
+| **ColdBox: Easy**✅           | TryHackMe     |            | Wordpress           |
+| **Basic pentesting**✅        | TryHackMe     |            | -                   |
+| **Vulnversity**✅             | TryHackMe     |            | Upload Bypass       |
+| **takeover**                 | TryHackMe     |            | Subdomain Takeover  |
+| **Rootme**✅                  | TryHackMe     |            | File Upload         |
+| **Pickle rick**✅             | TryHackMe     |            | Web / CMD Injection |
+| **SkyNet**                   | TryHackMe     |            | SMB / CMS / Tar     |
+| **Chocolate factory**        | TryHackMe     |            | -                   |
+| **Easy peasy**               | TryHackMe     |            | -                   |
+| **Corridor**                 | TryHackMe     |            | IDOR                |
+| **Steel Mountain**           | TryHackMe     |            | Windows Manual      |
+| **Game Zone**                | TryHackMe     |            | SQLMap / Tunneling  |
+| **Dawn**                     | PG Play       |            | -                   |
+| **InfosecPrep**              | PG Play       |            | -                   |
+| **Seppuku**                  | PG Play       |            | -                   |
+| **FunBoxEasy**               | PG Play       |            | -                   |
+| **Friendly**                 | HackMyVM      |            | -                   |
+| **Art**                      | HackMyVM      |            | -                   |
 
 ### Diccionarios utilizados eJPTv2
 ##### Fuerza bruta login FTP y SSH
