@@ -1,5 +1,5 @@
 ---
-title: Avanzado WEB - OSWE Roadmap
+title: OSWE - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/oswe

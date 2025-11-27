@@ -1,5 +1,5 @@
 ---
-title: Principiante - eJPT Roadmap
+title: eJPT - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/ejpt

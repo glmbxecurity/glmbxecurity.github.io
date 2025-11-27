@@ -1,5 +1,5 @@
 ---
-title: Intermedio - avanzado - OSCP Roadmap
+title: OSCP - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/oscp

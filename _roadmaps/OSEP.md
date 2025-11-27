@@ -1,5 +1,5 @@
 ---
-title: Extremo - OSEP Roadmap
+title: OSEP - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/osep

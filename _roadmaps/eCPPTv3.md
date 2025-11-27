@@ -1,5 +1,5 @@
 ---
-title: Intermedio - avanzado - eCPPTv3 Roadmap
+title: eCPPTv3 - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/ecpptv3

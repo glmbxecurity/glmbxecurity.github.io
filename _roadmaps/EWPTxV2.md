@@ -1,5 +1,5 @@
 ---
-title: Intermedio - avanzado WEB - EWPTxV2 Roadmap
+title: EWPTxV2 - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/ewptx_v2

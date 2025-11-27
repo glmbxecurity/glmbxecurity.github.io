@@ -70,7 +70,9 @@ collections:
   writeups:
     output: true
     permalink: /writeups/:path/
-
+  roadmaps:
+    output: true
+    permalink: /roadmaps/:path/
 # Defaults
 defaults:
   # _posts
@@ -105,4 +107,17 @@ defaults:
       share: false
       sidebar:
         nav: "notas"
+
+  # _roadmaps
+  - scope:
+      path: ""
+      type: roadmaps
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      sidebar:
+        nav: "roadmaps"
 

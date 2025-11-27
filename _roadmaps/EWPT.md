@@ -1,5 +1,5 @@
 ---
-title: Principiante WEB - EWPT Roadmap
+title: EWPT - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/ewpt

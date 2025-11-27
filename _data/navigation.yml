@@ -5,5 +5,7 @@ main:
     url: /notas/
   - title: "CTF Writeups"
     url: /writeups/
+  - title: "Roadmaps"
+    url: /roadmaps/
   - title: "About"
     url: /about/

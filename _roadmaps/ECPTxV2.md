@@ -1,5 +1,5 @@
 ---
-title: Extremo - ECPTxV2 Roadmap
+title: ECPTxV2 - Hackthebox
 layout: single
 category: Roadmaps
 slug: Roadmaps/ecptx_v2
