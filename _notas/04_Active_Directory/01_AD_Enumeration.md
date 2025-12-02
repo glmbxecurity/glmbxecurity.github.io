@@ -31,6 +31,7 @@ enum4linux -a <IP>
 ldapsearch -x -H ldap://<IP> -b "DC=dominio,DC=local"
 ```
 
+
 ---
 
 ### 2. Con Credenciales (Desde dentro)
@@ -60,4 +61,9 @@ Find-LocalAdminAccess  # ¿Dónde soy admin local?
 **Ldapdomaindump (HTML Report):**
 ```bash
 ldapdomaindump -u 'dominio\usuario' -p 'password' <IP_DC>
+```
+---
+#### Conectarse a un recurso SMB con o sin credenciales
+```bash
+smbclient //192.168.118.130/anonymous -U "anonymous"
 ```

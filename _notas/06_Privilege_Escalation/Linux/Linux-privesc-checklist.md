@@ -108,6 +108,8 @@ sudo /usr/bin/python3 /home/john/file.py
 ## 4. Permisos SUID / SGID
 Busca binarios que se ejecuten con permisos del dueño (generalmente root) independientemente de quién los lance.
 
+
+**Ojo al directorio /opt** a veces puede contener scripts interesantes
 ```bash
 find / -perm -4000 2>/dev/null  # Buscar SUID
 find / -perm -2000 2>/dev/null  # Buscar SGID
@@ -226,6 +228,8 @@ grep -rEi "pass|pwd|user|credential" /home/ 2>/dev/null
 grep -rEi "password" /var/www/ 2>/dev/null
 grep -rEi "DB_PASS" /var/www/html/wp-config.php  # Wordpress
 ```
+
+
 
 ---
 
