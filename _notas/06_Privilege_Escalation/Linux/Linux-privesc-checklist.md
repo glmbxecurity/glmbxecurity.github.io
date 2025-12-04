@@ -229,7 +229,8 @@ grep -rEi "password" /var/www/ 2>/dev/null
 grep -rEi "DB_PASS" /var/www/html/wp-config.php  # Wordpress
 ```
 
-
+### Historial bash
+En cada usuario que pivotemos debemos comprobar el .bash_history, incluso quizas podamos ver los de otros usuarios
 
 ---
 

